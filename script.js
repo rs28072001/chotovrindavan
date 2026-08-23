@@ -36,6 +36,39 @@ document.querySelector('.sound').addEventListener('click', e => {
   e.currentTarget.querySelector('span').textContent = e.currentTarget.classList.contains('playing') ? '◉' : '◌';
 });
 
+// journey section: vertical scroll drives horizontal movement through the scenes,
+// then hands off to normal vertical scroll once the last scene is reached
+const journey = document.querySelector('.journey');
+const journeyTrack = journey?.querySelector('.scene-track');
+if (journey && journeyTrack && !reduceMotion && window.matchMedia('(min-width:761px)').matches) {
+  let scrollDistance = 0;
+
+  function sizeJourney() {
+    scrollDistance = Math.max(journeyTrack.scrollWidth - window.innerWidth + journeyTrack.offsetLeft, 0);
+    journey.style.height = `calc(100vh + ${scrollDistance}px)`;
+  }
+
+  function driveJourney() {
+    if (scrollDistance <= 0) return;
+    const top = journey.getBoundingClientRect().top;
+    const progress = Math.min(Math.max(-top / scrollDistance, 0), 1);
+    journeyTrack.style.transform = `translateX(-${progress * scrollDistance}px)`;
+  }
+
+  sizeJourney();
+  driveJourney();
+  window.addEventListener('resize', () => {
+    if (!window.matchMedia('(min-width:761px)').matches) {
+      journey.style.height = '';
+      journeyTrack.style.transform = '';
+      return;
+    }
+    sizeJourney();
+    driveJourney();
+  });
+  window.addEventListener('scroll', driveJourney, { passive: true });
+}
+
 // scroll-triggered reveal animations
 const revealTargets = document.querySelectorAll('.reveal, .reveal-fade, .reveal-scale, .stagger');
 if (reduceMotion) {
