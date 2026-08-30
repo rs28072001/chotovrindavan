@@ -1,108 +1,223 @@
 <!doctype html>
 <html lang="hi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>मेरो छोटो वृन्दावन धाम — भक्ति, सेवा और दर्शन</title>
-    <meta name="description" content="मेरो छोटो वृन्दावन धाम — श्री राधा-कृष्ण को समर्पित मंदिर। दर्शन एवं आरती के समय, सेवा, दान और उत्सवों की जानकारी।" />
-    <meta name="theme-color" content="#09251f" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="मेरो छोटो वृन्दावन धाम" />
-    <meta property="og:description" content="जहाँ भक्ति एक अनुभव बन जाती है — दर्शन, आरती, सेवा और उत्सव।" />
-    <meta property="og:image" content="background_img.jpeg" />
-    <meta property="og:locale" content="hi_IN" />
-    <link rel="icon" type="image/png" href="logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Mukta:wght@400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"HinduTemple","name":"मेरो छोटो वृन्दावन धाम","alternateName":"Mero Choto Vrindavan Dham","description":"श्री राधा-कृष्ण को समर्पित मंदिर — दर्शन, आरती, सेवा एवं उत्सव।"}
-    </script>
-  </head>
-  <body>
-    <a class="skip" href="#top">मुख्य सामग्री पर जाएँ</a>
-    <header class="nav" id="nav">
-      <a class="brand" href="#top" aria-label="मेरो छोटो वृन्दावन धाम — मुखपृष्ठ"><img class="brand-mark" src="logo.png" alt="" /><span>मेरो छोटो वृन्दावन धाम</span></a>
-      <nav aria-label="मुख्य नेविगेशन"><a href="#mandir">मंदिर</a><a href="#darshan">दर्शन</a><a href="#seva">सेवा</a><a href="#utsav">उत्सव</a><a href="#about">हमारे बारे में</a></nav>
-      <div class="nav-actions">
-        <a class="donate-small" href="#donate">समर्पित करें</a>
-        <details class="mnav">
-          <summary aria-label="मेनू खोलें"><span aria-hidden="true">☰</span></summary>
-          <nav aria-label="मोबाइल नेविगेशन"><a href="#mandir">मंदिर</a><a href="#darshan">दर्शन</a><a href="#seva">सेवा</a><a href="#utsav">उत्सव</a><a href="#about">हमारे बारे में</a><a href="#contact">संपर्क</a></nav>
-        </details>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>मेरो छोटो वृन्दावन</title>
+  <meta name="description" content="जहाँ हर श्वास में राधे कृष्ण — एक सिनेमाई दर्शन अनुभव" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#darshan-info">मुख्य सामग्री पर जाएँ</a>
+
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="#top">MERO CHOTO VRINDAVAN</a>
+    <nav class="nav-links" aria-label="मुख्य">
+      <a href="#darshan-info">दर्शन</a>
+      <a href="#yatra">यात्रा</a>
+      <a href="#seva">सेवा</a>
+      <a href="#utsav">उत्सव</a>
+      <a href="#about">हमारी कथा</a>
+      <a href="#contact">संपर्क</a>
+    </nav>
+    <a class="nav-cta" href="#donate">सेवा करें</a>
+    <details class="nav-mobile">
+      <summary aria-label="मेनू"><span></span><span></span></summary>
+      <nav aria-label="मोबाइल">
+        <a href="#darshan-info">दर्शन</a>
+        <a href="#yatra">यात्रा</a>
+        <a href="#seva">सेवा</a>
+        <a href="#utsav">उत्सव</a>
+        <a href="#about">हमारी कथा</a>
+        <a href="#contact">संपर्क</a>
+        <a class="nav-cta" href="#donate">सेवा करें</a>
+      </nav>
+    </details>
+  </header>
+
+  <main id="top">
+
+    <!-- 01 · CINEMATIC HERO — scroll scrubs the temple-entry video -->
+    <section class="pin-section hero" id="hero" aria-label="मंदिर प्रवेश">
+      <div class="pin">
+        <video id="hero-video" src="videos/hero.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+        <div class="veil veil-edges" aria-hidden="true"></div>
+        <div class="hero-title" id="hero-title">
+          <h1>मेरो छोटो वृन्दावन</h1>
+          <p>जहाँ हर श्वास में राधे कृष्ण</p>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator" aria-hidden="true">
+          <span>SCROLL TO ENTER</span>
+          <i></i>
+        </div>
+        <div class="veil veil-gold-dark" id="hero-fade" aria-hidden="true"></div>
       </div>
-    </header>
+    </section>
 
-    <main id="top">
-      <section class="hero" aria-label="मेरो छोटो वृन्दावन धाम में प्रवेश">
-        <div class="hero-bg" aria-hidden="true"></div>
-        <div class="hero-copy">
-          <p class="eyebrow">मेरो छोटो वृन्दावन धाम</p>
-          <h1>राधे राधे</h1>
-          <p>जहाँ भक्ति एक अनुभव बन जाती है।</p>
-          <div class="hero-ctas">
-            <a class="entry" href="#donate">दान करें <span>→</span></a>
-            <a class="entry ghost" href="#schedule">आरती के समय <span>↓</span></a>
+    <!-- 02 · SEAMLESS TRANSITION — golden darkness + particles -->
+    <section class="pin-section transition" id="transition" aria-hidden="true">
+      <div class="pin">
+        <canvas id="particles"></canvas>
+        <p class="transition-line">गर्भगृह की ओर&hellip;</p>
+      </div>
+    </section>
+
+    <!-- 03 · RADHA KRISHNA DARSHAN — scroll scrubs the sanctum video -->
+    <section class="pin-section darshan" id="darshan" aria-label="राधा कृष्ण दर्शन">
+      <div class="pin">
+        <video id="darshan-video" data-src="videos/darshan.mp4" muted playsinline preload="none" aria-hidden="true"></video>
+        <div class="veil veil-black" id="darshan-in" aria-hidden="true"></div>
+        <div class="darshan-title" id="darshan-title">
+          <p class="darshan-eyebrow">राधे कृष्ण</p>
+          <h2>दर्शन</h2>
+          <p class="darshan-sub">दर्शन देखने का नहीं,<br />अनुभव करने का नाम है।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · DARSHAN INFORMATION -->
+    <section class="info" id="darshan-info">
+      <div class="info-inner reveal">
+        <p class="eyebrow">DARSHAN</p>
+        <h2 class="section-title">आज का दर्शन</h2>
+        <div class="ornament" aria-hidden="true"><i></i><b>&#9670;</b><i></i></div>
+
+        <div class="info-grid">
+          <div class="info-today">
+            <div class="info-block">
+              <h3>आज का दर्शन</h3>
+              <p class="ph" data-cms="today.darshan">[दर्शन विवरण]</p>
+            </div>
+            <div class="info-block">
+              <h3>आज का शृंगार</h3>
+              <p class="ph" data-cms="today.shringar">[शृंगार विवरण]</p>
+            </div>
+            <div class="info-block">
+              <h3>अगला दर्शन</h3>
+              <p class="ph" data-cms="next.name">[अगला दर्शन]</p>
+              <p class="ph time" data-cms="next.time">[time]</p>
+            </div>
+            <div class="info-block live">
+              <h3>प्रत्यक्ष दर्शन <span class="live-dot" aria-hidden="true"></span></h3>
+              <p class="ph" data-cms="live.status">[LIVE DARSHAN — जल्द उपलब्ध]</p>
+            </div>
+          </div>
+
+          <div class="info-timings">
+            <h3>दैनिक दर्शन समय</h3>
+            <ol id="timings-list"><!-- rendered from PLACEHOLDER data in main.js --></ol>
           </div>
         </div>
-        <div class="scroll-cue"><span></span> यात्रा आरंभ करें</div>
-      </section>
+      </div>
+    </section>
 
-      <section class="statement section-pad" id="mandir">
-        <p class="kicker">01 — छोटो वृन्दावन</p>
-        <div class="statement-lines stagger"><p>यह केवल एक मंदिर नहीं...</p><p>यह एक <em>अनुभव</em> है।</p><p>एक स्मृति है। <span>एक भावना है।</span></p><p>एक <em>घर</em> है।</p></div>
-        <p class="side-note reveal">हर यात्रा बाहर से भीतर की ओर जाती है।<br />आपका स्वागत है।</p>
-        <p class="statement-body reveal">यहाँ हर पत्थर में एक कहानी बसी है, हर घंटी की ध्वनि में एक प्रार्थना है। छोटोवृन्दावन उस भाव को जीवंत करता है जो वृन्दावन की गलियों में सदियों से बहता आया है — सरलता, समर्पण और सामूहिक श्रद्धा का भाव। यहाँ आने वाला हर भक्त केवल दर्शन के लिए नहीं, बल्कि अपने भीतर की शांति को फिर से पाने के लिए आता है।</p>
-      </section>
-
-      <section class="journey" aria-label="वृन्दावन की अनुभूति">
-        <div class="journey-sticky">
-          <div class="journey-head reveal"><p class="kicker">02 — अनुभव</p><h2>वृन्दावन की<br /><em>अनुभूति</em></h2><p>स्क्रॉल कीजिए और उस भाव में उतरिए, जिसे शब्दों में बाँधना कठिन है।</p></div>
-          <div class="scene-track stagger">
-            <article class="scene yamuna"><div class="scene-num">01</div><div><span>यमुना</span><small>जल की शांत लय</small></div></article>
-            <article class="scene kadamb"><div class="scene-num">02</div><div><span>कदम्ब वृक्ष</span><small>छाँव में ठहराव</small></div></article>
-            <article class="scene mandir"><div class="scene-num">03</div><div><span>मंदिर</span><small>जहाँ मन झुकता है</small></div></article>
-            <article class="scene diya"><div class="scene-num">04</div><div><span>दीप</span><small>अंतर की ज्योति</small></div></article>
-            <article class="scene goshala"><div class="scene-num">05</div><div><span>गौशाला</span><small>सेवा और स्नेह</small></div></article>
-            <article class="scene tulsi"><div class="scene-num">06</div><div><span>तुलसी</span><small>पवित्रता की सुगंध</small></div></article>
+    <!-- YATRA · Hisar → Agrohadham → ChotoVrindavan — scroll scrubs the pilgrimage map.
+         Assets: videos/yatra.mp4 (map→temple emergence), assets/journey/map-first.jpg
+         (poster/first frame), assets/journey/map-final.jpg (reduced-motion/fallback state).
+         The route is an artistic representation, not a navigation route. -->
+    <section class="pin-section journey" id="yatra" aria-label="हिसार से छोटो वृंदावन की यात्रा">
+      <div class="pin">
+        <div class="map-stage" aria-hidden="true">
+          <div class="map-zoom" id="map-zoom">
+            <video id="yatra-video" data-src="videos/yatra.mp4" poster="assets/journey/map-first.jpg" muted playsinline preload="none"></video>
+            <img id="yatra-final" src="assets/journey/map-final.jpg" alt="" loading="lazy" hidden />
+            <svg id="yatra-svg" viewBox="0 0 1280 720" preserveAspectRatio="none">
+              <g class="route-seg" id="seg1">
+                <path class="route-glow" d="M805 690 C 768 622, 750 560, 753 505 S 722 428, 710 390" />
+                <path class="route-core" d="M805 690 C 768 622, 750 560, 753 505 S 722 428, 710 390" />
+              </g>
+              <g class="route-seg" id="seg2">
+                <path class="route-glow" d="M710 390 C 698 340, 686 300, 700 265 S 762 224, 798 208" />
+                <path class="route-core" d="M710 390 C 698 340, 686 300, 700 265 S 762 224, 798 208" />
+              </g>
+              <g id="hisar-stop" class="stop">
+                <circle class="pulse" cx="805" cy="690" r="10" />
+                <circle class="dot" cx="805" cy="690" r="5" />
+              </g>
+              <g id="agroha-stop" class="stop green">
+                <circle class="pulse" cx="710" cy="390" r="9" />
+                <circle class="dot" cx="710" cy="390" r="4.5" />
+              </g>
+              <g id="dest-glow" class="stop">
+                <circle class="ring" cx="856" cy="180" r="46" />
+                <circle class="ring r2" cx="856" cy="180" r="82" />
+              </g>
+            </svg>
           </div>
         </div>
-      </section>
-
-      <section class="darshan section-pad" id="darshan">
-        <div class="darshan-title reveal"><p class="kicker">03 — सजीव दर्शन</p><h2>दर्शन</h2><p>जहाँ से भी हों, श्री चरणों के समीप आइए।</p><p class="darshan-note">दूर होकर भी दूर नहीं — हमारी सजीव प्रसारण सेवा के माध्यम से प्रतिदिन की आरती और श्रृंगार दर्शन सीधे आपके घर तक पहुँचते हैं। जब मंदिर की घंटियाँ बजें, आप भी उसी क्षण में जुड़ सकते हैं।</p></div>
-        <div class="darshan-frame reveal-scale">
-          <div class="frame-top"><span><span class="live-dot"></span>LIVE · [DARSHAN STREAM]</span><span aria-hidden="true">⌁</span></div>
-          <div class="sanctum"><div class="arch"><div class="deity"><span>श्री</span><small>राधे कृष्ण</small></div></div><div class="lamp l1"></div><div class="lamp l2"></div></div>
-          <div class="frame-bottom"><div><small>वर्तमान दर्शन</small><strong>[LIVE DARSHAN]</strong></div><a href="#schedule">अभी दर्शन करें <span>↗</span></a></div>
+        <div class="veil j-veil" id="j-veil" aria-hidden="true"></div>
+        <div class="j-intro" id="j-intro">
+          <h2>एक यात्रा&hellip;</h2>
+          <p>हिसार से छोटो वृंदावन तक</p>
         </div>
-        <div class="schedule-strip reveal" id="schedule">
-          <span>आज का मंदिर</span>
-          <span><b>06:00</b> मंगला आरती</span><span><b>08:00</b> श्रृंगार दर्शन</span><span><b>12:00</b> राजभोग आरती</span><span><b>17:00</b> उत्थापन दर्शन</span><span><b>19:00</b> संध्या आरती</span><span><b>20:30</b> शयन आरती</span>
-          <p class="aarti-now" aria-live="polite" hidden></p>
+        <p class="j-caption" id="j-cap-1">यात्रा यहाँ से प्रारंभ होती है — <b>हिसार</b><span>1 · HISAR</span></p>
+        <p class="j-caption" id="j-cap-2"><b>अग्रोहा धाम</b> — एक पवित्र पड़ाव<span>2 · AGROHADHAM</span></p>
+        <div class="j-arrival" id="j-arrival">
+          <p class="j-eyebrow">आप पहुँच गए</p>
+          <h2>छोटो वृंदावन</h2>
+          <p class="j-sub">यात्रा का अंत नहीं,<br />यह तो आरंभ है भक्ति का&hellip;</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="aarti"><div class="aarti-glow"></div><div class="aarti-copy reveal"><p class="kicker">04 — संध्या का समय</p><h2>संध्या आरती</h2><p>आइए, दीपों की इस ज्योति में अपनी श्रद्धा जोड़ें।</p><p class="aarti-note">जैसे ही सूर्य ढलता है, मंदिर परिसर घंटियों की ध्वनि और शंखनाद से गूँज उठता है। सैकड़ों दीपों की मिली-जुली रोशनी में हर भक्त का चेहरा एक ही भाव में डूब जाता है — कृतज्ञता का भाव। यह क्षण दिन भर की भागदौड़ के बाद मन को उसके मूल स्वभाव — शांति — में लौटा देता है।</p><a href="#seva" class="outline-btn">आरती में सम्मिलित हों <span>→</span></a></div><div class="diyas" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></section>
+    <!-- 06 · ANUBHUTI -->
+    <section class="anubhuti" id="anubhuti">
+      <div class="reveal">
+        <div class="ornament" aria-hidden="true"><i></i><b>&#9670;</b><i></i></div>
+        <h2>यह केवल एक मंदिर नहीं —<br />यह एक <em>अनुभव</em> है।</h2>
+        <p>एक स्मृति है, एक भावना है, एक <em>घर</em> है।</p>
+        <p class="anubhuti-body">यहाँ हर पत्थर में एक कहानी बसी है, हर घंटी की ध्वनि में एक प्रार्थना है। छोटो वृन्दावन उस भाव को जीवंत करता है जो वृन्दावन की गलियों में सदियों से बहता आया है — सरलता, समर्पण और सामूहिक श्रद्धा का भाव। यहाँ आने वाला हर भक्त केवल दर्शन के लिए नहीं, बल्कि अपने भीतर की शांति को फिर से पाने के लिए आता है।</p>
+      </div>
+    </section>
 
-      <section class="seva section-pad" id="seva">
-        <div class="section-heading reveal"><div><p class="kicker">05 — समर्पण</p><h2>सेवा</h2></div><p>सेवा ही सबसे सुंदर समर्पण है।<br />अपनी भावना को एक सुंदर कर्म का रूप दीजिए।<br />हर सेवा, चाहे छोटी हो या बड़ी, मंदिर की नित्य व्यवस्था और भक्तों के सुख का आधार बनती है।</p></div>
-        <div class="seva-grid stagger">
-          <article class="seva-card flower"><span>01</span><h3>पुष्प सेवा</h3><p>श्री विग्रह के श्रृंगार हेतु स्नेहपूर्ण अर्पण। प्रतिदिन ताज़े पुष्पों से सजता है श्रृंगार, और आपका योगदान इस सौंदर्य को निरंतर बनाए रखता है।</p><a href="#donate">सेवा समर्पित करें <b>↗</b></a></article>
-          <article class="seva-card food"><span>02</span><h3>अन्न सेवा</h3><p>प्रसाद और भोजन के माध्यम से प्रेम का विस्तार। भक्तों और ज़रूरतमंदों तक प्रसाद पहुँचाने का यह क्रम, सेवा और स्नेह दोनों का प्रतीक है।</p><a href="#donate">सेवा समर्पित करें <b>↗</b></a></article>
-          <article class="seva-card cow"><span>03</span><h3>गौ सेवा</h3><p>संरक्षण, पोषण और वात्सल्य के लिए योगदान। गौमाता की सेवा भारतीय सनातन परंपरा की जड़ों से जुड़ी है — इसमें भाग लेना उसी परंपरा को आगे बढ़ाना है।</p><a href="#donate">सेवा समर्पित करें <b>↗</b></a></article>
-          <article class="seva-card annadan"><span>04</span><h3>अन्नदान सेवा</h3><p>सामूहिक भंडारे और विशेष अवसरों पर सामुदायिक भोजन व्यवस्था में सहयोग — जहाँ हर थाली एक आशीर्वाद बनकर पहुँचती है।</p><a href="#donate">सेवा समर्पित करें <b>↗</b></a></article>
-          <article class="seva-card vastra"><span>05</span><h3>वस्त्र सेवा</h3><p>श्री विग्रह के नित्य एवं उत्सव वस्त्रों के निर्माण व रखरखाव में योगदान — हर धागे में भक्ति बुनी जाती है।</p><a href="#donate">सेवा समर्पित करें <b>↗</b></a></article>
-          <article class="seva-card seva-nirman"><span>06</span><h3>निर्माण सेवा</h3><p>मंदिर परिसर के विस्तार, रखरखाव और नवीनीकरण कार्यों में सहभागिता — आने वाली पीढ़ियों के लिए एक स्थायी नींव।</p><a href="#donate">सेवा समर्पित करें <b>↗</b></a></article>
+    <!-- 07 · ANUBHAV — vertical scroll drives the scene track sideways -->
+    <section class="experience" id="experience" aria-label="वृन्दावन की अनुभूति">
+      <div class="experience-sticky">
+        <div class="experience-head reveal">
+          <p class="eyebrow">ANUBHAV</p>
+          <h2 class="section-title">वृन्दावन की <em>अनुभूति</em></h2>
+          <p>स्क्रॉल कीजिए और उस भाव में उतरिए,<br />जिसे शब्दों में बाँधना कठिन है।</p>
         </div>
-      </section>
+        <div class="scene-track" id="scene-track">
+          <article class="scene yamuna"><div class="scene-num">01</div><div><span class="scene-name">यमुना</span><small>जल की शांत लय</small></div></article>
+          <article class="scene kadamb"><div class="scene-num">02</div><div><span class="scene-name">कदम्ब वृक्ष</span><small>छाँव में ठहराव</small></div></article>
+          <article class="scene mandir-card"><div class="scene-num">03</div><div><span class="scene-name">मंदिर</span><small>जहाँ मन झुकता है</small></div></article>
+          <article class="scene diya"><div class="scene-num">04</div><div><span class="scene-name">दीप</span><small>अंतर की ज्योति</small></div></article>
+          <article class="scene goshala"><div class="scene-num">05</div><div><span class="scene-name">गौशाला</span><small>सेवा और स्नेह</small></div></article>
+          <article class="scene tulsi"><div class="scene-num">06</div><div><span class="scene-name">तुलसी</span><small>पवित्रता की सुगंध</small></div></article>
+        </div>
+      </div>
+    </section>
 
-      <section class="donation" id="donate">
-        <div class="donation-art reveal-fade"><div class="lotus">✦</div><p>श्रद्धा का<br />एक दीप</p></div>
-        <form class="donation-form reveal" method="get" action="#donate">
-          <p class="kicker">06 — अपनी श्रद्धा समर्पित करें</p>
-          <h2>हर अर्पण में<br /><em>एक प्रार्थना</em> है।</h2>
+    <!-- 08 · SEVA -->
+    <section class="content alt" id="seva">
+      <div class="content-inner reveal">
+        <p class="eyebrow">SEVA</p>
+        <h2 class="section-title">सेवा</h2>
+        <div class="ornament" aria-hidden="true"><i></i><b>&#9670;</b><i></i></div>
+        <p class="section-lead">सेवा ही सबसे सुंदर समर्पण है। अपनी भावना को एक सुंदर कर्म का रूप दीजिए। हर सेवा, चाहे छोटी हो या बड़ी, मंदिर की नित्य व्यवस्था और भक्तों के सुख का आधार बनती है।</p>
+        <div class="seva-grid">
+          <article class="seva-card"><span class="seva-num">01</span><h3>पुष्प सेवा</h3><p>श्री विग्रह के श्रृंगार हेतु स्नेहपूर्ण अर्पण। प्रतिदिन ताज़े पुष्पों से सजता है श्रृंगार, और आपका योगदान इस सौंदर्य को निरंतर बनाए रखता है।</p><a href="#donate">सेवा समर्पित करें &#8599;</a></article>
+          <article class="seva-card"><span class="seva-num">02</span><h3>अन्न सेवा</h3><p>प्रसाद और भोजन के माध्यम से प्रेम का विस्तार। भक्तों और ज़रूरतमंदों तक प्रसाद पहुँचाने का यह क्रम, सेवा और स्नेह दोनों का प्रतीक है।</p><a href="#donate">सेवा समर्पित करें &#8599;</a></article>
+          <article class="seva-card"><span class="seva-num">03</span><h3>गौ सेवा</h3><p>संरक्षण, पोषण और वात्सल्य के लिए योगदान। गौमाता की सेवा भारतीय सनातन परंपरा की जड़ों से जुड़ी है — इसमें भाग लेना उसी परंपरा को आगे बढ़ाना है।</p><a href="#donate">सेवा समर्पित करें &#8599;</a></article>
+          <article class="seva-card"><span class="seva-num">04</span><h3>अन्नदान सेवा</h3><p>सामूहिक भंडारे और विशेष अवसरों पर सामुदायिक भोजन व्यवस्था में सहयोग — जहाँ हर थाली एक आशीर्वाद बनकर पहुँचती है।</p><a href="#donate">सेवा समर्पित करें &#8599;</a></article>
+          <article class="seva-card"><span class="seva-num">05</span><h3>वस्त्र सेवा</h3><p>श्री विग्रह के नित्य एवं उत्सव वस्त्रों के निर्माण व रखरखाव में योगदान — हर धागे में भक्ति बुनी जाती है।</p><a href="#donate">सेवा समर्पित करें &#8599;</a></article>
+          <article class="seva-card"><span class="seva-num">06</span><h3>निर्माण सेवा</h3><p>मंदिर परिसर के विस्तार, रखरखाव और नवीनीकरण कार्यों में सहभागिता — आने वाली पीढ़ियों के लिए एक स्थायी नींव।</p><a href="#donate">सेवा समर्पित करें &#8599;</a></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 · DONATION -->
+    <section class="content" id="donate">
+      <div class="content-inner reveal">
+        <p class="eyebrow">OFFERING</p>
+        <h2 class="section-title">हर अर्पण में<br /><em>एक प्रार्थना</em> है</h2>
+        <div class="ornament" aria-hidden="true"><i></i><b>&#9670;</b><i></i></div>
+        <form class="donate-form" method="get" action="#donate">
           <fieldset class="amounts">
             <legend class="sr-only">दान राशि चुनें</legend>
             <input type="radio" name="amt" id="amt-501" value="501" /><label for="amt-501">₹501</label>
@@ -112,30 +227,100 @@
             <input type="radio" name="amt" id="amt-other" value="" /><label for="amt-other">अन्य राशि</label>
           </fieldset>
           <p class="custom-amt"><label for="amt-custom">राशि (₹)</label><input id="amt-custom" name="custom" type="number" min="1" inputmode="numeric" placeholder="अपनी राशि लिखें" /></p>
-          <p class="fineprint">योगदान मंदिर व्यवस्था, अन्नदान, गौसेवा और भक्त सेवा में सहायक होगा। <br />[योगदान का वास्तविक उपयोग यहाँ जोड़ा जाए]</p>
+          <p class="fineprint">योगदान मंदिर व्यवस्था, अन्नदान, गौसेवा और भक्त सेवा में सहायक होगा।<br /><span class="placeholder">[योगदान का वास्तविक उपयोग यहाँ जोड़ा जाए]</span></p>
           <details class="pay-reveal">
-            <summary class="solid-btn">समर्पित करें <span>→</span></summary>
+            <summary>समर्पित करें &#8594;</summary>
             <div class="pay-panel">
-              <p><b>UPI</b> [UPI ID]</p>
-              <p><b>QR कोड</b> [QR IMAGE]</p>
-              <p><b>बैंक विवरण</b> [ACCOUNT NAME · ACCOUNT NO · IFSC]</p>
-              <p><b>80G</b> [80G पंजीकरण विवरण]</p>
+              <p><b>UPI</b> <span class="placeholder">[UPI ID]</span></p>
+              <p><b>QR कोड</b> <span class="placeholder">[QR IMAGE]</span></p>
+              <p><b>बैंक विवरण</b> <span class="placeholder">[ACCOUNT NAME · ACCOUNT NO · IFSC]</span></p>
+              <p><b>80G</b> <span class="placeholder">[80G पंजीकरण विवरण]</span></p>
               <p class="placeholder">ऑनलाइन भुगतान गेटवे शीघ्र उपलब्ध होगा — तब तक उपरोक्त माध्यमों से सेवा समर्पित करें।</p>
             </div>
           </details>
         </form>
-      </section>
+      </div>
+    </section>
 
-      <section class="story section-pad" id="about"><p class="kicker">07 — हमारी यात्रा</p><div class="story-layout reveal"><h2>स्मृतियों में<br />बसता हुआ<br /><em>मंदिर</em></h2><div class="story-copy"><p>हर मंदिर की एक कहानी होती है। छोटोवृन्दावन की कहानी, उसके लोगों, उसकी सेवा और उसके स्वप्नों से लिखी जानी है।</p><p>यह यात्रा कुछ श्रद्धालुओं के एक संकल्प से आरंभ हुई — वृन्दावन की भावना को उन लोगों तक पहुँचाने का संकल्प, जो दूर होकर भी उस पावन भूमि से जुड़े रहना चाहते हैं। धीरे-धीरे यह विचार एक समुदाय बना, समुदाय एक सेवा बना, और सेवा ने इस मंदिर को जन्म दिया।</p><p>आज छोटोवृन्दावन केवल पूजा-स्थल नहीं, बल्कि एक ऐसा स्थान है जहाँ परिवार इकट्ठा होते हैं, बच्चे संस्कार सीखते हैं और वृद्धजन अपने विश्वास में शांति पाते हैं। हर उत्सव, हर सेवा और हर दर्शन इस यात्रा को आगे बढ़ाता है।</p><p class="placeholder">[TEMPLE HISTORY / FOUNDER STORY]</p><a class="text-link" href="#contact">हमारी यात्रा जानिए <span>→</span></a></div></div><div class="timeline reveal"><span>स्थापना</span><i></i><span>सेवा</span><i></i><span>आज</span><i></i><span>आने वाला कल</span></div></section>
+    <!-- 10 · OUR STORY -->
+    <section class="content alt" id="about">
+      <div class="content-inner reveal">
+        <p class="eyebrow">OUR JOURNEY</p>
+        <h2 class="section-title">स्मृतियों में बसता हुआ <em>मंदिर</em></h2>
+        <div class="ornament" aria-hidden="true"><i></i><b>&#9670;</b><i></i></div>
+        <div class="about-copy">
+          <p>हर मंदिर की एक कहानी होती है। छोटो वृन्दावन की कहानी, उसके लोगों, उसकी सेवा और उसके स्वप्नों से लिखी जानी है।</p>
+          <p>यह यात्रा कुछ श्रद्धालुओं के एक संकल्प से आरंभ हुई — वृन्दावन की भावना को उन लोगों तक पहुँचाने का संकल्प, जो दूर होकर भी उस पावन भूमि से जुड़े रहना चाहते हैं। धीरे-धीरे यह विचार एक समुदाय बना, समुदाय एक सेवा बना, और सेवा ने इस मंदिर को जन्म दिया।</p>
+          <p>आज छोटो वृन्दावन केवल पूजा-स्थल नहीं, बल्कि एक ऐसा स्थान है जहाँ परिवार इकट्ठा होते हैं, बच्चे संस्कार सीखते हैं और वृद्धजन अपने विश्वास में शांति पाते हैं। हर उत्सव, हर सेवा और हर दर्शन इस यात्रा को आगे बढ़ाता है।</p>
+          <p class="placeholder">[TEMPLE HISTORY / FOUNDER STORY]</p>
+        </div>
+        <div class="timeline" aria-hidden="true"><span>स्थापना</span><i></i><span>सेवा</span><i></i><span>आज</span><i></i><span>आने वाला कल</span></div>
+      </div>
+    </section>
 
-      <section class="festival" id="utsav"><div class="festival-content reveal"><p class="kicker">08 — उत्सव</p><h2>रंग, राग<br />और <em>रस</em></h2><p>हर उत्सव, मिलकर याद रखने का एक सुंदर कारण है। साल भर मंदिर में उमंग और भक्ति के रंग बिखरे रहते हैं।</p><ul class="festival-list"><li><b>जन्माष्टमी</b> — श्री कृष्ण जन्मोत्सव की रात्रि जागरण एवं झांकियाँ</li><li><b>होली</b> — फूलों और रंगों से सजी वृन्दावन की पारंपरिक होली</li><li><b>राधाष्टमी</b> — श्री राधारानी के प्राकट्य का विशेष श्रृंगार व उत्सव</li><li><b>दीपावली</b> — हज़ारों दीपों से जगमगाता मंदिर परिसर</li></ul><a href="#contact" class="outline-btn">उत्सव देखें <span>→</span></a></div><div class="moon"></div><div class="festival-temple"></div></section>
+    <!-- 11 · UTSAV -->
+    <section class="content" id="utsav">
+      <div class="content-inner reveal">
+        <p class="eyebrow">FESTIVALS</p>
+        <h2 class="section-title">रंग, राग और <em>रस</em></h2>
+        <div class="ornament" aria-hidden="true"><i></i><b>&#9670;</b><i></i></div>
+        <p class="section-lead">हर उत्सव, मिलकर याद रखने का एक सुंदर कारण है। साल भर मंदिर में उमंग और भक्ति के रंग बिखरे रहते हैं।</p>
+        <ul class="festival-list">
+          <li><b>जन्माष्टमी</b> — श्री कृष्ण जन्मोत्सव की रात्रि जागरण एवं झांकियाँ</li>
+          <li><b>होली</b> — फूलों और रंगों से सजी वृन्दावन की पारंपरिक होली</li>
+          <li><b>राधाष्टमी</b> — श्री राधारानी के प्राकट्य का विशेष श्रृंगार व उत्सव</li>
+          <li><b>दीपावली</b> — हज़ारों दीपों से जगमगाता मंदिर परिसर</li>
+        </ul>
+      </div>
+    </section>
 
-      <section class="impact section-pad reveal"><p class="kicker">09 — साथ का प्रभाव</p><h2>भावना जब साथ चलती है,<br /><em>बदलाव बनती है।</em></h2><p class="impact-lead">हर सेवा, हर अर्पण और हर उपस्थिति मिलकर एक बड़े प्रभाव को जन्म देती है — ऐसा प्रभाव जो मंदिर की दीवारों से बाहर निकलकर समाज तक पहुँचता है।</p><div class="impact-grid stagger"><div><b>[00,000+]</b><span>भक्त जुड़े</span></div><div><b>[00,000+]</b><span>भोजन सेवा</span></div><div><b>[0,000+]</b><span>सेवा योगदान</span></div><div><b>[000+]</b><span>वार्षिक उत्सव आयोजन</span></div></div><p class="placeholder">[वास्तविक प्रभाव आँकड़े उपलब्ध होने पर प्रतिस्थापित करें]</p></section>
+    <!-- 12 · IMPACT -->
+    <section class="content alt" id="impact">
+      <div class="content-inner reveal">
+        <p class="eyebrow">IMPACT</p>
+        <h2 class="section-title">भावना जब साथ चलती है,<br /><em>बदलाव बनती है</em></h2>
+        <div class="ornament" aria-hidden="true"><i></i><b>&#9670;</b><i></i></div>
+        <p class="section-lead">हर सेवा, हर अर्पण और हर उपस्थिति मिलकर एक बड़े प्रभाव को जन्म देती है — ऐसा प्रभाव जो मंदिर की दीवारों से बाहर निकलकर समाज तक पहुँचता है।</p>
+        <div class="impact-grid">
+          <div><b class="placeholder">[00,000+]</b><span>भक्त जुड़े</span></div>
+          <div><b class="placeholder">[00,000+]</b><span>भोजन सेवा</span></div>
+          <div><b class="placeholder">[0,000+]</b><span>सेवा योगदान</span></div>
+          <div><b class="placeholder">[000+]</b><span>वार्षिक उत्सव आयोजन</span></div>
+        </div>
+        <p class="section-lead placeholder">[वास्तविक प्रभाव आँकड़े उपलब्ध होने पर प्रतिस्थापित करें]</p>
+      </div>
+    </section>
 
-      <section class="visit" id="contact"><div class="visit-map reveal-fade"><span>छोटो वृन्दावन</span><i></i><div class="map-lines"></div></div><div class="visit-copy reveal"><p class="kicker">10 — पधारिए</p><h2>आपका<br /><em>स्वागत है।</em></h2><p>छोटोवृन्दावन के द्वार सभी भक्तों के लिए सदैव खुले हैं — चाहे आप दर्शन हेतु आएं, सेवा में सम्मिलित हों, या केवल कुछ पल शांति के साथ बिताना चाहें।</p><p>[TEMPLE ADDRESS]<br />[CITY, STATE, INDIA]</p><p>[DARSHAN TIMINGS] · [CONTACT NUMBER]</p><p class="placeholder">[EMAIL / WHATSAPP / SOCIAL LINKS]</p></div></section>
-    </main>
+    <!-- 13 · VISIT / CONTACT -->
+    <section class="content" id="contact">
+      <div class="content-inner reveal">
+        <p class="eyebrow">VISIT US</p>
+        <h2 class="section-title">आपका <em>स्वागत है</em></h2>
+        <div class="ornament" aria-hidden="true"><i></i><b>&#9670;</b><i></i></div>
+        <div class="contact-copy">
+          <p>छोटो वृन्दावन के द्वार सभी भक्तों के लिए सदैव खुले हैं — चाहे आप दर्शन हेतु आएं, सेवा में सम्मिलित हों, या केवल कुछ पल शांति के साथ बिताना चाहें।</p>
+          <p class="placeholder">[TEMPLE ADDRESS]<br />[CITY, STATE, INDIA]</p>
+          <p class="placeholder">[DARSHAN TIMINGS] · [CONTACT NUMBER]</p>
+          <p class="placeholder">[EMAIL / WHATSAPP / SOCIAL LINKS]</p>
+        </div>
+      </div>
+    </section>
 
-    <footer><div><a class="brand" href="#top"><img class="brand-mark" src="logo.png" alt="" /><span>मेरो छोटो वृन्दावन धाम</span></a><p class="radhe">राधे राधे</p></div><div class="footer-links"><a href="#mandir">मंदिर</a><a href="#darshan">दर्शन</a><a href="#seva">सेवा</a><a href="#utsav">उत्सव</a><a href="#contact">संपर्क</a></div><div class="footer-note"><p>“आप फिर आइएगा।”</p><small>© मेरो छोटो वृन्दावन धाम · <span id="yr">2026</span></small></div></footer>
-    <script src="script.js"></script>
-  </body>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-brand">MERO CHOTO VRINDAVAN</p>
+    <p class="footer-radhe">राधे राधे</p>
+    <nav class="footer-links" aria-label="फुटर">
+      <a href="#darshan-info">दर्शन</a>
+      <a href="#yatra">यात्रा</a>
+      <a href="#seva">सेवा</a>
+      <a href="#utsav">उत्सव</a>
+      <a href="#contact">संपर्क</a>
+    </nav>
+    <p class="footer-note">&ldquo;आप फिर आइएगा।&rdquo; · © मेरो छोटो वृन्दावन धाम <span id="yr">2026</span></p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
 </html>
