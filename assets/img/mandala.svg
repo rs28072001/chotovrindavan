@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="#7E4555" stroke-width="0.8">
+  <circle cx="100" cy="100" r="26"/>
+  <circle cx="100" cy="100" r="44"/>
+  <circle cx="100" cy="100" r="64"/>
+  <circle cx="100" cy="100" r="82"/>
+  <circle cx="100" cy="100" r="98"/>
+  <g id="p">
+    <path d="M100 4 C118 34 118 54 100 72 C82 54 82 34 100 4 Z"/>
+    <path d="M100 50 C111 64 111 78 100 94 C89 78 89 64 100 50 Z"/>
+    <path d="M100 74 C108 84 108 92 100 100 C92 92 92 84 100 74 Z"/>
+  </g>
+  <use href="#p" transform="rotate(22.5 100 100)"/>
+  <use href="#p" transform="rotate(45 100 100)"/>
+  <use href="#p" transform="rotate(67.5 100 100)"/>
+  <use href="#p" transform="rotate(90 100 100)"/>
+  <use href="#p" transform="rotate(112.5 100 100)"/>
+  <use href="#p" transform="rotate(135 100 100)"/>
+  <use href="#p" transform="rotate(157.5 100 100)"/>
+  <use href="#p" transform="rotate(180 100 100)"/>
+  <use href="#p" transform="rotate(202.5 100 100)"/>
+  <use href="#p" transform="rotate(225 100 100)"/>
+  <use href="#p" transform="rotate(247.5 100 100)"/>
+  <use href="#p" transform="rotate(270 100 100)"/>
+  <use href="#p" transform="rotate(292.5 100 100)"/>
+  <use href="#p" transform="rotate(315 100 100)"/>
+  <use href="#p" transform="rotate(337.5 100 100)"/>
+</svg>

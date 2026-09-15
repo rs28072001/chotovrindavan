@@ -1,0 +1,211 @@
+.irs { position: relative; display: block; user-select: none; font-size: 12px; font-family: Arial, sans-serif; }
+
+.irs-line { position: relative; display: block; overflow: hidden; outline: none !important; }
+
+.irs-bar { position: absolute; display: block; left: 0px; width: 0px; }
+
+.irs-shadow { position: absolute; display: none; left: 0px; width: 0px; }
+
+.irs-handle { position: absolute; display: block; box-sizing: border-box; cursor: default; z-index: 1; }
+
+.irs-handle.type_last { z-index: 2; }
+
+.irs-min, .irs-max { position: absolute; display: block; cursor: default; }
+
+.irs-min { left: 0px; }
+
+.irs-max { right: 0px; }
+
+.irs-from, .irs-to, .irs-single { position: absolute; display: block; top: 0px; left: 0px; cursor: default; white-space: nowrap; }
+
+.irs-grid { position: absolute; display: none; bottom: 0px; left: 0px; width: 100%; height: 20px; }
+
+.irs-with-grid .irs-grid { display: block; }
+
+.irs-grid-pol { position: absolute; top: 0px; left: 0px; width: 1px; height: 8px; background: rgb(0, 0, 0); }
+
+.irs-grid-pol.small { height: 4px; }
+
+.irs-grid-text { position: absolute; bottom: 0px; left: 0px; white-space: nowrap; text-align: center; font-size: 9px; line-height: 9px; padding: 0px 3px; color: rgb(0, 0, 0); }
+
+.irs-disable-mask { position: absolute; display: block; top: 0px; left: -1%; width: 102%; height: 100%; cursor: default; background: rgba(0, 0, 0, 0); z-index: 2; }
+
+.lt-ie9 .irs-disable-mask { background: rgb(0, 0, 0); cursor: not-allowed; }
+
+.irs-disabled { opacity: 0.4; }
+
+.irs-hidden-input { overflow: hidden; position: absolute !important; display: block !important; top: 0px !important; left: 0px !important; width: 0px !important; height: 0px !important; font-size: 0px !important; line-height: 0 !important; padding: 0px !important; margin: 0px !important; outline: none !important; z-index: -9999 !important; background: none !important; border-style: solid !important; border-color: transparent !important; }
+
+.irs--flat { height: 40px; }
+
+.irs--flat.irs-with-grid { height: 60px; }
+
+.irs--flat .irs-line { top: 25px; height: 12px; background-color: rgb(225, 228, 233); border-radius: 4px; }
+
+.irs--flat .irs-bar { top: 25px; height: 12px; background-color: rgb(237, 85, 101); }
+
+.irs--flat .irs-bar--single { border-radius: 4px 0px 0px 4px; }
+
+.irs--flat .irs-shadow { height: 1px; bottom: 16px; background-color: rgb(225, 228, 233); }
+
+.irs--flat .irs-handle { top: 22px; width: 16px; height: 18px; background-color: transparent; }
+
+.irs--flat .irs-handle > i:first-child { position: absolute; display: block; top: 0px; left: 50%; width: 2px; height: 100%; margin-left: -1px; background-color: rgb(218, 68, 83); }
+
+.irs--flat .irs-handle.state_hover > i:first-child, .irs--flat .irs-handle:hover > i:first-child { background-color: rgb(164, 53, 64); }
+
+.irs--flat .irs-min, .irs--flat .irs-max { top: 0px; padding: 1px 3px; color: rgb(153, 153, 153); font-size: 10px; line-height: 1.333; text-shadow: none; background-color: rgb(225, 228, 233); border-radius: 4px; }
+
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single { color: white; font-size: 10px; line-height: 1.333; text-shadow: none; padding: 1px 5px; background-color: rgb(237, 85, 101); border-radius: 4px; }
+
+.irs--flat .irs-from::before, .irs--flat .irs-to::before, .irs--flat .irs-single::before { position: absolute; display: block; content: ""; bottom: -6px; left: 50%; width: 0px; height: 0px; margin-left: -3px; overflow: hidden; border-width: 3px; border-style: solid; border-color: rgb(237, 85, 101) transparent transparent; border-image: none; }
+
+.irs--flat .irs-grid-pol { background-color: rgb(225, 228, 233); }
+
+.irs--flat .irs-grid-text { color: rgb(153, 153, 153); }
+
+.irs--big { height: 55px; }
+
+.irs--big.irs-with-grid { height: 70px; }
+
+.irs--big .irs-line { top: 33px; height: 12px; background: linear-gradient(rgb(221, 221, 221) -50%, white 150%); border: 1px solid rgb(204, 204, 204); border-radius: 12px; }
+
+.irs--big .irs-bar { top: 33px; height: 12px; border: 1px solid rgb(66, 139, 202); background: linear-gradient(rgb(255, 255, 255) 0%, rgb(66, 139, 202) 30%, rgb(185, 212, 236) 100%); box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 1px 1px inset; }
+
+.irs--big .irs-bar--single { border-radius: 12px 0px 0px 12px; }
+
+.irs--big .irs-shadow { height: 1px; bottom: 16px; background-color: rgba(66, 139, 202, 0.5); }
+
+.irs--big .irs-handle { top: 25px; width: 30px; height: 30px; border: 1px solid rgba(0, 0, 0, 0.3); background: linear-gradient(white 0%, rgb(180, 185, 190) 30%, white 100%); box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px, white 0px 0px 3px 1px inset; border-radius: 30px; }
+
+.irs--big .irs-handle.state_hover, .irs--big .irs-handle:hover { border-color: rgba(0, 0, 0, 0.45); background: linear-gradient(white 0%, rgb(145, 155, 165) 30%, white 100%); }
+
+.irs--big .irs-min, .irs--big .irs-max { top: 0px; padding: 1px 5px; color: white; text-shadow: none; background-color: rgb(159, 159, 159); border-radius: 3px; }
+
+.irs--big .irs-from, .irs--big .irs-to, .irs--big .irs-single { color: white; text-shadow: none; padding: 1px 5px; background: linear-gradient(rgb(66, 139, 202) 0%, rgb(48, 113, 169) 100%); border-radius: 3px; }
+
+.irs--big .irs-grid-pol { background-color: rgb(66, 139, 202); }
+
+.irs--big .irs-grid-text { color: rgb(66, 139, 202); }
+
+.irs--modern { height: 55px; }
+
+.irs--modern.irs-with-grid { height: 55px; }
+
+.irs--modern .irs-line { top: 25px; height: 5px; background: linear-gradient(rgb(224, 228, 234) 0%, rgb(209, 214, 224) 100%); border-width: 1px 1px 0px; border-style: solid; border-color: rgb(163, 173, 193); border-image: none; border-radius: 5px; }
+
+.irs--modern .irs-bar { top: 25px; height: 5px; background: linear-gradient(rgb(32, 180, 38) 0%, rgb(24, 137, 29) 100%); }
+
+.irs--modern .irs-bar--single { border-radius: 5px 0px 0px 5px; }
+
+.irs--modern .irs-shadow { height: 1px; bottom: 21px; background-color: rgba(209, 214, 224, 0.5); }
+
+.irs--modern .irs-handle { top: 37px; width: 12px; height: 13px; border-width: 0px 1px 1px; border-style: solid; border-color: rgb(163, 173, 193); border-image: none; box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px; border-radius: 0px 0px 3px 3px; }
+
+.irs--modern .irs-handle > i:nth-child(1) { position: absolute; display: block; top: -4px; left: 1px; width: 6px; height: 6px; border: 1px solid rgb(163, 173, 193); background: white; transform: rotate(45deg); }
+
+.irs--modern .irs-handle > i:nth-child(2) { position: absolute; display: block; box-sizing: border-box; top: 0px; left: 0px; width: 10px; height: 12px; background: linear-gradient(white 0%, rgb(233, 230, 230) 100%); border-radius: 0px 0px 3px 3px; }
+
+.irs--modern .irs-handle > i:nth-child(3) { position: absolute; display: block; box-sizing: border-box; top: 3px; left: 3px; width: 4px; height: 5px; border-left: 1px solid rgb(163, 173, 193); border-right: 1px solid rgb(163, 173, 193); }
+
+.irs--modern .irs-handle.state_hover, .irs--modern .irs-handle:hover { border-color: rgb(118, 133, 162); background: linear-gradient(rgb(255, 255, 255) 0%, rgb(145, 155, 165) 30%, rgb(255, 255, 255) 100%); }
+
+.irs--modern .irs-handle.state_hover > i:nth-child(1), .irs--modern .irs-handle:hover > i:nth-child(1) { border-color: rgb(118, 133, 162); }
+
+.irs--modern .irs-handle.state_hover > i:nth-child(3), .irs--modern .irs-handle:hover > i:nth-child(3) { border-color: rgb(72, 83, 106); }
+
+.irs--modern .irs-min, .irs--modern .irs-max { top: 0px; font-size: 10px; line-height: 1.333; text-shadow: none; padding: 1px 5px; color: white; background-color: rgb(209, 214, 224); border-radius: 5px; }
+
+.irs--modern .irs-from, .irs--modern .irs-to, .irs--modern .irs-single { font-size: 10px; line-height: 1.333; text-shadow: none; padding: 1px 5px; background-color: rgb(32, 180, 38); color: white; border-radius: 5px; }
+
+.irs--modern .irs-from::before, .irs--modern .irs-to::before, .irs--modern .irs-single::before { position: absolute; display: block; content: ""; bottom: -6px; left: 50%; width: 0px; height: 0px; margin-left: -3px; overflow: hidden; border-width: 3px; border-style: solid; border-color: rgb(32, 180, 38) transparent transparent; border-image: none; }
+
+.irs--modern .irs-grid { height: 25px; }
+
+.irs--modern .irs-grid-pol { background-color: rgb(222, 222, 222); }
+
+.irs--modern .irs-grid-text { color: silver; font-size: 13px; }
+
+.irs--sharp { height: 50px; font-size: 12px; line-height: 1; }
+
+.irs--sharp.irs-with-grid { height: 57px; }
+
+.irs--sharp .irs-line { top: 30px; height: 2px; background-color: black; border-radius: 2px; }
+
+.irs--sharp .irs-bar { top: 30px; height: 2px; background-color: rgb(238, 34, 250); }
+
+.irs--sharp .irs-bar--single { border-radius: 2px 0px 0px 2px; }
+
+.irs--sharp .irs-shadow { height: 1px; bottom: 21px; background-color: rgba(0, 0, 0, 0.5); }
+
+.irs--sharp .irs-handle { top: 25px; width: 10px; height: 10px; background-color: rgb(168, 4, 178); }
+
+.irs--sharp .irs-handle > i:first-child { position: absolute; display: block; top: 100%; left: 0px; width: 0px; height: 0px; border-width: 5px; border-style: solid; border-color: rgb(168, 4, 178) transparent transparent; border-image: none; }
+
+.irs--sharp .irs-handle.state_hover, .irs--sharp .irs-handle:hover { background-color: black; }
+
+.irs--sharp .irs-handle.state_hover > i:first-child, .irs--sharp .irs-handle:hover > i:first-child { border-top-color: black; }
+
+.irs--sharp .irs-min, .irs--sharp .irs-max { color: white; font-size: 14px; line-height: 1; top: 0px; padding: 3px 4px; opacity: 0.4; background-color: rgb(168, 4, 178); border-radius: 2px; }
+
+.irs--sharp .irs-from, .irs--sharp .irs-to, .irs--sharp .irs-single { font-size: 14px; line-height: 1; text-shadow: none; padding: 3px 4px; background-color: rgb(168, 4, 178); color: white; border-radius: 2px; }
+
+.irs--sharp .irs-from::before, .irs--sharp .irs-to::before, .irs--sharp .irs-single::before { position: absolute; display: block; content: ""; bottom: -6px; left: 50%; width: 0px; height: 0px; margin-left: -3px; overflow: hidden; border-width: 3px; border-style: solid; border-color: rgb(168, 4, 178) transparent transparent; border-image: none; }
+
+.irs--sharp .irs-grid { height: 25px; }
+
+.irs--sharp .irs-grid-pol { background-color: rgb(222, 222, 222); }
+
+.irs--sharp .irs-grid-text { color: silver; font-size: 13px; }
+
+.irs--round { height: 50px; }
+
+.irs--round.irs-with-grid { height: 65px; }
+
+.irs--round .irs-line { top: 36px; height: 4px; background-color: rgb(222, 228, 236); border-radius: 4px; }
+
+.irs--round .irs-bar { top: 36px; height: 4px; background-color: rgb(0, 108, 250); }
+
+.irs--round .irs-bar--single { border-radius: 4px 0px 0px 4px; }
+
+.irs--round .irs-shadow { height: 4px; bottom: 21px; background-color: rgba(222, 228, 236, 0.5); }
+
+.irs--round .irs-handle { top: 26px; width: 24px; height: 24px; border: 4px solid rgb(0, 108, 250); background-color: white; border-radius: 24px; box-shadow: rgba(0, 0, 255, 0.3) 0px 1px 3px; }
+
+.irs--round .irs-handle.state_hover, .irs--round .irs-handle:hover { background-color: rgb(240, 246, 255); }
+
+.irs--round .irs-min, .irs--round .irs-max { color: rgb(51, 51, 51); font-size: 14px; line-height: 1; top: 0px; padding: 3px 5px; background-color: rgba(0, 0, 0, 0.1); border-radius: 4px; }
+
+.irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single { font-size: 14px; line-height: 1; text-shadow: none; padding: 3px 5px; background-color: rgb(0, 108, 250); color: white; border-radius: 4px; }
+
+.irs--round .irs-from::before, .irs--round .irs-to::before, .irs--round .irs-single::before { position: absolute; display: block; content: ""; bottom: -6px; left: 50%; width: 0px; height: 0px; margin-left: -3px; overflow: hidden; border-width: 3px; border-style: solid; border-color: rgb(0, 108, 250) transparent transparent; border-image: none; }
+
+.irs--round .irs-grid { height: 25px; }
+
+.irs--round .irs-grid-pol { background-color: rgb(222, 222, 222); }
+
+.irs--round .irs-grid-text { color: silver; font-size: 13px; }
+
+.irs--square { height: 50px; }
+
+.irs--square.irs-with-grid { height: 60px; }
+
+.irs--square .irs-line { top: 31px; height: 4px; background-color: rgb(222, 222, 222); }
+
+.irs--square .irs-bar { top: 31px; height: 4px; background-color: black; }
+
+.irs--square .irs-shadow { height: 2px; bottom: 21px; background-color: rgb(222, 222, 222); }
+
+.irs--square .irs-handle { top: 25px; width: 16px; height: 16px; border: 3px solid black; background-color: white; transform: rotate(45deg); }
+
+.irs--square .irs-handle.state_hover, .irs--square .irs-handle:hover { background-color: rgb(240, 246, 255); }
+
+.irs--square .irs-min, .irs--square .irs-max { color: rgb(51, 51, 51); font-size: 14px; line-height: 1; top: 0px; padding: 3px 5px; background-color: rgba(0, 0, 0, 0.1); }
+
+.irs--square .irs-from, .irs--square .irs-to, .irs--square .irs-single { font-size: 14px; line-height: 1; text-shadow: none; padding: 3px 5px; background-color: black; color: white; }
+
+.irs--square .irs-grid { height: 25px; }
+
+.irs--square .irs-grid-pol { background-color: rgb(222, 222, 222); }
+
+.irs--square .irs-grid-text { color: silver; font-size: 11px; }

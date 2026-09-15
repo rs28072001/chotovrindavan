@@ -1,0 +1,2717 @@
+/* ==========================================================================
+   Choto Vrindavan Dham — design system & project overrides
+   Loaded last. Put tweaks here, not in style.css.
+
+   Layers, in order:
+     1. Design system   tokens, typography, buttons, section rhythm, cards
+     2. Header          sticky cream nav (shared by every page)
+     3. Mobile nav      off-canvas drawer
+     4. Landing page    hero, quick actions, stats, donation, live, events,
+                        pujas, community, testimonials, news, final CTA
+     5. Footer
+     6. Utilities
+     7. Responsive
+   Brand colours live in theme-colors/color1.css.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  /* Type */
+  --cvd-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --cvd-sans: Poppins, -apple-system, "Segoe UI", sans-serif;
+
+  /* Spacing — one scale, used by every section on the landing page */
+  --cvd-sec-y: clamp(64px, 7.5vw, 118px);
+  --cvd-gap: clamp(20px, 2.2vw, 30px);
+
+  /* Surfaces */
+  --cvd-radius: 14px;
+  --cvd-radius-sm: 10px;
+  --cvd-shadow: 0 18px 44px -24px rgba(59, 27, 37, 0.35);
+  --cvd-shadow-lift: 0 28px 60px -26px rgba(59, 27, 37, 0.45);
+}
+
+/* --- Typography ---------------------------------------------------------- */
+body { color: var(--cvd-body); }
+
+h1, h2, h3, h4, h5, h6 { color: var(--cvd-ink); }
+
+/* Display face for the page-level headings only. Body copy, cards, nav and
+   metadata stay on Poppins so small text keeps its legibility. */
+h1,
+h2,
+.cvd-display,
+.section-title .title,
+.sigma_banner .title {
+  font-family: var(--cvd-display);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+h1 { font-size: clamp(38px, 5vw, 60px); line-height: 1.08; }
+h2 { font-size: clamp(32px, 3.6vw, 46px); line-height: 1.12; }
+
+.section-title .title {
+  font-size: clamp(30px, 3.4vw, 46px);
+  line-height: 1.14;
+}
+
+h3, h4, h5, h6 { letter-spacing: -0.01em; }
+
+p { color: var(--cvd-body); }
+
+.cvd-lead {
+  font-size: clamp(15px, 1.15vw, 17px);
+  line-height: 1.85;
+  max-width: 56ch;
+}
+
+/* Eyebrow label — small caps rule above every section heading */
+.section-title .subtitle,
+.cvd-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--cvd-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cvd-maroon);
+  margin-bottom: 14px;
+}
+/* The theme draws decorative glyphs around .subtitle; replace with one rule. */
+.section-title .subtitle::before,
+.section-title .subtitle::after { content: none !important; }
+/* Inner pages still use .section-title .subtitle, which keeps the gold rule;
+   landing-page eyebrows lead with an om glyph instead. */
+.section-title .subtitle::before {
+  content: "" !important;
+  width: 26px;
+  height: 1px;
+  background-color: var(--cvd-gold);
+  flex: 0 0 26px;
+}
+.cvd-eyebrow i { color: var(--cvd-gold); font-size: 14px; }
+
+/* Centred section heads get a comfortable measure */
+.section-title.text-center { max-width: 640px; }
+.section-title.text-center .subtitle { justify-content: center; }
+
+/* Section head with an action on the right (View all …) */
+.cvd-sec-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: clamp(32px, 3.5vw, 54px);
+}
+.cvd-sec-head .section-title { margin-bottom: 0; }
+
+/* --- Section rhythm ------------------------------------------------------ */
+/* Sections carry ids for in-page anchors; keep them clear of the sticky nav. */
+section[id] { scroll-margin-top: 100px; }
+.cvd-sec { position: relative; padding: var(--cvd-sec-y) 0; }
+.cvd-sec-tight { padding-top: calc(var(--cvd-sec-y) * 0.62); }
+.cvd-cream { background-color: var(--cvd-cream); }
+
+/* --- Buttons ------------------------------------------------------------- */
+.sigma_btn-custom {
+  font-family: var(--cvd-sans);
+  letter-spacing: 0.06em;
+  font-size: 13px;
+  padding: 16px 32px;
+  box-shadow: 0 10px 24px -14px rgba(var(--mht-primary-rgb), 0.9);
+}
+/* The theme's hover fill was a bright orange (#d43308). Deepen it so hover
+   stays inside the maroon family. */
+.sigma_btn-custom::before,
+.sigma_btn-custom.primary::before { background-color: var(--cvd-maroon-deep); }
+.sigma_btn-custom.dark::before,
+.sigma_btn-custom.secondary::before { background-color: var(--cvd-maroon); }
+.sigma_btn-custom.white { color: var(--cvd-maroon); }
+.sigma_btn-custom.white::before { background-color: var(--cvd-cream-deep); }
+.sigma_btn-custom.white:hover,
+.sigma_btn-custom.white:focus { color: var(--cvd-maroon-deep); }
+.sigma_btn-custom.light {
+  border: 1px solid var(--cvd-line);
+  color: var(--cvd-ink);
+  box-shadow: none;
+}
+.sigma_btn-custom.light::before { background-color: var(--cvd-maroon); }
+
+.sigma_btn-custom i { transition: transform 0.3s; }
+.sigma_btn-custom:hover i { transform: translateX(4px); }
+
+/* Text link with arrow */
+.btn-link { color: var(--cvd-maroon); letter-spacing: 0.06em; font-size: 13px; }
+.btn-link:hover { color: var(--cvd-maroon-deep); }
+.btn-link.light, .btn-link.light i { color: var(--cvd-gold-soft) !important; }
+
+h1 a:hover, h2 a:hover, h3 a:hover,
+h4 a:hover, h5 a:hover, h6 a:hover { color: var(--cvd-maroon); }
+
+/* --- Cards --------------------------------------------------------------- */
+.cvd-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid var(--cvd-line);
+  border-radius: var(--cvd-radius);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.cvd-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--cvd-shadow-lift);
+  border-color: transparent;
+}
+.cvd-card-body {
+  padding: clamp(22px, 2vw, 30px);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.cvd-card-body > *:last-child { margin-bottom: 0; }
+.cvd-card h5 { font-size: 20px; margin-bottom: 10px; }
+.cvd-card h5 a { color: var(--cvd-ink); }
+.cvd-card p { font-size: 14px; margin-bottom: 18px; }
+.cvd-card .cvd-card-foot { margin-top: auto; padding-top: 4px; }
+
+/* --- Images -------------------------------------------------------------- */
+/* Fixed ratios so no card ever crops a deity's face differently from the next.
+   Default focal point is slightly above centre, where faces usually sit. */
+.cvd-media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background-color: var(--cvd-cream-deep);
+}
+.cvd-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.cvd-ratio-4x3   { aspect-ratio: 4 / 3; }
+.cvd-ratio-4x5   { aspect-ratio: 4 / 5; }
+.cvd-ratio-1x1   { aspect-ratio: 1 / 1; }
+.cvd-card:hover .cvd-media img { transform: scale(1.05); }
+
+/* Badges */
+.cvd-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background-color: var(--cvd-cream-deep);
+  color: var(--cvd-maroon);
+}
+.cvd-badge-live { background-color: var(--cvd-red); color: #fff; }
+.cvd-badge-live i { font-size: 7px; animation: cvd-pulse 1.8s ease-in-out infinite; }
+@keyframes cvd-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+/* Scroll reveal is WOW.js (.wow fadeInUp). animate.css ships no
+   reduced-motion guard, so the one in section 7 supplies it. */
+
+
+/* ==========================================================================
+   2. HEADER
+   Structure: <header class="sigma_header cvd-header can-sticky">
+                <div class="sigma_header-middle cvd-mainnav">
+                  <nav class="navbar cvd-navbar">
+                    <div class="cvd-logo">…</div>
+                    <ul class="navbar-nav cvd-nav">…</ul>
+                    <div class="sigma_header-controls cvd-controls">…</div>
+   Reuses the theme's sigma_header / can-sticky / navbar-nav / menu-item /
+   sub-menu / aside-toggler classes so the sticky JS, hover dropdowns and
+   off-canvas menu keep working unchanged.
+   ========================================================================== */
+
+.cvd-header { background-color: #fff; position: relative; z-index: 20; }
+
+/* --- Main navigation ------------------------------------------------------ */
+.cvd-header .cvd-mainnav {
+  background-color: #fff;
+  padding: 0;
+  position: relative;
+  border-bottom: 1px solid rgba(126, 69, 85, 0.1);
+}
+.cvd-header .sigma_header-middle .cvd-navbar {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: transparent;
+  box-shadow: none;
+}
+.cvd-logo { display: flex; align-items: center; flex-shrink: 0; }
+.cvd-logo .navbar-brand { padding: 0; width: auto; margin: 0; }
+.cvd-logo img { display: block; height: 68px; width: auto; }
+
+.cvd-header .sigma_header-middle .navbar > .cvd-nav {
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+.cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item > a {
+  color: var(--cvd-ink);
+  padding: 14px 15px;
+  font-family: var(--cvd-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  position: relative;
+}
+.cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item > a::before { content: none !important; }
+.cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item.menu-item-has-children > a::after {
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 8px;
+  margin-left: 7px;
+  color: inherit;
+  opacity: 0.45;
+  position: static;
+  transform: none;
+}
+.cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item:not(.menu-item-has-children) > a::after { content: none; }
+/* Active / hover underline */
+.cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item > a > span {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 8px;
+  height: 2px;
+  background-color: var(--cvd-maroon);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.28s ease;
+}
+.cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item:hover > a,
+.cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item > a:focus,
+.cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item.current-menu-item > a { color: var(--cvd-maroon); }
+.cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item:hover > a > span,
+.cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item > a:focus > span,
+.cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item.current-menu-item > a > span { transform: scaleX(1); }
+
+.cvd-header .cvd-nav .sub-menu { border-top: 2px solid var(--cvd-maroon); box-shadow: var(--cvd-shadow); }
+.cvd-nav .sub-menu .menu-item > a::after { position: static; transform: rotate(-90deg); }
+
+/* The base theme only opens .sub-menu on :hover, which skips keyboard users. */
+.cvd-nav .menu-item-has-children:focus-within > .sub-menu {
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.cvd-controls { display: flex; align-items: center; gap: 14px; padding: 0; }
+.cvd-controls .sigma_btn-custom { margin: 0; }
+.cvd-cta { padding: 14px 26px; white-space: nowrap; }
+
+/* Sticky state — main.js toggles .sticky on .sigma_header.can-sticky */
+.cvd-header.sticky .cvd-mainnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 990;
+  box-shadow: 0 10px 40px rgba(59, 27, 37, 0.13);
+  animation: fadeHeaderInDown 0.35s ease;
+}
+.cvd-header.sticky .sigma_header-middle .cvd-navbar { padding-top: 8px; padding-bottom: 8px; }
+.cvd-header.sticky .cvd-logo img { height: 54px; }
+
+
+/* ==========================================================================
+   3. MOBILE OFF-CANVAS NAV
+   ========================================================================== */
+.sigma_aside.sigma_aside-left { background-color: var(--cvd-cream); }
+.sigma_aside .navbar-brand { margin-bottom: 26px; }
+.sigma_aside .navbar-brand img { height: 66px; width: auto; }
+.sigma_aside > ul > li.menu-item > a {
+  font-family: var(--cvd-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cvd-ink);
+  /* 48px tap target */
+  padding: 14px 20px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+.sigma_aside .sub-menu .menu-item > a { padding: 11px 20px 11px 34px; min-height: 44px; }
+.sigma_aside ul li a:hover { color: var(--cvd-maroon); }
+.sigma_aside .navbar-brand { padding: 22px 20px 4px; }
+.cvd-aside-cta {
+  display: block;
+  margin: 26px 20px 0;
+  text-align: center;
+}
+.cvd-aside-contact {
+  margin: 26px 20px 40px;
+  padding-top: 22px;
+  border-top: 1px solid var(--cvd-line);
+  font-size: 13px;
+  line-height: 1.9;
+}
+.cvd-aside-contact i { color: var(--cvd-gold); width: 18px; }
+
+
+/* ==========================================================================
+   4. LANDING PAGE
+   ========================================================================== */
+
+/* --- 4.1 Hero ------------------------------------------------------------ */
+/* Light, sunrise-toned slider: photograph + cream veil on the reading side,
+   deity cutout on the picture side. Slick fades between slides; the script
+   flourish, mandala and arrows sit outside the slider so they persist. */
+.cvd-hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--cvd-cream);
+}
+.cvd-hero-slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: clamp(520px, 72vh, 700px);
+}
+/* Before Slick initialises, only the first slide should be visible. */
+.cvd-hero-slider:not(.slick-initialized) > .cvd-hero-slide:not(:first-child) { display: none; }
+
+.cvd-hero-bg { position: absolute; inset: 0; }
+.cvd-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Holds the temple spires in frame at every width. */
+  object-position: center 55%;
+}
+.cvd-hero-slide.slick-active .cvd-hero-bg img { animation: cvd-kenburns 24s ease-out forwards; }
+@keyframes cvd-kenburns { from { transform: scale(1); } to { transform: scale(1.06); } }
+
+/* Cream wash over the left two-thirds so the type always has a ground. */
+.cvd-hero-veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(96deg,
+      rgba(251, 246, 238, 0.96) 0%,
+      rgba(251, 246, 238, 0.88) 26%,
+      rgba(251, 246, 238, 0.45) 52%,
+      rgba(251, 246, 238, 0.06) 74%,
+      rgba(251, 246, 238, 0) 100%),
+    linear-gradient(180deg, rgba(251, 246, 238, 0) 72%, rgba(251, 246, 238, 0.85) 100%);
+}
+
+.cvd-hero-figure {
+  position: absolute;
+  right: 21%;
+  bottom: 0;
+  z-index: 2;
+  height: auto;
+  width: clamp(320px, 31vw, 470px);
+  max-height: 92%;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 26px 40px rgba(90, 43, 58, 0.24));
+  pointer-events: none;
+}
+
+.cvd-hero-inner {
+  position: relative;
+  z-index: 3;
+  padding-top: clamp(64px, 7vw, 96px);
+  padding-bottom: clamp(64px, 7vw, 96px);
+}
+.cvd-hero-content { max-width: 640px; }
+
+.cvd-eyebrow.light { color: var(--cvd-gold-soft); }
+
+.cvd-hero .cvd-eyebrow {
+  color: var(--cvd-gold-deep);
+  letter-spacing: 0.22em;
+  gap: 12px;
+}
+.cvd-hero .cvd-eyebrow::before { content: none !important; }
+.cvd-hero .cvd-eyebrow i { color: var(--cvd-gold); font-size: 15px; }
+
+.cvd-hero h1 {
+  color: var(--cvd-maroon-deep);
+  font-weight: 700;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+.cvd-hero h1 em { font-style: normal; color: var(--cvd-gold-deep); }
+
+.cvd-hero p {
+  color: #5C4A50;
+  font-size: clamp(14.5px, 1.1vw, 16px);
+  line-height: 1.85;
+  max-width: 46ch;
+  margin-bottom: 32px;
+}
+.cvd-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* Outlined companion to the solid maroon button, for light grounds. */
+.cvd-btn-outline {
+  background-color: transparent;
+  border: 1px solid rgba(126, 69, 85, 0.45);
+  color: var(--cvd-maroon);
+  box-shadow: none;
+}
+.cvd-btn-outline::before { background-color: var(--cvd-maroon); }
+.cvd-btn-outline:hover,
+.cvd-btn-outline:focus { color: #fff; border-color: var(--cvd-maroon); }
+
+/* Decorative mandala, top-left */
+.cvd-hero-mandala {
+  position: absolute;
+  top: -74px;
+  left: -74px;
+  width: clamp(220px, 20vw, 320px);
+  height: auto;
+  color: var(--cvd-maroon);
+  opacity: 0.14;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* "Hare Krishna" flourish, bottom-right */
+.cvd-hero-script {
+  position: absolute;
+  right: clamp(24px, 4vw, 70px);
+  bottom: clamp(148px, 14vw, 182px);
+  z-index: 4;
+  font-family: "Great Vibes", var(--cvd-display);
+  font-size: clamp(30px, 2.9vw, 46px);
+  line-height: 1;
+  color: var(--cvd-maroon-deep);
+  pointer-events: none;
+  text-shadow: 0 0 22px rgba(255, 255, 255, 0.95), 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.cvd-hero-controls {
+  position: absolute;
+  right: clamp(20px, 4vw, 66px);
+  bottom: clamp(86px, 8vw, 104px);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.cvd-hero-arrows { display: flex; gap: 10px; }
+/* Slick renders its dots into .cvd-hero-dots via appendDots. */
+/* Dots sit over a bright photograph, so they ride on their own soft pill. */
+.cvd-hero-dots .slick-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 9px 14px;
+  list-style: none;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(3px);
+}
+.cvd-hero-dots .slick-dots li { width: auto; height: auto; margin: 0; }
+.cvd-hero-dots .slick-dots li button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgba(126, 69, 85, 0.32);
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cvd-hero-dots .slick-dots li button::before { display: none; }
+.cvd-hero-dots .slick-dots li.slick-active button {
+  width: 22px;
+  border-radius: 999px;
+  background-color: var(--cvd-maroon);
+}
+.cvd-hero-arrows button {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(126, 69, 85, 0.3);
+  background-color: rgba(255, 255, 255, 0.82);
+  color: var(--cvd-maroon);
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(3px);
+}
+.cvd-hero-arrows button:hover {
+  background-color: var(--cvd-maroon);
+  border-color: var(--cvd-maroon);
+  color: #fff;
+}
+
+/* --- Shared: mandala watermark ------------------------------------------- */
+.cvd-mandala {
+  position: absolute;
+  top: 50%;
+  width: clamp(240px, 26vw, 420px);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  background: url("../img/mandala.svg") center / contain no-repeat;
+  opacity: 0.075;
+  pointer-events: none;
+  z-index: 0;
+}
+.cvd-mandala-left { left: calc(-1 * clamp(110px, 12vw, 190px)); }
+.cvd-mandala-right { right: calc(-1 * clamp(110px, 12vw, 190px)); }
+.cvd-sec > .container { position: relative; z-index: 1; }
+
+/* --- 4.2 Quick action cards ---------------------------------------------- */
+/* One white band straddling the hero edge, split into three equal actions. */
+.cvd-quick { position: relative; z-index: 6; margin-top: -54px; }
+.cvd-quick-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.cvd-quick-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 24px;
+  background-color: #fff;
+  border-radius: var(--cvd-radius);
+  box-shadow: var(--cvd-shadow);
+  border: 1px solid rgba(233, 223, 208, 0.9);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.cvd-quick-card:hover { transform: translateY(-5px); box-shadow: var(--cvd-shadow-lift); }
+.cvd-quick-icon {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cvd-cream-deep);
+  color: var(--cvd-maroon);
+  font-size: 20px;
+}
+.cvd-quick-icon.cvd-icon-flame { background-color: #FCEBE2; color: #D2603A; }
+.cvd-quick-icon.cvd-icon-heart { background-color: #FBE4E6; color: var(--cvd-red); }
+.cvd-quick-text { flex: 1 1 auto; min-width: 0; }
+.cvd-quick-title {
+  display: block;
+  font-family: var(--cvd-sans);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cvd-maroon);
+  margin-bottom: 3px;
+}
+.cvd-quick-desc {
+  display: block;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--cvd-body);
+}
+.cvd-quick-go {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cvd-maroon);
+  color: #fff;
+  font-size: 13px;
+  transition: 0.3s;
+}
+.cvd-quick-card:hover .cvd-quick-go { background-color: var(--cvd-maroon-deep); transform: translateX(3px); }
+
+/* --- 4.3 About / mission ------------------------------------------------- */
+.cvd-about { overflow: hidden; }
+.cvd-about-art { position: relative; padding: 0 0 70px 0; }
+.cvd-about-main {
+  width: 66%;
+  border-radius: var(--cvd-radius);
+  overflow: hidden;
+  box-shadow: var(--cvd-shadow);
+}
+.cvd-about-main img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 403 / 481;
+  object-fit: cover;
+}
+/* Circular badge, overlapping the portrait's top-right corner */
+.cvd-about-badge {
+  position: absolute;
+  top: 6%;
+  left: 52%;
+  width: clamp(130px, 14vw, 168px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--cvd-maroon-darkest);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: var(--cvd-shadow-lift);
+  z-index: 2;
+}
+.cvd-about-badge i { color: var(--cvd-gold-soft); font-size: 17px; margin-bottom: 4px; }
+.cvd-about-badge { padding: 0 12px; }
+.cvd-about-badge strong {
+  font-family: var(--cvd-display);
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1;
+  color: #fff;
+}
+.cvd-about-badge span {
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-top: 3px;
+}
+/* Two smaller frames tucked under the badge, bottom-right */
+.cvd-about-stack {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 12px;
+  width: 60%;
+  z-index: 2;
+}
+.cvd-about-stack img {
+  /* flex basis, not 50% — two halves plus the gap overflowed the row */
+  flex: 1 1 0;
+  min-width: 0;
+  display: block;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center 40%;
+  border-radius: var(--cvd-radius-sm);
+  border: 6px solid #fff;
+  box-shadow: var(--cvd-shadow);
+}
+
+.cvd-about-copy h2 { margin-bottom: 18px; }
+/* Three values across one row, icon above/beside a two-line label */
+.cvd-about-copy .cvd-values {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 30px 0 34px;
+  padding: 0;
+}
+.cvd-about-copy .cvd-values li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 0;
+  border: 0;
+}
+.cvd-about-copy .cvd-values i {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  background: none;
+  border-radius: 0;
+  color: var(--cvd-maroon);
+  font-size: 19px;
+  margin-top: 2px;
+}
+.cvd-about-copy .cvd-values span {
+  font-family: var(--cvd-sans);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--cvd-ink);
+}
+.cvd-about-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.cvd-about-quote {
+  position: relative;
+  margin: 0;
+  padding-bottom: 12px;
+  font-family: var(--cvd-display);
+  font-size: clamp(15px, 1.3vw, 18px);
+  font-style: italic;
+  color: var(--cvd-maroon);
+}
+.cvd-about-quote::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 78px;
+  height: 2px;
+  background-color: var(--cvd-gold);
+}
+
+/* --- 4.4 Impact statistics ----------------------------------------------- */
+.cvd-stats {
+  position: relative;
+  background-color: var(--cvd-maroon-deep);
+  overflow: hidden;
+  padding: clamp(30px, 3.4vw, 46px) 0;
+}
+.cvd-stats::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/textures/map-2.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.07;
+}
+.cvd-stats .container { position: relative; }
+.cvd-stats .section-title { margin-bottom: clamp(28px, 3vw, 40px); }
+.cvd-stats .section-title .title { color: #fff; }
+.cvd-stats .section-title .subtitle { color: var(--cvd-gold-soft); }
+.cvd-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.cvd-stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 18px;
+}
+.cvd-stat + .cvd-stat { border-left: 1px solid rgba(255, 255, 255, 0.18); }
+.cvd-stat > i { font-size: clamp(22px, 2vw, 28px); color: var(--cvd-gold-soft); }
+.cvd-stat strong {
+  display: block;
+  font-family: var(--cvd-sans);
+  font-weight: 700;
+  font-size: clamp(22px, 2.1vw, 30px);
+  line-height: 1.1;
+  color: #fff;
+}
+.cvd-stat strong .counter { color: inherit; }
+.cvd-stat span {
+  display: block;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+/* --- 4.5 Donation -------------------------------------------------------- */
+.cvd-donate-copy h2 { font-size: clamp(26px, 2.6vw, 36px); }
+.cvd-card h5 { font-size: 17px; }
+.cvd-card p { font-size: 13.5px; }
+
+/* --- 4.6 Live broadcast --------------------------------------------------- */
+.cvd-live { overflow: hidden; background-color: #F8F1E5; }
+.cvd-live-wrap {
+  position: relative;
+  border-radius: var(--cvd-radius);
+  overflow: hidden;
+  box-shadow: var(--cvd-shadow-lift);
+}
+.cvd-live-wrap img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center 45%;
+}
+.cvd-live-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(43, 18, 26, 0.24) 0%, rgba(43, 18, 26, 0.5) 100%);
+  pointer-events: none;
+}
+.cvd-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: var(--cvd-maroon);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  z-index: 2;
+  transition: 0.3s;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.24);
+}
+.cvd-play:hover {
+  color: var(--cvd-maroon);
+  background-color: #fff;
+  transform: translate(-50%, -50%) scale(1.06);
+}
+.cvd-play i { margin-left: 3px; }
+.cvd-live-badge { position: absolute; top: 18px; right: 18px; z-index: 2; }
+/* Play-pill button */
+.cvd-btn-play { display: inline-flex; align-items: center; gap: 12px; padding-left: 10px; }
+.cvd-btn-play-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+/* --- 4.7 Dark sections (events, news) ------------------------------------- */
+.cvd-dark {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--cvd-maroon-darkest);
+}
+.cvd-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/banner/9.webp") center / cover no-repeat;
+  opacity: 0.13;
+}
+.cvd-dark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(59, 27, 37, 0.72) 0%, rgba(59, 27, 37, 0.92) 100%);
+}
+.cvd-dark > .container { position: relative; z-index: 1; }
+.cvd-dark h2,
+.cvd-dark .section-title .title { color: #fff; }
+.cvd-dark .cvd-eyebrow,
+.cvd-dark .section-title .subtitle { color: var(--cvd-gold-soft); }
+.cvd-dark .cvd-eyebrow i { color: var(--cvd-gold); }
+
+/* --- 4.7a Event cards ----------------------------------------------------- */
+.cvd-event-card {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--cvd-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, background-color 0.35s ease, border-color 0.35s ease;
+}
+.cvd-event-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(224, 193, 115, 0.45);
+}
+.cvd-event-media { display: block; overflow: hidden; }
+.cvd-event-media img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center 40%;
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.cvd-event-card:hover .cvd-event-media img { transform: scale(1.05); }
+.cvd-event-body {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 16px;
+  flex: 1 1 auto;
+}
+.cvd-event-date {
+  flex: 0 0 48px;
+  width: 48px;
+  padding: 7px 0 5px;
+  border-radius: var(--cvd-radius-sm);
+  background-color: #fff;
+  color: var(--cvd-maroon-darkest);
+  text-align: center;
+  line-height: 1.05;
+}
+.cvd-event-date strong { display: block; font-size: 18px; font-weight: 700; color: var(--cvd-maroon); }
+.cvd-event-date span { font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; }
+.cvd-event-text { flex: 1 1 auto; min-width: 0; }
+.cvd-event-text a {
+  display: block;
+  font-family: var(--cvd-sans);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+  margin-bottom: 3px;
+}
+.cvd-event-text a:hover { color: var(--cvd-gold-soft); }
+.cvd-event-text time { font-size: 11.5px; color: rgba(255, 255, 255, 0.6); }
+.cvd-event-go {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cvd-maroon);
+  color: #fff;
+  font-size: 11px;
+  transition: 0.3s;
+}
+.cvd-event-go:hover { background-color: var(--cvd-gold); color: var(--cvd-maroon-darkest); }
+
+/* --- 4.8 Pujas ------------------------------------------------------------ */
+.cvd-puja-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+.cvd-puja-card {
+  display: block;
+  border-radius: var(--cvd-radius-sm);
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid var(--cvd-line);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.cvd-puja-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--cvd-shadow-lift);
+  border-color: transparent;
+}
+.cvd-puja-card .cvd-media { display: block; }
+.cvd-puja-card img { object-position: center 45%; }
+.cvd-puja-card:hover img { transform: scale(1.06); }
+.cvd-puja-name {
+  display: block;
+  padding: 13px 12px;
+  font-family: var(--cvd-sans);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--cvd-ink);
+  text-align: center;
+}
+.cvd-puja-card:hover .cvd-puja-name { color: var(--cvd-maroon); }
+
+/* --- 4.9 Testimonials ----------------------------------------------------- */
+.cvd-testimonials { overflow: hidden; }
+.cvd-testimonial {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  border: 1px solid var(--cvd-line);
+  border-radius: var(--cvd-radius);
+  padding: clamp(22px, 2.2vw, 30px);
+  margin: 0 10px;
+  height: 100%;
+}
+.cvd-testimonial-avatar {
+  flex: 0 0 62px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+.cvd-testimonial-body { flex: 1 1 auto; min-width: 0; }
+.cvd-testimonial blockquote {
+  position: relative;
+  background: none;
+  border: 0;
+  padding: 0 0 0 26px;
+  margin: 0 0 20px;
+  text-align: left;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--cvd-ink);
+}
+.cvd-testimonial blockquote::before {
+  content: "\201C";
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: -6px;
+  width: auto;
+  font-family: var(--cvd-display);
+  font-size: 40px;
+  line-height: 1;
+  color: var(--cvd-maroon);
+  opacity: 0.35;
+}
+.cvd-testimonial-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.cvd-testimonial-foot cite {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--cvd-ink);
+}
+.cvd-testimonial-foot span { font-size: 12.5px; color: var(--cvd-body); }
+.cvd-testimonial .sigma_rating i { color: var(--cvd-gold); font-size: 13px; }
+.cvd-testimonial-slider .slick-track { display: flex; }
+.cvd-testimonial-slider .slick-slide { height: auto; }
+.cvd-testimonial-slider .slick-slide > div { height: 100%; }
+
+.cvd-pullquote { position: relative; margin: 0; padding-left: clamp(20px, 3vw, 46px); }
+.cvd-pullquote-mark {
+  display: block;
+  font-family: var(--cvd-display);
+  font-size: 92px;
+  line-height: 0.6;
+  color: var(--cvd-maroon);
+  opacity: 0.18;
+  margin-bottom: 8px;
+}
+.cvd-pullquote blockquote {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0 0 18px;
+  text-align: left;
+  font-family: var(--cvd-display);
+  font-size: clamp(22px, 2.3vw, 31px);
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--cvd-maroon-deep);
+}
+.cvd-pullquote blockquote::before { display: none; }
+.cvd-pullquote-rule { display: block; width: 78px; height: 2px; background-color: var(--cvd-gold); }
+.cvd-pullquote cite {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cvd-maroon);
+}
+
+.cvd-arrows { display: flex; gap: 10px; }
+.cvd-arrows button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--cvd-line);
+  background-color: #fff;
+  color: var(--cvd-maroon);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cvd-arrows button:hover { background-color: var(--cvd-maroon); color: #fff; border-color: var(--cvd-maroon); }
+
+/* --- 4.10 News ------------------------------------------------------------ */
+.cvd-news-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--cvd-radius);
+  overflow: hidden;
+  transition: transform 0.35s ease, background-color 0.35s ease, border-color 0.35s ease;
+}
+.cvd-news-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(224, 193, 115, 0.45);
+}
+.cvd-news-card .cvd-media img { transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.cvd-news-card:hover .cvd-media img { transform: scale(1.05); }
+.cvd-news-body { padding: 18px; display: flex; flex-direction: column; flex: 1 1 auto; }
+.cvd-news-body h5 { font-size: 14.5px; line-height: 1.45; margin-bottom: 12px; }
+.cvd-news-body h5 a { color: #fff; }
+.cvd-news-body h5 a:hover { color: var(--cvd-gold-soft); }
+.cvd-news-body time { margin-top: auto; font-size: 12px; color: rgba(255, 255, 255, 0.58); }
+
+.cvd-volunteer-card {
+  height: 100%;
+  border-radius: var(--cvd-radius);
+  background: linear-gradient(160deg, var(--cvd-maroon) 0%, var(--cvd-maroon-deep) 100%);
+  border: 1px solid rgba(224, 193, 115, 0.3);
+  padding: clamp(24px, 2.4vw, 32px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.cvd-volunteer-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.16);
+  color: var(--cvd-gold-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+.cvd-volunteer-card h5 { color: #fff; font-size: 18px; margin-bottom: 10px; }
+.cvd-volunteer-card p { color: rgba(255, 255, 255, 0.76); font-size: 13.5px; margin-bottom: 22px; }
+
+/* ==========================================================================
+   5. FOOTER
+   ========================================================================== */
+.sigma_footer.cvd-footer {
+  background-color: var(--cvd-cream);
+  color: var(--cvd-body);
+  padding: 0;
+  border-top: 1px solid var(--cvd-line);
+}
+.cvd-footer .sigma_footer-middle { padding: clamp(48px, 5vw, 72px) 0 clamp(12px, 1.4vw, 22px); }
+.cvd-footer .footer-widget { padding-bottom: 30px; }
+.cvd-footer p,
+.cvd-footer li,
+.cvd-footer span { color: var(--cvd-body); font-weight: 400; }
+.cvd-footer .widget-title {
+  color: var(--cvd-maroon);
+  font-family: var(--cvd-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+}
+.cvd-footer .footer-widget ul { list-style: none; margin: 0; padding: 0; }
+.cvd-footer .footer-widget ul li { padding: 0; margin-bottom: 10px; }
+.cvd-footer .footer-widget ul li a {
+  color: var(--cvd-body);
+  font-size: 13.5px;
+  font-weight: 400;
+  transition: 0.25s;
+}
+.cvd-footer .footer-widget ul li a:hover { color: var(--cvd-maroon); padding-left: 4px; }
+
+.cvd-footer-brand img { height: 76px; width: auto; margin-bottom: 14px; }
+.cvd-footer-tagline {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--cvd-body);
+  margin-bottom: 20px;
+}
+.cvd-footer .sigma_sm { display: flex; gap: 10px; list-style: none; padding: 0; margin: 0; }
+.cvd-footer.footer-2 .footer-widget .sigma_sm li a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cvd-maroon-darkest);
+  font-size: 13px;
+  transition: 0.3s;
+  padding-left: 0;
+}
+.cvd-footer.footer-2 .footer-widget .sigma_sm li a i { color: #fff; margin-right: 0; }
+.cvd-footer.footer-2 .footer-widget .sigma_sm li a:hover { background-color: var(--cvd-maroon); }
+
+.cvd-newsletter p { font-size: 13.5px; margin-bottom: 16px; line-height: 1.7; }
+.cvd-newsletter form { display: flex; align-items: stretch; }
+.cvd-newsletter input {
+  flex: 1 1 auto;
+  min-width: 0;
+  background-color: #fff;
+  border: 1px solid var(--cvd-line);
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
+  padding: 12px 16px;
+  color: var(--cvd-ink);
+  font-size: 13.5px;
+  outline: none;
+}
+.cvd-newsletter input::placeholder { color: #A99A9D; }
+.cvd-newsletter input:focus { border-color: var(--cvd-maroon); }
+.cvd-newsletter button {
+  flex: 0 0 48px;
+  border: 0;
+  border-radius: 0 8px 8px 0;
+  background-color: var(--cvd-maroon);
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cvd-newsletter button:hover { background-color: var(--cvd-maroon-deep); }
+
+.cvd-footer .sigma_footer-bottom {
+  border-top: 1px solid var(--cvd-line);
+  padding: 20px 0;
+}
+.cvd-footer .sigma_footer-bottom .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 26px;
+  flex-wrap: wrap;
+}
+.cvd-footer .sigma_footer-bottom p { margin: 0; font-size: 12.5px; text-transform: none; }
+.cvd-footer-legal { display: flex; list-style: none; margin: 0; padding: 0; }
+.cvd-footer-legal li + li { margin-left: 14px; padding-left: 14px; border-left: 1px solid var(--cvd-line); }
+.cvd-footer-legal a { font-size: 12.5px; color: var(--cvd-body); }
+.cvd-footer-legal a:hover { color: var(--cvd-maroon); }
+
+/* ==========================================================================
+   6. UTILITIES
+   ========================================================================== */
+
+/* Back-to-top visibility (toggled by main.js) */
+.sigma_top.active { opacity: 1; visibility: visible; }
+.sigma_top { background-color: var(--cvd-maroon); color: #fff; }
+
+/* Volunteer card: reveal socials after the "+" is tapped (touch devices) */
+.sigma_volunteers.volunteers-5 .sigma_volunteers-thumb .sigma_sm.visible a,
+.sigma_volunteers.volunteers-4 .sigma_volunteers-thumb .sigma_sm.visible a {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Floating WhatsApp button — hidden until a wa.me number is configured.
+   Set href="https://wa.me/<number>" and remove class mht-wa-disabled. */
+.mht-whatsapp-btn {
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  width: 56px;
+  height: 56px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45);
+  z-index: 998;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.mht-whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
+.mht-whatsapp-btn i { font-size: 28px; color: #fff; line-height: 1; }
+.mht-whatsapp-btn.mht-wa-disabled { display: none; }
+
+/* Icon-font substitutes — the original "flaticon" font is not distributed
+   with this template, so Font Awesome equivalents are sized to match. */
+.sigma_service.style-1 .sigma_service-thumb i { font-size: 50px; line-height: 1; }
+
+/* Contact map — the theme's .sigma_map is a bare 600px iframe well; give it
+   a frame and float the directions CTA over the bottom-right corner. */
+.sigma_map.cvd-map {
+  position: relative;
+  /* The form below overlaps ~200px of this via .mt-negative, so the band
+     has to be tall enough to still read as a map. */
+  height: clamp(440px, 48vw, 640px);
+  overflow: hidden;
+}
+.sigma_map.cvd-map iframe { border: 0; width: 100%; height: 100%; display: block; }
+/* Top-right, not bottom-right: the contact form below uses .mt-negative and
+   rides up over the map's lower edge. */
+.cvd-map-directions {
+  position: absolute;
+  right: clamp(16px, 3vw, 40px);
+  top: clamp(16px, 3vw, 34px);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.cvd-map-directions i { font-size: 14px; }
+/* .sigma_icon-block.icon-block-7 i is 60px; the inline link needs its own size. */
+.cvd-directions-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; }
+.sigma_icon-block .cvd-directions-link i {
+  font-size: 12px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  display: inline;
+  color: inherit;
+}
+
+/* Pricing cards — the theme's 250px corner circle ran over the plan
+   description, and its overflow:hidden clipped the "Most Popular" flag. */
+.sigma_pricing.pricing-2::before {
+  width: 170px;
+  height: 170px;
+  right: -62px;
+  top: -62px;
+  background-color: var(--cvd-cream-deep);
+}
+.sigma_pricing.pricing-2 > i { top: 22px; right: 30px; font-size: 44px; }
+/* Room above the plan title for the icon and the flag, on every card so the
+   three titles stay on the same line. */
+.sigma_pricing.pricing-2 { padding-top: 76px; }
+.cvd-plan-flag {
+  position: absolute;
+  top: 26px;
+  left: 30px;
+  z-index: 2;
+  background-color: var(--cvd-gold);
+  color: var(--cvd-maroon-darkest);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Subheader (inner pages) — align with the new palette */
+.sigma_subheader { background-color: var(--cvd-maroon-deep); }
+.sigma_subheader h1 { font-family: var(--cvd-display); color: #fff; }
+
+/* Focus visibility across the site */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--cvd-gold);
+  outline-offset: 3px;
+}
+
+
+/* ==========================================================================
+   7. RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1399px) {
+  .cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item > a { padding: 14px 12px; font-size: 12.5px; }
+  .cvd-header .sigma_header-middle .cvd-navbar { padding-left: 24px; padding-right: 24px; gap: 14px; }
+  .cvd-puja-row { gap: 14px; }
+}
+
+@media (max-width: 1199px) {
+  .cvd-header .sigma_header-middle .cvd-navbar { padding-left: 20px; padding-right: 20px; }
+  .cvd-header .sigma_header-middle .navbar > .cvd-nav > .menu-item > a { padding: 14px 10px; font-size: 12px; letter-spacing: 0.02em; }
+  .cvd-puja-row { grid-template-columns: repeat(3, 1fr); }
+  .cvd-about-copy .cvd-values { gap: 12px; }
+  .cvd-quick-card { padding: 18px; gap: 12px; }
+  .cvd-quick-desc { font-size: 12.5px; }
+}
+
+@media (max-width: 991px) {
+  /* The theme hides .navbar-nav below 991px and shows the off-canvas drawer. */
+  .cvd-header .sigma_header-middle .cvd-navbar { padding: 12px 20px; gap: 12px; }
+  .cvd-logo img { height: 58px; }
+  .cvd-header.sticky .cvd-logo img { height: 50px; }
+
+  .cvd-hero-slide { min-height: 0; }
+  .cvd-hero-inner { padding-top: 76px; padding-bottom: 178px; }
+  .cvd-hero-content { max-width: 72%; }
+  .cvd-hero-figure { right: 2%; width: clamp(230px, 34vw, 330px); max-height: 74%; }
+  .cvd-hero-veil {
+    background:
+      linear-gradient(96deg,
+        rgba(251, 246, 238, 0.97) 0%,
+        rgba(251, 246, 238, 0.9) 34%,
+        rgba(251, 246, 238, 0.5) 62%,
+        rgba(251, 246, 238, 0.08) 86%,
+        rgba(251, 246, 238, 0) 100%),
+      linear-gradient(180deg, rgba(251, 246, 238, 0) 68%, rgba(251, 246, 238, 0.9) 100%);
+  }
+  .cvd-hero-mandala { top: -56px; left: -56px; opacity: 0.1; }
+  /* The figure now fills the right edge, so the flourish and the arrows move
+     to the clear side. 62px keeps the arrows above the overlapping cards. */
+  .cvd-hero-script { right: auto; left: clamp(20px, 4vw, 40px); bottom: 118px; }
+  .cvd-hero-controls { right: auto; left: clamp(20px, 4vw, 40px); bottom: 62px; }
+
+  .cvd-quick { margin-top: -40px; }
+  .cvd-quick-row { grid-template-columns: 1fr; gap: 14px; }
+
+  .cvd-about-art { max-width: 520px; margin: 0 auto 46px; }
+  .cvd-mandala { display: none; }
+
+  .cvd-stats-row { grid-template-columns: repeat(2, 1fr); gap: 4px 0; }
+  .cvd-stat:nth-child(odd) { border-left: 0; }
+  .cvd-stat:nth-child(n+3) { border-top: 1px solid rgba(255, 255, 255, 0.18); padding-top: 22px; }
+  .cvd-stat:nth-child(-n+2) { padding-bottom: 22px; }
+
+  .cvd-sec-head { margin-bottom: 32px; }
+  .cvd-testimonial { margin: 0 8px; }
+  .cvd-pullquote { padding-left: 0; margin-top: 10px; }
+}
+
+@media (max-width: 767px) {
+  /* Phone: the deity sits behind the copy as a low-contrast anchor at the
+     bottom-right, and the veil turns vertical so the type stays legible. */
+  .cvd-hero-inner { padding-top: 64px; padding-bottom: 210px; }
+  .cvd-hero-content { max-width: 100%; }
+  .cvd-hero h1 { font-size: clamp(30px, 8.2vw, 40px); }
+  .cvd-hero p { font-size: 14.5px; margin-bottom: 26px; max-width: 100%; }
+  .cvd-hero-actions { gap: 10px; }
+  .cvd-hero-actions .sigma_btn-custom { flex: 1 1 100%; }
+  .cvd-hero-figure { right: -6%; width: 62%; max-height: 46%; }
+  .cvd-hero-veil {
+    background:
+      linear-gradient(180deg,
+        rgba(251, 246, 238, 0.94) 0%,
+        rgba(251, 246, 238, 0.86) 46%,
+        rgba(251, 246, 238, 0.42) 68%,
+        rgba(251, 246, 238, 0.72) 100%);
+  }
+  .cvd-hero-mandala { width: 190px; top: -46px; left: -46px; }
+  .cvd-hero-script { right: auto; left: 12px; bottom: 74px; font-size: 32px; }
+  .cvd-hero-controls { left: 12px; right: auto; bottom: 22px; }
+  .cvd-hero-arrows button { width: 44px; height: 44px; }
+
+  .cvd-quick { margin-top: 0; padding-top: 44px; }
+  .cvd-quick-card { box-shadow: none; }
+
+  .cvd-about-copy .cvd-values { grid-template-columns: 1fr; gap: 14px; }
+  .cvd-about-foot { flex-direction: column; align-items: flex-start; gap: 22px; }
+
+  /* Phone: unstack the collage — full-width portrait, badge in its corner,
+     the two small frames on their own row. Overlapping them at this width
+     pushed the second frame past the viewport. */
+  .cvd-about-art { padding-bottom: 0; }
+  .cvd-about-main { width: 100%; }
+  .cvd-about-badge { top: 16px; left: auto; right: 16px; width: 116px; }
+  .cvd-about-stack { position: static; width: 100%; margin-top: 14px; }
+  .cvd-about-stack img { border-width: 4px; }
+
+  .cvd-puja-row { grid-template-columns: repeat(2, 1fr); }
+
+  .cvd-testimonial { flex-direction: column; gap: 14px; margin: 0 6px; }
+  .cvd-sec-head { flex-direction: column; align-items: flex-start; gap: 18px; }
+
+  .cvd-footer .sigma_footer-bottom .container { justify-content: center; text-align: center; }
+  .cvd-footer-legal { justify-content: center; flex-wrap: wrap; }
+  /* The theme centres footer widgets below 768px; follow it. */
+  .cvd-footer-brand img,
+  .cvd-footer .sigma_sm { margin-left: auto; margin-right: auto; }
+  .cvd-footer .sigma_sm { justify-content: center; }
+}
+
+@media (max-width: 575px) {
+  .cvd-header .sigma_header-middle .cvd-navbar { padding: 10px 14px; }
+  .cvd-logo img { height: 50px; }
+  .cvd-cta { padding: 11px 18px; font-size: 11px; }
+
+  .cvd-stats-row { grid-template-columns: 1fr; }
+  .cvd-stat { justify-content: flex-start; border-left: 0 !important; }
+  .cvd-stat + .cvd-stat { border-top: 1px solid rgba(255, 255, 255, 0.18); padding-top: 18px; }
+  .cvd-stat:nth-child(-n+2) { padding-bottom: 10px; }
+
+  .cvd-puja-row { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .cvd-event-body { padding: 14px; gap: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cvd-hero-slide.slick-active .cvd-hero-bg img { animation: none; }
+  .wow, .wow.animated {
+    visibility: visible !important;
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  .cvd-badge-live i { animation: none; }
+  .cvd-card:hover,
+  .cvd-quick-card:hover,
+  .cvd-event-card:hover,
+  .cvd-news-card:hover,
+  .cvd-puja-card:hover { transform: none; }
+  .cvd-card:hover .cvd-media img,
+  .cvd-puja-card:hover img,
+  .cvd-news-card:hover .cvd-media img,
+  .cvd-event-card:hover .cvd-event-media img { transform: none; }
+}
+
+
+/* ==========================================================================
+   8. PUJA PAGE (puja.html)
+   Hero, devotional category filter, puja cards, Book-a-Puja band.
+   Scoped to this page's own classes; nothing here touches other templates.
+   ========================================================================== */
+
+/* --- 8.1 Hero ------------------------------------------------------------ */
+/* The photograph is already warm and light, so the veil only has to lift the
+   type off it — a cream wash, not the site-wide dark overlay. */
+.cvd-puja-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(74px, 9vw, 132px) 0 clamp(60px, 7vw, 96px);
+  text-align: center;
+  overflow: hidden;
+}
+.cvd-puja-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(251, 246, 238, 0.82) 0%, rgba(251, 246, 238, 0.42) 46%, rgba(251, 246, 238, 0.12) 72%),
+    linear-gradient(180deg, rgba(59, 27, 37, 0.16) 0%, rgba(59, 27, 37, 0) 34%);
+}
+/* Thin antique-gold hairline closing the hero */
+.cvd-puja-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.55), transparent);
+}
+.cvd-puja-hero .container { position: relative; z-index: 1; }
+.cvd-puja-hero-inner { max-width: 760px; margin: 0 auto; }
+.cvd-puja-hero h1 {
+  color: var(--cvd-maroon-deep);
+  margin-bottom: 14px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+.cvd-lotus-rule { display: block; color: var(--cvd-gold); margin-bottom: 14px; }
+.cvd-lotus-rule svg { display: inline-block; }
+.cvd-puja-hero-sub {
+  font-family: var(--cvd-display);
+  font-size: clamp(17px, 1.9vw, 24px);
+  font-style: italic;
+  color: var(--cvd-ink);
+  margin-bottom: 26px;
+}
+
+/* Breadcrumb pill — Home › om › Puja */
+.cvd-crumb {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 9px 20px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(201, 162, 39, 0.38);
+  backdrop-filter: blur(4px);
+  font-size: 13px;
+}
+.cvd-crumb .breadcrumb-item { color: var(--cvd-maroon-deep); margin: 0; }
+.cvd-crumb .breadcrumb-item a { color: var(--cvd-body); }
+.cvd-crumb .breadcrumb-item a:hover { color: var(--cvd-maroon); }
+.cvd-crumb .breadcrumb-item.active { color: var(--cvd-maroon); font-weight: 600; }
+.cvd-crumb .breadcrumb-item + .breadcrumb-item::before {
+  content: "\f105";                     /* fa-angle-right */
+  float: none;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--cvd-gold-deep);
+  padding: 0 8px;
+  font-size: 11px;
+}
+.cvd-crumb-om i { font-size: 14px; color: var(--cvd-maroon); vertical-align: -1px; }
+
+/* Devotional line set against the right edge; decorative, hidden when narrow */
+.cvd-puja-hero-shloka {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  text-align: right;
+  font-family: var(--cvd-display);
+  font-size: 19px;
+  line-height: 1.45;
+  color: var(--cvd-maroon-deep);
+  opacity: 0.78;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+/* --- 8.2 Category navigation --------------------------------------------- */
+/* Reuses .filter-items / .portfolio-trigger so the site-wide Isotope handler
+   in main.js keeps working, but drops the theme's 700px tab bar entirely. */
+.cvd-catnav-wrap { margin-bottom: clamp(32px, 3.4vw, 50px); }
+.filter-items.cvd-catnav {
+  max-width: none;
+  margin: 0;
+  display: flex;
+  /* Auto margins on the end items centre the row when it fits and collapse to
+     zero when it overflows — unlike justify-content:center, which would clip
+     the first category out of reach on narrow screens. */
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
+  border-bottom: 1px solid var(--cvd-line);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.filter-items.cvd-catnav::-webkit-scrollbar { display: none; }
+.cvd-catnav .portfolio-trigger {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  min-width: 118px;
+  padding: 16px 20px 15px;
+  margin: 0;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: var(--cvd-radius-sm) var(--cvd-radius-sm) 0 0;
+  font-family: var(--cvd-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--cvd-body);
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+.cvd-catnav .portfolio-trigger i {
+  font-size: 19px;
+  color: var(--cvd-gold-deep);
+  transition: color 0.3s;
+}
+/* Hairline between categories, in the manner of a jaali screen */
+.cvd-catnav .portfolio-trigger + .portfolio-trigger::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 26px;
+  background-color: var(--cvd-line);
+}
+.cvd-catnav .portfolio-trigger:hover { color: var(--cvd-maroon); }
+.cvd-catnav .portfolio-trigger:hover i { color: var(--cvd-maroon); }
+.cvd-catnav .portfolio-trigger.active {
+  color: var(--cvd-maroon-deep);
+  font-weight: 600;
+  background-color: var(--cvd-cream);
+  border-bottom-color: var(--cvd-maroon);
+}
+.cvd-catnav .portfolio-trigger.active i { color: var(--cvd-maroon); }
+.cvd-catnav .portfolio-trigger:focus-visible { outline-offset: -3px; }
+.cvd-catnav .portfolio-trigger:first-child { margin-left: auto; }
+.cvd-catnav .portfolio-trigger:last-child { margin-right: auto; }
+
+/* Small lotus mark closing the filter bar */
+.cvd-catnav-wrap::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 14px;
+  margin: 0 auto;
+  background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 14' fill='none' stroke='%23C9A227' stroke-width='1' stroke-linecap='round'%3E%3Cpath d='M23 2c4 3.6 4 7.6 0 10-4-2.4-4-6.4 0-10Z'/%3E%3Cpath d='M23 12c-4.6-.6-7.6-2.6-8.6-5.6 4-.8 7 .8 8.6 3.4M23 12c4.6-.6 7.6-2.6 8.6-5.6-4-.8-7 .8-8.6 3.4'/%3E%3C/svg%3E");
+}
+
+/* --- 8.3 Puja cards ------------------------------------------------------- */
+.cvd-pujacell { padding-bottom: 26px; }
+.cvd-pujacard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid var(--cvd-line);
+  border-radius: var(--cvd-radius);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.cvd-pujacard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--cvd-shadow-lift);
+  border-color: rgba(201, 162, 39, 0.45);
+}
+.cvd-pujacard:hover .cvd-media img { transform: scale(1.06); }
+.cvd-pujacard .cvd-media img { object-position: center 42%; }
+.cvd-pujacard-body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  flex: 1 1 auto;
+  padding: 16px 16px 17px;
+  background-color: var(--cvd-cream);
+  border-top: 1px solid var(--cvd-line);
+}
+.cvd-pujacard-copy { min-width: 0; }
+.cvd-pujacard-kicker {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cvd-gold-deep);
+  margin-bottom: 6px;
+}
+.cvd-pujacard-title {
+  font-family: var(--cvd-display);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 5px;
+}
+.cvd-pujacard-title a { color: var(--cvd-ink); }
+.cvd-pujacard:hover .cvd-pujacard-title a { color: var(--cvd-maroon); }
+.cvd-pujacard-body p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--cvd-body);
+}
+.cvd-pujacard-go {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #fff;
+  background-color: var(--cvd-gold-deep);
+  transition: background-color 0.3s, transform 0.3s;
+}
+.cvd-pujacard:hover .cvd-pujacard-go {
+  background-color: var(--cvd-maroon);
+  transform: translateX(3px);
+}
+/* Whole card is the link target; the anchor in the title carries the label. */
+.cvd-pujacard-title a::after { content: ""; position: absolute; inset: 0; }
+
+/* --- 8.4 Three steps ------------------------------------------------------ */
+.cvd-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--cvd-gap);
+  text-align: center;
+}
+.cvd-steps li { position: relative; padding: 0 12px; }
+/* Thin gold thread between the steps */
+.cvd-steps li + li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--cvd-gap) / 2);
+  top: 25px;
+  width: var(--cvd-gap);
+  height: 1px;
+  background-color: rgba(201, 162, 39, 0.5);
+}
+.cvd-step-no {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 162, 39, 0.6);
+  background-color: #fff;
+  font-family: var(--cvd-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--cvd-maroon);
+}
+.cvd-steps h3 { font-size: 18px; margin-bottom: 8px; }
+.cvd-steps p { font-size: 14px; margin: 0; }
+
+/* --- 8.5 Book a Puja ------------------------------------------------------ */
+.cvd-bookpuja {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(52px, 5.6vw, 84px) 0;
+  overflow: hidden;
+}
+.cvd-bookpuja::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(59, 27, 37, 0.88) 0%, rgba(90, 43, 58, 0.74) 52%, rgba(90, 43, 58, 0.86) 100%);
+}
+.cvd-bookpuja .container { position: relative; z-index: 1; }
+.cvd-bookpuja-inner {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 420px);
+  align-items: center;
+  gap: clamp(28px, 4vw, 60px);
+}
+.cvd-bookpuja-hi {
+  font-family: var(--cvd-display);
+  font-size: clamp(30px, 3.6vw, 46px);
+  line-height: 1.25;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.cvd-bookpuja-en {
+  font-family: var(--cvd-display);
+  font-style: italic;
+  font-size: clamp(16px, 1.5vw, 20px);
+  color: var(--cvd-gold-soft);
+  margin: 0;
+}
+.cvd-bookpuja-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 24px;
+  border-radius: var(--cvd-radius);
+  border: 1px solid rgba(224, 193, 115, 0.45);
+  background-color: rgba(255, 255, 255, 0.07);
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+}
+.cvd-bookpuja-card:hover {
+  background-color: rgba(255, 255, 255, 0.13);
+  border-color: var(--cvd-gold-soft);
+  transform: translateY(-3px);
+}
+.cvd-bookpuja-ico {
+  flex: 0 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--cvd-gold-soft);
+  border: 1px solid rgba(224, 193, 115, 0.5);
+}
+.cvd-bookpuja-copy { display: block; }
+.cvd-bookpuja-copy strong {
+  display: block;
+  font-family: var(--cvd-display);
+  font-size: 23px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.cvd-bookpuja-copy span {
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+}
+.cvd-bookpuja-go {
+  flex: 0 0 auto;
+  margin-left: auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--cvd-maroon-darkest);
+  background-color: var(--cvd-gold-soft);
+  transition: transform 0.3s;
+}
+.cvd-bookpuja-card:hover .cvd-bookpuja-go { transform: translateX(3px); }
+
+/* --- 8.6 Temple updates meta ---------------------------------------------- */
+.cvd-post-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--cvd-body);
+  margin-bottom: 12px;
+}
+.cvd-post-meta i { color: var(--cvd-gold-deep); }
+.cvd-post-meta span { color: var(--cvd-line); }
+
+/* --- 8.7 Puja page responsive --------------------------------------------- */
+@media (max-width: 1199px) {
+  .cvd-puja-hero-shloka { display: none; }
+}
+
+@media (max-width: 991px) {
+  .cvd-bookpuja-inner { grid-template-columns: 1fr; }
+  .cvd-steps { grid-template-columns: 1fr; gap: 30px; }
+  .cvd-steps li + li::before { display: none; }
+}
+
+@media (max-width: 767px) {
+  /* The theme turns .filter-items into a stacked block below 768px; the puja
+     bar stays one scrollable row instead. */
+  .filter-items.cvd-catnav {
+    display: flex;
+    border-bottom: 1px solid var(--cvd-line);
+    margin-bottom: 0;
+    scroll-snap-type: x proximity;
+    padding-inline: 2px;
+  }
+  .cvd-catnav .portfolio-trigger {
+    min-width: 96px;
+    padding: 14px 14px 13px;
+    font-size: 12px;
+    scroll-snap-align: center;
+  }
+  .cvd-catnav .portfolio-trigger i { font-size: 17px; }
+  .cvd-pujacard-title { font-size: 19px; }
+  .cvd-bookpuja-card { padding: 18px; gap: 14px; }
+}
+
+@media (max-width: 575px) {
+  .cvd-pujacell { padding-bottom: 18px; }
+  .cvd-pujacard-body { padding: 14px; gap: 10px; }
+  .cvd-crumb { font-size: 12px; padding: 8px 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cvd-pujacard:hover,
+  .cvd-bookpuja-card:hover { transform: none; }
+  .cvd-pujacard:hover .cvd-media img,
+  .cvd-pujacard:hover .cvd-pujacard-go,
+  .cvd-bookpuja-card:hover .cvd-bookpuja-go { transform: none; }
+}
+
+
+/* ==========================================================================
+   9. VOLUNTEERS PAGE (volunteers.html)
+   Hero, temple community cards, seva grid, impact band, join-seva form and
+   devotional panel. Scoped to this page's own classes; sigma_volunteers /
+   sigma_sm markup and its JS hook (main.js "Volunteer social toggle") are
+   left in place so the existing "+" reveal keeps working.
+   ========================================================================== */
+
+/* --- 9.0 Content width ------------------------------------------------------
+   The theme's .container is 1320px at ≥1400px — comfortable for the hero and
+   the global header, but wider than these card-heavy sections want. Scoped
+   to this page's own section ids so the site-wide .container is untouched
+   everywhere else. */
+#community > .container,
+#seva > .container,
+#impact > .container,
+#join-seva > .container,
+#news > .container {
+  max-width: 1240px;
+}
+
+/* --- 9.1 Hero -------------------------------------------------------------- */
+.cvd-vol-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(90px, 10vw, 130px) 0 clamp(76px, 8vw, 104px);
+}
+.cvd-vol-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, rgba(59, 27, 37, 0.6) 0%, rgba(90, 43, 58, 0.48) 46%, rgba(90, 43, 58, 0.32) 100%);
+}
+.cvd-vol-hero .container { position: relative; z-index: 1; }
+.cvd-vol-hero-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.cvd-vol-hero-text { max-width: 620px; }
+.cvd-vol-hero h1 { color: #fff; margin-bottom: 12px; }
+.cvd-vol-hero-tag {
+  font-family: var(--cvd-display);
+  font-style: italic;
+  font-size: clamp(16px, 1.5vw, 19px);
+  color: var(--cvd-gold-soft);
+  margin-bottom: 10px;
+}
+.cvd-vol-hero-sub {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 46ch;
+  margin-bottom: 20px;
+}
+/* Floating breadcrumb pill, centered on the hero's bottom edge */
+.cvd-vol-crumb-wrap {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  z-index: 3;
+}
+.cvd-crumb-dark {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background-color: #fff;
+  box-shadow: 0 20px 30px -12px rgba(59, 27, 37, 0.55);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.cvd-crumb-dark .breadcrumb-item { color: var(--cvd-maroon-deep); margin: 0; }
+.cvd-crumb-dark .breadcrumb-item a { color: var(--cvd-body); }
+.cvd-crumb-dark .breadcrumb-item a:hover { color: var(--cvd-maroon); }
+.cvd-crumb-dark .breadcrumb-item.active { color: var(--cvd-maroon); font-weight: 700; }
+.cvd-crumb-dark .breadcrumb-item + .breadcrumb-item::before {
+  content: "\f105";
+  float: none;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--cvd-gold);
+  padding: 0 8px;
+  font-size: 11px;
+}
+.cvd-crumb-dark .cvd-crumb-om i { font-size: 13px; color: var(--cvd-maroon); vertical-align: -1px; }
+
+/* Devotional quote, right of the hero copy on wide screens */
+.cvd-vol-quote {
+  flex: 0 0 auto;
+  max-width: 220px;
+  margin: 0;
+  padding-left: 22px;
+  border-left: 1px solid rgba(224, 193, 115, 0.4);
+  text-align: right;
+}
+.cvd-vol-quote p {
+  font-family: var(--cvd-display);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.4;
+  color: #fff;
+  margin: 0 0 8px;
+}
+.cvd-vol-quote cite {
+  display: block;
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cvd-gold-soft);
+}
+
+/* Floating breadcrumb only needs a little clearance below it, not the full
+   section rhythm value .cvd-sec applies to every other section's top edge. */
+.cvd-vol-community { padding-top: clamp(36px, 4.5vw, 56px); }
+
+/* --- 9.2 Temple community cards --------------------------------------------
+   .sigma_volunteers.volunteers-4 ships transparent with no card chroma; the
+   .cvd-vol-card modifier adds the white card, gold rule and photo frame
+   without touching the base theme class other pages may still use. */
+.cvd-vol-card.sigma_volunteers.volunteers-4 {
+  background-color: #fff;
+  border: 1px solid var(--cvd-line);
+  border-radius: var(--cvd-radius);
+  padding: 24px 20px 22px;
+  text-align: center;
+  box-shadow: 0 12px 28px -20px rgba(59, 27, 37, 0.3);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.cvd-vol-card.sigma_volunteers.volunteers-4:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--cvd-shadow-lift);
+  border-color: transparent;
+}
+/* The theme's own .sigma_volunteers.volunteers-4 .sigma_volunteers-thumb rule
+   (3 classes) outweighs a plain ".cvd-vol-card .sigma_volunteers-thumb"
+   (2 classes) on specificity alone, regardless of source order — so this
+   repeats the full class chain on the ancestor to win outright. */
+.cvd-vol-card.sigma_volunteers.volunteers-4 .sigma_volunteers-thumb {
+  width: 160px;
+  margin: 0 auto 14px;
+  border: 3px solid var(--cvd-cream-deep);
+}
+.cvd-vol-card.sigma_volunteers.volunteers-4 .sigma_volunteers-thumb .sigma_sm li { right: 4px; }
+.cvd-vol-card.sigma_volunteers.volunteers-4 .sigma_volunteers-thumb .sigma_sm a {
+  width: 34px;
+  height: 34px;
+  font-size: 12px;
+}
+/* The theme staggers the revealed Facebook/Twitter/Instagram links downward
+   at fixed offsets tuned for its 200px thumb; rescale those steps for the
+   160px thumb above so they stay stacked beside the circle, not over the
+   name below it. */
+.cvd-vol-card.sigma_volunteers.volunteers-4 .sigma_volunteers-thumb .sigma_sm li:nth-child(2) { top: 42px; right: -6px; }
+.cvd-vol-card.sigma_volunteers.volunteers-4 .sigma_volunteers-thumb .sigma_sm li:nth-child(3) { top: 84px; right: -10px; }
+.cvd-vol-card.sigma_volunteers.volunteers-4 .sigma_volunteers-thumb .sigma_sm li:nth-child(4) { top: 126px; right: 6px; }
+.cvd-vol-card .sigma_volunteers-body { padding: 0; }
+/* Small gold rule between the photo and the role/name, in the manner of the
+   puja-card kicker rule. */
+.cvd-vol-card .sigma_volunteers-info {
+  position: relative;
+  margin: 0;
+  padding-top: 12px;
+}
+.cvd-vol-card .sigma_volunteers-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background-color: var(--cvd-gold);
+}
+.cvd-vol-card .sigma_volunteers-info p {
+  font-family: var(--cvd-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--cvd-gold-deep);
+  margin-bottom: 4px;
+}
+.cvd-vol-card .sigma_volunteers-info h5 { font-size: 18px; margin-bottom: 0; }
+.cvd-vol-card .sigma_volunteers-info h5 a { color: var(--cvd-ink); }
+.cvd-vol-card .sigma_volunteers-info h5 a:hover { color: var(--cvd-maroon); }
+
+/* --- 9.3 Find Your Seva -----------------------------------------------------
+   Compact single row of six on desktop; steps down to 3, then 2 columns as
+   the viewport narrows (see 9.7). Section padding is tightened on its own
+   ids below so the generic .cvd-sec / .cvd-sec-tight rhythm doesn't stretch
+   this card-heavy page. */
+#seva { padding-top: clamp(36px, 4.5vw, 56px); padding-bottom: clamp(36px, 4.5vw, 56px); }
+#seva .section-title { margin-bottom: 28px; }
+.cvd-seva-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+.cvd-seva-card {
+  background-color: #fff;
+  border: 1px solid var(--cvd-line);
+  border-radius: var(--cvd-radius);
+  padding: 22px 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.cvd-seva-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--cvd-shadow-lift);
+  border-color: transparent;
+}
+.cvd-seva-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background-color: var(--cvd-cream-deep);
+  color: var(--cvd-gold-deep);
+  font-size: 21px;
+}
+/* Each seva card gets its own accent — dark icon on its own light tint,
+   so the six ways to serve read as distinct at a glance. */
+.cvd-seva-card:nth-child(1) .cvd-seva-icon { background-color: rgba(126, 69, 85, 0.12); color: #7E4555; }
+.cvd-seva-card:nth-child(2) .cvd-seva-icon { background-color: rgba(181, 80, 42, 0.12); color: #B5502A; }
+.cvd-seva-card:nth-child(3) .cvd-seva-icon { background-color: rgba(150, 105, 15, 0.14); color: #96690F; }
+.cvd-seva-card:nth-child(4) .cvd-seva-icon { background-color: rgba(53, 80, 122, 0.12); color: #35507A; }
+.cvd-seva-card:nth-child(5) .cvd-seva-icon { background-color: rgba(63, 107, 74, 0.12); color: #3F6B4A; }
+.cvd-seva-card:nth-child(6) .cvd-seva-icon { background-color: rgba(109, 76, 125, 0.12); color: #6D4C7D; }
+.cvd-seva-card h3 {
+  font-family: var(--cvd-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cvd-maroon);
+  margin-bottom: 6px;
+}
+.cvd-seva-card p { font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+/* --- 9.4 Every Seva Makes a Difference -------------------------------------
+   Non-numeric impact statements, laid out on .cvd-stats-row / .cvd-stat
+   (shared with the homepage statistics band) inside a .cvd-dark section.
+   .cvd-stat-word only resizes the headline for longer phrases. */
+.cvd-stat-word strong {
+  font-family: var(--cvd-sans);
+  font-size: clamp(15px, 1.3vw, 17px);
+  letter-spacing: 0.01em;
+}
+.cvd-stat-word span { margin-top: 2px; }
+/* .cvd-dark's shared temple texture is nearly invisible (13% opacity, then
+   crushed further by a 72–92% gradient) — right for the busier homepage
+   bands it was tuned for, but this page's impact strip wants the temple
+   silhouette actually readable. Scoped to #impact so the homepage's
+   events/news sections (also .cvd-dark) are untouched. Also trims the
+   section down to a compact, evenly padded strip instead of the full
+   .cvd-sec rhythm. */
+#impact { padding-top: clamp(56px, 6vw, 80px); padding-bottom: clamp(56px, 6vw, 80px); }
+#impact .section-title { margin-bottom: 32px; }
+#impact.cvd-dark::before { opacity: 0.32; }
+#impact.cvd-dark::after { background: linear-gradient(180deg, rgba(59, 27, 37, 0.58) 0%, rgba(59, 27, 37, 0.78) 100%); }
+
+/* --- 9.5 Join Us in Seva -----------------------------------------------------
+   .cvd-joinseva-card is the single integrated component: one shadow, one
+   rounded rectangle, the form and the devotional panel meeting with no gap
+   at a shared seam. overflow:hidden lets one border-radius clip both
+   children, whether they sit side by side (desktop) or stacked (mobile),
+   so no separate per-corner radius rules are needed. */
+#join-seva { padding-top: clamp(48px, 5.5vw, 72px); padding-bottom: clamp(48px, 5.5vw, 72px); }
+.cvd-joinseva-card {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: stretch;
+  border: 1px solid var(--cvd-line);
+  border-radius: var(--cvd-radius);
+  overflow: hidden;
+  box-shadow: var(--cvd-shadow-lift);
+}
+.cvd-volform {
+  background-color: #fff;
+  padding: clamp(32px, 3.6vw, 50px);
+}
+.cvd-volform > .cvd-eyebrow { margin-bottom: 12px; }
+.cvd-volform h2 { font-size: clamp(28px, 2.8vw, 38px); margin-bottom: 8px; }
+.cvd-volform-tagline {
+  font-family: var(--cvd-display);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--cvd-maroon);
+  margin-bottom: 10px;
+}
+.cvd-volform > p.cvd-lead { margin-bottom: 28px; font-size: 15px; }
+.cvd-volform-fields label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--cvd-ink);
+  margin-bottom: 7px;
+}
+.cvd-volform-fields .form-control { height: 48px; font-size: 14px; }
+.cvd-volform-fields textarea.form-control { height: auto; min-height: 116px; }
+.cvd-volform-fields .sigma_btn-custom { margin-top: 6px; }
+
+/* --- 9.6 Devotional visual panel -------------------------------------------- */
+/* Krishna sits in the right third of the source photograph (the left side is
+   soft garden bokeh), so a narrow panel under background-size:cover needs
+   its focal point shifted right to keep his face and the flute in frame
+   rather than cropping into empty background. */
+.cvd-krishna-panel {
+  position: relative;
+  min-height: 420px;
+  background-size: cover;
+  background-position: 78% 18%;
+  display: flex;
+  align-items: flex-end;
+}
+.cvd-krishna-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(43, 18, 26, 0.12) 0%, rgba(43, 18, 26, 0.4) 46%, rgba(43, 18, 26, 0.82) 100%);
+}
+.cvd-krishna-copy {
+  position: relative;
+  z-index: 1;
+  padding: clamp(24px, 3vw, 36px);
+  color: #fff;
+}
+.cvd-krishna-quote {
+  font-family: var(--cvd-display);
+  font-size: clamp(21px, 2.2vw, 27px);
+  line-height: 1.28;
+  color: #fff;
+  margin-bottom: 22px;
+}
+.cvd-krishna-list {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cvd-krishna-list li { display: flex; align-items: flex-start; gap: 12px; }
+.cvd-krishna-ico {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--cvd-maroon-darkest);
+  background-color: var(--cvd-gold-soft);
+}
+.cvd-krishna-list strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cvd-gold-soft);
+  margin-bottom: 2px;
+}
+.cvd-krishna-list li div span { display: block; font-size: 12.5px; line-height: 1.5; color: rgba(255, 255, 255, 0.82); }
+.cvd-krishna-line {
+  font-family: var(--cvd-display);
+  font-style: italic;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid rgba(224, 193, 115, 0.3);
+  padding-top: 14px;
+  margin: 0;
+}
+
+/* --- 9.7 Volunteers page responsive ----------------------------------------- */
+/* Six cards hold a single row down to tablet width; below that they'd be too
+   narrow for the description, so they step down to 3, then 2 columns. */
+
+@media (max-width: 991px) {
+  .cvd-vol-hero-grid { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .cvd-vol-quote { text-align: left; border-left: 0; border-top: 1px solid rgba(224, 193, 115, 0.4); padding-left: 0; padding-top: 16px; max-width: 100%; }
+  .cvd-seva-grid { grid-template-columns: repeat(3, 1fr); }
+  /* Krishna panel moves below the form once the card stacks to one column. */
+  .cvd-joinseva-card { grid-template-columns: 1fr; }
+  .cvd-krishna-panel { min-height: 320px; }
+}
+
+@media (max-width: 767px) {
+  .cvd-seva-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .cvd-seva-card { padding: 22px 16px; }
+  .cvd-volform { padding: 24px; }
+}
+
+@media (max-width: 575px) {
+  .cvd-vol-hero-sub { max-width: none; }
+  .cvd-vol-card.sigma_volunteers.volunteers-4 { padding: 22px 14px 20px; }
+  .cvd-crumb-dark { font-size: 11px; padding: 8px 14px; gap: 2px; }
+  .cvd-crumb-dark .breadcrumb-item + .breadcrumb-item::before { padding: 0 5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cvd-vol-card.sigma_volunteers.volunteers-4:hover,
+  .cvd-seva-card:hover { transform: none; }
+}
+
+
+/* ==========================================================================
+   10. ABOUT PAGE (about-us.html)
+   Hero, our-story collage, mission/vision/values pillars (reuses the
+   .cvd-seva-card surface from section 9.3), journey timeline, Krishna
+   inspiration panel, impact band (shares .cvd-stats with the homepage,
+   see 4.4) and the closing volunteer CTA.
+   ========================================================================== */
+
+/* --- 10.0 Content width -----------------------------------------------------
+   Matches the 1240px measure used on the volunteers page (see 9.0). */
+#our-story > .container,
+#purpose > .container,
+#journey > .container,
+#inspiration > .container,
+#moments > .container {
+  max-width: 1240px;
+}
+
+/* --- 10.1 Hero ----------------------------------------------------------------
+   Shorter than .cvd-vol-hero: About only needs a title, a tagline and a
+   breadcrumb, not a full intro paragraph, so it keeps closer to the
+   260–340px band the rest of the page is paced around. */
+.cvd-about-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(64px, 8vw, 96px) 0 clamp(46px, 6vw, 66px);
+}
+.cvd-about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, rgba(59, 27, 37, 0.68) 0%, rgba(90, 43, 58, 0.54) 48%, rgba(90, 43, 58, 0.38) 100%);
+}
+.cvd-about-hero .container { position: relative; z-index: 1; }
+
+.cvd-about-crumb .breadcrumb {
+  margin: 0 0 20px;
+  padding: 0;
+  background: none;
+  font-size: 12.5px;
+}
+.cvd-about-crumb .breadcrumb-item,
+.cvd-about-crumb .breadcrumb-item a { color: rgba(255, 255, 255, 0.7); }
+.cvd-about-crumb .breadcrumb-item { margin: 0; }
+.cvd-about-crumb .breadcrumb-item a:hover { color: #fff; }
+.cvd-about-crumb .breadcrumb-item.active { color: #fff; font-weight: 600; }
+.cvd-about-crumb .breadcrumb-item + .breadcrumb-item::before {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--cvd-gold-soft);
+  padding: 0 10px;
+  font-size: 10px;
+}
+
+.cvd-about-hero-grid {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.cvd-about-hero-text h1 { color: #fff; margin-bottom: 10px; }
+.cvd-about-hero-tag {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 16px;
+}
+.cvd-about-hero-badge {
+  background-color: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(224, 193, 115, 0.4);
+  color: #fff;
+}
+.cvd-about-hero-badge i { color: var(--cvd-gold-soft); margin-right: 8px; }
+.cvd-about-hero-quote {
+  max-width: 240px;
+  margin: 0;
+  font-family: var(--cvd-display);
+  font-style: italic;
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.4;
+  color: var(--cvd-gold-soft);
+  text-align: right;
+}
+
+/* --- 10.2 Our Story collage -------------------------------------------------
+   Four square-ish frames around a floating Om medallion. Distinct from the
+   homepage's .cvd-about-art (a single portrait + overlapping badge) so the
+   two pages don't read as the same composition. */
+.cvd-story { overflow: hidden; }
+.cvd-story-collage {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--cvd-gap);
+}
+.cvd-story-collage img {
+  width: 100%;
+  aspect-ratio: 4 / 4.5;
+  object-fit: cover;
+  border-radius: var(--cvd-radius);
+  box-shadow: var(--cvd-shadow);
+  display: block;
+}
+.cvd-story-om {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--cvd-cream);
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  box-shadow: var(--cvd-shadow-lift);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.cvd-story-om i { color: var(--cvd-maroon); font-size: 22px; }
+
+/* --- 10.3 Mission / Vision / Values pillars ---------------------------------
+   The card surface itself is .cvd-seva-card / .cvd-seva-icon (see 9.3);
+   only the value tag list below needs its own rule. */
+.cvd-value-list {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cvd-ink);
+  line-height: 1.9;
+}
+.cvd-value-list span { color: var(--cvd-gold-deep); margin: 0 2px; }
+
+/* --- 10.4 Journey timeline --------------------------------------------------- */
+.cvd-journey-art { width: 100%; max-width: 300px; height: auto; }
+.cvd-journey-intro { margin-bottom: clamp(40px, 5vw, 64px); }
+
+.cvd-timeline-track {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.cvd-timeline-track::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 34px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--cvd-gold) 6%, var(--cvd-gold) 94%, transparent 100%);
+}
+.cvd-timeline-node {
+  position: relative;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 190px;
+}
+.cvd-timeline-year {
+  font-family: var(--cvd-display);
+  font-weight: 600;
+  font-size: clamp(19px, 1.8vw, 24px);
+  color: var(--cvd-maroon);
+  margin-bottom: 12px;
+}
+.cvd-timeline-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--cvd-cream);
+  border: 2px solid var(--cvd-maroon);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+.cvd-timeline-label { font-size: 13px; line-height: 1.55; margin: 0; }
+
+/* --- 10.5 Krishna inspiration -------------------------------------------------
+   The photo's quote text sits in the top-left corner, so the 4:5 crop is
+   biased left to keep it in frame rather than centering on the subject. */
+.cvd-inspire-media img { object-position: 40% center; }
+.cvd-gita-card {
+  background-color: #fff;
+  border: 1px solid var(--cvd-line);
+  border-radius: var(--cvd-radius);
+  box-shadow: var(--cvd-shadow);
+  padding: clamp(26px, 3vw, 36px);
+  margin-top: 28px;
+}
+.cvd-gita-card .cvd-pullquote { padding-left: 0; }
+
+/* --- 10.6 Moments gallery ------------------------------------------------------ */
+.cvd-moment { margin: 0; }
+.cvd-moment figcaption { margin-top: 16px; }
+.cvd-moment-title {
+  display: block;
+  font-family: var(--cvd-sans);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--cvd-ink);
+}
+.cvd-moment-sub { display: block; font-size: 12.5px; color: var(--cvd-body); margin-top: 2px; }
+
+/* --- 10.7 Volunteer CTA ---------------------------------------------------------
+   Same cream-veil recipe as .cvd-hero-veil (see 4.1's hero) so a photo can
+   sit behind dark ink text without a heavy dark overlay. */
+.cvd-about-cta {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: clamp(56px, 6vw, 86px) 0;
+  overflow: hidden;
+}
+.cvd-about-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, var(--cvd-cream) 0%, rgba(251, 246, 238, 0.88) 42%, rgba(251, 246, 238, 0.64) 100%);
+}
+.cvd-about-cta .container { position: relative; z-index: 1; }
+.cvd-about-cta-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.cvd-about-cta-text { max-width: 560px; }
+.cvd-about-cta-text h2 { margin-bottom: 10px; }
+.cvd-about-cta-text > p { margin-bottom: 24px; }
+.cvd-about-cta-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.cvd-about-cta-quote {
+  flex: 0 0 auto;
+  max-width: 200px;
+  margin: 0;
+  padding-left: 24px;
+  border-left: 1px solid var(--cvd-line);
+  font-family: var(--cvd-display);
+  font-style: italic;
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.4;
+  color: var(--cvd-maroon);
+  text-align: right;
+}
+
+/* --- 10.8 Responsive -------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .cvd-about-hero-grid { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .cvd-about-hero-quote { text-align: left; max-width: none; }
+  .cvd-journey-art { max-width: 220px; }
+}
+
+@media (max-width: 767px) {
+  .cvd-story-collage { max-width: 420px; margin: 0 auto 46px; }
+
+  .cvd-timeline-track { flex-direction: column; align-items: flex-start; gap: 26px; }
+  .cvd-timeline-track::before {
+    left: 7px;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(180deg, transparent 0%, var(--cvd-gold) 6%, var(--cvd-gold) 94%, transparent 100%);
+  }
+  .cvd-timeline-node {
+    flex-direction: row;
+    align-items: baseline;
+    text-align: left;
+    max-width: none;
+    gap: 14px;
+  }
+  .cvd-timeline-dot { order: -1; align-self: center; margin-bottom: 0; }
+  .cvd-timeline-year { margin-bottom: 0; flex: 0 0 auto; }
+  .cvd-timeline-label { flex: 1 1 auto; }
+
+  .cvd-about-cta-grid { flex-direction: column; align-items: flex-start; }
+  .cvd-about-cta-quote { text-align: left; border-left: 0; border-top: 1px solid var(--cvd-line); padding-left: 0; padding-top: 14px; max-width: none; }
+}
+
+@media (max-width: 575px) {
+  .cvd-about-hero-badge { font-size: 10.5px; padding: 6px 12px; }
+  .cvd-about-cta-actions { flex-direction: column; align-items: stretch; }
+  .cvd-about-cta-actions .sigma_btn-custom { text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cvd-story-collage img,
+  .cvd-moment .cvd-media img { transition: none; }
+}

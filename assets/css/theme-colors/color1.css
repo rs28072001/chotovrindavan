@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Choto Vrindavan Dham — brand palette
+   Single source of truth for colour. Loaded after style.css, before custom.css.
+   ==========================================================================
+   --mht-primary   brand maroon, matches the logo. Buttons, links, accents.
+   --mht-accent    deep aubergine ink. Headings and dark surfaces.
+                   (Was #db4242 — a bright red that made every heading on the
+                   site read as a generic template. Red is now a *controlled*
+                   accent only: --cvd-red, used for the live dot and heart.)
+   ========================================================================== */
+:root {
+  --mht-primary: #7E4555;
+  --mht-primary-rgb: 126, 69, 85;
+  --mht-accent: #43222B;
+  --mht-accent-rgb: 67, 34, 43;
+
+  /* Extended palette */
+  --cvd-maroon: #7E4555;
+  --cvd-maroon-deep: #5A2B3A;
+  --cvd-maroon-darkest: #3B1B25;
+  --cvd-gold: #C9A227;
+  --cvd-gold-soft: #E0C173;
+  --cvd-gold-deep: #96690F;
+  --cvd-cream: #FBF6EE;
+  --cvd-cream-deep: #F4EADA;
+  --cvd-ink: #43222B;
+  --cvd-body: #6E6167;
+  --cvd-line: #E9DFD0;
+  --cvd-red: #C0392B;
+}
