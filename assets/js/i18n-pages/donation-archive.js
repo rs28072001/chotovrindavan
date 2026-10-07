@@ -4,7 +4,7 @@ window.CVD_I18N_PAGE = {
   "donation-archive.cardDesc": { en: "Temple is place where hindu worship  consectetur adipisicing elit, sed do ", hi: "मंदिर वह स्थान है जहाँ हिन्दू पूजा-अर्चना करते हैं, भक्ति और सेवा का केंद्र।" },
   "donation-archive.donate": { en: "Donate", hi: "दान करें" },
 
-  "donation-archive.card1.title": { en: "Protecting Children", hi: "बच्चों की सुरक्षा" },
+  "donation-archive.card1.title": { en: "Vishal Bhandara", hi: "विशाल भंडारा" },
   "donation-archive.card1.raised": { en: "Raised: $52,384", hi: "जमा राशि: $52,384" },
   "donation-archive.card1.goal": { en: "Goal: $85,000", hi: "लक्ष्य: $85,000" },
 
@@ -24,7 +24,7 @@ window.CVD_I18N_PAGE = {
   "donation-archive.card5.raised": { en: "Raised: $52,384", hi: "जमा राशि: $52,384" },
   "donation-archive.card5.goal": { en: "Goal: $85,000", hi: "लक्ष्य: $85,000" },
 
-  "donation-archive.card6.title": { en: "Protecting Children", hi: "बच्चों की सुरक्षा" },
+  "donation-archive.card6.title": { en: "Vishal Bhandara", hi: "विशाल भंडारा" },
   "donation-archive.card6.raised": { en: "Raised: $45,684", hi: "जमा राशि: $45,684" },
   "donation-archive.card6.goal": { en: "Goal: $90,000", hi: "लक्ष्य: $90,000" },
 

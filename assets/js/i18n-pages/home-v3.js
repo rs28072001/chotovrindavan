@@ -26,7 +26,7 @@ window.CVD_I18N_PAGE = {
 
   "home-v3.donate.subtitle": { en: "Donate To Help", hi: "सहायता हेतु दान करें" },
   "home-v3.donate.title": { en: "Make a Donation to Help Community", hi: "समुदाय की सहायता के लिए दान करें" },
-  "home-v3.d1.title": { en: "Protecting Children", hi: "बच्चों की सुरक्षा" },
+  "home-v3.d1.title": { en: "Vishal Bhandara", hi: "विशाल भंडारा" },
   "home-v3.d1.raised": { en: "Raised: $52,384", hi: "जमा राशि: $52,384" },
   "home-v3.d1.goal": { en: "Goal: $85,000", hi: "लक्ष्य: $85,000" },
   "home-v3.d2.title": { en: "Donate Ngos", hi: "एनजीओ को दान करें" },
