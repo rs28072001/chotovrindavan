@@ -38,8 +38,9 @@
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link id="mht-color-link" rel="stylesheet" href="assets/css/theme-colors/color1.css">
   <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/auth-login.css">
 </head>
-<body>
+<body class="cvd-login-page cvd-register-page">
 <a class="skip-link" href="#main-content" data-i18n="a11y.skipLink">Skip to main content</a>
   <!-- Preloader Start -->
   <div class="sigma_preloader">
@@ -186,75 +187,74 @@
   <main id="main-content">
   <!-- partial -->
 
-  <!-- partial:partia/__subheader.html -->
-  <div class="sigma_subheader dark-overlay dark-overlay-2" style="background-image: url(assets/img/subheader.webp)">
-
-    <div class="container">
-      <div class="sigma_subheader-inner">
-        <div class="sigma_subheader-text">
-          <h1 data-i18n="register.subheader.title">Create Account</h1>
-        </div>
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a class="btn-link" href="#" data-i18n="nav.home">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page" data-i18n="register.breadcrumb.current">Register</li>
-          </ol>
-        </nav>
-      </div>
+  <!-- Hero -->
+  <div class="sigma_subheader cvd-login-hero">
+    <h1 data-i18n="register.subheader.title">Create Account</h1>
+    <div class="cvd-vol-crumb-wrap">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb cvd-crumb-dark">
+          <li class="breadcrumb-item"><a class="btn-link" href="index.html" data-i18n="nav.home">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page" data-i18n="register.breadcrumb.current">Register</li>
+        </ol>
+      </nav>
     </div>
-
   </div>
-  <!-- partial -->
 
   <!-- Register Start -->
-  <div class="section">
+  <div class="section cvd-login-section">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="sigma_auth-wrapper">
-            <div class="sigma_auth-description dark-overlay dark-overlay-2" style="background-image: url(assets/img/subheader.webp)">
-              <div class="sigma_auth-description-inner">
-                <i class="fas fa-praying-hands"></i>
-                <h2 data-i18n="register.joinCommunity">Join Our Community</h2>
-                <p data-i18n="register.joinDesc">Create a devotee account to book pujas, donate to campaigns, and stay connected with temple events.</p>
-                <a href="login.html" class="sigma_btn-custom" style="white-space:nowrap" data-i18n="register.alreadyMember">Already a Member?</a>
-              </div>
-            </div>
-            <div class="sigma_auth-form">
-              <h2 data-i18n="register.subheader.title">Create Account</h2>
-              <form method="post" action="#" novalidate="">
-                <div class="mb-3">
-                  <i class="far fa-user" aria-hidden="true"></i>
-                  <input type="text" class="form-control" placeholder="Full Name" name="name" aria-label="Full Name" required="" data-i18n-attr="placeholder:donation.form.fullName|aria-label:donation.form.fullName">
-                </div>
-                <div class="mb-3">
-                  <i class="far fa-envelope" aria-hidden="true"></i>
-                  <input type="email" class="form-control" placeholder="Email Address" name="email" aria-label="Email Address" required="" data-i18n-attr="placeholder:donation.form.emailAddress|aria-label:donation.form.emailAddress">
-                </div>
-                <div class="mb-3">
-                  <i class="fas fa-phone" aria-hidden="true"></i>
-                  <input type="tel" class="form-control" placeholder="Phone Number" name="phone" aria-label="Phone Number" data-i18n-attr="placeholder:register.phone|aria-label:register.phone">
-                </div>
-                <div class="mb-3">
-                  <i class="fas fa-lock" aria-hidden="true"></i>
-                  <input type="password" class="form-control" placeholder="Password" name="password" aria-label="Password" required="" data-i18n-attr="placeholder:login.password|aria-label:login.password">
-                </div>
-                <div class="mb-3">
-                  <i class="fas fa-lock" aria-hidden="true"></i>
-                  <input type="password" class="form-control" placeholder="Confirm Password" name="password_confirm" aria-label="Confirm Password" required="" data-i18n-attr="placeholder:register.confirmPassword|aria-label:register.confirmPassword">
-                </div>
-                <div class="d-flex align-items-center mb-3" style="flex-wrap:wrap;gap:8px">
-                  <label for="terms" class="mb-0 d-flex align-items-center" style="cursor:pointer">
-                    <input type="checkbox" id="terms" class="me-2" required="">
-                    <span data-i18n="register.agreeTerms">I agree to the&nbsp;<a href="terms-and-conditions.html" style="display:inline">Terms</a>&nbsp;&amp;&nbsp;<a href="privacy-policy.html" style="display:inline">Privacy Policy</a></span>
-                  </label>
-                </div>
-                <button type="submit" class="sigma_btn-custom w-100" data-i18n="register.subheader.title">Create Account</button>
-                <div class="sigma_auth-seperator"><span data-i18n="login.or">OR</span></div>
-                <p class="mb-0" data-i18n="register.haveAccount">Already have an account? <a href="login.html" style="display:inline">Sign in here</a></p>
-              </form>
-            </div>
+      <div class="sigma_auth-wrapper">
+        <div class="sigma_auth-description">
+          <div class="sigma_auth-description-inner">
+            <i class="fas fa-praying-hands" aria-hidden="true"></i>
+            <h2 data-i18n="register.joinCommunity">Join Our Community</h2>
+            <div class="cvd-orn" aria-hidden="true"><i class="fas fa-square"></i></div>
+            <p data-i18n="register.joinDesc">Create a devotee account to book pujas, donate to our sevas, stay updated with temple events and become a part of the Chote Vrindavan family.</p>
           </div>
+          <ul class="cvd-login-features">
+            <li><a href="puja.html"><span class="cvd-feat-icon"><i class="fas fa-heart" aria-hidden="true"></i></span><span data-i18n="register.feat.pujas">Book Pujas</span></a></li>
+            <li><a href="donation.html"><span class="cvd-feat-icon"><i class="far fa-calendar-alt" aria-hidden="true"></i></span><span data-i18n="register.feat.sevas">Donate to Sevas</span></a></li>
+            <li><a href="events.html"><span class="cvd-feat-icon"><i class="fas fa-hands-helping" aria-hidden="true"></i></span><span data-i18n="register.feat.updated">Stay Updated</span></a></li>
+            <li><a href="volunteers.html"><span class="cvd-feat-icon"><i class="fas fa-users" aria-hidden="true"></i></span><span data-i18n="register.feat.community">Join Community</span></a></li>
+          </ul>
+        </div>
+        <div class="sigma_auth-form">
+          <h2 data-i18n="register.subheader.title">Create Account</h2>
+          <div class="cvd-orn" aria-hidden="true"><i class="fas fa-square"></i></div>
+          <p class="cvd-login-sub" data-i18n="register.sub">Join our community and be part of our spiritual journey.</p>
+          <form method="post" action="#" novalidate="">
+            <div class="cvd-field">
+              <i class="far fa-user cvd-field-icon" aria-hidden="true"></i>
+              <input type="text" class="form-control" placeholder="Full Name" name="name" aria-label="Full Name" autocomplete="name" required="" data-i18n-attr="placeholder:donation.form.fullName|aria-label:donation.form.fullName">
+            </div>
+            <div class="cvd-field">
+              <i class="far fa-envelope cvd-field-icon" aria-hidden="true"></i>
+              <input type="email" class="form-control" placeholder="Email Address" name="email" aria-label="Email Address" autocomplete="email" required="" data-i18n-attr="placeholder:donation.form.emailAddress|aria-label:donation.form.emailAddress">
+            </div>
+            <div class="cvd-field">
+              <i class="fas fa-phone cvd-field-icon" aria-hidden="true"></i>
+              <input type="tel" class="form-control" placeholder="Phone Number" name="phone" aria-label="Phone Number" autocomplete="tel" data-i18n-attr="placeholder:register.phone|aria-label:register.phone">
+            </div>
+            <div class="cvd-field">
+              <i class="fas fa-lock cvd-field-icon" aria-hidden="true"></i>
+              <input type="password" class="form-control" placeholder="Password" name="password" aria-label="Password" autocomplete="new-password" required="" data-i18n-attr="placeholder:login.password|aria-label:login.password">
+              <button type="button" class="cvd-pw-toggle" aria-label="Show password" aria-pressed="false" data-i18n-attr="aria-label:login.showPassword"><i class="far fa-eye-slash" aria-hidden="true"></i></button>
+            </div>
+            <div class="cvd-field">
+              <i class="fas fa-lock cvd-field-icon" aria-hidden="true"></i>
+              <input type="password" class="form-control" placeholder="Confirm Password" name="password_confirm" aria-label="Confirm Password" autocomplete="new-password" required="" data-i18n-attr="placeholder:register.confirmPassword|aria-label:register.confirmPassword">
+              <button type="button" class="cvd-pw-toggle" aria-label="Show password" aria-pressed="false" data-i18n-attr="aria-label:login.showPassword"><i class="far fa-eye-slash" aria-hidden="true"></i></button>
+            </div>
+            <div class="cvd-login-row">
+              <label for="terms">
+                <input type="checkbox" id="terms" required="">
+                <span data-i18n="register.agreeTerms">I agree to the&nbsp;<a href="terms-and-conditions.html">Terms</a>&nbsp;&amp;&nbsp;<a href="privacy-policy.html">Privacy Policy</a></span>
+              </label>
+            </div>
+            <button type="submit" class="cvd-login-submit w-100"><span data-i18n="register.subheader.title">Create Account</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+            <div class="sigma_auth-seperator"><span data-i18n="login.or">OR</span></div>
+            <p class="cvd-login-signup" data-i18n="register.haveAccount">Already have an account? <a href="login.html">Sign in here</a></p>
+          </form>
         </div>
       </div>
     </div>
@@ -276,6 +276,7 @@
             <ul class="sigma_sm">
               <li> <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
               <li> <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a> </li>
+              <li> <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a> </li>
               <li> <a href="#" aria-label="X"><i class="fab fa-twitter" aria-hidden="true"></i></a> </li>
               <li> <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a> </li>
             </ul>
@@ -296,9 +297,10 @@
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget">
             <h5 class="widget-title" data-i18n="footer.initiatives">Our Initiatives</h5>
             <ul>
-              <li> <a href="donation.html" data-i18n="footer.annadanam">Annadanam</a> </li>
-              <li> <a href="donation.html" data-i18n="footer.education">Education Support</a> </li>
-              <li> <a href="donation.html" data-i18n="footer.restoration">Temple Restoration</a> </li>
+              <li> <a href="services.html" data-i18n="footer.templeSeva">Temple Seva</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.annadaanSeva">Annadaan Seva</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.gaushalaSeva">Gaushala Seva</a> </li>
+              <li> <a href="events.html" data-i18n="footer.festivalCelebrations">Festival Celebrations</a> </li>
               <li> <a href="donation-archive.html" data-i18n="footer.outreach">Community Outreach</a> </li>
               <li> <a href="volunteers.html" data-i18n="footer.volunteer">Volunteer</a> </li>
             </ul>
@@ -357,5 +359,18 @@
   <script src="assets/js/i18n-common.js"></script>
   <script src="assets/js/i18n-pages/register.js"></script>
   <script src="assets/js/i18n.js"></script>
+<script>
+  (function () {
+    var btn = document.querySelector('.cvd-pw-toggle');
+    if (!btn) return;
+    var input = btn.parentNode.querySelector('input');
+    btn.addEventListener('click', function () {
+      var show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      btn.setAttribute('aria-pressed', show ? 'true' : 'false');
+      btn.firstElementChild.className = show ? 'far fa-eye' : 'far fa-eye-slash';
+    });
+  })();
+  </script>
 </body>
 </html>

@@ -38,8 +38,9 @@
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link id="mht-color-link" rel="stylesheet" href="assets/css/theme-colors/color1.css">
   <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/auth-login.css">
 </head>
-<body>
+<body class="cvd-login-page">
 <a class="skip-link" href="#main-content" data-i18n="a11y.skipLink">Skip to main content</a>
   <!-- Preloader Start -->
   <div class="sigma_preloader">
@@ -186,64 +187,62 @@
   <main id="main-content">
   <!-- partial -->
 
-  <!-- partial:partia/__subheader.html -->
-  <div class="sigma_subheader dark-overlay dark-overlay-2" style="background-image: url(assets/img/subheader.webp)">
-
-    <div class="container">
-      <div class="sigma_subheader-inner">
-        <div class="sigma_subheader-text">
-          <h1 data-i18n="nav.signin">Sign In</h1>
-        </div>
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a class="btn-link" href="#" data-i18n="footer.home">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page" data-i18n="nav.signin">Sign In</li>
-          </ol>
-        </nav>
-      </div>
+  <!-- Hero -->
+  <div class="sigma_subheader cvd-login-hero">
+    <h1 data-i18n="nav.signin">Sign In</h1>
+    <div class="cvd-vol-crumb-wrap">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb cvd-crumb-dark">
+          <li class="breadcrumb-item"><a class="btn-link" href="index.html" data-i18n="footer.home">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page" data-i18n="nav.signin">Sign In</li>
+        </ol>
+      </nav>
     </div>
-
   </div>
-  <!-- partial -->
 
   <!-- Login Start -->
-  <div class="section">
+  <div class="section cvd-login-section">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="sigma_auth-wrapper">
-            <div class="sigma_auth-description dark-overlay dark-overlay-2" style="background-image: url(assets/img/subheader.webp)">
-              <div class="sigma_auth-description-inner">
-                <i class="fas fa-place-of-worship"></i>
-                <h2 data-i18n="login.welcome">Welcome Back</h2>
-                <p data-i18n="login.welcomeDesc">Sign in to continue your spiritual journey with us. Access your donations, events, and puja bookings.</p>
-                <a href="register.html" class="sigma_btn-custom" style="white-space:nowrap" data-i18n="login.createAccount">Create Account</a>
-              </div>
-            </div>
-            <div class="sigma_auth-form">
-              <h2 data-i18n="nav.signin">Sign In</h2>
-              <form method="post" action="#" novalidate="">
-                <div class="mb-3">
-                  <i class="far fa-user" aria-hidden="true"></i>
-                  <input type="email" class="form-control" placeholder="Email Address" name="email" aria-label="Email Address" required="" data-i18n-attr="placeholder:donation.form.emailAddress|aria-label:donation.form.emailAddress">
-                </div>
-                <div class="mb-3">
-                  <i class="fas fa-lock" aria-hidden="true"></i>
-                  <input type="password" class="form-control" placeholder="Password" name="password" aria-label="Password" required="" data-i18n-attr="placeholder:login.password|aria-label:login.password">
-                </div>
-                <div class="d-flex align-items-center justify-content-between mb-3" style="gap:12px;flex-wrap:nowrap">
-                  <label for="remember" class="mb-0 d-flex align-items-center" style="white-space:nowrap;cursor:pointer">
-                    <input type="checkbox" id="remember" class="me-2">
-                    <span data-i18n="login.rememberMe">Remember me</span>
-                  </label>
-                  <a href="forgot-password.html" style="display:inline-block;white-space:nowrap" data-i18n="login.forgotPassword">Forgot password?</a>
-                </div>
-                <button type="submit" class="sigma_btn-custom w-100" data-i18n="nav.signin">Sign In</button>
-                <div class="sigma_auth-seperator"><span data-i18n="login.or">OR</span></div>
-                <p class="mb-0" data-i18n="login.noAccount">Don’t have an account? <a href="register.html" style="display:inline">Sign up here</a></p>
-              </form>
-            </div>
+      <div class="sigma_auth-wrapper">
+        <div class="sigma_auth-description">
+          <div class="sigma_auth-description-inner">
+            <i class="fas fa-place-of-worship" aria-hidden="true"></i>
+            <h2 data-i18n="login.welcome">Welcome Back</h2>
+            <div class="cvd-orn" aria-hidden="true"><i class="fas fa-square"></i></div>
+            <p data-i18n="login.welcomeDesc">Sign in to continue your spiritual journey with us. Access your donations, events, and puja bookings.</p>
           </div>
+          <ul class="cvd-login-features">
+            <li><a href="donation-archive.html"><span class="cvd-feat-icon"><i class="fas fa-heart" aria-hidden="true"></i></span><span data-i18n="login.feat.donations">View Donations</span></a></li>
+            <li><a href="puja.html"><span class="cvd-feat-icon"><i class="far fa-calendar-alt" aria-hidden="true"></i></span><span data-i18n="login.feat.bookings">Manage Bookings</span></a></li>
+            <li><a href="volunteers.html"><span class="cvd-feat-icon"><i class="fas fa-hands-helping" aria-hidden="true"></i></span><span data-i18n="login.feat.sevas">Join Sevas</span></a></li>
+            <li><a href="contact-us.html"><span class="cvd-feat-icon"><i class="far fa-user" aria-hidden="true"></i></span><span data-i18n="login.feat.connected">Stay Connected</span></a></li>
+          </ul>
+        </div>
+        <div class="sigma_auth-form">
+          <h2 data-i18n="nav.signin">Sign In</h2>
+          <div class="cvd-orn" aria-hidden="true"><i class="fas fa-square"></i></div>
+          <p class="cvd-login-sub" data-i18n="login.sub">Welcome back! Please sign in to your account.</p>
+          <form method="post" action="#" novalidate="">
+            <div class="cvd-field">
+              <i class="far fa-envelope cvd-field-icon" aria-hidden="true"></i>
+              <input type="email" class="form-control" placeholder="Email Address" name="email" aria-label="Email Address" autocomplete="email" required="" data-i18n-attr="placeholder:donation.form.emailAddress|aria-label:donation.form.emailAddress">
+            </div>
+            <div class="cvd-field">
+              <i class="fas fa-lock cvd-field-icon" aria-hidden="true"></i>
+              <input type="password" class="form-control" placeholder="Password" name="password" aria-label="Password" autocomplete="current-password" required="" data-i18n-attr="placeholder:login.password|aria-label:login.password">
+              <button type="button" class="cvd-pw-toggle" aria-label="Show password" aria-pressed="false" data-i18n-attr="aria-label:login.showPassword"><i class="far fa-eye-slash" aria-hidden="true"></i></button>
+            </div>
+            <div class="cvd-login-row">
+              <label for="remember">
+                <input type="checkbox" id="remember" name="remember">
+                <span data-i18n="login.rememberMe">Remember me</span>
+              </label>
+              <a href="forgot-password.html" data-i18n="login.forgotPassword">Forgot password?</a>
+            </div>
+            <button type="submit" class="cvd-login-submit w-100"><span data-i18n="nav.signin">Sign In</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+            <div class="sigma_auth-seperator"><span data-i18n="login.or">OR</span></div>
+            <p class="cvd-login-signup" data-i18n="login.noAccount">Don’t have an account? <a href="register.html">Sign up here</a></p>
+          </form>
         </div>
       </div>
     </div>
@@ -265,6 +264,7 @@
             <ul class="sigma_sm">
               <li> <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
               <li> <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a> </li>
+              <li> <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a> </li>
               <li> <a href="#" aria-label="X"><i class="fab fa-twitter" aria-hidden="true"></i></a> </li>
               <li> <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a> </li>
             </ul>
@@ -285,9 +285,10 @@
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget">
             <h5 class="widget-title" data-i18n="footer.initiatives">Our Initiatives</h5>
             <ul>
-              <li> <a href="donation.html" data-i18n="footer.annadanam">Annadanam</a> </li>
-              <li> <a href="donation.html" data-i18n="footer.education">Education Support</a> </li>
-              <li> <a href="donation.html" data-i18n="footer.restoration">Temple Restoration</a> </li>
+              <li> <a href="services.html" data-i18n="footer.templeSeva">Temple Seva</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.annadaanSeva">Annadaan Seva</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.gaushalaSeva">Gaushala Seva</a> </li>
+              <li> <a href="events.html" data-i18n="footer.festivalCelebrations">Festival Celebrations</a> </li>
               <li> <a href="donation-archive.html" data-i18n="footer.outreach">Community Outreach</a> </li>
               <li> <a href="volunteers.html" data-i18n="footer.volunteer">Volunteer</a> </li>
             </ul>
@@ -346,5 +347,18 @@
   <script src="assets/js/i18n-common.js"></script>
   <script src="assets/js/i18n-pages/login.js"></script>
   <script src="assets/js/i18n.js"></script>
+<script>
+  (function () {
+    var btn = document.querySelector('.cvd-pw-toggle');
+    if (!btn) return;
+    var input = btn.parentNode.querySelector('input');
+    btn.addEventListener('click', function () {
+      var show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      btn.setAttribute('aria-pressed', show ? 'true' : 'false');
+      btn.firstElementChild.className = show ? 'far fa-eye' : 'far fa-eye-slash';
+    });
+  })();
+  </script>
 </body>
 </html>
