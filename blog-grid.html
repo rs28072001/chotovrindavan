@@ -7,14 +7,14 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Choto Vrindavan Dham">
+  <meta name="apple-mobile-web-app-title" content="Mero Choto Vrindavan Dham">
   <meta name="format-detection" content="telephone=no">
-  <meta name="description" content="Temple Blog — Spiritual articles, festival guides, Sanskrit insights, and devotional stories from Choto Vrindavan Dham Hindu Temple.">
+  <meta name="description" content="Temple Blog — Spiritual articles, festival guides, Sanskrit insights, and devotional stories from Mero Choto Vrindavan Dham Hindu Temple.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Blog | Choto Vrindavan Dham Hindu Temple">
-  <meta property="og:description" content="Temple Blog — Spiritual articles, festival guides, Sanskrit insights, and devotional stories from Choto Vrindavan Dham Hindu Temple.">
+  <meta property="og:title" content="Blog | Mero Choto Vrindavan Dham Hindu Temple">
+  <meta property="og:description" content="Temple Blog — Spiritual articles, festival guides, Sanskrit insights, and devotional stories from Mero Choto Vrindavan Dham Hindu Temple.">
   <meta property="og:image" content="assets/img/banner/1.webp">
-  <title>Choto Vrindavan Dham | Blog Grid</title>
+  <title>Mero Choto Vrindavan Dham | Blog Grid</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#main-content" data-i18n="a11y.skipLink">Skip to main content</a>
   <!-- Preloader Start -->
   <div class="sigma_preloader">
     <img width="414" height="414" src="assets/img/om.svg" alt="preloader" loading="lazy">
@@ -49,106 +49,122 @@
 
 
   <!-- partial:partia/__mobile-nav.html -->
-  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation">
+  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation" data-i18n-attr="aria-label:a11y.mobileNav">
 
-    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham"> </a>
+    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name"> </a>
+
+    <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+    </div>
 
     <!-- Menu -->
     <ul>
-      <li class="menu-item" data-nav="home"> <a href="index.html">Home</a> </li>
+      <li class="menu-item" data-nav="home"> <a href="index.html" data-i18n="nav.home">Home</a> </li>
       <li class="menu-item menu-item-has-children" data-nav="about">
-        <a href="#">About</a>
+        <a href="#" data-i18n="nav.about">About</a>
         <ul class="sub-menu">
-          <li class="menu-item"> <a href="about-us.html">Our Story</a> </li>
-          <li class="menu-item"> <a href="pandits.html">Our Acharyas</a> </li>
-          <li class="menu-item"> <a href="volunteers.html">Volunteers</a> </li>
-          <li class="menu-item"> <a href="testimonials.html">Testimonials</a> </li>
-          <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
+          <li class="menu-item"> <a href="about-us.html" data-i18n="nav.about.story">Our Story</a> </li>
+          <li class="menu-item"> <a href="pandits.html" data-i18n="nav.about.acharyas">Our Acharyas</a> </li>
+          <li class="menu-item"> <a href="volunteers.html" data-i18n="nav.about.volunteers">Volunteers</a> </li>
+          <li class="menu-item"> <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a> </li>
+          <li class="menu-item"> <a href="faq.html" data-i18n="nav.about.faq">FAQ</a> </li>
         </ul>
       </li>
-      <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas</a> </li>
+      <li class="menu-item" data-nav="pujas"> <a href="puja.html" data-i18n="nav.pujas">Pujas</a> </li>
       <li class="menu-item menu-item-has-children" data-nav="seva">
-        <a href="#">Seva</a>
+        <a href="#" data-i18n="nav.seva">Seva</a>
         <ul class="sub-menu">
-          <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-          <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-          <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-          <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-          <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-          <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-          <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-          <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+          <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+          <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+          <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+          <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+          <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+          <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+          <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+          <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
         </ul>
       </li>
-      <li class="menu-item current-menu-item" data-nav="blog"> <a href="blog-grid.html">Blog</a> </li>
-      <li class="menu-item" data-nav="gallery"> <a href="gallery.html">Gallery</a> </li>
-      <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact</a> </li>
+      <li class="menu-item current-menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog</a> </li>
+      <li class="menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery</a> </li>
+      <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact</a> </li>
     </ul>
 
-    <a class="sigma_btn-custom cvd-aside-cta" href="contact-us.html">Visit Temple</a>
+    <div class="cvd-aside-cta cvd-account-cta">
+      <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+      <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+    </div>
 
     <div class="cvd-aside-contact">
-      <div><i class="fas fa-om" aria-hidden="true"></i> Darshan daily 5:30 AM &ndash; 9:00 PM</div>
-      <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/bBNHBzuiGE7314N56" target="_blank" rel="noopener noreferrer">Kuleri, Agroha, Haryana 125047</a></div>
+      <div><i class="fas fa-om" aria-hidden="true"></i> <span data-i18n="aside.darshan">Darshan daily 5:30 AM &ndash; 9:00 PM</span></div>
+      <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/bBNHBzuiGE7314N56" target="_blank" rel="noopener noreferrer" data-i18n="aside.address">Kuleri, Agroha, Haryana 125047</a></div>
     </div>
 
   </aside>
-  <div class="sigma_aside-overlay aside-trigger-left" role="button" tabindex="-1" aria-label="Close navigation menu"></div>
+  <div class="sigma_aside-overlay aside-trigger-left" role="button" tabindex="-1" aria-label="Close navigation menu" data-i18n-attr="aria-label:a11y.closeMenu"></div>
   <!-- partial -->
   <!-- partial:partia/__header.html -->
   <header class="sigma_header cvd-header can-sticky">
 
     <!-- Middle Header Start -->
     <div class="sigma_header-middle cvd-mainnav">
-      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary">
+      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary" data-i18n-attr="aria-label:a11y.primaryNav">
 
         <!-- Logo Start -->
         <div class="cvd-logo">
           <a class="navbar-brand" href="index.html">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham">
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name">
           </a>
         </div>
         <!-- Logo End -->
 
         <!-- Menu -->
         <ul class="navbar-nav cvd-nav">
-          <li class="menu-item" data-nav="home"> <a href="index.html">Home<span></span></a> </li>
+          <li class="menu-item" data-nav="home"> <a href="index.html" data-i18n="nav.home">Home<span></span></a> </li>
           <li class="menu-item menu-item-has-children" data-nav="about">
-            <a href="about-us.html" aria-haspopup="true" aria-expanded="false">About<span></span></a>
+            <a href="about-us.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.about">About<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="about-us.html">Our Story</a> </li>
-              <li class="menu-item"> <a href="pandits.html">Our Acharyas</a> </li>
-              <li class="menu-item"> <a href="volunteers.html">Volunteers</a> </li>
-              <li class="menu-item"> <a href="testimonials.html">Testimonials</a> </li>
-              <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
+              <li class="menu-item"> <a href="about-us.html" data-i18n="nav.about.story">Our Story</a> </li>
+              <li class="menu-item"> <a href="pandits.html" data-i18n="nav.about.acharyas">Our Acharyas</a> </li>
+              <li class="menu-item"> <a href="volunteers.html" data-i18n="nav.about.volunteers">Volunteers</a> </li>
+              <li class="menu-item"> <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a> </li>
+              <li class="menu-item"> <a href="faq.html" data-i18n="nav.about.faq">FAQ</a> </li>
             </ul>
           </li>
-          <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas<span></span></a> </li>
+          <li class="menu-item" data-nav="pujas"> <a href="puja.html" data-i18n="nav.pujas">Pujas<span></span></a> </li>
           <li class="menu-item menu-item-has-children" data-nav="seva">
-            <a href="services.html" aria-haspopup="true" aria-expanded="false">Seva<span></span></a>
+            <a href="services.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.seva">Seva<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-              <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-              <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-              <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-              <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-              <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-              <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-              <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+              <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+              <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+              <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+              <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+              <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+              <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+              <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+              <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
             </ul>
           </li>
-          <li class="menu-item current-menu-item" data-nav="blog"> <a href="blog-grid.html">Blog<span></span></a> </li>
-          <li class="menu-item" data-nav="gallery"> <a href="gallery.html">Gallery<span></span></a> </li>
-          <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact<span></span></a> </li>
+          <li class="menu-item current-menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog<span></span></a> </li>
+          <li class="menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery<span></span></a> </li>
+          <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact<span></span></a> </li>
         </ul>
 
         <!-- Controls -->
         <div class="sigma_header-controls cvd-controls">
-          <a class="sigma_btn-custom cvd-cta" href="contact-us.html">Visit Temple</a>
+          <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+          </div>
+
+          <div class="cvd-cta cvd-account-cta">
+            <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+            <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+          </div>
 
           <ul class="sigma_header-controls-inner">
             <!-- Mobile Toggler -->
-            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu">
+            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu" data-i18n-attr="aria-label:a11y.openMenu">
               <span></span>
               <span></span>
               <span></span>
@@ -176,12 +192,12 @@
     <div class="container">
       <div class="sigma_subheader-inner">
         <div class="sigma_subheader-text">
-          <h1>Blog Grid</h1>
+          <h1 data-i18n="blog-grid.subheader.title">Blog Grid</h1>
         </div>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a class="btn-link" href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Blog Grid</li>
+            <li class="breadcrumb-item"><a class="btn-link" href="#" data-i18n="blog-grid.breadcrumb.home">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-i18n="blog-grid.breadcrumb.current">Blog Grid</li>
           </ol>
         </nav>
       </div>
@@ -200,10 +216,10 @@
 
             <!-- Search Widget Start -->
             <div class="sidebar-widget widget-search">
-              <h5 class="widget-title">Search</h5>
+              <h5 class="widget-title" data-i18n="blog-grid.sidebar.search.title">Search</h5>
               <form method="post">
                 <div class="sigma_search-adv-input">
-                  <input type="text" class="form-control" placeholder="Search Posts" name="search" value="">
+                  <input type="text" class="form-control" placeholder="Search Posts" name="search" value="" data-i18n-attr="placeholder:blog-grid.sidebar.search.placeholder">
                   <button type="submit" name="button"><i class="fa fa-search"></i></button>
                 </div>
               </form>
@@ -212,26 +228,26 @@
 
             <!-- Popular Feed Start -->
             <div class="sidebar-widget widget-recent-posts">
-              <h5 class="widget-title">Recent Posts</h5>
+              <h5 class="widget-title" data-i18n="blog-grid.sidebar.recent.title">Recent Posts</h5>
               <article class="sigma_recent-post">
                 <a href="blog-details.html"><img width="80" height="80" src="assets/img/blog/md/1.webp" alt="post" loading="lazy"></a>
                 <div class="sigma_recent-post-body">
-                  <h6> <a href="blog-details.html">As we've all discovered by now, the world can change</a> </h6>
-                  <a href="blog-details.html"> <i class="far fa-calendar"></i> May 20, 2026</a>
+                  <h6> <a href="blog-details.html" data-i18n="blog-grid.sidebar.recent.p1.title">As we've all discovered by now, the world can change</a> </h6>
+                  <a href="blog-details.html"> <i class="far fa-calendar"></i> <span data-i18n="blog-grid.sidebar.recent.date">May 20, 2026</span></a>
                 </div>
               </article>
               <article class="sigma_recent-post">
                 <a href="blog-details.html"><img width="80" height="80" src="assets/img/blog/md/2.webp" alt="post" loading="lazy"></a>
                 <div class="sigma_recent-post-body">
-                  <h6> <a href="blog-details.html">Testimony love offering so blessed</a> </h6>
-                  <a href="blog-details.html"> <i class="far fa-calendar"></i> May 20, 2026</a>
+                  <h6> <a href="blog-details.html" data-i18n="blog-grid.sidebar.recent.p2.title">Testimony love offering so blessed</a> </h6>
+                  <a href="blog-details.html"> <i class="far fa-calendar"></i> <span data-i18n="blog-grid.sidebar.recent.date">May 20, 2026</span></a>
                 </div>
               </article>
               <article class="sigma_recent-post">
                 <a href="blog-details.html"><img width="80" height="80" src="assets/img/blog/md/3.webp" alt="post" loading="lazy"></a>
                 <div class="sigma_recent-post-body">
-                  <h6> <a href="blog-details.html">As we've all discovered by now, the world can change</a> </h6>
-                  <a href="blog-details.html"> <i class="far fa-calendar"></i> May 20, 2026</a>
+                  <h6> <a href="blog-details.html" data-i18n="blog-grid.sidebar.recent.p3.title">As we've all discovered by now, the world can change</a> </h6>
+                  <a href="blog-details.html"> <i class="far fa-calendar"></i> <span data-i18n="blog-grid.sidebar.recent.date">May 20, 2026</span></a>
                 </div>
               </article>
             </div>
@@ -239,7 +255,7 @@
 
             <!-- Social Media Start -->
             <div class="sidebar-widget">
-              <h5 class="widget-title">Never Miss Out</h5>
+              <h5 class="widget-title" data-i18n="blog-grid.sidebar.social.title">Never Miss Out</h5>
               <ul class="sigma_sm square light">
                 <li>
                   <a href="#" aria-label="Facebook">
@@ -267,26 +283,26 @@
 
             <!-- Twitter Feed Start -->
             <div class="sidebar-widget widget-twitter">
-              <h5 class="widget-title">Twitter Feed</h5>
+              <h5 class="widget-title" data-i18n="blog-grid.sidebar.twitter.title">Twitter Feed</h5>
               <div class="twitter-item d-flex align-items-start">
                 <i class="fab fa-twitter custom-primary me-4 mt-2"></i>
                 <div class="twitter-item-content">
-                  <p>Rescue - #Gutenberg ready @ HTML Template for Creative Bloggers available on @Themeforest https://t.co/2r1POkkgVC ... </p>
-                  <strong>November 25, 2026</strong>
+                  <p data-i18n="blog-grid.sidebar.twitter.text">Rescue - #Gutenberg ready @ HTML Template for Creative Bloggers available on @Themeforest https://t.co/2r1POkkgVC ... </p>
+                  <strong data-i18n="blog-grid.sidebar.twitter.date">November 25, 2026</strong>
                 </div>
               </div>
               <div class="twitter-item d-flex align-items-start">
                 <i class="fab fa-twitter custom-primary me-4 mt-2"></i>
                 <div class="twitter-item-content">
-                  <p>Rescue - #Gutenberg ready @ HTML Template for Creative Bloggers available on @Themeforest https://t.co/2r1POkkgVC ... </p>
-                  <strong>November 25, 2026</strong>
+                  <p data-i18n="blog-grid.sidebar.twitter.text">Rescue - #Gutenberg ready @ HTML Template for Creative Bloggers available on @Themeforest https://t.co/2r1POkkgVC ... </p>
+                  <strong data-i18n="blog-grid.sidebar.twitter.date">November 25, 2026</strong>
                 </div>
               </div>
               <div class="twitter-item d-flex align-items-start">
                 <i class="fab fa-twitter custom-primary me-4 mt-2"></i>
                 <div class="twitter-item-content">
-                  <p>Rescue - #Gutenberg ready @ HTML Template for Creative Bloggers available on @Themeforest https://t.co/2r1POkkgVC ... </p>
-                  <strong>November 25, 2026</strong>
+                  <p data-i18n="blog-grid.sidebar.twitter.text">Rescue - #Gutenberg ready @ HTML Template for Creative Bloggers available on @Themeforest https://t.co/2r1POkkgVC ... </p>
+                  <strong data-i18n="blog-grid.sidebar.twitter.date">November 25, 2026</strong>
                 </div>
               </div>
             </div>
@@ -294,16 +310,16 @@
 
             <!-- Popular Tags Start -->
             <div class="sidebar-widget">
-              <h5 class="widget-title">Popular Tags</h5>
+              <h5 class="widget-title" data-i18n="blog-grid.sidebar.tags.title">Popular Tags</h5>
               <div class="tagcloud">
-                <a href="#">Isabella</a>
-                <a href="#">Samantha</a>
-                <a href="#">Emily</a>
-                <a href="#">June</a>
-                <a href="#">Grace</a>
-                <a href="#">Madison</a>
-                <a href="#">Heather</a>
-                <a href="#">Micheal</a>
+                <a href="#" data-i18n="blog-grid.sidebar.tags.t1">Isabella</a>
+                <a href="#" data-i18n="blog-grid.sidebar.tags.t2">Samantha</a>
+                <a href="#" data-i18n="blog-grid.sidebar.tags.t3">Emily</a>
+                <a href="#" data-i18n="blog-grid.sidebar.tags.t4">June</a>
+                <a href="#" data-i18n="blog-grid.sidebar.tags.t5">Grace</a>
+                <a href="#" data-i18n="blog-grid.sidebar.tags.t6">Madison</a>
+                <a href="#" data-i18n="blog-grid.sidebar.tags.t7">Heather</a>
+                <a href="#" data-i18n="blog-grid.sidebar.tags.t8">Micheal</a>
               </div>
             </div>
             <!-- Popular Tags End -->
@@ -575,7 +591,7 @@
         <div class="row">
 
           <div class="col-xl-4 col-lg-4 col-md-6 footer-widget cvd-footer-brand">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham" loading="lazy">
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" loading="lazy">
             <p class="cvd-footer-tagline">Faith, Service, Community</p>
             <ul class="sigma_sm">
               <li> <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
@@ -625,7 +641,7 @@
     <!-- Footer Bottom -->
     <div class="sigma_footer-bottom">
       <div class="container">
-        <p>&copy; 2026 Choto Vrindavan Dham. All rights reserved.</p>
+        <p>&copy; 2026 Mero Choto Vrindavan Dham. All rights reserved.</p>
         <ul class="cvd-footer-legal">
           <li><a href="about-us.html">Faith</a></li>
           <li><a href="gallery.html">Culture</a></li>
@@ -658,5 +674,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n-common.js"></script>
+  <script src="assets/js/i18n-pages/blog-grid.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </body>
 </html>

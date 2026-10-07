@@ -1,0 +1,738 @@
+/* ==========================================================================
+   Donation page — Vishal Bhandara / Annadaan Seva
+   Loaded only by donation.html, after custom.css. Builds on the brand tokens
+   in theme-colors/color1.css and the type/surface tokens in custom.css.
+
+   Sections, in page order:
+     1. Page tokens & helpers
+     2. Hero (sigma_subheader override)
+     3. Campaign card + progress
+     4. Story + impact cards
+     5. Quote banner
+     6. Donation form
+     7. Seva cards
+     8. Footer accents
+     9. Motion & responsive
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. PAGE TOKENS & HELPERS
+   ========================================================================== */
+.cvd-donate-page {
+  --dn-ivory: #FFFCF7;
+  --dn-peach: #FBEFE6;
+  --dn-line: #EBDFD2;
+  --dn-radius: 24px;
+  --dn-radius-md: 18px;
+  --dn-radius-sm: 10px;
+  --dn-shadow: 0 24px 56px -38px rgba(59, 27, 37, 0.38);
+  --dn-shadow-lift: 0 30px 60px -34px rgba(59, 27, 37, 0.42);
+  --dn-sec-y: clamp(56px, 7vw, 92px);
+}
+
+/* Line icons from the inline sprite at the top of <main>. */
+/* Cormorant defaults to old-style figures; amounts read better lining. */
+.cvd-dn-title,
+.cvd-dn-amount,
+.cvd-dn-impact-amount { font-variant-numeric: lining-nums; }
+
+.cvd-ic {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Headings shared by every section on this page */
+.cvd-dn-h {
+  font-family: var(--cvd-display);
+  font-weight: 700;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.15;
+  color: var(--cvd-maroon-deep);
+  margin-bottom: 14px;
+}
+.cvd-dn-sub {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--cvd-body);
+  margin: 0 auto;
+  max-width: 620px;
+}
+.cvd-dn-head { text-align: center; margin-bottom: clamp(28px, 3.4vw, 44px); }
+
+/* Gold rule with a diamond, used under section headings */
+.cvd-dn-ornament {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 140px;
+  color: var(--cvd-gold);
+  margin: 4px 0 26px;
+}
+.cvd-dn-ornament::before,
+.cvd-dn-ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, currentColor);
+}
+.cvd-dn-ornament::after { background: linear-gradient(90deg, currentColor, transparent); }
+.cvd-dn-ornament span {
+  width: 7px;
+  height: 7px;
+  transform: rotate(45deg);
+  border: 1px solid currentColor;
+}
+.cvd-dn-head .cvd-dn-ornament { margin: 6px auto 16px; }
+
+
+/* ==========================================================================
+   2. HERO — the shared sigma_subheader, re-skinned for this page
+   ========================================================================== */
+.cvd-dn-hero {
+  background-image: url("../img/banner/slider-1.jpg");
+  background-position: center 62%;
+}
+.cvd-dn-hero.dark-overlay::before {
+  background: linear-gradient(180deg, rgba(59, 27, 37, 0.42) 0%, rgba(90, 43, 58, 0.5) 100%);
+}
+.cvd-dn-hero .sigma_subheader-inner { padding: clamp(64px, 7vw, 92px) 0 clamp(70px, 7.5vw, 100px); }
+.cvd-dn-hero h1 {
+  font-size: clamp(40px, 5vw, 62px);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 18px rgba(59, 27, 37, 0.35);
+}
+.cvd-dn-hero .breadcrumb { padding: 13px 26px; bottom: -24px; box-shadow: 0 12px 28px -14px rgba(59, 27, 37, 0.35); }
+.cvd-dn-hero .breadcrumb li a,
+.cvd-dn-hero .breadcrumb .breadcrumb-item.active {
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.cvd-dn-hero .breadcrumb li a { color: var(--cvd-body); font-weight: 500; }
+.cvd-dn-hero .breadcrumb li a:hover { color: var(--cvd-maroon); }
+.cvd-dn-hero .breadcrumb .breadcrumb-item.active { color: var(--cvd-maroon); font-weight: 600; }
+.cvd-dn-hero .breadcrumb-item + .breadcrumb-item::before { content: "\f105"; font-size: 12px; color: var(--cvd-gold-deep); }
+
+
+/* ==========================================================================
+   3. CAMPAIGN CARD + PROGRESS
+   ========================================================================== */
+.cvd-dn-campaign { padding: clamp(64px, 6vw, 84px) 0 var(--dn-sec-y); background-color: #fff; }
+
+.cvd-dn-card {
+  background-color: #fff;
+  border: 1px solid var(--dn-line);
+  border-radius: var(--dn-radius);
+  box-shadow: var(--dn-shadow);
+  padding: clamp(22px, 3.2vw, 40px);
+}
+
+.cvd-dn-pill {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background-color: var(--cvd-maroon);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.cvd-dn-title {
+  font-family: var(--cvd-display);
+  font-weight: 700;
+  font-size: clamp(30px, 3.7vw, 48px);
+  line-height: 1.1;
+  color: var(--cvd-maroon-deep);
+  margin-bottom: 14px;
+}
+.cvd-dn-lead {
+  font-size: clamp(15px, 1.25vw, 17px);
+  line-height: 1.75;
+  color: var(--cvd-body);
+  max-width: 760px;
+  margin-bottom: 22px;
+}
+
+.cvd-dn-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 0;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 clamp(22px, 2.6vw, 30px);
+}
+.cvd-dn-meta li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--cvd-ink);
+  padding-right: 18px;
+  margin-right: 18px;
+  border-right: 1px solid var(--dn-line);
+}
+.cvd-dn-meta li:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
+.cvd-dn-meta .cvd-ic { width: 17px; height: 17px; color: var(--cvd-maroon); }
+
+.cvd-dn-figure { margin: 0; border-radius: var(--dn-radius-md); overflow: hidden; }
+.cvd-dn-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2.25 / 1;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+/* Progress panel — tucks up over the photo's lower edge */
+.cvd-dn-progress {
+  position: relative;
+  margin: -56px clamp(14px, 2.4vw, 32px) 0;
+  background-color: #fff;
+  border: 1px solid var(--dn-line);
+  border-radius: var(--dn-radius-md);
+  box-shadow: 0 18px 40px -28px rgba(59, 27, 37, 0.4);
+  padding: clamp(20px, 2.4vw, 30px) clamp(20px, 2.8vw, 36px) clamp(18px, 2vw, 24px);
+}
+.cvd-dn-progress-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
+.cvd-dn-amount {
+  display: block;
+  font-family: var(--cvd-display);
+  font-weight: 700;
+  font-size: clamp(26px, 2.6vw, 34px);
+  line-height: 1;
+  color: var(--cvd-maroon-deep);
+}
+.cvd-dn-amount-label { display: block; font-size: 13px; color: var(--cvd-body); margin-top: 6px; }
+.cvd-dn-progress-head > div:last-child { text-align: right; }
+
+/* Track + fill. The fill keeps the theme's .progress-bar class so main.js
+   animates it to aria-valuenow% when it scrolls into view. */
+.cvd-dn-bar {
+  position: relative;
+  height: 8px;
+  margin: 22px 0 26px;
+  border-radius: 999px;
+  background-color: #F2E7DE;
+}
+.cvd-dn-bar .progress-bar {
+  position: relative;
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--cvd-maroon);
+  overflow: visible;
+  color: inherit;
+}
+.cvd-dn-bar-bubble {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  padding: 3px 9px;
+  border-radius: 999px;
+  background-color: #fff;
+  border: 1px solid var(--cvd-gold-soft);
+  box-shadow: 0 4px 12px -4px rgba(59, 27, 37, 0.3);
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--cvd-maroon-deep);
+  white-space: nowrap;
+}
+
+.cvd-dn-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  padding: 20px 0 0;
+  margin: 0;
+  border-top: 1px solid var(--dn-line);
+}
+.cvd-dn-stats li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 clamp(10px, 1.6vw, 22px);
+  border-left: 1px solid var(--dn-line);
+}
+.cvd-dn-stats li:first-child { border-left: 0; padding-left: 0; }
+.cvd-dn-stat-ic {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 50%;
+  background-color: var(--dn-peach);
+  color: var(--cvd-maroon);
+}
+.cvd-dn-stat-value {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--cvd-maroon-deep);
+}
+.cvd-dn-stat-label { display: block; font-size: 12.5px; color: var(--cvd-body); margin-top: 2px; }
+
+
+/* ==========================================================================
+   4. STORY + IMPACT CARDS
+   ========================================================================== */
+.cvd-dn-story {
+  position: relative;
+  overflow: hidden;
+  padding: var(--dn-sec-y) 0;
+  background-color: var(--cvd-cream);
+  border-top: 1px solid var(--cvd-line);
+}
+/* Two faint mandalas — decoration only, kept well below text contrast */
+.cvd-dn-story::before,
+.cvd-dn-story::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 560px;
+  height: 560px;
+  background: url("../img/mandala.svg") center / contain no-repeat;
+  opacity: 0.05;
+  pointer-events: none;
+}
+.cvd-dn-story::before { top: -180px; left: -200px; }
+.cvd-dn-story::after { bottom: -220px; right: -220px; }
+.cvd-dn-story > .container { position: relative; z-index: 1; }
+
+.cvd-dn-story-text p { font-size: 15px; line-height: 1.85; color: var(--cvd-body); max-width: 540px; }
+.cvd-dn-story-text p:last-child { margin-bottom: 0; }
+
+/* Photo with an offset gold hairline frame */
+.cvd-dn-story-media { position: relative; max-width: 540px; margin-left: auto; }
+.cvd-dn-story-media::before {
+  content: "";
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  border: 1px solid var(--cvd-gold-soft);
+  border-radius: var(--dn-radius);
+  pointer-events: none;
+}
+.cvd-dn-story-media img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 3.4;
+  object-fit: cover;
+  border-radius: var(--dn-radius);
+  box-shadow: var(--dn-shadow);
+}
+
+.cvd-dn-impact { margin-top: clamp(56px, 6vw, 80px); }
+.cvd-dn-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(14px, 1.6vw, 22px);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cvd-dn-impact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  height: 100%;
+  padding: 24px 22px;
+  border: 1px solid var(--dn-line);
+  border-radius: var(--dn-radius-md);
+  background-color: #FFFAF4;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.cvd-dn-impact-grid li:nth-child(2) .cvd-dn-impact-card { background-color: #FFF7EF; }
+.cvd-dn-impact-grid li:nth-child(3) .cvd-dn-impact-card { background-color: #FDF3EC; }
+.cvd-dn-impact-grid li:nth-child(4) .cvd-dn-impact-card { background-color: #FBF0EA; }
+.cvd-dn-impact-card:hover { transform: translateY(-4px); box-shadow: var(--dn-shadow-lift); border-color: var(--cvd-gold-soft); }
+.cvd-dn-impact-ic {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  color: var(--cvd-maroon);
+}
+.cvd-dn-impact-ic .cvd-ic { width: 24px; height: 24px; }
+.cvd-dn-impact-amount {
+  display: block;
+  font-family: var(--cvd-display);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--cvd-maroon-deep);
+  margin-bottom: 8px;
+}
+.cvd-dn-impact-card p { font-size: 13.5px; line-height: 1.6; color: var(--cvd-body); margin: 0; }
+
+
+/* ==========================================================================
+   5. QUOTE BANNER
+   ========================================================================== */
+.cvd-dn-quote {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.6vw, 34px);
+  margin: clamp(48px, 5.4vw, 72px) 0 0;
+  padding: clamp(28px, 3.6vw, 44px) clamp(24px, 4.4vw, 60px);
+  border-radius: var(--dn-radius);
+  background:
+    linear-gradient(90deg, var(--cvd-maroon-deep) 0%, rgba(90, 43, 58, 0.94) 48%, rgba(90, 43, 58, 0.62) 100%),
+    url("../img/banner/slider-1.jpg") right 55% / cover no-repeat;
+  box-shadow: var(--dn-shadow);
+}
+.cvd-dn-quote-ic {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+  border-radius: 50%;
+  border: 1px solid rgba(224, 193, 115, 0.45);
+  color: var(--cvd-gold-soft);
+}
+.cvd-dn-quote-ic .cvd-ic { width: 40px; height: 40px; stroke-width: 1.4; }
+.cvd-dn-quote blockquote { margin: 0; padding: 0; border: 0; border-radius: 0; background: none; text-align: left; }
+.cvd-dn-quote blockquote::before,
+.cvd-dn-quote blockquote::after { display: none; }
+.cvd-dn-quote p {
+  margin: 0;
+  font-family: var(--cvd-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(21px, 2.3vw, 30px);
+  line-height: 1.35;
+  color: #fff;
+}
+.cvd-dn-quote p em { font-style: normal; font-weight: 600; color: var(--cvd-gold-soft); }
+
+
+/* ==========================================================================
+   6. DONATION FORM
+   ========================================================================== */
+.cvd-dn-donate { padding: var(--dn-sec-y) 0; background-color: var(--dn-ivory); scroll-margin-top: 90px; }
+.cvd-dn-form-card { max-width: 1120px; margin: 0 auto; }
+.cvd-dn-form-card .cvd-dn-h span { color: var(--cvd-maroon); }
+
+.cvd-dn-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px clamp(28px, 4vw, 56px);
+}
+.cvd-dn-field { margin: 0; padding: 0; border: 0; min-width: 0; }
+.cvd-dn-label,
+.cvd-dn-field legend {
+  display: block;
+  float: none;
+  width: auto;
+  font-family: var(--cvd-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cvd-ink);
+  margin-bottom: 12px;
+  padding: 0;
+}
+.cvd-dn-label .req { color: var(--cvd-red); margin-left: 2px; }
+.cvd-dn-label .opt { font-weight: 400; color: var(--cvd-body); font-size: 12.5px; margin-left: 4px; }
+
+/* Amount chips — real radio inputs, visually hidden, labels styled */
+.cvd-dn-chips { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+.cvd-dn-chip { position: relative; margin: 0; }
+.cvd-dn-chip input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.cvd-dn-chip span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 0 6px;
+  border: 1px solid var(--dn-line);
+  border-radius: var(--dn-radius-sm);
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--cvd-ink);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+}
+.cvd-dn-chip span:hover { border-color: var(--cvd-maroon); }
+.cvd-dn-chip input:checked + span { background-color: var(--cvd-maroon); border-color: var(--cvd-maroon); color: #fff; }
+.cvd-dn-chip input:focus-visible + span { outline: 2px solid var(--cvd-gold); outline-offset: 2px; }
+
+.cvd-dn-custom { margin-top: 12px; }
+.cvd-dn-custom[hidden] { display: none; }
+
+/* Inputs */
+.cvd-dn-input,
+.cvd-dn-select,
+.cvd-dn-textarea {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--dn-line);
+  border-radius: var(--dn-radius-sm);
+  background-color: #fff;
+  font-family: var(--cvd-sans);
+  font-size: 14px;
+  color: var(--cvd-ink);
+  box-shadow: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.cvd-dn-textarea { height: auto; min-height: 150px; padding: 14px 16px; resize: vertical; line-height: 1.6; }
+.cvd-dn-input::placeholder,
+.cvd-dn-textarea::placeholder { color: #A99A9D; }
+.cvd-dn-input:focus,
+.cvd-dn-select:focus,
+.cvd-dn-textarea:focus {
+  outline: none;
+  border-color: var(--cvd-maroon);
+  box-shadow: 0 0 0 3px rgba(126, 69, 85, 0.12);
+}
+/* Only flag fields the donor has actually touched */
+.cvd-dn-form.was-submitted .cvd-dn-input:invalid,
+.cvd-dn-input:user-invalid { border-color: var(--cvd-red); }
+
+.cvd-dn-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 44px;
+  cursor: pointer;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237E4555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 16px center / 16px no-repeat;
+}
+
+/* ₹ / +91 prefixed inputs */
+.cvd-dn-affix { display: flex; align-items: stretch; }
+.cvd-dn-affix > span {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid var(--dn-line);
+  border-right: 0;
+  border-radius: var(--dn-radius-sm) 0 0 var(--dn-radius-sm);
+  background-color: var(--dn-peach);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--cvd-maroon-deep);
+}
+.cvd-dn-affix .cvd-dn-input { border-radius: 0 var(--dn-radius-sm) var(--dn-radius-sm) 0; min-width: 0; }
+
+/* Payment methods */
+.cvd-dn-pay { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.cvd-dn-pay li { display: flex; }
+.cvd-dn-pay label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  flex: 1;
+  min-height: 60px;
+  padding: 10px 14px;
+  border: 1px solid var(--dn-line);
+  border-radius: var(--dn-radius-sm);
+  background-color: #fff;
+  font-size: 14px;
+  color: var(--cvd-ink);
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+.cvd-dn-pay label:hover { border-color: var(--cvd-maroon); }
+/* style.css hides native radios/checkboxes for its input + label pattern;
+   these inputs sit inside their labels, so bring the native control back. */
+.cvd-dn-pay input,
+.cvd-dn-check input { position: static; opacity: 1; }
+.cvd-dn-pay input { width: 18px; height: 18px; margin: 0; accent-color: var(--cvd-maroon); flex: 0 0 auto; }
+.cvd-dn-pay .cvd-ic { color: var(--cvd-maroon); width: 19px; height: 19px; }
+.cvd-dn-pay span { line-height: 1.35; }
+.cvd-dn-pay small { display: block; font-size: 11.5px; color: var(--cvd-body); margin-top: 2px; }
+.cvd-dn-pay label:has(input:checked) { border-color: var(--cvd-maroon); background-color: #FDF7F3; }
+
+.cvd-dn-stack { display: grid; gap: 30px; align-content: start; }
+
+/* Donor details */
+.cvd-dn-details { grid-column: 1 / -1; }
+.cvd-dn-details-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.cvd-dn-details-grid .cvd-dn-label { font-weight: 500; font-size: 13px; margin-bottom: 8px; }
+
+.cvd-dn-check {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: -6px 0 0;
+  font-size: 13.5px;
+  color: var(--cvd-body);
+  cursor: pointer;
+}
+.cvd-dn-check span { font-weight: 400; }
+.cvd-dn-check input { width: 17px; height: 17px; margin: 2px 0 0; accent-color: var(--cvd-maroon); flex: 0 0 auto; }
+
+.cvd-dn-actions { grid-column: 1 / -1; text-align: center; margin-top: 6px; }
+.cvd-dn-submit.sigma_btn-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 250px;
+  padding: 16px 34px;
+  border-radius: 12px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+.cvd-dn-submit .cvd-ic { width: 18px; height: 18px; stroke-width: 2; transition: transform 0.3s; }
+.cvd-dn-submit:hover .cvd-ic { transform: translateX(4px); }
+
+
+/* ==========================================================================
+   7. SEVA CARDS
+   ========================================================================== */
+.cvd-dn-seva { padding: var(--dn-sec-y) 0; background-color: var(--cvd-cream); border-top: 1px solid var(--cvd-line); }
+.cvd-dn-seva-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 2.4vw, 30px); }
+.cvd-dn-seva-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--dn-line);
+  border-radius: var(--dn-radius);
+  overflow: hidden;
+  background-color: #fff;
+  color: inherit;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.cvd-dn-seva-card:hover { transform: translateY(-5px); box-shadow: var(--dn-shadow-lift); color: inherit; }
+.cvd-dn-seva-thumb { overflow: hidden; }
+.cvd-dn-seva-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.cvd-dn-seva-card:hover .cvd-dn-seva-thumb img { transform: scale(1.04); }
+.cvd-dn-seva-body { padding: 24px clamp(20px, 2.4vw, 30px) 26px; display: flex; flex-direction: column; flex: 1; }
+.cvd-dn-seva-body h3 {
+  font-family: var(--cvd-display);
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1.15;
+  color: var(--cvd-maroon-deep);
+  margin-bottom: 8px;
+}
+.cvd-dn-seva-body p { font-size: 14px; line-height: 1.7; color: var(--cvd-body); margin-bottom: 18px; }
+.cvd-dn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--cvd-maroon);
+}
+.cvd-dn-more .cvd-ic { width: 17px; height: 17px; stroke-width: 2; transition: transform 0.3s; }
+.cvd-dn-seva-card:hover .cvd-dn-more .cvd-ic { transform: translateX(4px); }
+
+
+/* ==========================================================================
+   8. FOOTER ACCENTS — faint temple line-art in the corner
+   ========================================================================== */
+.cvd-donate-page .cvd-footer { position: relative; overflow: hidden; }
+.cvd-donate-page .cvd-footer::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  width: min(620px, 60vw);
+  aspect-ratio: 2 / 1;
+  background: url("../img/donation/bhandara/footer-bg-pattern.jpg") center bottom / cover no-repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 60% 75%, #000 35%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 80% at 60% 75%, #000 35%, transparent 75%);
+  pointer-events: none;
+}
+.cvd-donate-page .cvd-footer > * { position: relative; }
+
+
+/* ==========================================================================
+   9. MOTION & RESPONSIVE
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .cvd-dn-bar .progress-bar { transition: none !important; }
+  .cvd-dn-impact-card,
+  .cvd-dn-seva-card,
+  .cvd-dn-seva-thumb img { transition: none; }
+  .cvd-dn-impact-card:hover,
+  .cvd-dn-seva-card:hover { transform: none; }
+  .cvd-dn-seva-card:hover .cvd-dn-seva-thumb img { transform: none; }
+}
+
+@media (max-width: 1199px) {
+  .cvd-dn-impact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cvd-dn-chips { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 991px) {
+  .cvd-dn-story-media { margin: 44px auto 0; }
+  .cvd-dn-story-text p { max-width: none; }
+  .cvd-dn-form-grid { grid-template-columns: minmax(0, 1fr); }
+  .cvd-dn-details-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cvd-dn-details-grid > :first-child { grid-column: 1 / -1; }
+  .cvd-dn-chips { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+
+  /* Stats go 2 × 2 */
+  .cvd-dn-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 18px; }
+  .cvd-dn-stats li:nth-child(odd) { border-left: 0; padding-left: 0; }
+}
+
+@media (max-width: 767px) {
+  .cvd-dn-meta li { border-right: 0; margin-right: 0; padding-right: 0; flex: 0 0 50%; }
+  .cvd-dn-figure img { aspect-ratio: 4 / 3; }
+  .cvd-dn-progress { margin: 16px 0 0; }
+  .cvd-dn-seva-grid { grid-template-columns: minmax(0, 1fr); }
+  .cvd-dn-chips { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .cvd-dn-details-grid { grid-template-columns: minmax(0, 1fr); }
+  .cvd-dn-pay { grid-template-columns: minmax(0, 1fr); }
+  .cvd-dn-quote { flex-direction: column; align-items: flex-start; text-align: left; }
+  .cvd-dn-quote-ic { width: 60px; height: 60px; flex-basis: 60px; }
+  .cvd-dn-quote-ic .cvd-ic { width: 30px; height: 30px; }
+  .cvd-dn-quote p br { display: none; }
+  .cvd-dn-story-media::before { inset: 10px -10px -10px 10px; }
+  .cvd-donate-page .cvd-footer::before { width: 100%; opacity: 0.6; }
+}
+
+@media (max-width: 575px) {
+  .cvd-dn-card { border-radius: var(--dn-radius-md); }
+  .cvd-dn-meta li { flex-basis: 100%; }
+  .cvd-dn-progress { padding: 18px 16px 16px; }
+  .cvd-dn-stats li { gap: 10px; padding: 0 0 0 12px; }
+  .cvd-dn-stat-ic { width: 38px; height: 38px; flex-basis: 38px; }
+  .cvd-dn-stat-ic .cvd-ic { width: 18px; height: 18px; }
+  .cvd-dn-stat-value { font-size: 16px; }
+  .cvd-dn-impact-grid { grid-template-columns: minmax(0, 1fr); }
+  .cvd-dn-submit.sigma_btn-custom { width: 100%; min-width: 0; }
+  .cvd-dn-hero .breadcrumb { padding: 11px 20px; }
+}

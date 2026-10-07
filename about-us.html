@@ -7,14 +7,14 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Choto Vrindavan Dham">
+  <meta name="apple-mobile-web-app-title" content="Mero Choto Vrindavan Dham">
   <meta name="format-detection" content="telephone=no">
-  <meta name="description" content="Discover the story of Choto Vrindavan Dham — our mission, vision, legacy and the timeless wisdom of Lord Krishna that guides our community of devotion, learning and seva.">
+  <meta name="description" content="Discover the story of Mero Choto Vrindavan Dham — our mission, vision, legacy and the timeless wisdom of Lord Krishna that guides our community of devotion, learning and seva.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="About Us | Choto Vrindavan Dham Hindu Temple">
-  <meta property="og:description" content="Discover the story of Choto Vrindavan Dham — our mission, vision, legacy and the timeless wisdom of Lord Krishna that guides our community of devotion, learning and seva.">
+  <meta property="og:title" content="About Us | Mero Choto Vrindavan Dham Hindu Temple">
+  <meta property="og:description" content="Discover the story of Mero Choto Vrindavan Dham — our mission, vision, legacy and the timeless wisdom of Lord Krishna that guides our community of devotion, learning and seva.">
   <meta property="og:image" content="assets/img/joinus-krishna.jpg">
-  <title>Choto Vrindavan Dham | About Us</title>
+  <title>Mero Choto Vrindavan Dham | About Us</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#main-content" data-i18n="a11y.skipLink">Skip to main content</a>
   <!-- Preloader Start -->
   <div class="sigma_preloader">
     <img width="414" height="414" src="assets/img/om.svg" alt="preloader" loading="lazy">
@@ -49,51 +49,59 @@
 
 
   <!-- partial:partia/__mobile-nav.html -->
-  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation">
+  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation" data-i18n-attr="aria-label:a11y.mobileNav">
 
-    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham"> </a>
+    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name"> </a>
+
+    <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+    </div>
 
     <!-- Menu -->
     <ul>
-      <li class="menu-item" data-nav="home"> <a href="index.html">Home</a> </li>
+      <li class="menu-item" data-nav="home"> <a href="index.html" data-i18n="nav.home">Home</a> </li>
       <li class="menu-item current-menu-item menu-item-has-children" data-nav="about">
-        <a href="#">About</a>
+        <a href="#" data-i18n="nav.about">About</a>
         <ul class="sub-menu">
-          <li class="menu-item"> <a href="about-us.html">Our Story</a> </li>
-          <li class="menu-item"> <a href="pandits.html">Our Acharyas</a> </li>
-          <li class="menu-item"> <a href="volunteers.html">Volunteers</a> </li>
-          <li class="menu-item"> <a href="testimonials.html">Testimonials</a> </li>
-          <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
+          <li class="menu-item"> <a href="about-us.html" data-i18n="nav.about.story">Our Story</a> </li>
+          <li class="menu-item"> <a href="pandits.html" data-i18n="nav.about.acharyas">Our Acharyas</a> </li>
+          <li class="menu-item"> <a href="volunteers.html" data-i18n="nav.about.volunteers">Volunteers</a> </li>
+          <li class="menu-item"> <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a> </li>
+          <li class="menu-item"> <a href="faq.html" data-i18n="nav.about.faq">FAQ</a> </li>
         </ul>
       </li>
-      <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas</a> </li>
+      <li class="menu-item" data-nav="pujas"> <a href="puja.html" data-i18n="nav.pujas">Pujas</a> </li>
       <li class="menu-item menu-item-has-children" data-nav="seva">
-        <a href="#">Seva</a>
+        <a href="#" data-i18n="nav.seva">Seva</a>
         <ul class="sub-menu">
-          <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-          <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-          <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-          <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-          <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-          <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-          <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-          <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+          <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+          <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+          <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+          <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+          <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+          <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+          <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+          <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
         </ul>
       </li>
-      <li class="menu-item" data-nav="blog"> <a href="blog-grid.html">Blog</a> </li>
-      <li class="menu-item" data-nav="gallery"> <a href="gallery.html">Gallery</a> </li>
-      <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact</a> </li>
+      <li class="menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog</a> </li>
+      <li class="menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery</a> </li>
+      <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact</a> </li>
     </ul>
 
-    <a class="sigma_btn-custom cvd-aside-cta" href="contact-us.html">Visit Temple</a>
+    <div class="cvd-aside-cta cvd-account-cta">
+      <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+      <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+    </div>
 
     <div class="cvd-aside-contact">
-      <div><i class="fas fa-om" aria-hidden="true"></i> Darshan daily 5:30 AM &ndash; 9:00 PM</div>
-      <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/bBNHBzuiGE7314N56" target="_blank" rel="noopener noreferrer">Kuleri, Agroha, Haryana 125047</a></div>
+      <div><i class="fas fa-om" aria-hidden="true"></i> <span data-i18n="aside.darshan">Darshan daily 5:30 AM &ndash; 9:00 PM</span></div>
+      <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/bBNHBzuiGE7314N56" target="_blank" rel="noopener noreferrer" data-i18n="aside.address">Kuleri, Agroha, Haryana 125047</a></div>
     </div>
 
   </aside>
-  <div class="sigma_aside-overlay aside-trigger-left" role="button" tabindex="-1" aria-label="Close navigation menu"></div>
+  <div class="sigma_aside-overlay aside-trigger-left" role="button" tabindex="-1" aria-label="Close navigation menu" data-i18n-attr="aria-label:a11y.closeMenu"></div>
   <!-- partial -->
 
   <!-- partial:partia/__header.html -->
@@ -101,55 +109,63 @@
 
     <!-- Middle Header Start -->
     <div class="sigma_header-middle cvd-mainnav">
-      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary">
+      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary" data-i18n-attr="aria-label:a11y.primaryNav">
 
         <!-- Logo Start -->
         <div class="cvd-logo">
           <a class="navbar-brand" href="index.html">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham">
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name">
           </a>
         </div>
         <!-- Logo End -->
 
         <!-- Menu -->
         <ul class="navbar-nav cvd-nav">
-          <li class="menu-item" data-nav="home"> <a href="index.html">Home<span></span></a> </li>
+          <li class="menu-item" data-nav="home"> <a href="index.html" data-i18n="nav.home">Home<span></span></a> </li>
           <li class="menu-item current-menu-item menu-item-has-children" data-nav="about">
-            <a href="about-us.html" aria-haspopup="true" aria-expanded="false">About<span></span></a>
+            <a href="about-us.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.about">About<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="about-us.html">Our Story</a> </li>
-              <li class="menu-item"> <a href="pandits.html">Our Acharyas</a> </li>
-              <li class="menu-item"> <a href="volunteers.html">Volunteers</a> </li>
-              <li class="menu-item"> <a href="testimonials.html">Testimonials</a> </li>
-              <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
+              <li class="menu-item"> <a href="about-us.html" data-i18n="nav.about.story">Our Story</a> </li>
+              <li class="menu-item"> <a href="pandits.html" data-i18n="nav.about.acharyas">Our Acharyas</a> </li>
+              <li class="menu-item"> <a href="volunteers.html" data-i18n="nav.about.volunteers">Volunteers</a> </li>
+              <li class="menu-item"> <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a> </li>
+              <li class="menu-item"> <a href="faq.html" data-i18n="nav.about.faq">FAQ</a> </li>
             </ul>
           </li>
-          <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas<span></span></a> </li>
+          <li class="menu-item" data-nav="pujas"> <a href="puja.html" data-i18n="nav.pujas">Pujas<span></span></a> </li>
           <li class="menu-item menu-item-has-children" data-nav="seva">
-            <a href="services.html" aria-haspopup="true" aria-expanded="false">Seva<span></span></a>
+            <a href="services.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.seva">Seva<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-              <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-              <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-              <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-              <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-              <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-              <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-              <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+              <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+              <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+              <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+              <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+              <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+              <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+              <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+              <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
             </ul>
           </li>
-          <li class="menu-item" data-nav="blog"> <a href="blog-grid.html">Blog<span></span></a> </li>
-          <li class="menu-item" data-nav="gallery"> <a href="gallery.html">Gallery<span></span></a> </li>
-          <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact<span></span></a> </li>
+          <li class="menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog<span></span></a> </li>
+          <li class="menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery<span></span></a> </li>
+          <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact<span></span></a> </li>
         </ul>
 
         <!-- Controls -->
         <div class="sigma_header-controls cvd-controls">
-          <a class="sigma_btn-custom cvd-cta" href="contact-us.html">Visit Temple</a>
+          <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+          </div>
+
+          <div class="cvd-cta cvd-account-cta">
+            <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+            <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+          </div>
 
           <ul class="sigma_header-controls-inner">
             <!-- Mobile Toggler -->
-            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu">
+            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu" data-i18n-attr="aria-label:a11y.openMenu">
               <span></span>
               <span></span>
               <span></span>
@@ -177,18 +193,18 @@
 
       <nav class="cvd-about-crumb" aria-label="Breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">About Us</li>
+          <li class="breadcrumb-item"><a href="index.html" data-i18n="footer.home">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page" data-i18n="about-us.hero.crumb">About Us</li>
         </ol>
       </nav>
 
       <div class="cvd-about-hero-grid">
         <div class="cvd-about-hero-text">
-          <h1>About Us</h1>
-          <p class="cvd-about-hero-tag">A spiritual home for everyone</p>
-          <span class="cvd-badge cvd-about-hero-badge"><i class="fas fa-om" aria-hidden="true"></i>Faith &middot; Community &middot; Service</span>
+          <h1 data-i18n="about-us.hero.title">About Us</h1>
+          <p class="cvd-about-hero-tag" data-i18n="about-us.hero.tag">A spiritual home for everyone</p>
+          <span class="cvd-badge cvd-about-hero-badge" data-i18n="about-us.hero.badge"><i class="fas fa-om" aria-hidden="true"></i>Faith &middot; Community &middot; Service</span>
         </div>
-        <p class="cvd-about-hero-quote">&ldquo;Where tradition meets togetherness&rdquo;</p>
+        <p class="cvd-about-hero-quote" data-i18n="about-us.hero.quote">&ldquo;Where tradition meets togetherness&rdquo;</p>
       </div>
 
     </div>
@@ -203,32 +219,32 @@
 
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="0.7s">
           <div class="cvd-story-collage">
-            <img width="270" height="300" src="assets/img/service/details/5.webp" alt="An aarti flame lifted in offering during evening worship" loading="lazy">
-            <img width="270" height="300" src="assets/img/service/details/6.webp" alt="A devotee lighting diyas before the deities" loading="lazy">
-            <img width="270" height="300" src="assets/img/service/details/7.webp" alt="A murti of Nataraja adorned for puja" loading="lazy">
-            <img width="270" height="300" src="assets/img/service/details/8.webp" alt="A murti of Lord Ganesha decorated with gold ornaments" loading="lazy">
+            <img width="270" height="300" src="assets/img/service/details/5.webp" alt="An aarti flame lifted in offering during evening worship" loading="lazy" data-i18n-attr="alt:about-us.story.img1Alt">
+            <img width="270" height="300" src="assets/img/service/details/6.webp" alt="A devotee lighting diyas before the deities" loading="lazy" data-i18n-attr="alt:about-us.story.img2Alt">
+            <img width="270" height="300" src="assets/img/service/details/7.webp" alt="A murti of Nataraja adorned for puja" loading="lazy" data-i18n-attr="alt:about-us.story.img3Alt">
+            <img width="270" height="300" src="assets/img/service/details/8.webp" alt="A murti of Lord Ganesha decorated with gold ornaments" loading="lazy" data-i18n-attr="alt:about-us.story.img4Alt">
             <span class="cvd-story-om" aria-hidden="true"><i class="fas fa-om"></i></span>
           </div>
         </div>
 
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.1s">
           <div class="cvd-about-copy">
-            <p class="cvd-eyebrow"><i class="fas fa-om" aria-hidden="true"></i>Our Story</p>
-            <h2>A Place of Devotion, Learning and Service</h2>
-            <p class="cvd-lead">Our temple is more than a place of worship &mdash; it is a vibrant community that celebrates faith, culture and compassion. Inspired by the timeless teachings of Lord Krishna, we strive to create a space where everyone can connect, learn and grow together.</p>
+            <p class="cvd-eyebrow" data-i18n="about-us.story.eyebrow"><i class="fas fa-om" aria-hidden="true"></i>Our Story</p>
+            <h2 data-i18n="about-us.story.title">A Place of Devotion, Learning and Service</h2>
+            <p class="cvd-lead" data-i18n="about-us.story.lead">Our temple is more than a place of worship &mdash; it is a vibrant community that celebrates faith, culture and compassion. Inspired by the timeless teachings of Lord Krishna, we strive to create a space where everyone can connect, learn and grow together.</p>
 
             <ul class="cvd-values">
               <li>
                 <i class="fas fa-spa" aria-hidden="true"></i>
-                <span>Spiritual<br>Growth</span>
+                <span data-i18n="about-us.story.value1">Spiritual<br>Growth</span>
               </li>
               <li>
                 <i class="fas fa-users" aria-hidden="true"></i>
-                <span>Community<br>Unity</span>
+                <span data-i18n="about-us.story.value2">Community<br>Unity</span>
               </li>
               <li>
                 <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
-                <span>Service to<br>Society</span>
+                <span data-i18n="about-us.story.value3">Service to<br>Society</span>
               </li>
             </ul>
           </div>
@@ -244,9 +260,9 @@
     <div class="container">
 
       <div class="section-title text-center mx-auto wow fadeInUp" data-wow-duration="0.7s">
-        <p class="subtitle">Our Purpose</p>
-        <h4 class="title">Rooted in Dharma, Serving the World</h4>
-        <p class="cvd-lead mx-auto">Guided by timeless values, we work towards a more compassionate, connected and harmonious society.</p>
+        <p class="subtitle" data-i18n="about-us.purpose.eyebrow">Our Purpose</p>
+        <h4 class="title" data-i18n="about-us.purpose.title">Rooted in Dharma, Serving the World</h4>
+        <p class="cvd-lead mx-auto" data-i18n="about-us.purpose.lead">Guided by timeless values, we work towards a more compassionate, connected and harmonious society.</p>
       </div>
 
       <div class="row g-4">
@@ -254,24 +270,24 @@
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-duration="0.6s">
           <div class="cvd-seva-card h-100">
             <span class="cvd-seva-icon"><i class="fas fa-bullseye" aria-hidden="true"></i></span>
-            <h3>Our Mission</h3>
-            <p>To promote spiritual growth, preserve our rich cultural heritage and serve the community through education, seva and compassionate action.</p>
+            <h3 data-i18n="about-us.purpose.mission.title">Our Mission</h3>
+            <p data-i18n="about-us.purpose.mission.desc">To promote spiritual growth, preserve our rich cultural heritage and serve the community through education, seva and compassionate action.</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.1s">
           <div class="cvd-seva-card h-100">
             <span class="cvd-seva-icon"><i class="fas fa-eye" aria-hidden="true"></i></span>
-            <h3>Our Vision</h3>
-            <p>A world inspired by the teachings of Lord Krishna &mdash; where everyone lives with peace, purpose and kindness.</p>
+            <h3 data-i18n="about-us.purpose.vision.title">Our Vision</h3>
+            <p data-i18n="about-us.purpose.vision.desc">A world inspired by the teachings of Lord Krishna &mdash; where everyone lives with peace, purpose and kindness.</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 mx-auto mx-lg-0 wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.2s">
           <div class="cvd-seva-card h-100">
             <span class="cvd-seva-icon"><i class="fas fa-gem" aria-hidden="true"></i></span>
-            <h3>Our Values</h3>
-            <p class="cvd-value-list">Devotion <span aria-hidden="true">&middot;</span> Integrity <span aria-hidden="true">&middot;</span> Inclusivity <span aria-hidden="true">&middot;</span> Service <span aria-hidden="true">&middot;</span> Learning <span aria-hidden="true">&middot;</span> Community</p>
+            <h3 data-i18n="about-us.purpose.values.title">Our Values</h3>
+            <p class="cvd-value-list" data-i18n="about-us.purpose.values.list">Devotion <span aria-hidden="true">&middot;</span> Integrity <span aria-hidden="true">&middot;</span> Inclusivity <span aria-hidden="true">&middot;</span> Service <span aria-hidden="true">&middot;</span> Learning <span aria-hidden="true">&middot;</span> Community</p>
           </div>
         </div>
 
@@ -288,12 +304,12 @@
 
       <div class="row align-items-center g-5 cvd-journey-intro">
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="0.7s">
-          <p class="cvd-eyebrow"><i class="fas fa-om" aria-hidden="true"></i>Our Journey</p>
-          <h2>A Legacy of Faith and Service</h2>
-          <p class="cvd-lead">From humble beginnings to a thriving community, our journey has always been guided by devotion and the blessings of the Divine.</p>
+          <p class="cvd-eyebrow" data-i18n="about-us.journey.eyebrow"><i class="fas fa-om" aria-hidden="true"></i>Our Journey</p>
+          <h2 data-i18n="about-us.journey.title">A Legacy of Faith and Service</h2>
+          <p class="cvd-lead" data-i18n="about-us.journey.lead">From humble beginnings to a thriving community, our journey has always been guided by devotion and the blessings of the Divine.</p>
         </div>
         <div class="col-lg-6 text-center wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.1s">
-          <svg class="cvd-journey-art" viewBox="0 0 320 260" role="img" aria-label="Line illustration of a temple spire">
+          <svg class="cvd-journey-art" viewBox="0 0 320 260" role="img" aria-label="Line illustration of a temple spire" data-i18n-attr="aria-label:about-us.journey.artAria">
             <ellipse cx="160" cy="238" rx="130" ry="8" fill="var(--cvd-cream-deep)"></ellipse>
             <circle cx="160" cy="70" r="52" fill="none" stroke="var(--cvd-gold-soft)" stroke-width="1" opacity="0.6"></circle>
             <path d="M112 236V150h96v86" fill="none" stroke="var(--cvd-maroon)" stroke-width="2"></path>
@@ -314,27 +330,27 @@
         <div class="cvd-timeline-node wow fadeInUp" data-wow-duration="0.6s">
           <span class="cvd-timeline-year">1998</span>
           <span class="cvd-timeline-dot" aria-hidden="true"></span>
-          <p class="cvd-timeline-label">Foundation of the Temple</p>
+          <p class="cvd-timeline-label" data-i18n="about-us.journey.t1998">Foundation of the Temple</p>
         </div>
         <div class="cvd-timeline-node wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.1s">
           <span class="cvd-timeline-year">2005</span>
           <span class="cvd-timeline-dot" aria-hidden="true"></span>
-          <p class="cvd-timeline-label">Community Programs Begin</p>
+          <p class="cvd-timeline-label" data-i18n="about-us.journey.t2005">Community Programs Begin</p>
         </div>
         <div class="cvd-timeline-node wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.2s">
           <span class="cvd-timeline-year">2012</span>
           <span class="cvd-timeline-dot" aria-hidden="true"></span>
-          <p class="cvd-timeline-label">Expanded Facilities</p>
+          <p class="cvd-timeline-label" data-i18n="about-us.journey.t2012">Expanded Facilities</p>
         </div>
         <div class="cvd-timeline-node wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">
           <span class="cvd-timeline-year">2018</span>
           <span class="cvd-timeline-dot" aria-hidden="true"></span>
-          <p class="cvd-timeline-label">Youth &amp; Education Initiatives</p>
+          <p class="cvd-timeline-label" data-i18n="about-us.journey.t2018">Youth &amp; Education Initiatives</p>
         </div>
         <div class="cvd-timeline-node wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.4s">
           <span class="cvd-timeline-year">2024</span>
           <span class="cvd-timeline-dot" aria-hidden="true"></span>
-          <p class="cvd-timeline-label">A Stronger Community Today</p>
+          <p class="cvd-timeline-label" data-i18n="about-us.journey.t2024">A Stronger Community Today</p>
         </div>
       </div>
 
@@ -349,21 +365,21 @@
 
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="0.7s">
           <div class="cvd-media cvd-ratio-4x5 cvd-inspire-media">
-            <img src="assets/img/about-inspiration.jpg" alt="A temple sevak seated in blessing, with the Bhagavad Gita and the temple's domes in the background" loading="lazy">
+            <img src="assets/img/about-inspiration.jpg" alt="A temple sevak seated in blessing, with the Bhagavad Gita and the temple's domes in the background" loading="lazy" data-i18n-attr="alt:about-us.inspiration.imgAlt">
           </div>
         </div>
 
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.1s">
-          <p class="cvd-eyebrow"><i class="fas fa-om" aria-hidden="true"></i>Our Inspiration</p>
-          <h2>The Timeless Wisdom of Lord Krishna</h2>
-          <p class="cvd-lead">Lord Krishna&rsquo;s teachings guide us to live with wisdom, compassion and joy. His message of duty, selfless action and devotion continues to inspire generations of devotees who walk through our doors.</p>
+          <p class="cvd-eyebrow" data-i18n="about-us.inspiration.eyebrow"><i class="fas fa-om" aria-hidden="true"></i>Our Inspiration</p>
+          <h2 data-i18n="about-us.inspiration.title">The Timeless Wisdom of Lord Krishna</h2>
+          <p class="cvd-lead" data-i18n="about-us.inspiration.lead">Lord Krishna&rsquo;s teachings guide us to live with wisdom, compassion and joy. His message of duty, selfless action and devotion continues to inspire generations of devotees who walk through our doors.</p>
 
           <div class="cvd-gita-card">
             <figure class="cvd-pullquote">
               <span class="cvd-pullquote-mark" aria-hidden="true">&ldquo;</span>
-              <blockquote>Do your duty with devotion,<br>let go of the results, and find peace within.</blockquote>
+              <blockquote data-i18n="about-us.inspiration.quote">Do your duty with devotion,<br>let go of the results, and find peace within.</blockquote>
               <span class="cvd-pullquote-rule" aria-hidden="true"></span>
-              <cite>&mdash; Bhagavad Gita</cite>
+              <cite data-i18n="about-us.inspiration.citation">&mdash; Bhagavad Gita</cite>
             </figure>
           </div>
         </div>
@@ -378,8 +394,8 @@
     <div class="container">
 
       <div class="section-title text-center mx-auto wow fadeInUp" data-wow-duration="0.7s">
-        <p class="subtitle">Our Impact</p>
-        <h4 class="title">Together We Make a Difference</h4>
+        <p class="subtitle" data-i18n="about-us.impact.eyebrow">Our Impact</p>
+        <h4 class="title" data-i18n="about-us.impact.title">Together We Make a Difference</h4>
       </div>
 
       <div class="cvd-stats-row">
@@ -387,28 +403,28 @@
           <i class="fas fa-users" aria-hidden="true"></i>
           <div>
             <strong><b class="counter" data-from="0" data-to="10">10</b>K+</strong>
-            <span>Devotees &amp; Visitors</span>
+            <span data-i18n="about-us.impact.devotees">Devotees &amp; Visitors</span>
           </div>
         </div>
         <div class="cvd-stat">
           <i class="far fa-calendar-alt" aria-hidden="true"></i>
           <div>
             <strong><b class="counter" data-from="0" data-to="200">200</b>+</strong>
-            <span>Events &amp; Pujas</span>
+            <span data-i18n="about-us.impact.events">Events &amp; Pujas</span>
           </div>
         </div>
         <div class="cvd-stat">
           <i class="fas fa-seedling" aria-hidden="true"></i>
           <div>
             <strong><b class="counter" data-from="0" data-to="50">50</b>+</strong>
-            <span>Community Initiatives</span>
+            <span data-i18n="about-us.impact.initiatives">Community Initiatives</span>
           </div>
         </div>
         <div class="cvd-stat">
           <i class="fas fa-hands-helping" aria-hidden="true"></i>
           <div>
             <strong><b class="counter" data-from="0" data-to="100">100</b>+</strong>
-            <span>Volunteers</span>
+            <span data-i18n="about-us.impact.volunteers">Volunteers</span>
           </div>
         </div>
       </div>
@@ -423,10 +439,10 @@
 
       <div class="cvd-sec-head wow fadeInUp" data-wow-duration="0.7s">
         <div>
-          <p class="cvd-eyebrow"><i class="fas fa-om" aria-hidden="true"></i>In Action</p>
-          <h2>Moments from Our Journey</h2>
+          <p class="cvd-eyebrow" data-i18n="about-us.moments.eyebrow"><i class="fas fa-om" aria-hidden="true"></i>In Action</p>
+          <h2 data-i18n="about-us.moments.title">Moments from Our Journey</h2>
         </div>
-        <a href="gallery.html" class="btn-link">View Gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        <a href="gallery.html" class="btn-link" data-i18n="about-us.moments.viewall">View Gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
       </div>
 
       <div class="row g-4">
@@ -434,11 +450,11 @@
         <div class="col-6 col-lg-3 wow fadeInUp" data-wow-duration="0.6s">
           <figure class="cvd-moment">
             <div class="cvd-media cvd-ratio-1x1">
-              <img src="assets/img/puja/style-2/3.webp" alt="Priests performing Ganga aarti with flame lamps before a crowd of devotees" loading="lazy">
+              <img src="assets/img/puja/style-2/3.webp" alt="Priests performing Ganga aarti with flame lamps before a crowd of devotees" loading="lazy" data-i18n-attr="alt:about-us.moments.m1Alt">
             </div>
             <figcaption>
-              <span class="cvd-moment-title">Festivals</span>
-              <span class="cvd-moment-sub">Celebrating our traditions</span>
+              <span class="cvd-moment-title" data-i18n="about-us.moments.m1.title">Festivals</span>
+              <span class="cvd-moment-sub" data-i18n="about-us.moments.m1.sub">Celebrating our traditions</span>
             </figcaption>
           </figure>
         </div>
@@ -446,11 +462,11 @@
         <div class="col-6 col-lg-3 wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.1s">
           <figure class="cvd-moment">
             <div class="cvd-media cvd-ratio-1x1">
-              <img src="assets/img/puja/style-2/2.webp" alt="Devotees gathered in line to receive prasad at the temple" loading="lazy">
+              <img src="assets/img/puja/style-2/2.webp" alt="Devotees gathered in line to receive prasad at the temple" loading="lazy" data-i18n-attr="alt:about-us.moments.m2Alt">
             </div>
             <figcaption>
-              <span class="cvd-moment-title">Community</span>
-              <span class="cvd-moment-sub">Stronger together</span>
+              <span class="cvd-moment-title" data-i18n="about-us.moments.m2.title">Community</span>
+              <span class="cvd-moment-sub" data-i18n="about-us.moments.m2.sub">Stronger together</span>
             </figcaption>
           </figure>
         </div>
@@ -458,11 +474,11 @@
         <div class="col-6 col-lg-3 wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.2s">
           <figure class="cvd-moment">
             <div class="cvd-media cvd-ratio-1x1">
-              <img src="assets/img/puja/style-2/5.webp" alt="A devotee's hand lighting diyas as an act of seva" loading="lazy">
+              <img src="assets/img/puja/style-2/5.webp" alt="A devotee's hand lighting diyas as an act of seva" loading="lazy" data-i18n-attr="alt:about-us.moments.m3Alt">
             </div>
             <figcaption>
-              <span class="cvd-moment-title">Seva</span>
-              <span class="cvd-moment-sub">Service in action</span>
+              <span class="cvd-moment-title" data-i18n="about-us.moments.m3.title">Seva</span>
+              <span class="cvd-moment-sub" data-i18n="about-us.moments.m3.sub">Service in action</span>
             </figcaption>
           </figure>
         </div>
@@ -470,11 +486,11 @@
         <div class="col-6 col-lg-3 wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">
           <figure class="cvd-moment">
             <div class="cvd-media cvd-ratio-1x1">
-              <img src="assets/img/puja/details/2.webp" alt="Hands joined in prayer, a tradition passed through generations" loading="lazy">
+              <img src="assets/img/puja/details/2.webp" alt="Hands joined in prayer, a tradition passed through generations" loading="lazy" data-i18n-attr="alt:about-us.moments.m4Alt">
             </div>
             <figcaption>
-              <span class="cvd-moment-title">Future Generations</span>
-              <span class="cvd-moment-sub">Passing on values</span>
+              <span class="cvd-moment-title" data-i18n="about-us.moments.m4.title">Future Generations</span>
+              <span class="cvd-moment-sub" data-i18n="about-us.moments.m4.sub">Passing on values</span>
             </figcaption>
           </figure>
         </div>
@@ -490,14 +506,14 @@
     <div class="container">
       <div class="cvd-about-cta-grid">
         <div class="cvd-about-cta-text">
-          <h2>Be a Part of Our Journey</h2>
-          <p class="cvd-lead">Join us in our mission of devotion, learning and service.</p>
+          <h2 data-i18n="about-us.cta.title">Be a Part of Our Journey</h2>
+          <p class="cvd-lead" data-i18n="about-us.cta.lead">Join us in our mission of devotion, learning and service.</p>
           <div class="cvd-about-cta-actions">
-            <a href="volunteers.html" class="sigma_btn-custom">Become a Volunteer</a>
-            <a href="donation.html" class="sigma_btn-custom cvd-btn-outline">Support Our Temple</a>
+            <a href="volunteers.html" class="sigma_btn-custom" data-i18n="about-us.cta.volunteer">Become a Volunteer</a>
+            <a href="donation.html" class="sigma_btn-custom cvd-btn-outline" data-i18n="about-us.cta.support">Support Our Temple</a>
           </div>
         </div>
-        <p class="cvd-about-cta-quote">&ldquo;Together for a brighter tomorrow&rdquo;</p>
+        <p class="cvd-about-cta-quote" data-i18n="about-us.cta.quote">&ldquo;Together for a brighter tomorrow&rdquo;</p>
       </div>
     </div>
   </section>
@@ -513,8 +529,8 @@
         <div class="row">
 
           <div class="col-xl-4 col-lg-4 col-md-6 footer-widget cvd-footer-brand">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham" loading="lazy">
-            <p class="cvd-footer-tagline">Faith, Service, Community</p>
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" loading="lazy" data-i18n-attr="alt:brand.name">
+            <p class="cvd-footer-tagline" data-i18n="footer.tagline">Faith, Service, Community</p>
             <ul class="sigma_sm">
               <li> <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
               <li> <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a> </li>
@@ -524,35 +540,35 @@
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-6 footer-widget">
-            <h5 class="widget-title">Quick Links</h5>
+            <h5 class="widget-title" data-i18n="footer.quicklinks">Quick Links</h5>
             <ul>
-              <li> <a href="index.html">Home</a> </li>
-              <li> <a href="about-us.html">About Us</a> </li>
-              <li> <a href="puja.html">Pujas &amp; Services</a> </li>
-              <li> <a href="events.html">Events</a> </li>
-              <li> <a href="gallery.html">Gallery</a> </li>
-              <li> <a href="blog-grid.html">Blog</a> </li>
+              <li> <a href="index.html" data-i18n="footer.home">Home</a> </li>
+              <li> <a href="about-us.html" data-i18n="footer.about">About Us</a> </li>
+              <li> <a href="puja.html" data-i18n="footer.pujas">Pujas &amp; Services</a> </li>
+              <li> <a href="events.html" data-i18n="footer.events">Events</a> </li>
+              <li> <a href="gallery.html" data-i18n="footer.gallery">Gallery</a> </li>
+              <li> <a href="blog-grid.html" data-i18n="footer.blog">Blog</a> </li>
             </ul>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget">
-            <h5 class="widget-title">Our Initiatives</h5>
+            <h5 class="widget-title" data-i18n="footer.initiatives">Our Initiatives</h5>
             <ul>
-              <li> <a href="donation.html">Annadanam</a> </li>
-              <li> <a href="donation.html">Education Support</a> </li>
-              <li> <a href="donation.html">Temple Restoration</a> </li>
-              <li> <a href="donation-archive.html">Community Outreach</a> </li>
-              <li> <a href="volunteers.html">Volunteer</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.annadanam">Annadanam</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.education">Education Support</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.restoration">Temple Restoration</a> </li>
+              <li> <a href="donation-archive.html" data-i18n="footer.outreach">Community Outreach</a> </li>
+              <li> <a href="volunteers.html" data-i18n="footer.volunteer">Volunteer</a> </li>
             </ul>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget cvd-newsletter">
-            <h5 class="widget-title">Stay Connected</h5>
-            <p>Subscribe to our newsletter for updates and events.</p>
+            <h5 class="widget-title" data-i18n="footer.connected">Stay Connected</h5>
+            <p data-i18n="footer.newsletter.desc">Subscribe to our newsletter for updates and events.</p>
             <form method="post" aria-label="Newsletter signup">
-              <label class="visually-hidden" for="cvd-newsletter-email">Email address</label>
-              <input type="email" id="cvd-newsletter-email" name="email" placeholder="Your email address" required>
-              <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <label class="visually-hidden" for="cvd-newsletter-email" data-i18n="footer.newsletter.emailLabel">Email address</label>
+              <input type="email" id="cvd-newsletter-email" name="email" placeholder="Your email address" required data-i18n-attr="placeholder:footer.newsletter.emailPlaceholder">
+              <button type="submit" aria-label="Subscribe" data-i18n-attr="aria-label:footer.newsletter.subscribe"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
             </form>
           </div>
 
@@ -563,12 +579,12 @@
     <!-- Footer Bottom -->
     <div class="sigma_footer-bottom">
       <div class="container">
-        <p>&copy; 2026 Choto Vrindavan Dham. All rights reserved.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 Mero Choto Vrindavan Dham. All rights reserved.</p>
         <ul class="cvd-footer-legal">
-          <li><a href="about-us.html">Faith</a></li>
-          <li><a href="gallery.html">Culture</a></li>
-          <li><a href="services.html">Service</a></li>
-          <li><a href="donation.html">A Better Tomorrow</a></li>
+          <li><a href="about-us.html" data-i18n="footer.legal.faith">Faith</a></li>
+          <li><a href="gallery.html" data-i18n="footer.legal.culture">Culture</a></li>
+          <li><a href="services.html" data-i18n="footer.legal.service">Service</a></li>
+          <li><a href="donation.html" data-i18n="footer.legal.tomorrow">A Better Tomorrow</a></li>
         </ul>
       </div>
     </div>
@@ -577,12 +593,12 @@
   <!-- partial -->
 
   <!-- WhatsApp float button: set href="https://wa.me/<number>" and remove class mht-wa-disabled to enable -->
-  <a class="mht-whatsapp-btn mht-wa-disabled" href="#" title="WhatsApp — add your number to activate" aria-label="WhatsApp not yet configured">
+  <a class="mht-whatsapp-btn mht-wa-disabled" href="#" title="WhatsApp — add your number to activate" aria-label="WhatsApp not yet configured" data-i18n-attr="title:wa.title|aria-label:wa.aria">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <!-- Back To Top Start -->
-  <div class="sigma_top style-5">
+  <div class="sigma_top style-5" role="button" tabindex="0" aria-label="Back to top" data-i18n-attr="aria-label:a11y.backToTop">
     <i class="fas fa-angle-double-up"></i>
   </div>
   <!-- Back To Top End -->
@@ -596,5 +612,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n-common.js"></script>
+  <script src="assets/js/i18n-pages/about-us.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </body>
 </html>

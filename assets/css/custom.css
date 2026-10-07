@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Choto Vrindavan Dham — design system & project overrides
+   Mero Choto Vrindavan Dham — design system & project overrides
    Loaded last. Put tweaks here, not in style.css.
 
    Layers, in order:
@@ -326,7 +326,22 @@ h4 a:hover, h5 a:hover, h6 a:hover { color: var(--cvd-maroon); }
 
 .cvd-controls { display: flex; align-items: center; gap: 14px; padding: 0; }
 .cvd-controls .sigma_btn-custom { margin: 0; }
-.cvd-cta { padding: 14px 26px; white-space: nowrap; }
+.cvd-cta { white-space: nowrap; }
+
+/* Sign In / Register control group (replaces the old single "Visit Temple" CTA) */
+.cvd-account-cta { display: flex; align-items: center; gap: 10px; }
+.cvd-account-cta .sigma_btn-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  padding: 8px 18px;
+  line-height: 1.2;
+  font-size: 13px;
+}
+.cvd-account-cta .sigma_btn-custom i { margin: 0; font-size: 12px; }
+.cvd-account-cta .sigma_btn-custom:hover i { transform: none; }
 
 /* Sticky state — main.js toggles .sticky on .sigma_header.can-sticky */
 .cvd-header.sticky .cvd-mainnav {
@@ -365,10 +380,11 @@ h4 a:hover, h5 a:hover, h6 a:hover { color: var(--cvd-maroon); }
 .sigma_aside ul li a:hover { color: var(--cvd-maroon); }
 .sigma_aside .navbar-brand { padding: 22px 20px 4px; }
 .cvd-aside-cta {
-  display: block;
   margin: 26px 20px 0;
   text-align: center;
 }
+.cvd-aside-cta.cvd-account-cta { display: flex; }
+.cvd-aside-cta.cvd-account-cta .sigma_btn-custom { flex: 1 1 0; }
 .cvd-aside-contact {
   margin: 26px 20px 40px;
   padding-top: 22px;
@@ -2714,4 +2730,61 @@ button:focus-visible,
 @media (prefers-reduced-motion: reduce) {
   .cvd-story-collage img,
   .cvd-moment .cvd-media img { transition: none; }
+}
+
+/* ==========================================================================
+   8. LANGUAGE TOGGLE (EN / HI)
+   ========================================================================== */
+
+.cvd-lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--cvd-line);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+  background: var(--cvd-cream);
+}
+
+.cvd-lang-toggle-btn {
+  border: 0;
+  background: transparent;
+  color: var(--cvd-body);
+  font-family: var(--cvd-sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 7px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.cvd-lang-toggle-btn:hover { color: var(--cvd-ink); }
+
+.cvd-lang-toggle-btn.is-active {
+  background: var(--mht-primary);
+  color: #fff;
+}
+
+.cvd-header .cvd-controls .cvd-lang-toggle {
+  margin-right: 14px;
+}
+
+.sigma_aside .cvd-lang-toggle {
+  margin: 18px 0;
+}
+
+.sigma_aside .cvd-lang-toggle-btn {
+  padding: 8px 16px;
+}
+
+@media (max-width: 991px) {
+  .cvd-header .cvd-controls .cvd-lang-toggle {
+    margin-right: 8px;
+  }
+  .cvd-lang-toggle-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
 }

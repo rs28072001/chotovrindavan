@@ -1,0 +1,75 @@
+/* Page-specific EN/HI strings for event-details.html. */
+window.CVD_I18N_PAGE = {
+  "event-details.hero.title": { en: "Event Details", hi: "कार्यक्रम विवरण" },
+  "event-details.countdown.days": { en: "Days", hi: "दिन" },
+  "event-details.countdown.hours": { en: "Hours", hi: "घंटे" },
+  "event-details.countdown.minutes": { en: "Minutes", hi: "मिनट" },
+  "event-details.countdown.seconds": { en: "Seconds", hi: "सेकंड" },
+
+  "event-details.intro.heading": { en: "People ask questions related to Hinduism", hi: "लोग हिन्दू धर्म से जुड़े प्रश्न पूछते हैं" },
+  "event-details.intro.when": { en: "<i class=\"far fa-clock\"></i> Sunday (8:00 am -9:00 am)", hi: "<i class=\"far fa-clock\"></i> रविवार (सुबह 8:00 - 9:00 बजे)" },
+  "event-details.intro.where": { en: "<i class=\"fas fa-map-marker-alt-alt\"></i> 56 Thatcher Avenue River Forest", hi: "<i class=\"fas fa-map-marker-alt-alt\"></i> 56 थैचर एवेन्यू, रिवर फॉरेस्ट" },
+  "event-details.intro.p1": { en: "Our mission is to share the Good of Hinduism, Loving, Faith and Serving. People ask questions related to Hinduism. Temple is a place where Hindu worship our Bhagwan Ram, Shiva, Vishnu, Krishna etc. galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting", hi: "हमारा उद्देश्य हिन्दू धर्म की अच्छाई, प्रेम, आस्था और सेवा को साझा करना है। मंदिर वह स्थान है जहाँ हिन्दू भगवान राम, शिव, विष्णु, कृष्ण आदि की पूजा करते हैं। यह परंपरा सदियों से चली आ रही है और आज भी उतनी ही प्रासंगिक है।" },
+  "event-details.intro.p2": { en: "Temple is a place where Hindu worship our Bhagwan Ram, Shiva, Vishnu, Krishna etc. Proin eget tortor industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type, People ask questions related to Hinduism. specimen book.", hi: "मंदिर वह स्थान है जहाँ हिन्दू भगवान राम, शिव, विष्णु, कृष्ण आदि की पूजा करते हैं। लोग अक्सर हिन्दू धर्म से जुड़े प्रश्न पूछते हैं और यहाँ उन्हें उत्तर मिलते हैं।" },
+
+  "event-details.rebirth.heading": { en: "Should I Believe in Rebirth?", hi: "क्या मुझे पुनर्जन्म में विश्वास करना चाहिए?" },
+  "event-details.rebirth.list": { en: "<li>People ask questions related to Hinduism</li><li>We never believe in reborn </li><li>People ask questions related to Hinduism</li><li>We never believe in reborn </li>", hi: "<li>लोग हिन्दू धर्म से जुड़े प्रश्न पूछते हैं</li><li>हम पुनर्जन्म में विश्वास नहीं करते</li><li>लोग हिन्दू धर्म से जुड़े प्रश्न पूछते हैं</li><li>हम पुनर्जन्म में विश्वास नहीं करते</li>" },
+
+  "event-details.quote.author": { en: "By Hetmayar", hi: "हेटमायर द्वारा" },
+  "event-details.quote.text": { en: "Some Hindu teachers insist that believing in rebirth is necessary for living an ethical life. Their concern is that if there is no fear of karmic repercussions in future lifetimes", hi: "कुछ हिन्दू गुरुओं का मानना है कि नैतिक जीवन जीने के लिए पुनर्जन्म में विश्वास आवश्यक है। उनकी चिंता यह है कि यदि भविष्य के जन्मों में कर्म परिणामों का भय न हो..." },
+
+  "event-details.body.p1": { en: "Temple is a place where Hindu worship our Bhagwan Ram, Shiva, Vishnu, Krishna etc. Proin eget tortor industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type, People ask questions related to Hinduism. specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with", hi: "मंदिर वह स्थान है जहाँ हिन्दू भगवान राम, शिव, विष्णु, कृष्ण आदि की पूजा करते हैं। यह परंपरा पीढ़ियों से चली आ रही है और आज भी उतनी ही सार्थक है जितनी पहले थी। समय के साथ इसमें कई नए आयाम जुड़े हैं।" },
+  "event-details.body.p2": { en: "Temple is a place where Hindu worship our Bhagwan Ram, Shiva, Vishnu, Krishna etc. Proin eget tortor industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type, People ask questions related to Hinduism. specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", hi: "मंदिर वह स्थान है जहाँ हिन्दू भगवान राम, शिव, विष्णु, कृष्ण आदि की पूजा करते हैं। सदियों से चली आ रही यह परंपरा आज भी समुदाय को एक साथ जोड़ती है और आस्था को जीवित रखती है।" },
+
+  "event-details.tagsHeading": { en: "Tags", hi: "टैग" },
+  "event-details.tag1": { en: "Portfolio", hi: "पोर्टफोलियो" },
+  "event-details.tag2": { en: "Creative", hi: "रचनात्मक" },
+  "event-details.tag3": { en: "Intuitive", hi: "सहज" },
+  "event-details.shareHeading": { en: "Share", hi: "साझा करें" },
+
+  "event-details.comments.heading": { en: "03 Comments", hi: "03 टिप्पणियाँ" },
+  "event-details.comment1.name": { en: "Robert John", hi: "रॉबर्ट जॉन" },
+  "event-details.comment1.date": { en: "<i class=\"far fa-clock\"></i> January 13 2026", hi: "<i class=\"far fa-clock\"></i> 13 जनवरी 2026" },
+  "event-details.comment1.text": { en: "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.", hi: "उच्च-स्तरीय अवलोकन के लिए एक सुदृढ़ सारांश प्रस्तुत करने हेतु फुर्तीले ढाँचों का उपयोग करें। कॉर्पोरेट रणनीति के पुनरावृत्तीय दृष्टिकोण समग्र मूल्य प्रस्ताव को आगे बढ़ाने के लिए सहयोगात्मक सोच को बढ़ावा देते हैं।" },
+  "event-details.comment2.name": { en: "Christine Hill", hi: "क्रिस्टीन हिल" },
+  "event-details.comment2.date": { en: "<i class=\"far fa-clock\"></i> December 27 2026", hi: "<i class=\"far fa-clock\"></i> 27 दिसंबर 2026" },
+  "event-details.comment2.text": { en: "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches", hi: "उच्च-स्तरीय अवलोकन के लिए एक सुदृढ़ सारांश प्रस्तुत करने हेतु फुर्तीले ढाँचों का उपयोग करें।" },
+  "event-details.comment.reply": { en: " Reply <i class=\"fas fa-reply\"></i> ", hi: " उत्तर दें <i class=\"fas fa-reply\"></i> " },
+
+  "event-details.leaveComment": { en: "Leave a Comment", hi: "टिप्पणी छोड़ें" },
+  "event-details.form.messagePlaceholder": { en: "Enter your Message", hi: "अपना संदेश दर्ज करें" },
+  "event-details.form.website": { en: "Website", hi: "वेबसाइट" },
+  "event-details.form.websiteAria": { en: "Website URL", hi: "वेबसाइट URL" },
+  "donation.form.fullName": { en: "Full Name", hi: "पूरा नाम" },
+  "donation.form.emailAddress": { en: "Email Address", hi: "ईमेल पता" },
+  "event-details.form.postComment": { en: "Post Comment <i class=\"far fa-comments\"></i> ", hi: "टिप्पणी पोस्ट करें <i class=\"far fa-comments\"></i> " },
+
+  "event-details.sidebar.infoHeading": { en: " Information ", hi: " जानकारी " },
+  "event-details.sidebar.date": { en: "Date:", hi: "तिथि:" },
+  "event-details.sidebar.time": { en: "Time:", hi: "समय:" },
+  "event-details.sidebar.category": { en: "Event Category:", hi: "कार्यक्रम श्रेणी:" },
+  "event-details.sidebar.organizer": { en: "Organizer:", hi: "आयोजक:" },
+  "event-details.sidebar.organizerValue": { en: "Event Planer", hi: "कार्यक्रम आयोजक" },
+  "event-details.sidebar.phone": { en: "Phone:", hi: "फ़ोन:" },
+  "event-details.sidebar.email": { en: "Email:", hi: "ईमेल:" },
+  "event-details.sidebar.bookNow": { en: "Book Now", hi: "अभी बुक करें" },
+
+  "event-details.speakers.heading": { en: "Speakers", hi: "वक्ता" },
+  "event-details.speaker1.name": { en: " Thomas Taylor", hi: " थॉमस टेलर" },
+  "event-details.speaker1.time": { en: "2:00 - 4:00 pm", hi: "दोपहर 2:00 - 4:00 बजे" },
+  "event-details.speaker2.name": { en: " Aaron Williams", hi: " आरोन विलियम्स" },
+  "event-details.speaker2.time": { en: "4:00 - 6:00 pm", hi: "शाम 4:00 - 6:00 बजे" },
+  "event-details.speaker3.name": { en: " John Doe", hi: " जॉन डो" },
+  "event-details.speaker3.time": { en: "8:00 - 9:00 pm", hi: "रात्रि 8:00 - 9:00 बजे" },
+  "event-details.speaker.bio": { en: "Temple is a place where Hindu worship our Bhagwan Ram, Shiva, Vishnu, Krishna etc. Proin eget tortor risus. Vivamus magna justo, .People ask questions related to Hinduism", hi: "मंदिर वह स्थान है जहाँ हिन्दू भगवान राम, शिव, विष्णु, कृष्ण आदि की पूजा करते हैं। लोग हिन्दू धर्म से जुड़े प्रश्न पूछते हैं।" },
+
+  "event-details.upcoming.heading": { en: " Upcoming Donation ", hi: " आगामी दान " },
+  "event-details.upcoming.e1.title": { en: "Weekly Evening Prayer", hi: "साप्ताहिक संध्या आरती" },
+  "event-details.upcoming.e1.time": { en: "Wednesday | 6:00 pm", hi: "बुधवार | शाम 6:00 बजे" },
+  "event-details.upcoming.e2.title": { en: "Staff Members Meet", hi: "स्टाफ सदस्यों की बैठक" },
+  "event-details.upcoming.e2.time": { en: "Thursday | 8:00 pm", hi: "गुरुवार | रात्रि 8:00 बजे" },
+  "event-details.upcoming.e3.title": { en: "Weekly Evening Prayer", hi: "साप्ताहिक संध्या आरती" },
+  "event-details.upcoming.e3.time": { en: "Monday | 4:00 pm", hi: "सोमवार | शाम 4:00 बजे" },
+  "event-details.seeAll": { en: "See All", hi: "सभी देखें" },
+  "event-details.neverMissOut": { en: "Never Miss Out", hi: "कभी न चूकें" }
+};

@@ -7,14 +7,14 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Choto Vrindavan Dham">
+  <meta name="apple-mobile-web-app-title" content="Mero Choto Vrindavan Dham">
   <meta name="format-detection" content="telephone=no">
-  <meta name="description" content="About Choto Vrindavan Dham Hindu Temple — Learn our history, sacred mission, guiding vision, and the devoted team serving the community and the divine.">
+  <meta name="description" content="About Mero Choto Vrindavan Dham Hindu Temple — Learn our history, sacred mission, guiding vision, and the devoted team serving the community and the divine.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="About Us | Choto Vrindavan Dham Hindu Temple">
-  <meta property="og:description" content="About Choto Vrindavan Dham Hindu Temple — Learn our history, sacred mission, guiding vision, and the devoted team serving the community and the divine.">
+  <meta property="og:title" content="About Us | Mero Choto Vrindavan Dham Hindu Temple">
+  <meta property="og:description" content="About Mero Choto Vrindavan Dham Hindu Temple — Learn our history, sacred mission, guiding vision, and the devoted team serving the community and the divine.">
   <meta property="og:image" content="assets/img/banner/1.webp">
-  <title>Choto Vrindavan Dham | Course Details</title>
+  <title>Mero Choto Vrindavan Dham | Course Details</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#main-content" data-i18n="a11y.skipLink">Skip to main content</a>
   <!-- Preloader Start -->
   <div class="sigma_preloader">
     <img width="414" height="414" src="assets/img/om.svg" alt="preloader" loading="lazy">
@@ -49,106 +49,122 @@
 
 
   <!-- partial:partia/__mobile-nav.html -->
-  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation">
+  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation" data-i18n-attr="aria-label:a11y.mobileNav">
 
-    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham"> </a>
+    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name"> </a>
+
+    <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+    </div>
 
     <!-- Menu -->
     <ul>
-      <li class="menu-item" data-nav="home"> <a href="index.html">Home</a> </li>
+      <li class="menu-item" data-nav="home"> <a href="index.html" data-i18n="nav.home">Home</a> </li>
       <li class="menu-item menu-item-has-children" data-nav="about">
-        <a href="#">About</a>
+        <a href="#" data-i18n="nav.about">About</a>
         <ul class="sub-menu">
-          <li class="menu-item"> <a href="about-us.html">Our Story</a> </li>
-          <li class="menu-item"> <a href="pandits.html">Our Acharyas</a> </li>
-          <li class="menu-item"> <a href="volunteers.html">Volunteers</a> </li>
-          <li class="menu-item"> <a href="testimonials.html">Testimonials</a> </li>
-          <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
+          <li class="menu-item"> <a href="about-us.html" data-i18n="nav.about.story">Our Story</a> </li>
+          <li class="menu-item"> <a href="pandits.html" data-i18n="nav.about.acharyas">Our Acharyas</a> </li>
+          <li class="menu-item"> <a href="volunteers.html" data-i18n="nav.about.volunteers">Volunteers</a> </li>
+          <li class="menu-item"> <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a> </li>
+          <li class="menu-item"> <a href="faq.html" data-i18n="nav.about.faq">FAQ</a> </li>
         </ul>
       </li>
-      <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas</a> </li>
+      <li class="menu-item" data-nav="pujas"> <a href="puja.html" data-i18n="nav.pujas">Pujas</a> </li>
       <li class="menu-item current-menu-item menu-item-has-children" data-nav="seva">
-        <a href="#">Seva</a>
+        <a href="#" data-i18n="nav.seva">Seva</a>
         <ul class="sub-menu">
-          <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-          <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-          <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-          <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-          <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-          <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-          <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-          <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+          <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+          <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+          <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+          <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+          <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+          <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+          <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+          <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
         </ul>
       </li>
-      <li class="menu-item" data-nav="blog"> <a href="blog-grid.html">Blog</a> </li>
-      <li class="menu-item" data-nav="gallery"> <a href="gallery.html">Gallery</a> </li>
-      <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact</a> </li>
+      <li class="menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog</a> </li>
+      <li class="menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery</a> </li>
+      <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact</a> </li>
     </ul>
 
-    <a class="sigma_btn-custom cvd-aside-cta" href="contact-us.html">Visit Temple</a>
+    <div class="cvd-aside-cta cvd-account-cta">
+      <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+      <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+    </div>
 
     <div class="cvd-aside-contact">
-      <div><i class="fas fa-om" aria-hidden="true"></i> Darshan daily 5:30 AM &ndash; 9:00 PM</div>
-      <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/bBNHBzuiGE7314N56" target="_blank" rel="noopener noreferrer">Kuleri, Agroha, Haryana 125047</a></div>
+      <div><i class="fas fa-om" aria-hidden="true"></i> <span data-i18n="aside.darshan">Darshan daily 5:30 AM &ndash; 9:00 PM</span></div>
+      <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/bBNHBzuiGE7314N56" target="_blank" rel="noopener noreferrer" data-i18n="aside.address">Kuleri, Agroha, Haryana 125047</a></div>
     </div>
 
   </aside>
-  <div class="sigma_aside-overlay aside-trigger-left" role="button" tabindex="-1" aria-label="Close navigation menu"></div>
+  <div class="sigma_aside-overlay aside-trigger-left" role="button" tabindex="-1" aria-label="Close navigation menu" data-i18n-attr="aria-label:a11y.closeMenu"></div>
   <!-- partial -->
   <!-- partial:partia/__header.html -->
   <header class="sigma_header cvd-header can-sticky">
 
     <!-- Middle Header Start -->
     <div class="sigma_header-middle cvd-mainnav">
-      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary">
+      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary" data-i18n-attr="aria-label:a11y.primaryNav">
 
         <!-- Logo Start -->
         <div class="cvd-logo">
           <a class="navbar-brand" href="index.html">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham">
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name">
           </a>
         </div>
         <!-- Logo End -->
 
         <!-- Menu -->
         <ul class="navbar-nav cvd-nav">
-          <li class="menu-item" data-nav="home"> <a href="index.html">Home<span></span></a> </li>
+          <li class="menu-item" data-nav="home"> <a href="index.html" data-i18n="nav.home">Home<span></span></a> </li>
           <li class="menu-item menu-item-has-children" data-nav="about">
-            <a href="about-us.html" aria-haspopup="true" aria-expanded="false">About<span></span></a>
+            <a href="about-us.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.about">About<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="about-us.html">Our Story</a> </li>
-              <li class="menu-item"> <a href="pandits.html">Our Acharyas</a> </li>
-              <li class="menu-item"> <a href="volunteers.html">Volunteers</a> </li>
-              <li class="menu-item"> <a href="testimonials.html">Testimonials</a> </li>
-              <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
+              <li class="menu-item"> <a href="about-us.html" data-i18n="nav.about.story">Our Story</a> </li>
+              <li class="menu-item"> <a href="pandits.html" data-i18n="nav.about.acharyas">Our Acharyas</a> </li>
+              <li class="menu-item"> <a href="volunteers.html" data-i18n="nav.about.volunteers">Volunteers</a> </li>
+              <li class="menu-item"> <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a> </li>
+              <li class="menu-item"> <a href="faq.html" data-i18n="nav.about.faq">FAQ</a> </li>
             </ul>
           </li>
-          <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas<span></span></a> </li>
+          <li class="menu-item" data-nav="pujas"> <a href="puja.html" data-i18n="nav.pujas">Pujas<span></span></a> </li>
           <li class="menu-item current-menu-item menu-item-has-children" data-nav="seva">
-            <a href="services.html" aria-haspopup="true" aria-expanded="false">Seva<span></span></a>
+            <a href="services.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.seva">Seva<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-              <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-              <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-              <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-              <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-              <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-              <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-              <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+              <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+              <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+              <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+              <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+              <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+              <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+              <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+              <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
             </ul>
           </li>
-          <li class="menu-item" data-nav="blog"> <a href="blog-grid.html">Blog<span></span></a> </li>
-          <li class="menu-item" data-nav="gallery"> <a href="gallery.html">Gallery<span></span></a> </li>
-          <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact<span></span></a> </li>
+          <li class="menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog<span></span></a> </li>
+          <li class="menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery<span></span></a> </li>
+          <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact<span></span></a> </li>
         </ul>
 
         <!-- Controls -->
         <div class="sigma_header-controls cvd-controls">
-          <a class="sigma_btn-custom cvd-cta" href="contact-us.html">Visit Temple</a>
+          <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+          </div>
+
+          <div class="cvd-cta cvd-account-cta">
+            <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+            <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+          </div>
 
           <ul class="sigma_header-controls-inner">
             <!-- Mobile Toggler -->
-            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu">
+            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu" data-i18n-attr="aria-label:a11y.openMenu">
               <span></span>
               <span></span>
               <span></span>
@@ -176,12 +192,12 @@
     <div class="container">
       <div class="sigma_subheader-inner">
         <div class="sigma_subheader-text">
-          <h1>Course Details</h1>
+          <h1 data-i18n="course-details.hero.title">Course Details</h1>
         </div>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a class="btn-link" href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Course Details</li>
+            <li class="breadcrumb-item"><a class="btn-link" href="#" data-i18n="footer.home">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-i18n="course-details.hero.title">Course Details</li>
           </ol>
         </nav>
       </div>
@@ -198,8 +214,8 @@
           <img width="770" height="460" src="assets/img/service/1.webp" alt="Hatha Yoga Foundations" class="w-100 rounded mb-30">
           <div class="d-flex flex-wrap align-items-center justify-content-between mb-3">
             <div>
-              <span class="fw-600 custom-primary text-uppercase">Yoga Class</span>
-              <h3 class="entry-title mb-0">Hatha Yoga Foundations — 6 Week Course</h3>
+              <span class="fw-600 custom-primary text-uppercase" data-i18n="course-details.category">Yoga Class</span>
+              <h3 class="entry-title mb-0" data-i18n="course-details.title">Hatha Yoga Foundations — 6 Week Course</h3>
             </div>
             <div class="d-flex align-items-center mt-2 mt-md-0">
               <div class="me-3" style="color:#f5b700">
@@ -209,11 +225,11 @@
             </div>
           </div>
           <div class="sigma_post-meta mb-4">
-            <a href="#"><i class="far fa-user"></i> Pandit Arjun Sharma</a>
-            <a href="#"><i class="far fa-clock"></i> 6 Weeks</a>
-            <a href="#"><i class="fas fa-signal"></i> Beginner</a>
-            <a href="#"><i class="fas fa-users"></i> Max 16 students</a>
-            <a href="#"><i class="fas fa-language"></i> English &amp; Hindi</a>
+            <a href="#" data-i18n="course-details.meta.teacher"><i class="far fa-user"></i> Pandit Arjun Sharma</a>
+            <a href="#" data-i18n="course-details.meta.duration"><i class="far fa-clock"></i> 6 Weeks</a>
+            <a href="#" data-i18n="course-details.meta.level"><i class="fas fa-signal"></i> Beginner</a>
+            <a href="#" data-i18n="course-details.meta.students"><i class="fas fa-users"></i> Max 16 students</a>
+            <a href="#" data-i18n="course-details.meta.language"><i class="fas fa-language"></i> English &amp; Hindi</a>
           </div>
 
           <!-- Quick stats row -->
@@ -221,48 +237,48 @@
             <div class="col-md-3 col-6">
               <div class="sigma_box p-3 text-center">
                 <i class="far fa-calendar mb-2" style="font-size:20px;color:var(--mht-accent)"></i>
-                <h6 class="mb-0">12 Sessions</h6>
-                <span class="text-muted" style="font-size:12px">Tue + Thu</span>
+                <h6 class="mb-0" data-i18n="course-details.stats.sessions">12 Sessions</h6>
+                <span class="text-muted" style="font-size:12px" data-i18n="course-details.stats.sessionsDays">Tue + Thu</span>
               </div>
             </div>
             <div class="col-md-3 col-6">
               <div class="sigma_box p-3 text-center">
                 <i class="far fa-clock mb-2" style="font-size:20px;color:var(--mht-accent)"></i>
-                <h6 class="mb-0">90 min</h6>
-                <span class="text-muted" style="font-size:12px">per session</span>
+                <h6 class="mb-0" data-i18n="course-details.stats.length">90 min</h6>
+                <span class="text-muted" style="font-size:12px" data-i18n="course-details.stats.lengthSub">per session</span>
               </div>
             </div>
             <div class="col-md-3 col-6">
               <div class="sigma_box p-3 text-center">
                 <i class="fas fa-certificate mb-2" style="font-size:20px;color:var(--mht-accent)"></i>
-                <h6 class="mb-0">Certificate</h6>
-                <span class="text-muted" style="font-size:12px">on completion</span>
+                <h6 class="mb-0" data-i18n="course-details.stats.cert">Certificate</h6>
+                <span class="text-muted" style="font-size:12px" data-i18n="course-details.stats.certSub">on completion</span>
               </div>
             </div>
             <div class="col-md-3 col-6">
               <div class="sigma_box p-3 text-center">
                 <i class="fas fa-video mb-2" style="font-size:20px;color:var(--mht-accent)"></i>
-                <h6 class="mb-0">Recordings</h6>
-                <span class="text-muted" style="font-size:12px">lifetime access</span>
+                <h6 class="mb-0" data-i18n="course-details.stats.recordings">Recordings</h6>
+                <span class="text-muted" style="font-size:12px" data-i18n="course-details.stats.recordingsSub">lifetime access</span>
               </div>
             </div>
           </div>
 
-          <h4>About this Course</h4>
-          <p>This foundational course introduces you to classical Hatha Yoga postures, breathing techniques (pranayama), and meditation. Perfect for beginners and anyone looking to build a strong, mindful practice rooted in the Indian spiritual tradition.</p>
-          <p>You’ll learn alignment principles, breath-led movement, and end each class with a guided meditation. By the end of the six weeks you’ll have a complete 30-minute home practice you can maintain for life.</p>
+          <h4 data-i18n="course-details.about.heading">About this Course</h4>
+          <p data-i18n="course-details.about.p1">This foundational course introduces you to classical Hatha Yoga postures, breathing techniques (pranayama), and meditation. Perfect for beginners and anyone looking to build a strong, mindful practice rooted in the Indian spiritual tradition.</p>
+          <p data-i18n="course-details.about.p2">You’ll learn alignment principles, breath-led movement, and end each class with a guided meditation. By the end of the six weeks you’ll have a complete 30-minute home practice you can maintain for life.</p>
 
-          <h4>What You’ll Learn</h4>
+          <h4 data-i18n="course-details.learn.heading">What You’ll Learn</h4>
           <div class="row">
             <div class="col-md-6">
-              <ul class="sigma_list sigma_list-2">
+              <ul class="sigma_list sigma_list-2" data-i18n="course-details.learn.col1">
                 <li>Proper alignment in 30+ foundational asanas</li>
                 <li>Six pranayama techniques for energy and calm</li>
                 <li>How to design a daily home practice</li>
               </ul>
             </div>
             <div class="col-md-6">
-              <ul class="sigma_list sigma_list-2">
+              <ul class="sigma_list sigma_list-2" data-i18n="course-details.learn.col2">
                 <li>The eight limbs of yoga (Ashtanga Yoga)</li>
                 <li>Mantra japa and classical meditation</li>
                 <li>Safe modifications for every body type</li>
@@ -270,17 +286,17 @@
             </div>
           </div>
 
-          <h4 class="mt-4">Course Curriculum</h4>
+          <h4 class="mt-4" data-i18n="course-details.curriculum.heading">Course Curriculum</h4>
           <div class="accordion mb-4" id="curriculumAccordion">
             <div class="accordion-item sigma_box mb-2">
               <h5 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#week1">
-                  <strong>Week 1 — Foundation &amp; Breath</strong>
+                  <strong data-i18n="course-details.week1.title">Week 1 — Foundation &amp; Breath</strong>
                 </button>
               </h5>
               <div id="week1" class="accordion-collapse collapse show" data-bs-parent="#curriculumAccordion">
                 <div class="accordion-body">
-                  <ul class="mb-0">
+                  <ul class="mb-0" data-i18n="course-details.week1.items">
                     <li>Introduction to Hatha Yoga &amp; temple tradition</li>
                     <li>Basic standing postures (Tadasana, Uttanasana)</li>
                     <li>Three-part breath &amp; Ujjayi pranayama</li>
@@ -291,12 +307,12 @@
             <div class="accordion-item sigma_box mb-2">
               <h5 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#week2">
-                  <strong>Week 2 — Standing Poses &amp; Balance</strong>
+                  <strong data-i18n="course-details.week2.title">Week 2 — Standing Poses &amp; Balance</strong>
                 </button>
               </h5>
               <div id="week2" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
                 <div class="accordion-body">
-                  <ul class="mb-0">
+                  <ul class="mb-0" data-i18n="course-details.week2.items">
                     <li>Warrior series (Virabhadrasana I, II, III)</li>
                     <li>Tree pose (Vrikshasana) variations</li>
                     <li>Nadi Shodhana (alternate nostril breathing)</li>
@@ -307,68 +323,68 @@
             <div class="accordion-item sigma_box mb-2">
               <h5 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#week3">
-                  <strong>Week 3 — Seated Poses &amp; Forward Bends</strong>
+                  <strong data-i18n="course-details.week3.title">Week 3 — Seated Poses &amp; Forward Bends</strong>
                 </button>
               </h5>
               <div id="week3" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
-                <div class="accordion-body"><ul class="mb-0"><li>Paschimottanasana &amp; Janu Sirsasana</li><li>Bound angle pose (Baddha Konasana)</li><li>Introduction to meditation</li></ul></div>
+                <div class="accordion-body"><ul class="mb-0" data-i18n="course-details.week3.items"><li>Paschimottanasana &amp; Janu Sirsasana</li><li>Bound angle pose (Baddha Konasana)</li><li>Introduction to meditation</li></ul></div>
               </div>
             </div>
             <div class="accordion-item sigma_box mb-2">
               <h5 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#week4">
-                  <strong>Week 4 — Backbends &amp; Heart Opening</strong>
+                  <strong data-i18n="course-details.week4.title">Week 4 — Backbends &amp; Heart Opening</strong>
                 </button>
               </h5>
               <div id="week4" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
-                <div class="accordion-body"><ul class="mb-0"><li>Bhujangasana, Ushtrasana, Setu Bandhasana</li><li>Chest opening pranayama</li><li>Heart chakra meditation</li></ul></div>
+                <div class="accordion-body"><ul class="mb-0" data-i18n="course-details.week4.items"><li>Bhujangasana, Ushtrasana, Setu Bandhasana</li><li>Chest opening pranayama</li><li>Heart chakra meditation</li></ul></div>
               </div>
             </div>
             <div class="accordion-item sigma_box mb-2">
               <h5 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#week5">
-                  <strong>Week 5 — Inversions &amp; Core</strong>
+                  <strong data-i18n="course-details.week5.title">Week 5 — Inversions &amp; Core</strong>
                 </button>
               </h5>
               <div id="week5" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
-                <div class="accordion-body"><ul class="mb-0"><li>Supported Sarvangasana (shoulder stand)</li><li>Core strengthening postures</li><li>Kapalabhati (skull shining breath)</li></ul></div>
+                <div class="accordion-body"><ul class="mb-0" data-i18n="course-details.week5.items"><li>Supported Sarvangasana (shoulder stand)</li><li>Core strengthening postures</li><li>Kapalabhati (skull shining breath)</li></ul></div>
               </div>
             </div>
             <div class="accordion-item sigma_box">
               <h5 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#week6">
-                  <strong>Week 6 — Integration &amp; Home Practice</strong>
+                  <strong data-i18n="course-details.week6.title">Week 6 — Integration &amp; Home Practice</strong>
                 </button>
               </h5>
               <div id="week6" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
-                <div class="accordion-body"><ul class="mb-0"><li>Full 30-minute home flow</li><li>Mantra japa with tulsi mala</li><li>Closing ceremony &amp; certificates</li></ul></div>
+                <div class="accordion-body"><ul class="mb-0" data-i18n="course-details.week6.items"><li>Full 30-minute home flow</li><li>Mantra japa with tulsi mala</li><li>Closing ceremony &amp; certificates</li></ul></div>
               </div>
             </div>
           </div>
 
-          <h4>Meet Your Teacher</h4>
+          <h4 data-i18n="course-details.teacher.heading">Meet Your Teacher</h4>
           <div class="sigma_box p-4 d-flex align-items-center mb-4">
             <img width="100" height="100" src="assets/img/volunteers/1.webp" alt="Pandit Arjun Sharma" class="rounded-circle me-3" style="object-fit:cover">
             <div>
-              <h5 class="mb-1">Pandit Arjun Sharma</h5>
-              <span class="text-muted" style="font-size:13px">Head Priest · 25+ years experience</span>
-              <p class="mb-0 mt-2" style="font-size:14px">Trained at Shringeri Sharada Peetham, Pandit Arjun has taught over 3000 students across India and the United States.</p>
+              <h5 class="mb-1" data-i18n="course-details.meta.teacher2">Pandit Arjun Sharma</h5>
+              <span class="text-muted" style="font-size:13px" data-i18n="course-details.teacher.role">Head Priest · 25+ years experience</span>
+              <p class="mb-0 mt-2" style="font-size:14px" data-i18n="course-details.teacher.bio">Trained at Shringeri Sharada Peetham, Pandit Arjun has taught over 3000 students across India and the United States.</p>
             </div>
           </div>
 
-          <h4>What Students Say</h4>
+          <h4 data-i18n="course-details.reviews.heading">What Students Say</h4>
           <div class="row">
             <div class="col-md-6 mb-3">
               <div class="sigma_box p-4 h-100">
                 <div class="d-flex mb-2" style="color:#f5b700"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="mb-3" style="font-style:italic">"I came to this course as a complete beginner. Six weeks later, I have a daily home practice and my back pain is gone. Life-changing."</p>
+                <p class="mb-3" style="font-style:italic" data-i18n="course-details.review1.text">"I came to this course as a complete beginner. Six weeks later, I have a daily home practice and my back pain is gone. Life-changing."</p>
                 <strong>Sarah M.</strong>
               </div>
             </div>
             <div class="col-md-6 mb-3">
               <div class="sigma_box p-4 h-100">
                 <div class="d-flex mb-2" style="color:#f5b700"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="mb-3" style="font-style:italic">"Pandit Arjun explains everything so clearly and with such patience. He treats every student as if they were his own family."</p>
+                <p class="mb-3" style="font-style:italic" data-i18n="course-details.review2.text">"Pandit Arjun explains everything so clearly and with such patience. He treats every student as if they were his own family."</p>
                 <strong>Vikram S.</strong>
               </div>
             </div>
@@ -379,18 +395,18 @@
         <div class="col-lg-4">
           <div class="sidebar-widget">
             <div class="sigma_box p-4">
-              <h4 class="mb-2">Enrol Today</h4>
+              <h4 class="mb-2" data-i18n="course-details.sidebar.enrolHeading">Enrol Today</h4>
               <div class="d-flex align-items-baseline mb-3">
                 <h3 class="mb-0" style="color:var(--mht-accent)">$149</h3>
                 <span class="ms-2 text-decoration-line-through text-muted">$199</span>
-                <span class="ms-2 badge" style="background:#198754;color:#fff">25% OFF</span>
+                <span class="ms-2 badge" style="background:#198754;color:#fff" data-i18n="course-details.sidebar.off">25% OFF</span>
               </div>
-              <p class="text-muted mb-3" style="font-size:13px">Full course · 6 weeks · 12 sessions</p>
-              <a href="donation.html" class="sigma_btn-custom w-100 mb-2">Enrol Now <i class="fas fa-arrow-right"></i></a>
-              <a href="contact-us.html" class="sigma_btn-custom white w-100">Ask a Question</a>
+              <p class="text-muted mb-3" style="font-size:13px" data-i18n="course-details.sidebar.summary">Full course · 6 weeks · 12 sessions</p>
+              <a href="donation.html" class="sigma_btn-custom w-100 mb-2" data-i18n="course-details.sidebar.enrolCta">Enrol Now <i class="fas fa-arrow-right"></i></a>
+              <a href="contact-us.html" class="sigma_btn-custom white w-100" data-i18n="course-details.sidebar.askCta">Ask a Question</a>
               <hr>
-              <h6 class="mb-3">This course includes:</h6>
-              <ul class="sidebar-widget-list list-unstyled mb-0">
+              <h6 class="mb-3" data-i18n="course-details.sidebar.includesHeading">This course includes:</h6>
+              <ul class="sidebar-widget-list list-unstyled mb-0" data-i18n="course-details.sidebar.includesList">
                 <li class="mb-2"><i class="fas fa-check me-2" style="color:#198754"></i> 12 live sessions (18 hours)</li>
                 <li class="mb-2"><i class="fas fa-check me-2" style="color:#198754"></i> Lifetime video recordings</li>
                 <li class="mb-2"><i class="fas fa-check me-2" style="color:#198754"></i> Weekly home practice guides</li>
@@ -402,22 +418,22 @@
             </div>
 
             <div class="sigma_box p-4 mt-3">
-              <h6 class="mb-3"><i class="far fa-calendar-check me-2" style="color:var(--mht-accent)"></i> Schedule</h6>
-              <div class="d-flex justify-content-between py-2 border-bottom"><span>Starts</span><strong>May 6, 2026</strong></div>
-              <div class="d-flex justify-content-between py-2 border-bottom"><span>Ends</span><strong>Jun 12, 2026</strong></div>
-              <div class="d-flex justify-content-between py-2 border-bottom"><span>Days</span><strong>Tue &amp; Thu</strong></div>
-              <div class="d-flex justify-content-between py-2 border-bottom"><span>Time</span><strong>6:30pm — 8:00pm</strong></div>
-              <div class="d-flex justify-content-between py-2"><span>Location</span><strong>Temple hall, L2</strong></div>
+              <h6 class="mb-3"><i class="far fa-calendar-check me-2" style="color:var(--mht-accent)"></i> <span data-i18n="course-details.sidebar.scheduleHeading">Schedule</span></h6>
+              <div class="d-flex justify-content-between py-2 border-bottom"><span data-i18n="course-details.sidebar.starts">Starts</span><strong>May 6, 2026</strong></div>
+              <div class="d-flex justify-content-between py-2 border-bottom"><span data-i18n="course-details.sidebar.ends">Ends</span><strong>Jun 12, 2026</strong></div>
+              <div class="d-flex justify-content-between py-2 border-bottom"><span data-i18n="course-details.sidebar.days">Days</span><strong>Tue &amp; Thu</strong></div>
+              <div class="d-flex justify-content-between py-2 border-bottom"><span data-i18n="course-details.sidebar.time">Time</span><strong>6:30pm — 8:00pm</strong></div>
+              <div class="d-flex justify-content-between py-2"><span data-i18n="course-details.sidebar.location">Location</span><strong data-i18n="course-details.sidebar.locationValue">Temple hall, L2</strong></div>
             </div>
 
             <div class="sigma_box p-4 mt-3">
-              <h6 class="mb-3"><i class="fas fa-users me-2" style="color:var(--mht-accent)"></i> Seats Remaining</h6>
+              <h6 class="mb-3"><i class="fas fa-users me-2" style="color:var(--mht-accent)"></i> <span data-i18n="course-details.sidebar.seatsHeading">Seats Remaining</span></h6>
               <div class="sigma_progress" style="margin-bottom:10px">
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 75%; background: var(--mht-accent); transition: width 0.8s;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
-              <p class="mb-0" style="font-size:13px"><strong>4 seats left</strong> · 12 of 16 filled</p>
+              <p class="mb-0" style="font-size:13px" data-i18n="course-details.sidebar.seatsText"><strong>4 seats left</strong> · 12 of 16 filled</p>
             </div>
 
           </div>
@@ -437,8 +453,8 @@
         <div class="row">
 
           <div class="col-xl-4 col-lg-4 col-md-6 footer-widget cvd-footer-brand">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham" loading="lazy">
-            <p class="cvd-footer-tagline">Faith, Service, Community</p>
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" loading="lazy" data-i18n-attr="alt:brand.name">
+            <p class="cvd-footer-tagline" data-i18n="footer.tagline">Faith, Service, Community</p>
             <ul class="sigma_sm">
               <li> <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
               <li> <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a> </li>
@@ -448,35 +464,35 @@
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-6 footer-widget">
-            <h5 class="widget-title">Quick Links</h5>
+            <h5 class="widget-title" data-i18n="footer.quicklinks">Quick Links</h5>
             <ul>
-              <li> <a href="index.html">Home</a> </li>
-              <li> <a href="about-us.html">About Us</a> </li>
-              <li> <a href="puja.html">Pujas &amp; Services</a> </li>
-              <li> <a href="events.html">Events</a> </li>
-              <li> <a href="gallery.html">Gallery</a> </li>
-              <li> <a href="blog-grid.html">Blog</a> </li>
+              <li> <a href="index.html" data-i18n="footer.home">Home</a> </li>
+              <li> <a href="about-us.html" data-i18n="footer.about">About Us</a> </li>
+              <li> <a href="puja.html" data-i18n="footer.pujas">Pujas &amp; Services</a> </li>
+              <li> <a href="events.html" data-i18n="footer.events">Events</a> </li>
+              <li> <a href="gallery.html" data-i18n="footer.gallery">Gallery</a> </li>
+              <li> <a href="blog-grid.html" data-i18n="footer.blog">Blog</a> </li>
             </ul>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget">
-            <h5 class="widget-title">Our Initiatives</h5>
+            <h5 class="widget-title" data-i18n="footer.initiatives">Our Initiatives</h5>
             <ul>
-              <li> <a href="donation.html">Annadanam</a> </li>
-              <li> <a href="donation.html">Education Support</a> </li>
-              <li> <a href="donation.html">Temple Restoration</a> </li>
-              <li> <a href="donation-archive.html">Community Outreach</a> </li>
-              <li> <a href="volunteers.html">Volunteer</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.annadanam">Annadanam</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.education">Education Support</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.restoration">Temple Restoration</a> </li>
+              <li> <a href="donation-archive.html" data-i18n="footer.outreach">Community Outreach</a> </li>
+              <li> <a href="volunteers.html" data-i18n="footer.volunteer">Volunteer</a> </li>
             </ul>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget cvd-newsletter">
-            <h5 class="widget-title">Stay Connected</h5>
-            <p>Subscribe to our newsletter for updates and events.</p>
+            <h5 class="widget-title" data-i18n="footer.connected">Stay Connected</h5>
+            <p data-i18n="footer.newsletter.desc">Subscribe to our newsletter for updates and events.</p>
             <form method="post" aria-label="Newsletter signup">
-              <label class="visually-hidden" for="cvd-newsletter-email">Email address</label>
-              <input type="email" id="cvd-newsletter-email" name="email" placeholder="Your email address" required>
-              <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <label class="visually-hidden" for="cvd-newsletter-email" data-i18n="footer.newsletter.emailLabel">Email address</label>
+              <input type="email" id="cvd-newsletter-email" name="email" placeholder="Your email address" required data-i18n-attr="placeholder:footer.newsletter.emailPlaceholder">
+              <button type="submit" aria-label="Subscribe" data-i18n-attr="aria-label:footer.newsletter.subscribe"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
             </form>
           </div>
 
@@ -487,12 +503,12 @@
     <!-- Footer Bottom -->
     <div class="sigma_footer-bottom">
       <div class="container">
-        <p>&copy; 2026 Choto Vrindavan Dham. All rights reserved.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 Mero Choto Vrindavan Dham. All rights reserved.</p>
         <ul class="cvd-footer-legal">
-          <li><a href="about-us.html">Faith</a></li>
-          <li><a href="gallery.html">Culture</a></li>
-          <li><a href="services.html">Service</a></li>
-          <li><a href="donation.html">A Better Tomorrow</a></li>
+          <li><a href="about-us.html" data-i18n="footer.legal.faith">Faith</a></li>
+          <li><a href="gallery.html" data-i18n="footer.legal.culture">Culture</a></li>
+          <li><a href="services.html" data-i18n="footer.legal.service">Service</a></li>
+          <li><a href="donation.html" data-i18n="footer.legal.tomorrow">A Better Tomorrow</a></li>
         </ul>
       </div>
     </div>
@@ -501,13 +517,13 @@
   <!-- partial -->
 
   <!-- WhatsApp float button: set href="https://wa.me/<number>" and remove class mht-wa-disabled to enable -->
-  <a class="mht-whatsapp-btn mht-wa-disabled" href="#" title="WhatsApp — add your number to activate" aria-label="WhatsApp not yet configured">
+  <a class="mht-whatsapp-btn mht-wa-disabled" href="#" title="WhatsApp — add your number to activate" aria-label="WhatsApp not yet configured" data-i18n-attr="title:wa.title|aria-label:wa.aria">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <!-- Back To Top Start -->
-  <div class="sigma_top style-5 active">
-    <i class="fas fa-angle-double-up"></i>
+  <div class="sigma_top style-5 active" role="button" tabindex="0" aria-label="Back to top" data-i18n-attr="aria-label:a11y.backToTop">
+    <i class="fas fa-angle-double-up" aria-hidden="true"></i>
   </div>
   <!-- Back To Top End -->
 
@@ -520,5 +536,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n-common.js"></script>
+  <script src="assets/js/i18n-pages/course-details.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </body>
 </html>

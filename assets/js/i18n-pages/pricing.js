@@ -1,0 +1,85 @@
+/* Page-specific EN/HI strings for pricing.html. */
+window.CVD_I18N_PAGE = {
+  "pricing.hero.title": { en: "Membership Plans", hi: "सदस्यता योजनाएँ" },
+  "pricing.breadcrumb": { en: "Pricing", hi: "मूल्य" },
+
+  "pricing.plans.subtitle": { en: "MEMBERSHIP PLANS", hi: "सदस्यता योजनाएँ" },
+  "pricing.plans.title": { en: "Choose Your Path of Devotion", hi: "अपना भक्ति मार्ग चुनें" },
+  "pricing.plans.desc": { en: "All plans include access to our temple community, daily aarti live stream, and a warm welcome from our pandits. Upgrade anytime, cancel anytime. Every rupee funds temple programmes and community initiatives.", hi: "सभी योजनाओं में हमारे मंदिर समुदाय, दैनिक आरती लाइव स्ट्रीम और हमारे पंडितों की ओर से हार्दिक स्वागत शामिल है। कभी भी अपग्रेड करें, कभी भी रद्द करें। हर रुपया मंदिर कार्यक्रमों और सामुदायिक पहलों को वित्तपोषित करता है।" },
+
+  "pricing.toggle.monthly": { en: "Monthly", hi: "मासिक" },
+  "pricing.toggle.annual": { en: "Annual <span class=\"badge\" style=\"background:var(--mht-accent);color:#fff\">Save 20%</span>", hi: "वार्षिक <span class=\"badge\" style=\"background:var(--mht-accent);color:#fff\">20% बचाएँ</span>" },
+
+  "pricing.perMonth": { en: "/month", hi: "/माह" },
+  "pricing.mostPopular": { en: "Most Popular", hi: "सर्वाधिक लोकप्रिय" },
+
+  "pricing.seeker.title": { en: "Seeker", hi: "साधक" },
+  "pricing.seeker.desc": { en: "Perfect for newcomers starting their spiritual journey.", hi: "अपनी आध्यात्मिक यात्रा शुरू करने वाले नए लोगों के लिए उपयुक्त।" },
+  "pricing.seeker.billing": { en: "billed monthly · no commitment", hi: "मासिक बिल · कोई प्रतिबद्धता नहीं" },
+  "pricing.seeker.features": { en: "<li><i class=\"fas fa-check\"></i> Daily aarti live stream</li><li><i class=\"fas fa-check\"></i> Monthly temple newsletter</li><li><i class=\"fas fa-check\"></i> Access to sermon archive (200+ talks)</li><li><i class=\"fas fa-check\"></i> Basic puja prayer guides</li><li><i class=\"fas fa-check\"></i> Community discussion forum</li><li class=\"opacity-50\"><i class=\"fas fa-times\"></i> No 1:1 pandit time</li><li class=\"opacity-50\"><i class=\"fas fa-times\"></i> No free event tickets</li>", hi: "<li><i class=\"fas fa-check\"></i> दैनिक आरती लाइव स्ट्रीम</li><li><i class=\"fas fa-check\"></i> मासिक मंदिर न्यूज़लेटर</li><li><i class=\"fas fa-check\"></i> प्रवचन संग्रह तक पहुँच (200+ प्रवचन)</li><li><i class=\"fas fa-check\"></i> मूल पूजा प्रार्थना मार्गदर्शिकाएँ</li><li><i class=\"fas fa-check\"></i> सामुदायिक चर्चा मंच</li><li class=\"opacity-50\"><i class=\"fas fa-times\"></i> कोई 1:1 पंडित समय नहीं</li><li class=\"opacity-50\"><i class=\"fas fa-times\"></i> कोई मुफ्त कार्यक्रम टिकट नहीं</li>" },
+  "pricing.seeker.cta": { en: "Start Seeking <i class=\"fas fa-arrow-right\"></i>", hi: "अभी शुरू करें <i class=\"fas fa-arrow-right\"></i>" },
+
+  "pricing.devotee.title": { en: "Devotee", hi: "भक्त" },
+  "pricing.devotee.desc": { en: "For committed devotees seeking deeper practice and community.", hi: "गहरे अभ्यास और समुदाय की तलाश करने वाले समर्पित भक्तों के लिए।" },
+  "pricing.devotee.billing": { en: "billed monthly · cancel anytime", hi: "मासिक बिल · कभी भी रद्द करें" },
+  "pricing.devotee.features": { en: "<li><i class=\"fas fa-check\"></i> <strong>Everything in Seeker</strong></li><li><i class=\"fas fa-check\"></i> Weekly 30-min 1:1 with pandit</li><li><i class=\"fas fa-check\"></i> Priority puja booking (48h ahead)</li><li><i class=\"fas fa-check\"></i> Free monthly event tickets (2)</li><li><i class=\"fas fa-check\"></i> Yoga &amp; meditation classes (unlimited)</li><li><i class=\"fas fa-check\"></i> Festival invitations (family of 4)</li><li><i class=\"fas fa-check\"></i> Prasad home delivery (1/month)</li>", hi: "<li><i class=\"fas fa-check\"></i> <strong>साधक की सभी सुविधाएँ</strong></li><li><i class=\"fas fa-check\"></i> पंडित के साथ साप्ताहिक 30-मिनट 1:1</li><li><i class=\"fas fa-check\"></i> प्राथमिकता पूजा बुकिंग (48 घंटे पहले)</li><li><i class=\"fas fa-check\"></i> मुफ्त मासिक कार्यक्रम टिकट (2)</li><li><i class=\"fas fa-check\"></i> योग एवं ध्यान कक्षाएँ (असीमित)</li><li><i class=\"fas fa-check\"></i> त्योहार आमंत्रण (4 सदस्यीय परिवार)</li><li><i class=\"fas fa-check\"></i> प्रसाद घर डिलीवरी (1/माह)</li>" },
+  "pricing.devotee.cta": { en: "Become a Devotee <i class=\"fas fa-arrow-right\"></i>", hi: "भक्त बनें <i class=\"fas fa-arrow-right\"></i>" },
+
+  "pricing.patron.title": { en: "Patron", hi: "संरक्षक" },
+  "pricing.patron.desc": { en: "For those who wish to sponsor and lead temple programmes.", hi: "मंदिर कार्यक्रमों को प्रायोजित एवं नेतृत्व करने के इच्छुक लोगों के लिए।" },
+  "pricing.patron.billing": { en: "billed monthly · tax-deductible", hi: "मासिक बिल · कर-कटौती योग्य" },
+  "pricing.patron.features": { en: "<li><i class=\"fas fa-check\"></i> <strong>Everything in Devotee</strong></li><li><i class=\"fas fa-check\"></i> Private pandit consultations (monthly)</li><li><i class=\"fas fa-check\"></i> Named sponsorship on events</li><li><i class=\"fas fa-check\"></i> Annual Himalayan retreat included</li><li><i class=\"fas fa-check\"></i> Personal Vedic birth chart reading</li><li><i class=\"fas fa-check\"></i> Quarterly impact reports</li><li><i class=\"fas fa-check\"></i> Full tax-deductible donation receipts</li>", hi: "<li><i class=\"fas fa-check\"></i> <strong>भक्त की सभी सुविधाएँ</strong></li><li><i class=\"fas fa-check\"></i> निजी पंडित परामर्श (मासिक)</li><li><i class=\"fas fa-check\"></i> कार्यक्रमों पर नामित प्रायोजन</li><li><i class=\"fas fa-check\"></i> वार्षिक हिमालयी रिट्रीट शामिल</li><li><i class=\"fas fa-check\"></i> व्यक्तिगत वैदिक जन्म कुंडली पाठ</li><li><i class=\"fas fa-check\"></i> त्रैमासिक प्रभाव रिपोर्ट</li><li><i class=\"fas fa-check\"></i> पूर्ण कर-कटौती योग्य दान रसीदें</li>" },
+  "pricing.patron.cta": { en: "Become a Patron <i class=\"fas fa-arrow-right\"></i>", hi: "संरक्षक बनें <i class=\"fas fa-arrow-right\"></i>" },
+
+  "pricing.compare.subtitle": { en: "COMPARE PLANS", hi: "योजनाओं की तुलना करें" },
+  "pricing.compare.title": { en: "What’s in each plan?", hi: "हर योजना में क्या है?" },
+  "pricing.table.features": { en: "Features", hi: "विशेषताएँ" },
+  "pricing.table.seekerCol": { en: "Seeker<br><small style=\"opacity:.75\">$29/mo</small>", hi: "साधक<br><small style=\"opacity:.75\">$29/माह</small>" },
+  "pricing.table.devoteeCol": { en: "Devotee<br><small style=\"opacity:.9\">$79/mo</small>", hi: "भक्त<br><small style=\"opacity:.9\">$79/माह</small>" },
+  "pricing.table.patronCol": { en: "Patron<br><small style=\"opacity:.75\">$199/mo</small>", hi: "संरक्षक<br><small style=\"opacity:.75\">$199/माह</small>" },
+
+  "pricing.table.community": { en: "Community", hi: "समुदाय" },
+  "pricing.table.panditAccess": { en: "Pandit Access", hi: "पंडित पहुँच" },
+  "pricing.table.eventsClasses": { en: "Events &amp; Classes", hi: "कार्यक्रम एवं कक्षाएँ" },
+  "pricing.table.benefits": { en: "Benefits", hi: "लाभ" },
+
+  "pricing.row.dailyAarti": { en: "Daily aarti live stream", hi: "दैनिक आरती लाइव स्ट्रीम" },
+  "pricing.row.forumAccess": { en: "Community forum access", hi: "सामुदायिक मंच पहुँच" },
+  "pricing.row.consultTime": { en: "1:1 consultation time", hi: "1:1 परामर्श समय" },
+  "pricing.row.priorityBooking": { en: "Priority puja booking", hi: "प्राथमिकता पूजा बुकिंग" },
+  "pricing.row.birthChart": { en: "Vedic birth chart reading", hi: "वैदिक जन्म कुंडली पाठ" },
+  "pricing.row.yoga": { en: "Yoga &amp; meditation classes", hi: "योग एवं ध्यान कक्षाएँ" },
+  "pricing.row.freeTickets": { en: "Free event tickets per month", hi: "प्रति माह मुफ्त कार्यक्रम टिकट" },
+  "pricing.row.retreat": { en: "Annual retreat", hi: "वार्षिक रिट्रीट" },
+  "pricing.row.prasad": { en: "Prasad home delivery", hi: "प्रसाद घर डिलीवरी" },
+  "pricing.row.sponsorship": { en: "Named event sponsorship", hi: "नामित कार्यक्रम प्रायोजन" },
+  "pricing.row.taxReceipts": { en: "Tax-deductible receipts", hi: "कर-कटौती योग्य रसीदें" },
+  "pricing.row.impactReports": { en: "Quarterly impact reports", hi: "त्रैमासिक प्रभाव रिपोर्ट" },
+
+  "pricing.val.monthly": { en: "Monthly", hi: "मासिक" },
+  "pricing.val.weeklyVip": { en: "Weekly + VIP", hi: "साप्ताहिक + वीआईपी" },
+  "pricing.val.weekly": { en: "Weekly", hi: "साप्ताहिक" },
+  "pricing.val.consult30": { en: "30 min/week", hi: "30 मिनट/सप्ताह" },
+  "pricing.val.consult60": { en: "60 min/week", hi: "60 मिनट/सप्ताह" },
+  "pricing.val.booking48": { en: "48h ahead", hi: "48 घंटे पहले" },
+  "pricing.val.sameDay": { en: "Same day", hi: "उसी दिन" },
+  "pricing.val.unlimitedPrivate": { en: "Unlimited + private", hi: "असीमित + निजी" },
+  "pricing.val.unlimited": { en: "Unlimited", hi: "असीमित" },
+  "pricing.val.retreat50": { en: "50% off", hi: "50% छूट" },
+  "pricing.val.included": { en: "Included", hi: "शामिल" },
+  "pricing.val.monthly1": { en: "1/month", hi: "1/माह" },
+  "pricing.val.partial": { en: "Partial", hi: "आंशिक" },
+  "pricing.val.full": { en: "Full", hi: "पूर्ण" },
+
+  "pricing.faq.subtitle": { en: "PRICING FAQ", hi: "मूल्य संबंधी प्रश्न" },
+  "pricing.faq.title": { en: "Common Questions", hi: "सामान्य प्रश्न" },
+
+  "pricing.f1.q": { en: "Can I cancel anytime?", hi: "क्या मैं कभी भी रद्द कर सकता हूँ?" },
+  "pricing.f1.a": { en: "Yes. All plans are month-to-month with no long-term commitment. You can cancel from your <a href=\"my-account.html\">account page</a> and your access continues until the end of the billing period.", hi: "हाँ। सभी योजनाएँ मासिक हैं और इनमें कोई दीर्घकालिक प्रतिबद्धता नहीं है। आप अपने <a href=\"my-account.html\">खाता पृष्ठ</a> से रद्द कर सकते हैं और आपकी पहुँच बिलिंग अवधि के अंत तक जारी रहेगी।" },
+  "pricing.f2.q": { en: "Is my donation tax-deductible?", hi: "क्या मेरा दान कर-कटौती योग्य है?" },
+  "pricing.f2.a": { en: "Patron plans are fully tax-deductible. Devotee plans include a partial receipt (service portion excluded). We issue receipts quarterly for all eligible members.", hi: "संरक्षक योजनाएँ पूर्णतः कर-कटौती योग्य हैं। भक्त योजनाओं में आंशिक रसीद शामिल है (सेवा भाग छोड़कर)। हम सभी पात्र सदस्यों के लिए त्रैमासिक रसीदें जारी करते हैं।" },
+  "pricing.f3.q": { en: "Can I upgrade later?", hi: "क्या मैं बाद में अपग्रेड कर सकता हूँ?" },
+  "pricing.f3.a": { en: "Absolutely. You can upgrade from Seeker to Devotee or Patron at any time and we’ll pro-rate the difference on your next bill.", hi: "बिल्कुल। आप किसी भी समय साधक से भक्त या संरक्षक में अपग्रेड कर सकते हैं और हम आपके अगले बिल पर अंतर समायोजित करेंगे।" },
+  "pricing.f4.q": { en: "Do you offer family plans?", hi: "क्या आप पारिवारिक योजनाएँ प्रदान करते हैं?" },
+  "pricing.f4.a": { en: "Devotee and Patron plans include benefits for a family of 4 at no extra cost. Please <a href=\"contact-us.html\">contact us</a> for larger families or community groups.", hi: "भक्त एवं संरक्षक योजनाओं में बिना अतिरिक्त शुल्क के 4 सदस्यीय परिवार के लिए लाभ शामिल हैं। बड़े परिवारों या सामुदायिक समूहों के लिए कृपया <a href=\"contact-us.html\">हमसे संपर्क करें</a>।" }
+};

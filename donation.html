@@ -7,14 +7,14 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Choto Vrindavan Dham">
+  <meta name="apple-mobile-web-app-title" content="Mero Choto Vrindavan Dham">
   <meta name="format-detection" content="telephone=no">
-  <meta name="description" content="Donate to Choto Vrindavan Dham — Your generous donation helps maintain the temple, serve the community, and uphold our spiritual mission.">
+  <meta name="description" content="Support Vishal Bhandara at Mero Choto Vrindavan Dham — your donation helps serve fresh, sattvic meals to devotees, pilgrims, sadhus and visitors through Annadaan Seva.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Donate | Choto Vrindavan Dham Hindu Temple">
-  <meta property="og:description" content="Donate to Choto Vrindavan Dham — Your generous donation helps maintain the temple, serve the community, and uphold our spiritual mission.">
-  <meta property="og:image" content="assets/img/banner/1.webp">
-  <title>Choto Vrindavan Dham | Donation</title>
+  <meta property="og:title" content="Donate to Vishal Bhandara | Mero Choto Vrindavan Dham">
+  <meta property="og:description" content="Support Vishal Bhandara at Mero Choto Vrindavan Dham — your donation helps serve fresh, sattvic meals to devotees, pilgrims, sadhus and visitors through Annadaan Seva.">
+  <meta property="og:image" content="assets/img/donation/bhandara/hero-bhandara.jpg">
+  <title>Mero Choto Vrindavan Dham | Donation</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -38,9 +38,11 @@
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link id="mht-color-link" rel="stylesheet" href="assets/css/theme-colors/color1.css">
   <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/donation.css">
+  <noscript><style>.cvd-dn-bar .progress-bar { width: 57%; }</style></noscript>
 </head>
-<body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<body class="cvd-donate-page">
+<a class="skip-link" href="#main-content" data-i18n="a11y.skipLink">Skip to main content</a>
   <!-- Preloader Start -->
   <div class="sigma_preloader">
     <img width="414" height="414" src="assets/img/om.svg" alt="preloader" loading="lazy">
@@ -49,106 +51,122 @@
 
 
   <!-- partial:partia/__mobile-nav.html -->
-  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation">
+  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation" data-i18n-attr="aria-label:a11y.mobileNav">
 
-    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham"> </a>
+    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name"> </a>
+
+    <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+    </div>
 
     <!-- Menu -->
     <ul>
-      <li class="menu-item" data-nav="home"> <a href="index.html">Home</a> </li>
+      <li class="menu-item" data-nav="home"> <a href="index.html" data-i18n="nav.home">Home</a> </li>
       <li class="menu-item menu-item-has-children" data-nav="about">
-        <a href="#">About</a>
+        <a href="#" data-i18n="nav.about">About</a>
         <ul class="sub-menu">
-          <li class="menu-item"> <a href="about-us.html">Our Story</a> </li>
-          <li class="menu-item"> <a href="pandits.html">Our Acharyas</a> </li>
-          <li class="menu-item"> <a href="volunteers.html">Volunteers</a> </li>
-          <li class="menu-item"> <a href="testimonials.html">Testimonials</a> </li>
-          <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
+          <li class="menu-item"> <a href="about-us.html" data-i18n="nav.about.story">Our Story</a> </li>
+          <li class="menu-item"> <a href="pandits.html" data-i18n="nav.about.acharyas">Our Acharyas</a> </li>
+          <li class="menu-item"> <a href="volunteers.html" data-i18n="nav.about.volunteers">Volunteers</a> </li>
+          <li class="menu-item"> <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a> </li>
+          <li class="menu-item"> <a href="faq.html" data-i18n="nav.about.faq">FAQ</a> </li>
         </ul>
       </li>
-      <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas</a> </li>
+      <li class="menu-item" data-nav="pujas"> <a href="puja.html" data-i18n="nav.pujas">Pujas</a> </li>
       <li class="menu-item current-menu-item menu-item-has-children" data-nav="seva">
-        <a href="#">Seva</a>
+        <a href="#" data-i18n="nav.seva">Seva</a>
         <ul class="sub-menu">
-          <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-          <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-          <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-          <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-          <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-          <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-          <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-          <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+          <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+          <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+          <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+          <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+          <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+          <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+          <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+          <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
         </ul>
       </li>
-      <li class="menu-item" data-nav="blog"> <a href="blog-grid.html">Blog</a> </li>
-      <li class="menu-item" data-nav="gallery"> <a href="gallery.html">Gallery</a> </li>
-      <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact</a> </li>
+      <li class="menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog</a> </li>
+      <li class="menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery</a> </li>
+      <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact</a> </li>
     </ul>
 
-    <a class="sigma_btn-custom cvd-aside-cta" href="contact-us.html">Visit Temple</a>
+    <div class="cvd-aside-cta cvd-account-cta">
+      <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+      <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+    </div>
 
     <div class="cvd-aside-contact">
-      <div><i class="fas fa-om" aria-hidden="true"></i> Darshan daily 5:30 AM &ndash; 9:00 PM</div>
-      <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/bBNHBzuiGE7314N56" target="_blank" rel="noopener noreferrer">Kuleri, Agroha, Haryana 125047</a></div>
+      <div><i class="fas fa-om" aria-hidden="true"></i> <span data-i18n="aside.darshan">Darshan daily 5:30 AM &ndash; 9:00 PM</span></div>
+      <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/bBNHBzuiGE7314N56" target="_blank" rel="noopener noreferrer" data-i18n="aside.address">Kuleri, Agroha, Haryana 125047</a></div>
     </div>
 
   </aside>
-  <div class="sigma_aside-overlay aside-trigger-left" role="button" tabindex="-1" aria-label="Close navigation menu"></div>
+  <div class="sigma_aside-overlay aside-trigger-left" role="button" tabindex="-1" aria-label="Close navigation menu" data-i18n-attr="aria-label:a11y.closeMenu"></div>
   <!-- partial -->
   <!-- partial:partia/__header.html -->
   <header class="sigma_header cvd-header can-sticky">
 
     <!-- Middle Header Start -->
     <div class="sigma_header-middle cvd-mainnav">
-      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary">
+      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary" data-i18n-attr="aria-label:a11y.primaryNav">
 
         <!-- Logo Start -->
         <div class="cvd-logo">
           <a class="navbar-brand" href="index.html">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham">
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name">
           </a>
         </div>
         <!-- Logo End -->
 
         <!-- Menu -->
         <ul class="navbar-nav cvd-nav">
-          <li class="menu-item" data-nav="home"> <a href="index.html">Home<span></span></a> </li>
+          <li class="menu-item" data-nav="home"> <a href="index.html" data-i18n="nav.home">Home<span></span></a> </li>
           <li class="menu-item menu-item-has-children" data-nav="about">
-            <a href="about-us.html" aria-haspopup="true" aria-expanded="false">About<span></span></a>
+            <a href="about-us.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.about">About<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="about-us.html">Our Story</a> </li>
-              <li class="menu-item"> <a href="pandits.html">Our Acharyas</a> </li>
-              <li class="menu-item"> <a href="volunteers.html">Volunteers</a> </li>
-              <li class="menu-item"> <a href="testimonials.html">Testimonials</a> </li>
-              <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
+              <li class="menu-item"> <a href="about-us.html" data-i18n="nav.about.story">Our Story</a> </li>
+              <li class="menu-item"> <a href="pandits.html" data-i18n="nav.about.acharyas">Our Acharyas</a> </li>
+              <li class="menu-item"> <a href="volunteers.html" data-i18n="nav.about.volunteers">Volunteers</a> </li>
+              <li class="menu-item"> <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a> </li>
+              <li class="menu-item"> <a href="faq.html" data-i18n="nav.about.faq">FAQ</a> </li>
             </ul>
           </li>
-          <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas<span></span></a> </li>
+          <li class="menu-item" data-nav="pujas"> <a href="puja.html" data-i18n="nav.pujas">Pujas<span></span></a> </li>
           <li class="menu-item current-menu-item menu-item-has-children" data-nav="seva">
-            <a href="services.html" aria-haspopup="true" aria-expanded="false">Seva<span></span></a>
+            <a href="services.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.seva">Seva<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-              <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-              <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-              <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-              <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-              <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-              <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-              <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+              <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+              <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+              <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+              <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+              <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+              <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+              <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+              <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
             </ul>
           </li>
-          <li class="menu-item" data-nav="blog"> <a href="blog-grid.html">Blog<span></span></a> </li>
-          <li class="menu-item" data-nav="gallery"> <a href="gallery.html">Gallery<span></span></a> </li>
-          <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact<span></span></a> </li>
+          <li class="menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog<span></span></a> </li>
+          <li class="menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery<span></span></a> </li>
+          <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact<span></span></a> </li>
         </ul>
 
         <!-- Controls -->
         <div class="sigma_header-controls cvd-controls">
-          <a class="sigma_btn-custom cvd-cta" href="contact-us.html">Visit Temple</a>
+          <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+          </div>
+
+          <div class="cvd-cta cvd-account-cta">
+            <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+            <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+          </div>
 
           <ul class="sigma_header-controls-inner">
             <!-- Mobile Toggler -->
-            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu">
+            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu" data-i18n-attr="aria-label:a11y.openMenu">
               <span></span>
               <span></span>
               <span></span>
@@ -170,250 +188,298 @@
   <main id="main-content">
   <!-- partial -->
 
-  <!-- partial:partia/__subheader.html -->
-  <div class="sigma_subheader dark-overlay dark-overlay-2" style="background-image: url(assets/img/subheader.webp)">
+  <!-- Line-icon sprite (donation page). Referenced with <svg class="cvd-ic"><use href="#ic-…"/></svg>. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="ic-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="ic-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="ic-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="ic-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="ic-coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18M7 6h1v4M16.71 13.88l.7.71-2.82 2.82"/></symbol>
+    <symbol id="ic-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    <symbol id="ic-pot" viewBox="0 0 24 24"><path d="M2 12h20M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8M4 8l16-4"/><path d="m8.86 6.78-.45-1.81a2 2 0 0 1 1.45-2.43l1.94-.48a2 2 0 0 1 2.43 1.46l.45 1.8"/></symbol>
+    <symbol id="ic-bowl" viewBox="0 0 24 24"><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9ZM7 21h10M19.5 12 22 6"/><path d="M16.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.73 1.62M11.25 3c.27.1.8.53.74 1.36-.05.83-.93 1.2-.98 2.02-.06.78.33 1.24.72 1.62M6.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.74 1.62"/></symbol>
+    <symbol id="ic-namaste" viewBox="0 0 48 48"><path d="M24 4c-3 0-4.6 3-5 7l-1.5 10c-.2 1.5-1.1 2.8-2.3 3.7L12 29c-1.4 2-2 4-2 6l-2 9M24 4c3 0 4.6 3 5 7l1.5 10c.2 1.5 1.1 2.8 2.3 3.7L36 29c1.4 2 2 4 2 6l2 9M24 4v30M17.5 21c2 1 4 3.5 4.5 7M30.5 21c-2 1-4 3.5-4.5 7M10 38h8M30 38h8"/></symbol>
+    <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="ic-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="ic-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="ic-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+    <symbol id="ic-bank" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4Z"/></symbol>
+  </svg>
 
+  <!-- Hero (shared sigma_subheader, re-skinned in donation.css) -->
+  <div class="sigma_subheader dark-overlay cvd-dn-hero">
     <div class="container">
       <div class="sigma_subheader-inner">
         <div class="sigma_subheader-text">
-          <h1>Donation</h1>
+          <h1 data-i18n="donation.hero.title">Donation</h1>
         </div>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a class="btn-link" href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Donation</li>
+            <li class="breadcrumb-item"><a class="btn-link" href="index.html" data-i18n="footer.home">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-i18n="donation.hero.title">Donation</li>
           </ol>
         </nav>
       </div>
     </div>
-
   </div>
-  <!-- partial -->
 
-  <!-- Campaign Detail Start -->
-  <div class="section sigma_post-single sigma_donation-single">
+  <!-- Campaign Start -->
+  <section class="cvd-dn-campaign" aria-labelledby="dn-campaign-title">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="post-detail-wrapper">
-            <div class="entry-content">
+      <article class="cvd-dn-card wow fadeInUp" data-wow-duration="0.7s">
 
-              <!-- Category badge -->
-              <div class="sigma_post-meta">
-                <div class="sigma_post-categories">
-                  <a href="donation-archive.html" class="sigma_post-category">Education</a>
-                </div>
-              </div>
+        <span class="cvd-dn-pill" data-i18n="donation.pill">Bhandara Seva</span>
+        <h2 class="cvd-dn-title" id="dn-campaign-title" data-i18n="donation.campaign.title">Vishal Bhandara — Feed With Faith, Serve With Love</h2>
+        <p class="cvd-dn-lead" data-i18n="donation.campaign.lead">Join hands in the sacred seva of feeding devotees. Your contribution helps us organise Vishal Bhandara and serve wholesome, sattvic meals with love and devotion.</p>
 
-              <!-- Campaign title -->
-              <h4 class="entry-title">Education for Every Child — Help Us Build the Next Classroom</h4>
+        <ul class="cvd-dn-meta">
+          <li><svg class="cvd-ic" aria-hidden="true"><use href="#ic-pin"/></svg><span data-i18n="donation.meta.location">Mero Choto Vrindavan Dham, Agroha</span></li>
+          <li><svg class="cvd-ic" aria-hidden="true"><use href="#ic-calendar"/></svg><span data-i18n="donation.meta.frequency">Ongoing Seva</span></li>
+          <li><svg class="cvd-ic" aria-hidden="true"><use href="#ic-users"/></svg><span data-i18n="donation.meta.audience">For All Devotees</span></li>
+          <li><svg class="cvd-ic" aria-hidden="true"><use href="#ic-heart"/></svg><span data-i18n="donation.meta.seva">Annadaan Seva</span></li>
+        </ul>
 
-              <!-- Meta row (organiser, days left, donors) -->
-              <div class="sigma_post-meta">
-                <a href="#"> <i class="far fa-user"></i> By Choto Vrindavan Dham Trust</a>
-                <a href="#"> <i class="far fa-calendar"></i> 18 Days Left</a>
-                <a href="#"> <i class="far fa-heart"></i> 423 Donors</a>
-              </div>
+        <figure class="cvd-dn-figure">
+          <img width="1152" height="516" src="assets/img/donation/bhandara/hero-bhandara.jpg" alt="Sevadars serving hot prasad to a long line of devotees at the Vishal Bhandara" data-i18n-attr="alt:donation.campaign.imgAlt">
+        </figure>
 
-              <!-- Hero image -->
-              <img width="770" height="460" src="assets/img/donation/details/1.webp" alt="Education for every child campaign" loading="lazy" class="w-100 mb-30">
-
-              <!-- ===== Donation Meter (style-2 — hero/detail variant) ===== -->
-              <div class="sigma_donation-meter">
-                <div class="sigma_donation-meter-head">
-                  <div class="sigma_donation-meter-stat">
-                    <span class="sigma_donation-meter-label">Raised</span>
-                    <h3 class="sigma_donation-meter-value">$52,384</h3>
-                  </div>
-                  <div class="sigma_donation-meter-stat text-end">
-                    <span class="sigma_donation-meter-label">Goal</span>
-                    <h3 class="sigma_donation-meter-value sigma_donation-meter-value-muted">$85,000</h3>
-                  </div>
-                </div>
-                <div class="sigma_progress style-2">
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="61" aria-valuemin="0" aria-valuemax="100" aria-label="Campaign progress: 61 percent funded">
-                      <span class="sigma_progress-bubble">61%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="sigma_donation-meter-foot">
-                  <div class="sigma_donation-meter-chip">
-                    <i class="flaticon-heart fas fa-heart" aria-hidden="true"></i>
-                    <span>423 donors</span>
-                  </div>
-                  <div class="sigma_donation-meter-chip">
-                    <i class="far fa-clock" aria-hidden="true"></i>
-                    <span>18 days left</span>
-                  </div>
-                  <div class="sigma_donation-meter-chip sigma_donation-meter-chip-accent">
-                    <i class="fas fa-coins" aria-hidden="true"></i>
-                    <span>$32,616 to go</span>
-                  </div>
-                </div>
-              </div>
-              <!-- ===== /Donation Meter ===== -->
-
-              <!-- Campaign story -->
-              <h5>Every child deserves a classroom</h5>
-              <p>
-                Choto Vrindavan Dham Trust has been serving remote villages for more than a decade. Our current campaign funds the construction of a new learning centre in the foothills of Rishikesh — complete with desks, books, clean drinking water, and a qualified teacher for the first full academic year.
-              </p>
-              <p>
-                Your donation is fully tax-deductible and directly supports on-ground operations. Every rupee collected is accounted for in our public quarterly reports, and donors above $100 receive a personal update letter from the classroom once construction begins.
-              </p>
-
-              <!-- Campaign highlights -->
-              <h5>What your donation will fund</h5>
-              <ul class="sigma_list sigma_list-2">
-                <li><strong>$15</strong> — Supplies a child with notebooks and pencils for a full term</li>
-                <li><strong>$45</strong> — Covers a weekly hot meal programme for 10 students</li>
-                <li><strong>$100</strong> — Funds one desk and chair for the new classroom</li>
-                <li><strong>$500</strong> — Sponsors a child's full academic year including uniform and tuition</li>
-              </ul>
-
-              <!-- Inspirational quote -->
-              <blockquote>
-                <cite>Mahatma Gandhi</cite>
-                <p>Live as if you were to die tomorrow. Learn as if you were to live forever.</p>
-              </blockquote>
-
+        <!-- Progress -->
+        <div class="cvd-dn-progress">
+          <div class="cvd-dn-progress-head">
+            <div>
+              <span class="cvd-dn-amount">₹2,85,340</span>
+              <span class="cvd-dn-amount-label" data-i18n="donation.meter.raised">Raised so far</span>
+            </div>
+            <div>
+              <span class="cvd-dn-amount">₹5,00,000</span>
+              <span class="cvd-dn-amount-label" data-i18n="donation.meter.goal">Our Goal</span>
             </div>
           </div>
+          <div class="cvd-dn-bar">
+            <div class="progress-bar" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" aria-label="Vishal Bhandara progress: 57 percent of goal raised" data-i18n-attr="aria-label:donation.meter.progressAria">
+              <span class="cvd-dn-bar-bubble">57%</span>
+            </div>
+          </div>
+          <ul class="cvd-dn-stats">
+            <li>
+              <span class="cvd-dn-stat-ic"><svg class="cvd-ic" aria-hidden="true"><use href="#ic-users"/></svg></span>
+              <span><span class="cvd-dn-stat-value">312</span><span class="cvd-dn-stat-label" data-i18n="donation.meter.donors">Donors</span></span>
+            </li>
+            <li>
+              <span class="cvd-dn-stat-ic"><svg class="cvd-ic" aria-hidden="true"><use href="#ic-clock"/></svg></span>
+              <span><span class="cvd-dn-stat-value">18</span><span class="cvd-dn-stat-label" data-i18n="donation.meter.daysLeft">Days left</span></span>
+            </li>
+            <li>
+              <span class="cvd-dn-stat-ic"><svg class="cvd-ic" aria-hidden="true"><use href="#ic-coins"/></svg></span>
+              <span><span class="cvd-dn-stat-value">₹2,14,660</span><span class="cvd-dn-stat-label" data-i18n="donation.meter.togo">Needed to go</span></span>
+            </li>
+            <li>
+              <span class="cvd-dn-stat-ic"><svg class="cvd-ic" aria-hidden="true"><use href="#ic-heart"/></svg></span>
+              <span><span class="cvd-dn-stat-value" data-i18n="donation.meter.support">Support</span><span class="cvd-dn-stat-label" data-i18n="donation.meter.supportLabel">Vishal Bhandara</span></span>
+            </li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- Campaign Detail End -->
 
-  <!-- Form Start -->
-  <div class="section pt-0">
-    <div class="container">
-      <div class="section-title text-center wow fadeInUp" data-wow-duration="0.7s">
-        <p class="subtitle">DONATE TO HELP</p>
-        <h4 class="title">Make a donation to help us</h4>
-      </div>
-      <form method="post">
-        <div class="row sigma_donation-form">
-          <div class="col-12">
-            <div class="mb-3 mb-5">
-              <h5>Donation Amount</h5>
-              <div class="input-group">
-                <button class="sigma_btn-custom shadow-none btn-sm" type="button">$</button>
-                <input type="text" class="form-control ms-0" placeholder="$100">
-              </div>
-              <ul class="sigma_select-amount">
-                <li>$15</li>
-                <li>$25</li>
-                <li>$45</li>
-                <li class="active">$100</li>
-                <li>$500</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="mb-3 mb-5">
-              <h5>Payment Method</h5>
-              <div class="d-flex align-items-center">
-                <div class="d-flex align-items-center">
-                 <input type="radio" id="radio" name="radio" value="Online Payment">
-                 <label for="radio" class="mb-0">Online Payment</label>
-               </div>
-               <div class="d-flex align-items-center ms-4">
-                 <input type="radio" id="radio2" name="radio" value="Offline Payment">
-                 <label for="radio2" class="mb-0">Offline Payment</label>
-               </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="mb-3">
-              <h5>Campaigns</h5>
-              <select class="form-control">
-                <option value="1" selected="">Education for Every Child - (Target: 10000.00)</option>
-                <option value="2">Education for Every Child - (Target: 10000.00)</option>
-                <option value="3">Education for Every Child - (Target: 15000.00)</option>
-                <option value="4">Education for Every Child - (Target: 25000.00)</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="mb-3">
-              <h5>Message</h5>
-              <textarea name="message" class="form-control" placeholder="Enter Message" rows="6"></textarea>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="mb-3">
-              <h5>Donator Details</h5>
-              <div class="row">
-                <div class="col-lg-6">
-                  <input type="text" class="form-control" placeholder="Full Name" name="name">
-                </div>
-                <div class="col-lg-6 mt-3 mt-lg-0">
-                  <input type="email" placeholder="Email Address" name="email" class="form-control">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-12 text-center">
-            <button type="submit" class="sigma_btn-custom" name="button"> Donate Now </button>
-          </div>
-        </div>
-      </form>
+      </article>
     </div>
-  </div>
-  <!-- Form End -->
+  </section>
+  <!-- Campaign End -->
 
-  <!-- holi Start -->
-  <div class="section section-padding light-bg">
+  <!-- Story + Impact Start -->
+  <section class="cvd-dn-story" aria-labelledby="dn-story-title">
     <div class="container">
 
       <div class="row align-items-center">
-        <div class="col-md-5">
-          <div class="section-title text-end wow fadeInUp" data-wow-duration="0.7s">
-            <p class="subtitle">WAYS WE CAN HELP</p>
-            <h4 class="title">Angels Ready To Help</h4>
+        <div class="col-lg-6">
+          <div class="cvd-dn-story-text wow fadeInUp" data-wow-duration="0.7s">
+            <h2 class="cvd-dn-h" id="dn-story-title" data-i18n="donation.story.title">Your donation becomes a meal</h2>
+            <div class="cvd-dn-ornament" aria-hidden="true"><span></span></div>
+            <p data-i18n="donation.story.p1">Your generous contribution helps us organise Vishal Bhandara and serve fresh, nutritious and sattvic meals to devotees, pilgrims and visitors. The seva includes raw ingredients, cooking, serving, drinking water, utensils and all arrangements required for a smooth bhandara.</p>
+            <p data-i18n="donation.story.p2">Every donation, big or small, becomes a part of this sacred service and helps feed many with love and devotion.</p>
           </div>
         </div>
-        <div class="col-md-2 d-none d-md-block"> <span class="vertical-seperator"></span> </div>
-        <div class="col-md-5 d-none d-md-block">
-          <p class="fw-600 mb-0 custom-secondary">Our mission is to share the Good of Hinduism, Loving, Faith and Serving. People ask questions related to Hinduism.</p>
+        <div class="col-lg-6">
+          <div class="cvd-dn-story-media wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.1s">
+            <img width="548" height="326" src="assets/img/donation/bhandara/section-food-closeup.jpg" alt="A sevadar ladles freshly cooked prasad from a large brass vessel" loading="lazy" data-i18n-attr="alt:donation.story.imgAlt">
+          </div>
         </div>
       </div>
 
-       <div class="row">
+      <div class="cvd-dn-impact" aria-labelledby="dn-impact-title">
+        <h2 class="cvd-dn-h" id="dn-impact-title" data-i18n="donation.impact.title">What your donation will provide</h2>
+        <div class="cvd-dn-ornament" aria-hidden="true"><span></span></div>
+        <ul class="cvd-dn-impact-grid">
+          <li class="wow fadeInUp" data-wow-duration="0.6s">
+            <div class="cvd-dn-impact-card">
+              <span class="cvd-dn-impact-ic"><svg class="cvd-ic" aria-hidden="true"><use href="#ic-leaf"/></svg></span>
+              <div><span class="cvd-dn-impact-amount">₹51</span><p data-i18n="donation.impact.c1">Helps provide prasad / meal ingredients for devotees.</p></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.08s">
+            <div class="cvd-dn-impact-card">
+              <span class="cvd-dn-impact-ic"><svg class="cvd-ic" aria-hidden="true"><use href="#ic-pot"/></svg></span>
+              <div><span class="cvd-dn-impact-amount">₹101</span><p data-i18n="donation.impact.c2">Supports meals for several people.</p></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.16s">
+            <div class="cvd-dn-impact-card">
+              <span class="cvd-dn-impact-ic"><svg class="cvd-ic" aria-hidden="true"><use href="#ic-bowl"/></svg></span>
+              <div><span class="cvd-dn-impact-amount">₹501</span><p data-i18n="donation.impact.c3">Helps with a larger batch of bhandara preparations.</p></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.24s">
+            <div class="cvd-dn-impact-card">
+              <span class="cvd-dn-impact-ic"><svg class="cvd-ic" aria-hidden="true"><use href="#ic-users"/></svg></span>
+              <div><span class="cvd-dn-impact-amount">₹1,100</span><p data-i18n="donation.impact.c4">Supports a substantial bhandara contribution.</p></div>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-        <div class="col-lg-6 col-md-6">
-          <a href="services.html" class="sigma_service style-3">
-            <div class="sigma_service-thumb">
-              <img width="570" height="280" src="assets/img/service/1.webp" alt="img" loading="lazy">
-              <i class="fas fa-place-of-worship"></i>
-            </div>
-            <div class="sigma_service-body">
-              <h5>About Temple</h5>
-              <p>Temple is a place where Hindu worship our Bhagwan Ram, Shiva, Vishnu, Krishna etc. Proin eget tortor risus. </p>
-            </div>
-          </a>
+      <figure class="cvd-dn-quote wow fadeInUp" data-wow-duration="0.7s">
+        <span class="cvd-dn-quote-ic"><svg class="cvd-ic" aria-hidden="true"><use href="#ic-namaste"/></svg></span>
+        <blockquote>
+          <p data-i18n="donation.quote.text"><em>Annadaan is Seva</em> — when we feed someone,<br> we share more than food; we share care, dignity and blessings.</p>
+        </blockquote>
+      </figure>
+
+    </div>
+  </section>
+  <!-- Story + Impact End -->
+
+  <!-- Donation Form Start -->
+  <section class="cvd-dn-donate" id="donate" aria-labelledby="dn-form-title">
+    <div class="container">
+      <div class="cvd-dn-card cvd-dn-form-card wow fadeInUp" data-wow-duration="0.7s">
+
+        <div class="cvd-dn-head">
+          <h2 class="cvd-dn-h" id="dn-form-title" data-i18n="donation.form.title">Make a donation to support <span>Vishal Bhandara</span></h2>
+          <div class="cvd-dn-ornament" aria-hidden="true"><span></span></div>
+          <p class="cvd-dn-sub" data-i18n="donation.form.subtitle">Be a part of this sacred seva. Your contribution helps continue Vishal Bhandara and serve prasad with love.</p>
         </div>
 
-        <div class="col-lg-6 col-md-6">
-          <a href="donation.html" class="sigma_service style-3">
-            <div class="sigma_service-thumb">
-              <img width="570" height="280" src="assets/img/service/2.webp" alt="img" loading="lazy">
-              <i class="fas fa-praying-hands"></i>
+        <!-- Submission is left to the site's backend / payment gateway; this page only collects the fields. -->
+        <form method="post" id="donation-form" class="cvd-dn-form">
+          <div class="cvd-dn-form-grid">
+
+            <div class="cvd-dn-stack">
+              <fieldset class="cvd-dn-field">
+                <legend data-i18n="donation.form.amount">Select Donation Amount</legend>
+                <div class="cvd-dn-chips">
+                  <label class="cvd-dn-chip"><input type="radio" name="amount_choice" value="51"><span>₹51</span></label>
+                  <label class="cvd-dn-chip"><input type="radio" name="amount_choice" value="101" checked><span>₹101</span></label>
+                  <label class="cvd-dn-chip"><input type="radio" name="amount_choice" value="501"><span>₹501</span></label>
+                  <label class="cvd-dn-chip"><input type="radio" name="amount_choice" value="1100"><span>₹1,100</span></label>
+                  <label class="cvd-dn-chip"><input type="radio" name="amount_choice" value="5100"><span>₹5,100</span></label>
+                  <label class="cvd-dn-chip"><input type="radio" name="amount_choice" value="custom"><span data-i18n="donation.form.custom">Custom</span></label>
+                </div>
+                <div class="cvd-dn-custom">
+                  <label class="visually-hidden" for="dn-amount" data-i18n="donation.form.customLabel">Donation amount in rupees</label>
+                  <div class="cvd-dn-affix">
+                    <span aria-hidden="true">₹</span>
+                    <input type="number" class="cvd-dn-input" id="dn-amount" name="amount" value="101" min="1" step="1" inputmode="numeric" required placeholder="Enter amount" data-i18n-attr="placeholder:donation.form.customPlaceholder">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="cvd-dn-field">
+                <legend data-i18n="donation.form.paymentMethod">Payment Method</legend>
+                <ul class="cvd-dn-pay">
+                  <li><label><input type="radio" name="payment_method" value="razorpay" checked><svg class="cvd-ic" aria-hidden="true"><use href="#ic-shield"/></svg><span>Razorpay <small data-i18n="donation.form.pay.razorpay">Cards / UPI / Net Banking</small></span></label></li>
+                  <li><label><input type="radio" name="payment_method" value="upi"><svg class="cvd-ic" aria-hidden="true"><use href="#ic-phone"/></svg><span>UPI <small>GPay / PhonePe / Paytm</small></span></label></li>
+                  <li><label><input type="radio" name="payment_method" value="card"><svg class="cvd-ic" aria-hidden="true"><use href="#ic-card"/></svg><span data-i18n="donation.form.pay.card">Credit / Debit Card</span></label></li>
+                  <li><label><input type="radio" name="payment_method" value="netbanking"><svg class="cvd-ic" aria-hidden="true"><use href="#ic-bank"/></svg><span data-i18n="donation.form.pay.netbanking">Net Banking</span></label></li>
+                </ul>
+              </fieldset>
             </div>
-            <div class="sigma_service-body">
-              <h5>Why Hindu Temple</h5>
-              <p>Temple is a place where Hindu worship our Bhagwan Ram, Shiva, Vishnu, Krishna etc. Proin eget tortor risus. </p>
+
+            <div class="cvd-dn-stack">
+              <div class="cvd-dn-field">
+                <label class="cvd-dn-label" for="dn-campaign" data-i18n="donation.form.campaign">Campaign</label>
+                <select class="cvd-dn-select" id="dn-campaign" name="campaign">
+                  <option value="vishal-bhandara" selected data-i18n="donation.form.campaign.bhandara">Vishal Bhandara</option>
+                  <option value="annadaan-seva" data-i18n="donation.form.campaign.annadaan">Annadaan Seva</option>
+                </select>
+              </div>
+              <div class="cvd-dn-field">
+                <label class="cvd-dn-label" for="dn-message"><span data-i18n="donation.form.message">Leave a Message</span><span class="opt" data-i18n="donation.form.optional">(Optional)</span></label>
+                <textarea class="cvd-dn-textarea" id="dn-message" name="message" rows="6" placeholder="Share your prayers or message..." data-i18n-attr="placeholder:donation.form.messagePlaceholder"></textarea>
+              </div>
             </div>
-          </a>
-        </div>
+
+            <fieldset class="cvd-dn-field cvd-dn-details">
+              <legend data-i18n="donation.form.details">Your Details</legend>
+              <div class="cvd-dn-details-grid">
+                <div>
+                  <label class="cvd-dn-label" for="dn-name"><span data-i18n="donation.form.fullName">Full Name</span><span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" class="cvd-dn-input" id="dn-name" name="name" autocomplete="name" required placeholder="Enter your name" data-i18n-attr="placeholder:donation.form.namePlaceholder">
+                </div>
+                <div>
+                  <label class="cvd-dn-label" for="dn-email"><span data-i18n="donation.form.email">Email ID</span><span class="req" aria-hidden="true">*</span></label>
+                  <input type="email" class="cvd-dn-input" id="dn-email" name="email" autocomplete="email" required placeholder="Enter your email" data-i18n-attr="placeholder:donation.form.emailPlaceholder">
+                </div>
+                <div>
+                  <label class="cvd-dn-label" for="dn-phone"><span data-i18n="donation.form.mobile">Mobile Number</span><span class="req" aria-hidden="true">*</span></label>
+                  <div class="cvd-dn-affix">
+                    <span aria-hidden="true">+91</span>
+                    <input type="tel" class="cvd-dn-input" id="dn-phone" name="phone" autocomplete="tel-national" inputmode="numeric" pattern="[0-9]{10}" required placeholder="Enter mobile number" data-i18n-attr="placeholder:donation.form.mobilePlaceholder">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <label class="cvd-dn-check">
+              <input type="checkbox" name="updates_optin" value="yes">
+              <span data-i18n="donation.form.updates">I would like to receive updates about upcoming sevas and events.</span>
+            </label>
+
+            <div class="cvd-dn-actions">
+              <button type="submit" class="sigma_btn-custom cvd-dn-submit"><span data-i18n="donation.form.submit">Donate Now</span><svg class="cvd-ic" aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+            </div>
+
+          </div>
+        </form>
 
       </div>
     </div>
-  </div>
-  <!-- holi End -->
+  </section>
+  <!-- Donation Form End -->
+
+  <!-- Seva Cards Start -->
+  <section class="cvd-dn-seva" aria-labelledby="dn-seva-title">
+    <div class="container">
+      <div class="cvd-dn-head wow fadeInUp" data-wow-duration="0.7s">
+        <h2 class="cvd-dn-h" id="dn-seva-title" data-i18n="donation.seva.title">Seva Begins With You</h2>
+        <div class="cvd-dn-ornament" aria-hidden="true"><span></span></div>
+        <p class="cvd-dn-sub" data-i18n="donation.seva.subtitle">Explore more ways to be a part of Annadaan and support our seva initiatives.</p>
+      </div>
+      <div class="cvd-dn-seva-grid">
+        <a href="services-2.html" class="cvd-dn-seva-card wow fadeInUp" data-wow-duration="0.7s">
+          <div class="cvd-dn-seva-thumb">
+            <img width="558" height="279" src="assets/img/donation/bhandara/card-bhandara.jpg" alt="A large brass vessel of freshly cooked bhandara prasad" loading="lazy" data-i18n-attr="alt:donation.seva.c1.imgAlt">
+          </div>
+          <div class="cvd-dn-seva-body">
+            <h3 data-i18n="donation.seva.c1.title">Vishal Bhandara</h3>
+            <p data-i18n="donation.seva.c1.desc">Support our ongoing bhandara seva and help us serve fresh, nutritious meals to all devotees.</p>
+            <span class="cvd-dn-more"><span data-i18n="donation.seva.more">Know More</span><svg class="cvd-ic" aria-hidden="true"><use href="#ic-arrow"/></svg></span>
+          </div>
+        </a>
+        <a href="event-details.html" class="cvd-dn-seva-card wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.1s">
+          <div class="cvd-dn-seva-thumb">
+            <img width="548" height="274" src="assets/img/donation/bhandara/card-annadaan.jpg" alt="Sevadars serving meals to devotees seated in rows during annadaan" loading="lazy" data-i18n-attr="alt:donation.seva.c2.imgAlt">
+          </div>
+          <div class="cvd-dn-seva-body">
+            <h3 data-i18n="donation.seva.c2.title">Annadaan Seva</h3>
+            <p data-i18n="donation.seva.c2.desc">Contribute towards providing food to sadhus, devotees and visitors through regular annadaan.</p>
+            <span class="cvd-dn-more"><span data-i18n="donation.seva.more">Know More</span><svg class="cvd-ic" aria-hidden="true"><use href="#ic-arrow"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Seva Cards End -->
+
 
   <!-- partial:partia/__footer.html -->
   </main>
@@ -425,8 +491,8 @@
         <div class="row">
 
           <div class="col-xl-4 col-lg-4 col-md-6 footer-widget cvd-footer-brand">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham" loading="lazy">
-            <p class="cvd-footer-tagline">Faith, Service, Community</p>
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" loading="lazy" data-i18n-attr="alt:brand.name">
+            <p class="cvd-footer-tagline" data-i18n="footer.tagline">Faith, Service, Community</p>
             <ul class="sigma_sm">
               <li> <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
               <li> <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a> </li>
@@ -436,35 +502,35 @@
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-6 footer-widget">
-            <h5 class="widget-title">Quick Links</h5>
+            <h5 class="widget-title" data-i18n="footer.quicklinks">Quick Links</h5>
             <ul>
-              <li> <a href="index.html">Home</a> </li>
-              <li> <a href="about-us.html">About Us</a> </li>
-              <li> <a href="puja.html">Pujas &amp; Services</a> </li>
-              <li> <a href="events.html">Events</a> </li>
-              <li> <a href="gallery.html">Gallery</a> </li>
-              <li> <a href="blog-grid.html">Blog</a> </li>
+              <li> <a href="index.html" data-i18n="footer.home">Home</a> </li>
+              <li> <a href="about-us.html" data-i18n="footer.about">About Us</a> </li>
+              <li> <a href="puja.html" data-i18n="footer.pujas">Pujas &amp; Services</a> </li>
+              <li> <a href="events.html" data-i18n="footer.events">Events</a> </li>
+              <li> <a href="gallery.html" data-i18n="footer.gallery">Gallery</a> </li>
+              <li> <a href="blog-grid.html" data-i18n="footer.blog">Blog</a> </li>
             </ul>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget">
-            <h5 class="widget-title">Our Initiatives</h5>
+            <h5 class="widget-title" data-i18n="footer.initiatives">Our Initiatives</h5>
             <ul>
-              <li> <a href="donation.html">Annadanam</a> </li>
-              <li> <a href="donation.html">Education Support</a> </li>
-              <li> <a href="donation.html">Temple Restoration</a> </li>
-              <li> <a href="donation-archive.html">Community Outreach</a> </li>
-              <li> <a href="volunteers.html">Volunteer</a> </li>
+              <li> <a href="services.html" data-i18n="donation.footer.temple">Temple Seva</a> </li>
+              <li> <a href="donation.html" data-i18n="donation.footer.annadaan">Annadaan Seva</a> </li>
+              <li> <a href="services-2.html" data-i18n="donation.footer.gaushala">Gaushala Seva</a> </li>
+              <li> <a href="events.html" data-i18n="donation.footer.festival">Festival Seva</a> </li>
+              <li> <a href="volunteers.html" data-i18n="donation.footer.community">Community Seva</a> </li>
             </ul>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget cvd-newsletter">
-            <h5 class="widget-title">Stay Connected</h5>
-            <p>Subscribe to our newsletter for updates and events.</p>
+            <h5 class="widget-title" data-i18n="footer.connected">Stay Connected</h5>
+            <p data-i18n="footer.newsletter.desc">Subscribe to our newsletter for updates and events.</p>
             <form method="post" aria-label="Newsletter signup">
-              <label class="visually-hidden" for="cvd-newsletter-email">Email address</label>
-              <input type="email" id="cvd-newsletter-email" name="email" placeholder="Your email address" required>
-              <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <label class="visually-hidden" for="cvd-newsletter-email" data-i18n="footer.newsletter.emailLabel">Email address</label>
+              <input type="email" id="cvd-newsletter-email" name="email" placeholder="Your email address" required data-i18n-attr="placeholder:footer.newsletter.emailPlaceholder">
+              <button type="submit" aria-label="Subscribe" data-i18n-attr="aria-label:footer.newsletter.subscribe"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
             </form>
           </div>
 
@@ -475,12 +541,12 @@
     <!-- Footer Bottom -->
     <div class="sigma_footer-bottom">
       <div class="container">
-        <p>&copy; 2026 Choto Vrindavan Dham. All rights reserved.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 Mero Choto Vrindavan Dham. All rights reserved.</p>
         <ul class="cvd-footer-legal">
-          <li><a href="about-us.html">Faith</a></li>
-          <li><a href="gallery.html">Culture</a></li>
-          <li><a href="services.html">Service</a></li>
-          <li><a href="donation.html">A Better Tomorrow</a></li>
+          <li><a href="about-us.html" data-i18n="footer.legal.faith">Faith</a></li>
+          <li><a href="gallery.html" data-i18n="footer.legal.culture">Culture</a></li>
+          <li><a href="services.html" data-i18n="footer.legal.service">Service</a></li>
+          <li><a href="donation.html" data-i18n="footer.legal.tomorrow">A Better Tomorrow</a></li>
         </ul>
       </div>
     </div>
@@ -489,13 +555,13 @@
   <!-- partial -->
 
   <!-- WhatsApp float button: set href="https://wa.me/<number>" and remove class mht-wa-disabled to enable -->
-  <a class="mht-whatsapp-btn mht-wa-disabled" href="#" title="WhatsApp — add your number to activate" aria-label="WhatsApp not yet configured">
+  <a class="mht-whatsapp-btn mht-wa-disabled" href="#" title="WhatsApp — add your number to activate" aria-label="WhatsApp not yet configured" data-i18n-attr="title:wa.title|aria-label:wa.aria">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <!-- Back To Top Start -->
-  <div class="sigma_top style-5 active">
-    <i class="fas fa-angle-double-up"></i>
+  <div class="sigma_top style-5 active" role="button" tabindex="0" aria-label="Back to top" data-i18n-attr="aria-label:a11y.backToTop">
+    <i class="fas fa-angle-double-up" aria-hidden="true"></i>
   </div>
   <!-- Back To Top End -->
 
@@ -508,5 +574,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/donation-form.js"></script>
+  <script src="assets/js/i18n-common.js"></script>
+  <script src="assets/js/i18n-pages/donation.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </body>
 </html>

@@ -7,14 +7,14 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Choto Vrindavan Dham">
+  <meta name="apple-mobile-web-app-title" content="Mero Choto Vrindavan Dham">
   <meta name="format-detection" content="telephone=no">
-  <meta name="description" content="About Choto Vrindavan Dham Hindu Temple — Learn our history, sacred mission, guiding vision, and the devoted team serving the community and the divine.">
+  <meta name="description" content="About Mero Choto Vrindavan Dham Hindu Temple — Learn our history, sacred mission, guiding vision, and the devoted team serving the community and the divine.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="About Us | Choto Vrindavan Dham Hindu Temple">
-  <meta property="og:description" content="About Choto Vrindavan Dham Hindu Temple — Learn our history, sacred mission, guiding vision, and the devoted team serving the community and the divine.">
+  <meta property="og:title" content="About Us | Mero Choto Vrindavan Dham Hindu Temple">
+  <meta property="og:description" content="About Mero Choto Vrindavan Dham Hindu Temple — Learn our history, sacred mission, guiding vision, and the devoted team serving the community and the divine.">
   <meta property="og:image" content="assets/img/banner/1.webp">
-  <title>Choto Vrindavan Dham | Gallery</title>
+  <title>Mero Choto Vrindavan Dham | Gallery</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#main-content" data-i18n="a11y.skipLink">Skip to main content</a>
   <!-- Preloader Start -->
   <div class="sigma_preloader">
     <img width="414" height="414" src="assets/img/om.svg" alt="preloader" loading="lazy">
@@ -49,24 +49,29 @@
 
 
   <!-- partial:partia/__mobile-nav.html -->
-  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation">
+  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation" data-i18n-attr="aria-label:a11y.mobileNav">
 
-    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham"> </a>
+    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name"> </a>
+
+    <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+    </div>
 
     <!-- Menu -->
     <ul>
-      <li class="menu-item" data-nav="home"> <a href="index.html">Home</a> </li>
+      <li class="menu-item" data-nav="home"> <a href="index.html" data-i18n="nav.home">Home</a> </li>
       <li class="menu-item menu-item-has-children" data-nav="about">
-        <a href="#">About</a>
+        <a href="#" data-i18n="nav.about">About</a>
         <ul class="sub-menu">
-          <li class="menu-item"> <a href="about-us.html">Our Story</a> </li>
-          <li class="menu-item"> <a href="pandits.html">Our Acharyas</a> </li>
-          <li class="menu-item"> <a href="volunteers.html">Volunteers</a> </li>
-          <li class="menu-item"> <a href="testimonials.html">Testimonials</a> </li>
-          <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
+          <li class="menu-item"> <a href="about-us.html" data-i18n="nav.about.story">Our Story</a> </li>
+          <li class="menu-item"> <a href="pandits.html" data-i18n="nav.about.acharyas">Our Acharyas</a> </li>
+          <li class="menu-item"> <a href="volunteers.html" data-i18n="nav.about.volunteers">Volunteers</a> </li>
+          <li class="menu-item"> <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a> </li>
+          <li class="menu-item"> <a href="faq.html" data-i18n="nav.about.faq">FAQ</a> </li>
         </ul>
       </li>
-      <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas</a> </li>
+      <li class="menu-item" data-nav="pujas"> <a href="puja.html" data-i18n="nav.pujas">Pujas</a> </li>
       <li class="menu-item menu-item-has-children" data-nav="seva">
         <a href="#">Seva</a>
         <ul class="sub-menu">
@@ -85,7 +90,10 @@
       <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact</a> </li>
     </ul>
 
-    <a class="sigma_btn-custom cvd-aside-cta" href="contact-us.html">Visit Temple</a>
+    <div class="cvd-aside-cta cvd-account-cta">
+      <a class="sigma_btn-custom light btn-sm" href="login.html">Sign In</a>
+      <a class="sigma_btn-custom btn-sm" href="register.html">Register</a>
+    </div>
 
     <div class="cvd-aside-contact">
       <div><i class="fas fa-om" aria-hidden="true"></i> Darshan daily 5:30 AM &ndash; 9:00 PM</div>
@@ -100,55 +108,63 @@
 
     <!-- Middle Header Start -->
     <div class="sigma_header-middle cvd-mainnav">
-      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary">
+      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary" data-i18n-attr="aria-label:a11y.primaryNav">
 
         <!-- Logo Start -->
         <div class="cvd-logo">
           <a class="navbar-brand" href="index.html">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham">
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name">
           </a>
         </div>
         <!-- Logo End -->
 
         <!-- Menu -->
         <ul class="navbar-nav cvd-nav">
-          <li class="menu-item" data-nav="home"> <a href="index.html">Home<span></span></a> </li>
+          <li class="menu-item" data-nav="home"> <a href="index.html" data-i18n="nav.home">Home<span></span></a> </li>
           <li class="menu-item menu-item-has-children" data-nav="about">
-            <a href="about-us.html" aria-haspopup="true" aria-expanded="false">About<span></span></a>
+            <a href="about-us.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.about">About<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="about-us.html">Our Story</a> </li>
-              <li class="menu-item"> <a href="pandits.html">Our Acharyas</a> </li>
-              <li class="menu-item"> <a href="volunteers.html">Volunteers</a> </li>
-              <li class="menu-item"> <a href="testimonials.html">Testimonials</a> </li>
-              <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
+              <li class="menu-item"> <a href="about-us.html" data-i18n="nav.about.story">Our Story</a> </li>
+              <li class="menu-item"> <a href="pandits.html" data-i18n="nav.about.acharyas">Our Acharyas</a> </li>
+              <li class="menu-item"> <a href="volunteers.html" data-i18n="nav.about.volunteers">Volunteers</a> </li>
+              <li class="menu-item"> <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a> </li>
+              <li class="menu-item"> <a href="faq.html" data-i18n="nav.about.faq">FAQ</a> </li>
             </ul>
           </li>
-          <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas<span></span></a> </li>
+          <li class="menu-item" data-nav="pujas"> <a href="puja.html" data-i18n="nav.pujas">Pujas<span></span></a> </li>
           <li class="menu-item menu-item-has-children" data-nav="seva">
-            <a href="services.html" aria-haspopup="true" aria-expanded="false">Seva<span></span></a>
+            <a href="services.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.seva">Seva<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-              <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-              <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-              <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-              <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-              <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-              <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-              <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+              <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+              <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+              <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+              <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+              <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+              <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+              <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+              <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
             </ul>
           </li>
-          <li class="menu-item" data-nav="blog"> <a href="blog-grid.html">Blog<span></span></a> </li>
-          <li class="menu-item current-menu-item" data-nav="gallery"> <a href="gallery.html">Gallery<span></span></a> </li>
-          <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact<span></span></a> </li>
+          <li class="menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog<span></span></a> </li>
+          <li class="menu-item current-menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery<span></span></a> </li>
+          <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact<span></span></a> </li>
         </ul>
 
         <!-- Controls -->
         <div class="sigma_header-controls cvd-controls">
-          <a class="sigma_btn-custom cvd-cta" href="contact-us.html">Visit Temple</a>
+          <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+          </div>
+
+          <div class="cvd-cta cvd-account-cta">
+            <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+            <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+          </div>
 
           <ul class="sigma_header-controls-inner">
             <!-- Mobile Toggler -->
-            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu">
+            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu" data-i18n-attr="aria-label:a11y.openMenu">
               <span></span>
               <span></span>
               <span></span>
@@ -176,12 +192,12 @@
     <div class="container">
       <div class="sigma_subheader-inner">
         <div class="sigma_subheader-text">
-          <h1>Gallery</h1>
+          <h1 data-i18n="nav.gallery">Gallery</h1>
         </div>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a class="btn-link" href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+            <li class="breadcrumb-item"><a class="btn-link" href="#" data-i18n="footer.home">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-i18n="nav.gallery">Gallery</li>
           </ol>
         </nav>
       </div>
@@ -194,678 +210,678 @@
   <div class="section">
     <div class="container">
       <div class="section-title text-center wow fadeInUp">
-        <p class="subtitle">OUR GALLERY</p>
-        <h4 class="title">Moments from our Temple</h4>
+        <p class="subtitle" data-i18n="gallery.subtitle">OUR GALLERY</p>
+        <h4 class="title" data-i18n="gallery.title">Moments from our Temple</h4>
       </div>
       <div class="row">
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image45.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image45.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image45.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image45.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image46.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image46.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image46.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image46.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image47.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image47.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image47.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image47.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image48.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image48.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image48.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image48.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image49.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image49.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image49.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image49.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image50.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image50.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image50.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image50.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image51.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image51.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image51.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image51.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image52.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image52.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image52.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image52.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image53.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image53.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image53.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image53.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image54.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image54.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image54.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image54.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image55.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image55.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image55.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image55.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image56.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image56.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image56.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image56.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image57.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image57.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image57.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image57.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image58.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image58.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image58.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image58.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image59.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image59.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image59.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image59.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image60.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image60.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image60.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image60.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image61.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image61.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image61.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image61.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image62.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image62.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image62.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image62.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image63.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image63.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image63.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image63.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image64.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image64.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image64.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image64.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image65.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image65.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image65.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image65.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image66.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image66.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image66.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image66.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image67.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image67.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image67.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image67.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image68.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image68.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image68.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image68.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image69.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image69.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image69.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image69.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image70.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image70.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image70.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image70.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image71.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image71.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image71.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image71.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image72.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image72.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image72.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image72.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image73.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image73.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image73.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image73.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image74.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image74.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image74.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image74.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image75.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image75.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image75.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image75.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image76.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image76.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image76.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image76.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image77.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image77.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image77.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image77.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image78.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image78.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image78.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image78.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image79.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image79.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image79.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image79.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image80.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image80.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image80.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image80.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image81.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image81.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image81.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image81.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image82.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image82.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image82.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image82.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image83.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image83.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image83.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image83.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image84.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image84.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image84.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image84.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image85.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image85.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image85.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image85.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image86.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image86.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image86.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image86.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image87.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image87.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image87.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image87.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image88.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image88.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image88.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image88.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image89.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image89.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image89.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image89.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image90.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image90.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image90.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image90.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image91.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image91.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image91.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image91.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image92.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image92.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image92.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image92.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image93.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image93.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image93.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image93.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image94.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image94.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image94.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image94.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image95.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image95.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image95.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image95.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image96.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image96.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image96.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image96.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image97.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image97.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image97.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image97.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image98.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image98.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image98.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image98.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image99.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image99.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image99.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image99.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image100.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image100.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image100.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image100.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image101.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image101.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image101.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image101.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image102.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image102.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image102.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image102.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image103.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image103.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image103.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image103.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image104.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image104.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image104.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image104.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image105.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image105.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image105.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image105.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image106.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image106.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image106.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image106.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image107.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image107.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image107.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image107.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image108.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image108.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image108.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image108.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image109.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image109.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image109.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image109.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image110.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image110.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image110.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image110.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image111.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image111.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image111.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image111.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image112.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image112.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image112.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image112.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image113.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image113.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image113.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image113.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image114.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image114.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image114.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image114.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image115.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image115.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image115.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image115.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image116.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image116.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image116.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image116.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image117.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image117.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image117.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image117.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image118.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image118.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image118.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image118.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image119.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image119.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image119.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image119.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image120.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image120.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image120.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image120.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image121.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image121.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image121.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image121.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image122.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image122.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image122.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image122.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image123.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image123.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image123.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image123.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image124.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image124.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image124.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image124.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image125.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image125.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image125.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image125.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image126.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image126.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image126.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image126.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image127.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image127.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image127.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image127.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image128.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image128.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image128.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image128.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image129.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image129.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image129.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image129.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image130.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image130.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image130.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image130.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image131.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image131.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image131.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image131.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image132.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image132.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image132.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image132.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image133.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image133.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image133.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image133.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image134.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image134.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image134.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image134.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image1.png" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image1.png" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image1.png" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image1.png" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image2.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image2.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image2.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image2.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image3.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image3.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image3.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image3.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image4.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image4.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image4.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image4.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image5.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image5.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image5.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image5.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image6.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image6.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image6.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image6.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image7.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image7.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image7.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image7.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image8.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image8.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image8.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image8.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image9.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image9.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image9.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image9.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image10.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image10.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image10.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image10.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image11.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image11.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image11.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image11.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image12.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image12.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image12.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image12.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image13.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image13.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image13.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image13.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image14.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image14.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image14.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image14.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image15.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image15.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image15.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image15.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image16.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image16.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image16.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image16.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image17.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image17.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image17.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image17.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image18.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image18.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image18.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image18.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image19.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image19.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image19.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image19.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image20.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image20.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image20.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image20.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image21.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image21.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image21.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image21.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image22.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image22.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image22.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image22.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image23.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image23.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image23.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image23.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image24.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image24.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image24.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image24.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image25.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image25.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image25.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image25.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image26.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image26.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image26.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image26.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image27.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image27.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image27.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image27.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image28.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image28.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image28.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image28.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image29.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image29.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image29.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image29.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image30.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image30.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image30.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image30.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image31.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image31.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image31.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image31.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image32.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image32.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image32.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image32.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image33.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image33.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image33.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image33.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image34.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image34.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image34.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image34.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image35.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image35.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image35.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image35.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image36.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image36.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image36.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image36.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image37.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image37.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image37.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image37.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image38.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image38.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image38.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image38.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image39.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image39.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image39.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image39.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image40.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image40.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image40.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image40.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image41.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image41.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image41.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image41.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image42.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image42.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image42.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image42.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image43.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image43.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image43.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image43.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
         <div class="col-lg-4 col-md-6 mb-30">
-          <a href="assets/img/gallery/image44.jpeg" class="gallery-thumb d-block" title="Temple gallery photo">
-            <img width="570" height="400" src="assets/img/gallery/image44.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy">
+          <a href="assets/img/gallery/image44.jpeg" class="gallery-thumb d-block" title="Temple gallery photo" data-i18n-attr="title:gallery.photoLabel">
+            <img width="570" height="400" src="assets/img/gallery/image44.jpeg" alt="Temple gallery photo" class="w-100" loading="lazy" data-i18n-attr="alt:gallery.photoLabel">
           </a>
         </div>
       </div>
@@ -883,8 +899,8 @@
         <div class="row">
 
           <div class="col-xl-4 col-lg-4 col-md-6 footer-widget cvd-footer-brand">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham" loading="lazy">
-            <p class="cvd-footer-tagline">Faith, Service, Community</p>
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" loading="lazy" data-i18n-attr="alt:brand.name">
+            <p class="cvd-footer-tagline" data-i18n="footer.tagline">Faith, Service, Community</p>
             <ul class="sigma_sm">
               <li> <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
               <li> <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a> </li>
@@ -894,35 +910,35 @@
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-6 footer-widget">
-            <h5 class="widget-title">Quick Links</h5>
+            <h5 class="widget-title" data-i18n="footer.quicklinks">Quick Links</h5>
             <ul>
-              <li> <a href="index.html">Home</a> </li>
-              <li> <a href="about-us.html">About Us</a> </li>
-              <li> <a href="puja.html">Pujas &amp; Services</a> </li>
-              <li> <a href="events.html">Events</a> </li>
-              <li> <a href="gallery.html">Gallery</a> </li>
-              <li> <a href="blog-grid.html">Blog</a> </li>
+              <li> <a href="index.html" data-i18n="footer.home">Home</a> </li>
+              <li> <a href="about-us.html" data-i18n="footer.about">About Us</a> </li>
+              <li> <a href="puja.html" data-i18n="footer.pujas">Pujas &amp; Services</a> </li>
+              <li> <a href="events.html" data-i18n="footer.events">Events</a> </li>
+              <li> <a href="gallery.html" data-i18n="footer.gallery">Gallery</a> </li>
+              <li> <a href="blog-grid.html" data-i18n="footer.blog">Blog</a> </li>
             </ul>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget">
-            <h5 class="widget-title">Our Initiatives</h5>
+            <h5 class="widget-title" data-i18n="footer.initiatives">Our Initiatives</h5>
             <ul>
-              <li> <a href="donation.html">Annadanam</a> </li>
-              <li> <a href="donation.html">Education Support</a> </li>
-              <li> <a href="donation.html">Temple Restoration</a> </li>
-              <li> <a href="donation-archive.html">Community Outreach</a> </li>
-              <li> <a href="volunteers.html">Volunteer</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.annadanam">Annadanam</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.education">Education Support</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.restoration">Temple Restoration</a> </li>
+              <li> <a href="donation-archive.html" data-i18n="footer.outreach">Community Outreach</a> </li>
+              <li> <a href="volunteers.html" data-i18n="footer.volunteer">Volunteer</a> </li>
             </ul>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget cvd-newsletter">
-            <h5 class="widget-title">Stay Connected</h5>
-            <p>Subscribe to our newsletter for updates and events.</p>
+            <h5 class="widget-title" data-i18n="footer.connected">Stay Connected</h5>
+            <p data-i18n="footer.newsletter.desc">Subscribe to our newsletter for updates and events.</p>
             <form method="post" aria-label="Newsletter signup">
-              <label class="visually-hidden" for="cvd-newsletter-email">Email address</label>
-              <input type="email" id="cvd-newsletter-email" name="email" placeholder="Your email address" required>
-              <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <label class="visually-hidden" for="cvd-newsletter-email" data-i18n="footer.newsletter.emailLabel">Email address</label>
+              <input type="email" id="cvd-newsletter-email" name="email" placeholder="Your email address" required data-i18n-attr="placeholder:footer.newsletter.emailPlaceholder">
+              <button type="submit" aria-label="Subscribe" data-i18n-attr="aria-label:footer.newsletter.subscribe"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
             </form>
           </div>
 
@@ -933,12 +949,12 @@
     <!-- Footer Bottom -->
     <div class="sigma_footer-bottom">
       <div class="container">
-        <p>&copy; 2026 Choto Vrindavan Dham. All rights reserved.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 Mero Choto Vrindavan Dham. All rights reserved.</p>
         <ul class="cvd-footer-legal">
-          <li><a href="about-us.html">Faith</a></li>
-          <li><a href="gallery.html">Culture</a></li>
-          <li><a href="services.html">Service</a></li>
-          <li><a href="donation.html">A Better Tomorrow</a></li>
+          <li><a href="about-us.html" data-i18n="footer.legal.faith">Faith</a></li>
+          <li><a href="gallery.html" data-i18n="footer.legal.culture">Culture</a></li>
+          <li><a href="services.html" data-i18n="footer.legal.service">Service</a></li>
+          <li><a href="donation.html" data-i18n="footer.legal.tomorrow">A Better Tomorrow</a></li>
         </ul>
       </div>
     </div>
@@ -947,12 +963,12 @@
   <!-- partial -->
 
   <!-- WhatsApp float button: set href="https://wa.me/<number>" and remove class mht-wa-disabled to enable -->
-  <a class="mht-whatsapp-btn mht-wa-disabled" href="#" title="WhatsApp — add your number to activate" aria-label="WhatsApp not yet configured">
+  <a class="mht-whatsapp-btn mht-wa-disabled" href="#" title="WhatsApp — add your number to activate" aria-label="WhatsApp not yet configured" data-i18n-attr="title:wa.title|aria-label:wa.aria">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <!-- Back To Top Start -->
-  <div class="sigma_top style-5">
+  <div class="sigma_top style-5" role="button" tabindex="0" aria-label="Back to top" data-i18n-attr="aria-label:a11y.backToTop">
     <i class="fas fa-angle-double-up"></i>
   </div>
   <!-- Back To Top End -->
@@ -966,5 +982,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n-common.js"></script>
+  <script src="assets/js/i18n-pages/gallery.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </body>
 </html>

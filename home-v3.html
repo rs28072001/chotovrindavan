@@ -7,14 +7,14 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Choto Vrindavan Dham">
+  <meta name="apple-mobile-web-app-title" content="Mero Choto Vrindavan Dham">
   <meta name="format-detection" content="telephone=no">
-  <meta name="description" content="Choto Vrindavan Dham Hindu Temple — Join us for daily Aarti, spiritual discourses, and vibrant temple festivals in our modern home layout.">
+  <meta name="description" content="Mero Choto Vrindavan Dham Hindu Temple — Join us for daily Aarti, spiritual discourses, and vibrant temple festivals in our modern home layout.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Choto Vrindavan Dham Hindu Temple">
-  <meta property="og:description" content="Choto Vrindavan Dham Hindu Temple — Join us for daily Aarti, spiritual discourses, and vibrant temple festivals in our modern home layout.">
+  <meta property="og:title" content="Mero Choto Vrindavan Dham Hindu Temple">
+  <meta property="og:description" content="Mero Choto Vrindavan Dham Hindu Temple — Join us for daily Aarti, spiritual discourses, and vibrant temple festivals in our modern home layout.">
   <meta property="og:image" content="assets/img/banner/1.webp">
-  <title>Choto Vrindavan Dham | Home V3</title>
+  <title>Mero Choto Vrindavan Dham | Home V3</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#main-content" data-i18n="a11y.skipLink">Skip to main content</a>
   <!-- Preloader Start -->
   <div class="sigma_preloader">
     <img width="414" height="414" src="assets/img/om.svg" alt="preloader" loading="lazy">
@@ -50,106 +50,122 @@
 
 
   <!-- partial:partia/__mobile-nav.html -->
-  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation">
+  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation" data-i18n-attr="aria-label:a11y.mobileNav">
 
-    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham"> </a>
+    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name"> </a>
+
+    <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+    </div>
 
     <!-- Menu -->
     <ul>
-      <li class="menu-item" data-nav="home"> <a href="index.html">Home</a> </li>
+      <li class="menu-item" data-nav="home"> <a href="index.html" data-i18n="nav.home">Home</a> </li>
       <li class="menu-item menu-item-has-children" data-nav="about">
-        <a href="#">About</a>
+        <a href="#" data-i18n="nav.about">About</a>
         <ul class="sub-menu">
-          <li class="menu-item"> <a href="about-us.html">Our Story</a> </li>
-          <li class="menu-item"> <a href="pandits.html">Our Acharyas</a> </li>
-          <li class="menu-item"> <a href="volunteers.html">Volunteers</a> </li>
-          <li class="menu-item"> <a href="testimonials.html">Testimonials</a> </li>
-          <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
+          <li class="menu-item"> <a href="about-us.html" data-i18n="nav.about.story">Our Story</a> </li>
+          <li class="menu-item"> <a href="pandits.html" data-i18n="nav.about.acharyas">Our Acharyas</a> </li>
+          <li class="menu-item"> <a href="volunteers.html" data-i18n="nav.about.volunteers">Volunteers</a> </li>
+          <li class="menu-item"> <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a> </li>
+          <li class="menu-item"> <a href="faq.html" data-i18n="nav.about.faq">FAQ</a> </li>
         </ul>
       </li>
-      <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas</a> </li>
+      <li class="menu-item" data-nav="pujas"> <a href="puja.html" data-i18n="nav.pujas">Pujas</a> </li>
       <li class="menu-item menu-item-has-children" data-nav="seva">
         <a href="#">Seva</a>
         <ul class="sub-menu">
-          <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-          <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-          <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-          <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-          <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-          <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-          <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-          <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+          <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+          <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+          <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+          <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+          <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+          <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+          <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+          <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
         </ul>
       </li>
-      <li class="menu-item" data-nav="blog"> <a href="blog-grid.html">Blog</a> </li>
-      <li class="menu-item" data-nav="gallery"> <a href="gallery.html">Gallery</a> </li>
-      <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact</a> </li>
+      <li class="menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog</a> </li>
+      <li class="menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery</a> </li>
+      <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact</a> </li>
     </ul>
 
-    <a class="sigma_btn-custom cvd-aside-cta" href="contact-us.html">Visit Temple</a>
+    <div class="cvd-aside-cta cvd-account-cta">
+      <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+      <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+    </div>
 
     <div class="cvd-aside-contact">
-      <div><i class="fas fa-om" aria-hidden="true"></i> Darshan daily 5:30 AM &ndash; 9:00 PM</div>
-      <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/bBNHBzuiGE7314N56" target="_blank" rel="noopener noreferrer">Kuleri, Agroha, Haryana 125047</a></div>
+      <div><i class="fas fa-om" aria-hidden="true"></i> <span data-i18n="aside.darshan">Darshan daily 5:30 AM &ndash; 9:00 PM</span></div>
+      <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/bBNHBzuiGE7314N56" target="_blank" rel="noopener noreferrer" data-i18n="aside.address">Kuleri, Agroha, Haryana 125047</a></div>
     </div>
 
   </aside>
-  <div class="sigma_aside-overlay aside-trigger-left" role="button" tabindex="-1" aria-label="Close navigation menu"></div>
+  <div class="sigma_aside-overlay aside-trigger-left" role="button" tabindex="-1" aria-label="Close navigation menu" data-i18n-attr="aria-label:a11y.closeMenu"></div>
   <!-- partial -->
   <!-- partial:partia/__header.html -->
   <header class="sigma_header cvd-header can-sticky">
 
     <!-- Middle Header Start -->
     <div class="sigma_header-middle cvd-mainnav">
-      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary">
+      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary" data-i18n-attr="aria-label:a11y.primaryNav">
 
         <!-- Logo Start -->
         <div class="cvd-logo">
           <a class="navbar-brand" href="index.html">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham">
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name">
           </a>
         </div>
         <!-- Logo End -->
 
         <!-- Menu -->
         <ul class="navbar-nav cvd-nav">
-          <li class="menu-item" data-nav="home"> <a href="index.html">Home<span></span></a> </li>
+          <li class="menu-item" data-nav="home"> <a href="index.html" data-i18n="nav.home">Home<span></span></a> </li>
           <li class="menu-item menu-item-has-children" data-nav="about">
-            <a href="about-us.html" aria-haspopup="true" aria-expanded="false">About<span></span></a>
+            <a href="about-us.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.about">About<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="about-us.html">Our Story</a> </li>
-              <li class="menu-item"> <a href="pandits.html">Our Acharyas</a> </li>
-              <li class="menu-item"> <a href="volunteers.html">Volunteers</a> </li>
-              <li class="menu-item"> <a href="testimonials.html">Testimonials</a> </li>
-              <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
+              <li class="menu-item"> <a href="about-us.html" data-i18n="nav.about.story">Our Story</a> </li>
+              <li class="menu-item"> <a href="pandits.html" data-i18n="nav.about.acharyas">Our Acharyas</a> </li>
+              <li class="menu-item"> <a href="volunteers.html" data-i18n="nav.about.volunteers">Volunteers</a> </li>
+              <li class="menu-item"> <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a> </li>
+              <li class="menu-item"> <a href="faq.html" data-i18n="nav.about.faq">FAQ</a> </li>
             </ul>
           </li>
-          <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas<span></span></a> </li>
+          <li class="menu-item" data-nav="pujas"> <a href="puja.html" data-i18n="nav.pujas">Pujas<span></span></a> </li>
           <li class="menu-item menu-item-has-children" data-nav="seva">
-            <a href="services.html" aria-haspopup="true" aria-expanded="false">Seva<span></span></a>
+            <a href="services.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.seva">Seva<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-              <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-              <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-              <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-              <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-              <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-              <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-              <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+              <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+              <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+              <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+              <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+              <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+              <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+              <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+              <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
             </ul>
           </li>
-          <li class="menu-item" data-nav="blog"> <a href="blog-grid.html">Blog<span></span></a> </li>
-          <li class="menu-item" data-nav="gallery"> <a href="gallery.html">Gallery<span></span></a> </li>
-          <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact<span></span></a> </li>
+          <li class="menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog<span></span></a> </li>
+          <li class="menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery<span></span></a> </li>
+          <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact<span></span></a> </li>
         </ul>
 
         <!-- Controls -->
         <div class="sigma_header-controls cvd-controls">
-          <a class="sigma_btn-custom cvd-cta" href="contact-us.html">Visit Temple</a>
+          <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+          </div>
+
+          <div class="cvd-cta cvd-account-cta">
+            <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+            <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+          </div>
 
           <ul class="sigma_header-controls-inner">
             <!-- Mobile Toggler -->
-            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu">
+            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu" data-i18n-attr="aria-label:a11y.openMenu">
               <span></span>
               <span></span>
               <span></span>
@@ -183,11 +199,11 @@
             <div class="row align-items-center">
               <div class="col-lg-6">
                 <div class="sigma_box primary-bg banner-cta">
-                  <h1 class="text-white title">Mere Ganpati Guru Ganesh Ji Tusi Aa Jao.</h1>
-                  <p class="blockquote light light-border mb-0"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva.</p>
+                  <h1 class="text-white title" data-i18n="home-v3.banner1.title">Mere Ganpati Guru Ganesh Ji Tusi Aa Jao.</h1>
+                  <p class="blockquote light light-border mb-0" data-i18n="home-v3.banner.desc"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva.</p>
                   <div class="section-button d-flex align-items-center">
-                    <a href="contact-us.html" class="sigma_btn-custom secondary">Join Today <i class="fas fa-arrow-right"></i> </a>
-                    <a href="donation.html" class="ms-3 sigma_btn-custom light text-white">Donate Us <i class="fas fa-arrow-right"></i> </a>
+                    <a href="contact-us.html" class="sigma_btn-custom secondary" data-i18n="home-v3.joinToday">Join Today <i class="fas fa-arrow-right"></i> </a>
+                    <a href="donation.html" class="ms-3 sigma_btn-custom light text-white" data-i18n="home-v3.donateUs">Donate Us <i class="fas fa-arrow-right"></i> </a>
                   </div>
                 </div>
               </div>
@@ -202,11 +218,11 @@
             <div class="row align-items-center">
               <div class="offset-lg-6 col-lg-6">
                 <div class="sigma_box primary-bg banner-cta">
-                  <h1 class="text-white title">Welcome to Religion of the Hinduism</h1>
-                  <p class="blockquote light light-border mb-0"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva.</p>
+                  <h1 class="text-white title" data-i18n="home-v3.banner2.title">Welcome to Religion of the Hinduism</h1>
+                  <p class="blockquote light light-border mb-0" data-i18n="home-v3.banner.desc"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva.</p>
                   <div class="section-button d-flex align-items-center">
-                    <a href="contact-us.html" class="sigma_btn-custom secondary">Join Today <i class="fas fa-arrow-right"></i> </a>
-                    <a href="donation.html" class="ms-3 sigma_btn-custom light text-white">Donate Us <i class="fas fa-arrow-right"></i> </a>
+                    <a href="contact-us.html" class="sigma_btn-custom secondary" data-i18n="home-v3.joinToday">Join Today <i class="fas fa-arrow-right"></i> </a>
+                    <a href="donation.html" class="ms-3 sigma_btn-custom light text-white" data-i18n="home-v3.donateUs">Donate Us <i class="fas fa-arrow-right"></i> </a>
                   </div>
                 </div>
               </div>
@@ -240,8 +256,8 @@
               <span></span>
             </div>
             <div class="sigma_service-body">
-              <h5>Temple</h5>
-              <p>Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
+              <h5 data-i18n="home-v3.svc1.title">Temple</h5>
+              <p data-i18n="donation-archive.cardDesc">Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
             </div>
           </a>
         </div>
@@ -254,8 +270,8 @@
               <span></span>
             </div>
             <div class="sigma_service-body">
-              <h5 class="text-white">Puja</h5>
-              <p class="text-white">Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
+              <h5 class="text-white" data-i18n="home-v3.svc2.title">Puja</h5>
+              <p class="text-white" data-i18n="donation-archive.cardDesc">Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
             </div>
           </a>
         </div>
@@ -268,8 +284,8 @@
               <span></span>
             </div>
             <div class="sigma_service-body">
-              <h5 class="text-white">Donation</h5>
-              <p class="text-white">Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
+              <h5 class="text-white" data-i18n="home-v3.svc3.title">Donation</h5>
+              <p class="text-white" data-i18n="donation-archive.cardDesc">Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
             </div>
           </a>
         </div>
@@ -288,16 +304,16 @@
         <div class="col-lg-5 d-none d-lg-block">
           <div class="sigma_counter bg-cover primary-overlay bg-norepeat bg-center" style="background-image: url(assets/img/counter.webp)">
             <h4> <b class="counter" data-from="0" data-to="25">25</b> <span>+</span> </h4>
-            <p>Join Temple</p>
+            <p data-i18n="home-v3.joinTemple">Join Temple</p>
           </div>
         </div>
         <div class="col-lg-7">
           <div class="me-lg-30">
             <div class="section-title mb-0 text-start wow fadeInUp" data-wow-duration="0.7s">
-              <p class="subtitle">Education for all rural children</p>
-              <h4 class="title">We Are A Hindu That Believes In Rama.</h4>
+              <p class="subtitle" data-i18n="home-v3.about.subtitle">Education for all rural children</p>
+              <h4 class="title" data-i18n="home-v3.about.title">We Are A Hindu That Believes In Rama.</h4>
             </div>
-            <p class="blockquote bg-transparent"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva. </p>
+            <p class="blockquote bg-transparent" data-i18n="home-v3.banner.desc"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva. </p>
             <div class="row">
               <div class="col-lg-6">
                 <div class="sigma_icon-block icon-block-3">
@@ -305,8 +321,8 @@
                     <i class="fas fa-place-of-worship"></i>
                   </div>
                   <div class="sigma_icon-block-content">
-                    <h5> Temple </h5>
-                    <p>Donation is a good act amet quam vehicula elementum sed.</p>
+                    <h5 data-i18n="home-v3.about.icon1.title"> Temple </h5>
+                    <p data-i18n="home-v3.about.iconDesc">Donation is a good act amet quam vehicula elementum sed.</p>
                   </div>
                 </div>
               </div>
@@ -316,13 +332,13 @@
                     <i class="fas fa-palette"></i>
                   </div>
                   <div class="sigma_icon-block-content">
-                    <h5> Donation </h5>
-                    <p>Donation is a good act amet quam vehicula elementum sed.</p>
+                    <h5 data-i18n="home-v3.about.icon2.title"> Donation </h5>
+                    <p data-i18n="home-v3.about.iconDesc">Donation is a good act amet quam vehicula elementum sed.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <a href="about-us.html" class="sigma_btn-custom light">Learn More <i class="fas fa-arrow-right"></i> </a>
+            <a href="about-us.html" class="sigma_btn-custom light" data-i18n="home.about.cta">Learn More <i class="fas fa-arrow-right"></i> </a>
           </div>
         </div>
       </div>
@@ -340,19 +356,19 @@
           <div class="sigma_cta lg primary-bg">
             <img width="669" height="759" class="d-none d-lg-block" src="assets/img/cta/3.webp" alt="cta" loading="lazy">
             <div class="sigma_cta-content">
-              <span class="fw-600 custom-secondary">Need Help, Call Our HOTLINE!</span>
+              <span class="fw-600 custom-secondary" data-i18n="donation-archive.cta.hotline">Need Help, Call Our HOTLINE!</span>
               <h4 class="text-white">+1 212-683-9756</h4>
             </div>
           </div>
         </div>
         <div class="col-lg-5 col-md-6 position-relative">
           <div class="sigma_cta sm primary-bg">
-            <span class="sigma_cta-sperator d-none d-lg-flex">or</span>
+            <span class="sigma_cta-sperator d-none d-lg-flex" data-i18n="donation-archive.cta.or">or</span>
             <div class="sigma_cta-content">
               <form method="post">
-                <label class="mb-0 text-white">Temple Newsletter</label>
+                <label class="mb-0 text-white" data-i18n="donation-archive.cta.newsletter">Temple Newsletter</label>
                 <div class="sigma_search-adv-input">
-                  <input type="text" class="form-control" placeholder="Enter email address" name="search" value="">
+                  <input type="text" class="form-control" placeholder="Enter email address" name="search" value="" data-i18n-attr="placeholder:donation-archive.cta.emailPlaceholder">
                   <button type="submit" name="button"><i class="far fa-envelope"></i></button>
                 </div>
               </form>
@@ -370,8 +386,8 @@
    <div class="section section-padding pt-0">
     <div class="container">
       <div class="section-title text-center wow fadeInUp" data-wow-duration="0.7s">
-        <p class="subtitle">Donate To Help</p>
-        <h4 class="title">Make a Donation to Help Community</h4>
+        <p class="subtitle" data-i18n="home-v3.donate.subtitle">Donate To Help</p>
+        <h4 class="title" data-i18n="home-v3.donate.title">Make a Donation to Help Community</h4>
       </div>
       <div class="row">
 
@@ -382,13 +398,13 @@
             </div>
             <div class="sigma_service-body">
               <h5>
-                <a href="donation.html">Protecting Children</a>
+                <a href="donation.html" data-i18n="home-v3.d1.title">Protecting Children</a>
               </h5>
-              <p>Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
+              <p data-i18n="donation-archive.cardDesc">Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
               <div class="sigma_service-progress">
                 <div class="progress-content">
-                  <p>Raised: $52,384</p>
-                  <p>Goal: $85,000</p>
+                  <p data-i18n="home-v3.d1.raised">Raised: $52,384</p>
+                  <p data-i18n="home-v3.d1.goal">Goal: $85,000</p>
                 </div>
                 <div class="sigma_progress">
                     <div class="progress">
@@ -397,7 +413,7 @@
                     </div>
                 </div>
               </div>
-              <a href="donation.html" class="sigma_btn-custom">
+              <a href="donation.html" class="sigma_btn-custom" data-i18n="donation-archive.donate">
                 Donate
               </a>
             </div>
@@ -411,13 +427,13 @@
             </div>
             <div class="sigma_service-body">
               <h5>
-                <a href="donation.html">Donate Ngos</a>
+                <a href="donation.html" data-i18n="home-v3.d2.title">Donate Ngos</a>
               </h5>
-              <p>Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
+              <p data-i18n="donation-archive.cardDesc">Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
               <div class="sigma_service-progress">
                 <div class="progress-content">
-                  <p>Raised: $49,444</p>
-                  <p>Goal: $78,000</p>
+                  <p data-i18n="home-v3.d2.raised">Raised: $49,444</p>
+                  <p data-i18n="home-v3.d2.goal">Goal: $78,000</p>
                 </div>
                 <div class="sigma_progress">
                     <div class="progress">
@@ -426,7 +442,7 @@
                     </div>
                 </div>
               </div>
-              <a href="donation.html" class="sigma_btn-custom">
+              <a href="donation.html" class="sigma_btn-custom" data-i18n="donation-archive.donate">
                 Donate
               </a>
             </div>
@@ -440,13 +456,13 @@
             </div>
             <div class="sigma_service-body">
               <h5>
-                <a href="donation.html">Feed The Poor</a>
+                <a href="donation.html" data-i18n="home-v3.d3.title">Feed The Poor</a>
               </h5>
-              <p>Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
+              <p data-i18n="donation-archive.cardDesc">Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
               <div class="sigma_service-progress">
                 <div class="progress-content">
-                  <p>Raised: $78,334</p>
-                  <p>Goal: $96,400</p>
+                  <p data-i18n="home-v3.d3.raised">Raised: $78,334</p>
+                  <p data-i18n="home-v3.d3.goal">Goal: $96,400</p>
                 </div>
                 <div class="sigma_progress">
                     <div class="progress">
@@ -455,7 +471,7 @@
                     </div>
                 </div>
               </div>
-              <a href="donation.html" class="sigma_btn-custom">
+              <a href="donation.html" class="sigma_btn-custom" data-i18n="donation-archive.donate">
                 Donate
               </a>
             </div>
@@ -472,8 +488,8 @@
   <div class="section section-padding pt-0">
     <div class="container">
       <div class="section-title text-center wow fadeInUp" data-wow-duration="0.7s">
-        <p class="subtitle">Watch Video</p>
-        <h4 class="title">Our Live Broadcast</h4>
+        <p class="subtitle" data-i18n="broadcast.watchVideo">Watch Video</p>
+        <h4 class="title" data-i18n="home.live.title">Our Live Broadcast</h4>
       </div>
       <div class="row sigma_broadcast-video">
         <div class="col-12 mb-5">
@@ -488,10 +504,10 @@
             </div>
             <div class="col-lg-6">
               <div class="sigma_box m-0">
-                <p class="custom-primary mb-0 fw-600 fs-16">Aug 12, 2026</p>
-                <h4 class="title">Serving the needs of the Hindu Community</h4>
-                <p class="m-0"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva. This is where you should start Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
-                <a href="broadcast.html" class="sigma_btn-custom section-button">Watch Video</a>
+                <p class="custom-primary mb-0 fw-600 fs-16" data-i18n="broadcast.main.date2">Aug 12, 2026</p>
+                <h4 class="title" data-i18n="broadcast.main.title">Serving the needs of the Hindu Community</h4>
+                <p class="m-0" data-i18n="home-v3.broadcast.desc"> We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva. This is where you should start Temple is place where hindu worship  consectetur adipisicing elit, sed do </p>
+                <a href="broadcast.html" class="sigma_btn-custom section-button" data-i18n="broadcast.watchVideo">Watch Video</a>
               </div>
             </div>
           </div>
@@ -503,7 +519,7 @@
               <i class="fas fa-play"></i>
             </a>
           </div>
-          <h6 class="mb-0 mt-3">Varansi at Night</h6>
+          <h6 class="mb-0 mt-3" data-i18n="broadcast.clip1.title">Varansi at Night</h6>
         </div>
         <div class="col-lg-3 col-sm-6 mb-30">
           <div class="sigma_video-popup-wrap">
@@ -512,7 +528,7 @@
               <i class="fas fa-play"></i>
             </a>
           </div>
-          <h6 class="mb-0 mt-3">Chaar Dhaam Yatra</h6>
+          <h6 class="mb-0 mt-3" data-i18n="broadcast.clip2.title">Chaar Dhaam Yatra</h6>
         </div>
         <div class="col-lg-3 col-sm-6 mb-30">
           <div class="sigma_video-popup-wrap">
@@ -521,7 +537,7 @@
               <i class="fas fa-play"></i>
             </a>
           </div>
-          <h6 class="mb-0 mt-3">Mahashivratri Temple</h6>
+          <h6 class="mb-0 mt-3" data-i18n="broadcast.clip3.title">Mahashivratri Temple</h6>
         </div>
         <div class="col-lg-3 col-sm-6 mb-30">
           <div class="sigma_video-popup-wrap">
@@ -530,7 +546,7 @@
               <i class="fas fa-play"></i>
             </a>
           </div>
-          <h6 class="mb-0 mt-3">OM Mahashivratri</h6>
+          <h6 class="mb-0 mt-3" data-i18n="broadcast.clip4.title">OM Mahashivratri</h6>
         </div>
       </div>
     </div>
@@ -543,14 +559,14 @@
 
       <div class="section-title text-start flex-title wow fadeInUp" data-wow-duration="0.7s">
         <div>
-          <p class="subtitle">Puja</p>
-          <h4 class="title mb-lg-0">Our Puja</h4>
+          <p class="subtitle" data-i18n="home-v3.puja.subtitle">Puja</p>
+          <h4 class="title mb-lg-0" data-i18n="home-v3.puja.title">Our Puja</h4>
         </div>
         <div class="text-center filter-items me-0 mb-0">
-          <h5 class="active portfolio-trigger" data-filter="*">All</h5>
-          <h5 class="portfolio-trigger" data-filter=".coaching">Durga Puja</h5>
-          <h5 class="portfolio-trigger" data-filter=".stakeholder">Raksha Bandhan</h5>
-          <h5 class="portfolio-trigger" data-filter=".relations">Holi</h5>
+          <h5 class="active portfolio-trigger" data-filter="*" data-i18n="puja.filter.all">All</h5>
+          <h5 class="portfolio-trigger" data-filter=".coaching" data-i18n="home-v3.puja.filterDurga">Durga Puja</h5>
+          <h5 class="portfolio-trigger" data-filter=".stakeholder" data-i18n="home-v3.puja.filterRaksha">Raksha Bandhan</h5>
+          <h5 class="portfolio-trigger" data-filter=".relations" data-i18n="home-v3.puja.filterHoli">Holi</h5>
         </div>
       </div>
 
@@ -560,8 +576,8 @@
             <img width="370" height="420" src="assets/img/puja/1.webp" alt="portfolio" loading="lazy">
             <div class="sigma_portfolio-item-content">
               <div class="sigma_portfolio-item-content-inner">
-                <h5> <a href="puja-details.html"> Durga Puja </a> </h5>
-                <p class="blockquote bg-transparent">Puja is the worship of the Lord, consectet ur adipisicing elit, sed do eiusmod</p>
+                <h5> <a href="puja-details.html" data-i18n="home-v3.pj1">Durga Puja</a> </h5>
+                <p class="blockquote bg-transparent" data-i18n="home-v3.puja.cardDesc">Puja is the worship of the Lord, consectet ur adipisicing elit, sed do eiusmod</p>
               </div>
               <a href="puja-details.html"><i class="fas fa-plus"></i></a>
             </div>
@@ -572,8 +588,8 @@
             <img width="370" height="420" src="assets/img/puja/2.webp" alt="portfolio" loading="lazy">
             <div class="sigma_portfolio-item-content">
               <div class="sigma_portfolio-item-content-inner">
-                <h5> <a href="puja-details.html"> Raksha Bandhan </a> </h5>
-                <p class="blockquote bg-transparent">Puja is the worship of the Lord, consectet ur adipisicing elit, sed do eiusmod</p>
+                <h5> <a href="puja-details.html" data-i18n="home-v3.pj2">Raksha Bandhan</a> </h5>
+                <p class="blockquote bg-transparent" data-i18n="home-v3.puja.cardDesc">Puja is the worship of the Lord, consectet ur adipisicing elit, sed do eiusmod</p>
               </div>
               <a href="puja-details.html"><i class="fas fa-plus"></i></a>
             </div>
@@ -584,8 +600,8 @@
             <img width="370" height="420" src="assets/img/puja/3.webp" alt="portfolio" loading="lazy">
             <div class="sigma_portfolio-item-content">
               <div class="sigma_portfolio-item-content-inner">
-                <h5> <a href="puja-details.html"> Janmashtmi </a> </h5>
-                <p class="blockquote bg-transparent">Puja is the worship of the Lord, consectet ur adipisicing elit, sed do eiusmod</p>
+                <h5> <a href="puja-details.html" data-i18n="home-v3.pj3">Janmashtmi</a> </h5>
+                <p class="blockquote bg-transparent" data-i18n="home-v3.puja.cardDesc">Puja is the worship of the Lord, consectet ur adipisicing elit, sed do eiusmod</p>
               </div>
               <a href="puja-details.html"><i class="fas fa-plus"></i></a>
             </div>
@@ -596,8 +612,8 @@
             <img width="370" height="420" src="assets/img/puja/4.webp" alt="portfolio" loading="lazy">
             <div class="sigma_portfolio-item-content">
               <div class="sigma_portfolio-item-content-inner">
-                <h5> <a href="puja-details.html"> Mahashivratri </a> </h5>
-                <p class="blockquote bg-transparent">Puja is the worship of the Lord, consectet ur adipisicing elit, sed do eiusmod</p>
+                <h5> <a href="puja-details.html" data-i18n="home-v3.pj4">Mahashivratri</a> </h5>
+                <p class="blockquote bg-transparent" data-i18n="home-v3.puja.cardDesc">Puja is the worship of the Lord, consectet ur adipisicing elit, sed do eiusmod</p>
               </div>
               <a href="puja-details.html"><i class="fas fa-plus"></i></a>
             </div>
@@ -608,8 +624,8 @@
             <img width="370" height="420" src="assets/img/puja/5.webp" alt="portfolio" loading="lazy">
             <div class="sigma_portfolio-item-content">
               <div class="sigma_portfolio-item-content-inner">
-                <h5> <a href="puja-details.html"> Holi </a> </h5>
-                <p class="blockquote bg-transparent">Puja is the worship of the Lord, consectet ur adipisicing elit, sed do eiusmod</p>
+                <h5> <a href="puja-details.html" data-i18n="home-v3.pj5">Holi</a> </h5>
+                <p class="blockquote bg-transparent" data-i18n="home-v3.puja.cardDesc">Puja is the worship of the Lord, consectet ur adipisicing elit, sed do eiusmod</p>
               </div>
               <a href="puja-details.html"><i class="fas fa-plus"></i></a>
             </div>
@@ -620,8 +636,8 @@
             <img width="370" height="420" src="assets/img/puja/6.webp" alt="portfolio" loading="lazy">
             <div class="sigma_portfolio-item-content">
               <div class="sigma_portfolio-item-content-inner">
-                <h5> <a href="puja-details.html"> Diwali</a> </h5>
-                <p class="blockquote bg-transparent">Puja is the worship of the Lord, consectet ur adipisicing elit, sed do eiusmod</p>
+                <h5> <a href="puja-details.html" data-i18n="home-v3.pj6">Diwali</a> </h5>
+                <p class="blockquote bg-transparent" data-i18n="home-v3.puja.cardDesc">Puja is the worship of the Lord, consectet ur adipisicing elit, sed do eiusmod</p>
               </div>
               <a href="puja-details.html"><i class="fas fa-plus"></i></a>
             </div>
@@ -638,8 +654,8 @@
     <div class="container">
 
       <div class="section-title text-center wow fadeInUp" data-wow-duration="0.7s">
-        <p class="subtitle text-white">Who</p>
-        <h4 class="title text-white">Our Volunteers</h4>
+        <p class="subtitle text-white" data-i18n="home-v3.vol.subtitle">Who</p>
+        <h4 class="title text-white" data-i18n="home-v3.vol.title">Our Volunteers</h4>
       </div>
 
       <div class="row">
@@ -657,9 +673,9 @@
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p class="text-white">Temple Pandit</p>
+                <p class="text-white" data-i18n="home-v3.v1.role">Temple Pandit</p>
                 <h5 class="text-white">
-                  <a href="volunteer-detail.html">Rakesh K Pandey</a></h5>
+                  <a href="volunteer-detail.html" data-i18n="home-v3.v1.name">Rakesh K Pandey</a></h5>
               </div>
             </div>
           </div>
@@ -678,9 +694,9 @@
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p class="text-white">Temple Memember</p>
+                <p class="text-white" data-i18n="home-v3.v2.role">Temple Memember</p>
                 <h5 class="text-white">
-                  <a href="volunteer-detail.html">Yesh Chopra</a>
+                  <a href="volunteer-detail.html" data-i18n="home-v3.v2.name">Yesh Chopra</a>
                 </h5>
               </div>
             </div>
@@ -700,9 +716,9 @@
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p class="text-white">Temple Memember</p>
+                <p class="text-white" data-i18n="home-v3.v3.role">Temple Memember</p>
                 <h5 class="text-white">
-                  <a href="volunteer-detail.html">M Kapoor</a>
+                  <a href="volunteer-detail.html" data-i18n="home-v3.v3.name">M Kapoor</a>
                 </h5>
               </div>
             </div>
@@ -722,9 +738,9 @@
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p class="text-white">Temple Memember</p>
+                <p class="text-white" data-i18n="home-v3.v4.role">Temple Memember</p>
                 <h5 class="text-white">
-                  <a href="volunteer-detail.html">Mohan Das</a>
+                  <a href="volunteer-detail.html" data-i18n="home-v3.v4.name">Mohan Das</a>
                 </h5>
               </div>
             </div>
@@ -744,9 +760,9 @@
       <div class="row">
         <div class="col-lg-5">
           <div class="section-title text-start wow fadeInUp" data-wow-duration="0.7s">
-            <p class="subtitle">Testimonials</p>
-            <h4 class="title">What Our Members Say</h4>
-            <p>We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva. This is where you should start Temple is place where hindu worship  consectetur adipisicing elit, sed do Temple is place where hindu worship  consectetur adipisicing elit, sed do</p>
+            <p class="subtitle" data-i18n="testimonials.style2.title2">Testimonials</p>
+            <h4 class="title" data-i18n="home.testimonials.title">What Our Members Say</h4>
+            <p data-i18n="testimonials.style4.desc">We are a Hindu that belives in Lord Rama and Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva. This is where you should start Temple is place where hindu worship  consectetur adipisicing elit, sed do Temple is place where hindu worship  consectetur adipisicing elit, sed do</p>
           </div>
         </div>
         <div class="col-lg-7">
@@ -768,21 +784,21 @@
               <i class="fas fa-quote-right icon"></i>
               <div class="sigma_testimonial-slider-1">
                 <div class="sigma_testimonial-slider-item">
-                  <p>If money help a man to do well to others, it is of some value; but if not, it is simply a mass of evil, and the sooner it is got rid of, the better.</p>
+                  <p data-i18n="testimonials.quote">If money help a man to do well to others, it is of some value; but if not, it is simply a mass of evil, and the sooner it is got rid of, the better.</p>
                   <div class="sigma_testimonial-author">
-                    <cite>Mukesh Singh</cite>
+                    <cite data-i18n="testimonials.p1.name">Mukesh Singh</cite>
                   </div>
                 </div>
       <div class="sigma_testimonial-slider-item">
-                  <p>If money help a man to do well to others, it is of some value; but if not, it is simply a mass of evil, and the sooner it is got rid of, the better.</p>
+                  <p data-i18n="testimonials.quote">If money help a man to do well to others, it is of some value; but if not, it is simply a mass of evil, and the sooner it is got rid of, the better.</p>
                   <div class="sigma_testimonial-author">
-                    <cite>Das Gupta</cite>
+                    <cite data-i18n="testimonials.p2.name">Das Gupta</cite>
                   </div>
                 </div>
       <div class="sigma_testimonial-slider-item">
-                  <p>If money help a man to do well to others, it is of some value; but if not, it is simply a mass of evil, and the sooner it is got rid of, the better.</p>
+                  <p data-i18n="testimonials.quote">If money help a man to do well to others, it is of some value; but if not, it is simply a mass of evil, and the sooner it is got rid of, the better.</p>
                   <div class="sigma_testimonial-author">
-                    <cite>R Patel</cite>
+                    <cite data-i18n="testimonials.p3.name">R Patel</cite>
                   </div>
                 </div>
 
@@ -801,8 +817,8 @@
     <div class="container">
 
       <div class="section-title text-center wow fadeInUp" data-wow-duration="0.7s">
-        <p class="subtitle text-white">Blog</p>
-        <h4 class="title text-white">News Feed</h4>
+        <p class="subtitle text-white" data-i18n="broadcast.blog.subtitle">Blog</p>
+        <h4 class="title text-white" data-i18n="broadcast.blog.title">News Feed</h4>
       </div>
 
       <div class="row">
@@ -819,16 +835,16 @@
               <div class="sigma_post-meta">
                 <div class="me-3">
                   <i class="fas fa-om"></i>
-                  <a href="blog-details.html" class="sigma_post-category">Temple</a>,
-                  <a href="blog-details.html" class="sigma_post-category">Love</a>
+                  <a href="blog-details.html" class="sigma_post-category" data-i18n="cat.temple">Temple</a>,
+                  <a href="blog-details.html" class="sigma_post-category" data-i18n="broadcast.post.category.love">Love</a>
                 </div>
-                <a href="blog-details.html" class="sigma_post-date"> <i class="far fa-calendar"></i> May 20, 2026</a>
+                <a href="blog-details.html" class="sigma_post-date" data-i18n="broadcast.post.date"> <i class="far fa-calendar"></i> May 20, 2026</a>
               </div>
-              <h5> <a href="blog-details.html">Education for all rural children are necessary.</a> </h5>
+              <h5> <a href="blog-details.html" data-i18n="home-v3.bp1.title">Education for all rural children are necessary.</a> </h5>
               <div class="sigma_post-single-author">
                 <img width="60" height="60" src="assets/img/people/1.webp" alt="author" loading="lazy">
                 <div class="sigma_post-single-author-content">
-                  By <p>Yesh Chopra</p>
+                  <span data-i18n="broadcast.post.by">By</span> <p data-i18n="broadcast.post.author">Yesh Chopra</p>
                 </div>
               </div>
             </div>
@@ -848,16 +864,16 @@
               <div class="sigma_post-meta">
                 <div class="me-3">
                   <i class="fas fa-om"></i>
-                  <a href="blog-details.html" class="sigma_post-category">Temple</a>,
-                  <a href="blog-details.html" class="sigma_post-category">Love</a>
+                  <a href="blog-details.html" class="sigma_post-category" data-i18n="cat.temple">Temple</a>,
+                  <a href="blog-details.html" class="sigma_post-category" data-i18n="broadcast.post.category.love">Love</a>
                 </div>
-                <a href="blog-details.html" class="sigma_post-date"> <i class="far fa-calendar"></i> May 20, 2026</a>
+                <a href="blog-details.html" class="sigma_post-date" data-i18n="broadcast.post.date"> <i class="far fa-calendar"></i> May 20, 2026</a>
               </div>
-              <h5> <a href="blog-details.html">Reconstruct or new construct Temple</a> </h5>
+              <h5> <a href="blog-details.html" data-i18n="home-v3.bp2.title">Reconstruct or new construct Temple</a> </h5>
               <div class="sigma_post-single-author">
                 <img width="60" height="60" src="assets/img/people/2.webp" alt="author" loading="lazy">
                 <div class="sigma_post-single-author-content">
-                  By <p>Yesh Chopra</p>
+                  <span data-i18n="broadcast.post.by">By</span> <p data-i18n="broadcast.post.author">Yesh Chopra</p>
                 </div>
               </div>
             </div>
@@ -877,16 +893,16 @@
               <div class="sigma_post-meta">
                 <div class="me-3">
                   <i class="fas fa-om"></i>
-                  <a href="blog-details.html" class="sigma_post-category">Temple</a>,
-                  <a href="blog-details.html" class="sigma_post-category">Love</a>
+                  <a href="blog-details.html" class="sigma_post-category" data-i18n="cat.temple">Temple</a>,
+                  <a href="blog-details.html" class="sigma_post-category" data-i18n="broadcast.post.category.love">Love</a>
                 </div>
-                <a href="blog-details.html" class="sigma_post-date"> <i class="far fa-calendar"></i> May 20, 2026</a>
+                <a href="blog-details.html" class="sigma_post-date" data-i18n="broadcast.post.date"> <i class="far fa-calendar"></i> May 20, 2026</a>
               </div>
-              <h5> <a href="blog-details.html">Ensure child safety &amp; health in World</a> </h5>
+              <h5> <a href="blog-details.html" data-i18n="home-v3.bp3.title">Ensure child safety &amp; health in World</a> </h5>
               <div class="sigma_post-single-author">
                 <img width="60" height="60" src="assets/img/people/1.webp" alt="author" loading="lazy">
                 <div class="sigma_post-single-author-content">
-                  By <p>Yesh Chopra</p>
+                  <span data-i18n="broadcast.post.by">By</span> <p data-i18n="broadcast.post.author">Yesh Chopra</p>
                 </div>
               </div>
             </div>
@@ -911,8 +927,8 @@
         <div class="row">
 
           <div class="col-xl-4 col-lg-4 col-md-6 footer-widget cvd-footer-brand">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham" loading="lazy">
-            <p class="cvd-footer-tagline">Faith, Service, Community</p>
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" loading="lazy" data-i18n-attr="alt:brand.name">
+            <p class="cvd-footer-tagline" data-i18n="footer.tagline">Faith, Service, Community</p>
             <ul class="sigma_sm">
               <li> <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
               <li> <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a> </li>
@@ -922,35 +938,35 @@
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-6 footer-widget">
-            <h5 class="widget-title">Quick Links</h5>
+            <h5 class="widget-title" data-i18n="footer.quicklinks">Quick Links</h5>
             <ul>
-              <li> <a href="index.html">Home</a> </li>
-              <li> <a href="about-us.html">About Us</a> </li>
-              <li> <a href="puja.html">Pujas &amp; Services</a> </li>
-              <li> <a href="events.html">Events</a> </li>
-              <li> <a href="gallery.html">Gallery</a> </li>
-              <li> <a href="blog-grid.html">Blog</a> </li>
+              <li> <a href="index.html" data-i18n="footer.home">Home</a> </li>
+              <li> <a href="about-us.html" data-i18n="footer.about">About Us</a> </li>
+              <li> <a href="puja.html" data-i18n="footer.pujas">Pujas &amp; Services</a> </li>
+              <li> <a href="events.html" data-i18n="footer.events">Events</a> </li>
+              <li> <a href="gallery.html" data-i18n="footer.gallery">Gallery</a> </li>
+              <li> <a href="blog-grid.html" data-i18n="footer.blog">Blog</a> </li>
             </ul>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget">
-            <h5 class="widget-title">Our Initiatives</h5>
+            <h5 class="widget-title" data-i18n="footer.initiatives">Our Initiatives</h5>
             <ul>
-              <li> <a href="donation.html">Annadanam</a> </li>
-              <li> <a href="donation.html">Education Support</a> </li>
-              <li> <a href="donation.html">Temple Restoration</a> </li>
-              <li> <a href="donation-archive.html">Community Outreach</a> </li>
-              <li> <a href="volunteers.html">Volunteer</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.annadanam">Annadanam</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.education">Education Support</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.restoration">Temple Restoration</a> </li>
+              <li> <a href="donation-archive.html" data-i18n="footer.outreach">Community Outreach</a> </li>
+              <li> <a href="volunteers.html" data-i18n="footer.volunteer">Volunteer</a> </li>
             </ul>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget cvd-newsletter">
-            <h5 class="widget-title">Stay Connected</h5>
-            <p>Subscribe to our newsletter for updates and events.</p>
+            <h5 class="widget-title" data-i18n="footer.connected">Stay Connected</h5>
+            <p data-i18n="footer.newsletter.desc">Subscribe to our newsletter for updates and events.</p>
             <form method="post" aria-label="Newsletter signup">
-              <label class="visually-hidden" for="cvd-newsletter-email">Email address</label>
-              <input type="email" id="cvd-newsletter-email" name="email" placeholder="Your email address" required>
-              <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <label class="visually-hidden" for="cvd-newsletter-email" data-i18n="footer.newsletter.emailLabel">Email address</label>
+              <input type="email" id="cvd-newsletter-email" name="email" placeholder="Your email address" required data-i18n-attr="placeholder:footer.newsletter.emailPlaceholder">
+              <button type="submit" aria-label="Subscribe" data-i18n-attr="aria-label:footer.newsletter.subscribe"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
             </form>
           </div>
 
@@ -961,12 +977,12 @@
     <!-- Footer Bottom -->
     <div class="sigma_footer-bottom">
       <div class="container">
-        <p>&copy; 2026 Choto Vrindavan Dham. All rights reserved.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 Mero Choto Vrindavan Dham. All rights reserved.</p>
         <ul class="cvd-footer-legal">
-          <li><a href="about-us.html">Faith</a></li>
-          <li><a href="gallery.html">Culture</a></li>
-          <li><a href="services.html">Service</a></li>
-          <li><a href="donation.html">A Better Tomorrow</a></li>
+          <li><a href="about-us.html" data-i18n="footer.legal.faith">Faith</a></li>
+          <li><a href="gallery.html" data-i18n="footer.legal.culture">Culture</a></li>
+          <li><a href="services.html" data-i18n="footer.legal.service">Service</a></li>
+          <li><a href="donation.html" data-i18n="footer.legal.tomorrow">A Better Tomorrow</a></li>
         </ul>
       </div>
     </div>
@@ -975,12 +991,12 @@
   <!-- partial -->
 
   <!-- WhatsApp float button: set href="https://wa.me/<number>" and remove class mht-wa-disabled to enable -->
-  <a class="mht-whatsapp-btn mht-wa-disabled" href="#" title="WhatsApp — add your number to activate" aria-label="WhatsApp not yet configured">
+  <a class="mht-whatsapp-btn mht-wa-disabled" href="#" title="WhatsApp — add your number to activate" aria-label="WhatsApp not yet configured" data-i18n-attr="title:wa.title|aria-label:wa.aria">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <!-- Back To Top Start -->
-  <div class="sigma_top style-5">
+  <div class="sigma_top style-5" role="button" tabindex="0" aria-label="Back to top" data-i18n-attr="aria-label:a11y.backToTop">
     <i class="fas fa-angle-double-up"></i>
   </div>
   <!-- Back To Top End -->
@@ -994,5 +1010,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n-common.js"></script>
+  <script src="assets/js/i18n-pages/home-v3.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </body>
 </html>

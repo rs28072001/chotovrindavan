@@ -1,4 +1,4 @@
-# Choto Vrindavan Dham — Hindu Temple Website
+# Mero Choto Vrindavan Dham — Hindu Temple Website
 
 Static HTML site (no build step). Open any `.html` in a browser, or serve the
 folder:
@@ -152,7 +152,7 @@ Chart.js bar chart (`puja-details.html`), and a form fallback.
 - **Forms** — the newsletter and contact forms have no backend. Point
   `action` at your own handler or replace the fallback in `main.js`.
 - **Maps** — `contact-us.html` and `event-details.html` embed the temple's
-  location (Choto Vrindavan Dham Kuleri, Agroha, Haryana 125047 —
+  location (Mero Choto Vrindavan Dham Kuleri, Agroha, Haryana 125047 —
   29.368491, 75.625902). The "Get Directions" buttons use the Google Maps
   URLs API (`/maps/dir/?api=1&destination=…`), which opens the native app on
   phones. To move the pin, take the new place's share link, load

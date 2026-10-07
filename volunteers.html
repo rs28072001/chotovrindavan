@@ -7,14 +7,14 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Choto Vrindavan Dham">
+  <meta name="apple-mobile-web-app-title" content="Mero Choto Vrindavan Dham">
   <meta name="format-detection" content="telephone=no">
-  <meta name="description" content="Our Volunteers — Meet the dedicated sevaks who serve Choto Vrindavan Dham Hindu Temple with devotion and a selfless spirit.">
+  <meta name="description" content="Our Volunteers — Meet the dedicated sevaks who serve Mero Choto Vrindavan Dham Hindu Temple with devotion and a selfless spirit.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Volunteers | Choto Vrindavan Dham Hindu Temple">
-  <meta property="og:description" content="Our Volunteers — Meet the dedicated sevaks who serve Choto Vrindavan Dham Hindu Temple with devotion and a selfless spirit.">
+  <meta property="og:title" content="Volunteers | Mero Choto Vrindavan Dham Hindu Temple">
+  <meta property="og:description" content="Our Volunteers — Meet the dedicated sevaks who serve Mero Choto Vrindavan Dham Hindu Temple with devotion and a selfless spirit.">
   <meta property="og:image" content="assets/img/joinus-krishna.jpg">
-  <title>Choto Vrindavan Dham | Volunteers</title>
+  <title>Mero Choto Vrindavan Dham | Volunteers</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#main-content" data-i18n="a11y.skipLink">Skip to main content</a>
   <!-- Preloader Start -->
   <div class="sigma_preloader">
     <img width="414" height="414" src="assets/img/om.svg" alt="preloader" loading="lazy">
@@ -49,9 +49,14 @@
 
 
   <!-- partial:partia/__mobile-nav.html -->
-  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation">
+  <aside class="sigma_aside sigma_aside-left" aria-hidden="true" aria-label="Mobile navigation" data-i18n-attr="aria-label:a11y.mobileNav">
 
-    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham"> </a>
+    <a class="navbar-brand" href="index.html"> <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name"> </a>
+
+    <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+      <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+    </div>
 
     <!-- Menu -->
     <ul>
@@ -70,42 +75,45 @@
       <li class="menu-item menu-item-has-children" data-nav="seva">
         <a href="#">Seva</a>
         <ul class="sub-menu">
-          <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-          <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-          <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-          <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-          <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-          <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-          <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-          <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+          <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+          <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+          <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+          <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+          <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+          <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+          <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+          <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
         </ul>
       </li>
-      <li class="menu-item" data-nav="blog"> <a href="blog-grid.html">Blog</a> </li>
-      <li class="menu-item" data-nav="gallery"> <a href="gallery.html">Gallery</a> </li>
-      <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact</a> </li>
+      <li class="menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog</a> </li>
+      <li class="menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery</a> </li>
+      <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact</a> </li>
     </ul>
 
-    <a class="sigma_btn-custom cvd-aside-cta" href="contact-us.html">Visit Temple</a>
+    <div class="cvd-aside-cta cvd-account-cta">
+      <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+      <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+    </div>
 
     <div class="cvd-aside-contact">
-      <div><i class="fas fa-om" aria-hidden="true"></i> Darshan daily 5:30 AM &ndash; 9:00 PM</div>
-      <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/bBNHBzuiGE7314N56" target="_blank" rel="noopener noreferrer">Kuleri, Agroha, Haryana 125047</a></div>
+      <div><i class="fas fa-om" aria-hidden="true"></i> <span data-i18n="aside.darshan">Darshan daily 5:30 AM &ndash; 9:00 PM</span></div>
+      <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/bBNHBzuiGE7314N56" target="_blank" rel="noopener noreferrer" data-i18n="aside.address">Kuleri, Agroha, Haryana 125047</a></div>
     </div>
 
   </aside>
-  <div class="sigma_aside-overlay aside-trigger-left" role="button" tabindex="-1" aria-label="Close navigation menu"></div>
+  <div class="sigma_aside-overlay aside-trigger-left" role="button" tabindex="-1" aria-label="Close navigation menu" data-i18n-attr="aria-label:a11y.closeMenu"></div>
   <!-- partial -->
   <!-- partial:partia/__header.html -->
   <header class="sigma_header cvd-header can-sticky">
 
     <!-- Middle Header Start -->
     <div class="sigma_header-middle cvd-mainnav">
-      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary">
+      <nav class="navbar cvd-navbar" role="navigation" aria-label="Primary" data-i18n-attr="aria-label:a11y.primaryNav">
 
         <!-- Logo Start -->
         <div class="cvd-logo">
           <a class="navbar-brand" href="index.html">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham">
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" data-i18n-attr="alt:brand.name">
           </a>
         </div>
         <!-- Logo End -->
@@ -125,30 +133,38 @@
           </li>
           <li class="menu-item" data-nav="pujas"> <a href="puja.html">Pujas<span></span></a> </li>
           <li class="menu-item menu-item-has-children" data-nav="seva">
-            <a href="services.html" aria-haspopup="true" aria-expanded="false">Seva<span></span></a>
+            <a href="services.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav.seva">Seva<span></span></a>
             <ul class="sub-menu">
-              <li class="menu-item"> <a href="services.html">Temple Services</a> </li>
-              <li class="menu-item"> <a href="services-2.html">Seva Programmes</a> </li>
-              <li class="menu-item"> <a href="donation.html">Ways to Give</a> </li>
-              <li class="menu-item"> <a href="donation-archive.html">All Causes</a> </li>
-              <li class="menu-item"> <a href="pricing.html">Seva Contributions</a> </li>
-              <li class="menu-item"> <a href="courses.html">Courses &amp; Classes</a> </li>
-              <li class="menu-item"> <a href="events.html">Upcoming Events</a> </li>
-              <li class="menu-item"> <a href="broadcast.html">Live Broadcast</a> </li>
+              <li class="menu-item"> <a href="services.html" data-i18n="nav.seva.services">Temple Services</a> </li>
+              <li class="menu-item"> <a href="services-2.html" data-i18n="nav.seva.programmes">Seva Programmes</a> </li>
+              <li class="menu-item"> <a href="donation.html" data-i18n="nav.seva.give">Ways to Give</a> </li>
+              <li class="menu-item"> <a href="donation-archive.html" data-i18n="nav.seva.causes">All Causes</a> </li>
+              <li class="menu-item"> <a href="pricing.html" data-i18n="nav.seva.contributions">Seva Contributions</a> </li>
+              <li class="menu-item"> <a href="courses.html" data-i18n="nav.seva.courses">Courses &amp; Classes</a> </li>
+              <li class="menu-item"> <a href="events.html" data-i18n="nav.seva.events">Upcoming Events</a> </li>
+              <li class="menu-item"> <a href="broadcast.html" data-i18n="nav.seva.broadcast">Live Broadcast</a> </li>
             </ul>
           </li>
-          <li class="menu-item" data-nav="blog"> <a href="blog-grid.html">Blog<span></span></a> </li>
-          <li class="menu-item" data-nav="gallery"> <a href="gallery.html">Gallery<span></span></a> </li>
-          <li class="menu-item" data-nav="contact"> <a href="contact-us.html">Contact<span></span></a> </li>
+          <li class="menu-item" data-nav="blog"> <a href="blog-grid.html" data-i18n="nav.blog">Blog<span></span></a> </li>
+          <li class="menu-item" data-nav="gallery"> <a href="gallery.html" data-i18n="nav.gallery">Gallery<span></span></a> </li>
+          <li class="menu-item" data-nav="contact"> <a href="contact-us.html" data-i18n="nav.contact">Contact<span></span></a> </li>
         </ul>
 
         <!-- Controls -->
         <div class="sigma_header-controls cvd-controls">
-          <a class="sigma_btn-custom cvd-cta" href="contact-us.html">Visit Temple</a>
+          <div class="cvd-lang-toggle" role="group" data-i18n-attr="aria-label:a11y.langToggle" aria-label="Select language">
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="en" data-i18n="lang.en">EN</button>
+            <button type="button" class="cvd-lang-toggle-btn" data-lang-option="hi" data-i18n="lang.hi">हिं</button>
+          </div>
+
+          <div class="cvd-cta cvd-account-cta">
+            <a class="sigma_btn-custom light btn-sm" href="login.html"><i class="fas fa-sign-in-alt" aria-hidden="true"></i><span data-i18n="nav.signin">Sign In</span></a>
+            <a class="sigma_btn-custom btn-sm" href="register.html"><i class="fas fa-user-plus" aria-hidden="true"></i><span data-i18n="nav.register">Register</span></a>
+          </div>
 
           <ul class="sigma_header-controls-inner">
             <!-- Mobile Toggler -->
-            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu">
+            <li class="aside-toggler style-2 aside-trigger-left" role="button" tabindex="0" aria-expanded="false" aria-label="Open navigation menu" data-i18n-attr="aria-label:a11y.openMenu">
               <span></span>
               <span></span>
               <span></span>
@@ -175,22 +191,22 @@
     <div class="container">
       <div class="cvd-vol-hero-grid">
         <div class="cvd-vol-hero-text">
-          <p class="cvd-eyebrow light"><i class="fas fa-om" aria-hidden="true"></i>A Community in Service</p>
-          <h1>Volunteers</h1>
-          <p class="cvd-vol-hero-tag">Serve with devotion. Grow through seva.</p>
-          <p class="cvd-vol-hero-sub">Join the Choto Vrindavan Dham community and contribute your time, skills and devotion.</p>
+          <p class="cvd-eyebrow light" data-i18n="volunteers.hero.eyebrow"><i class="fas fa-om" aria-hidden="true"></i>A Community in Service</p>
+          <h1 data-i18n="nav.about.volunteers">Volunteers</h1>
+          <p class="cvd-vol-hero-tag" data-i18n="volunteers.hero.tag">Serve with devotion. Grow through seva.</p>
+          <p class="cvd-vol-hero-sub" data-i18n="volunteers.hero.sub">Join the Mero Choto Vrindavan Dham community and contribute your time, skills and devotion.</p>
         </div>
         <div class="cvd-vol-quote">
-          <p>&ldquo;Seva is the highest form of love.&rdquo;</p>
-          <cite>&mdash; Bhagavad Gita</cite>
+          <p data-i18n="volunteers.hero.quote">&ldquo;Seva is the highest form of love.&rdquo;</p>
+          <cite data-i18n="volunteers.hero.quoteSource">&mdash; Bhagavad Gita</cite>
         </div>
       </div>
     </div>
     <nav class="cvd-vol-crumb-wrap" aria-label="Breadcrumb">
       <ol class="breadcrumb cvd-crumb-dark">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html" data-i18n="footer.home">Home</a></li>
         <li class="breadcrumb-item cvd-crumb-om"><i class="fas fa-om" aria-hidden="true"></i><span class="visually-hidden">Om</span></li>
-        <li class="breadcrumb-item active" aria-current="page">Volunteers</li>
+        <li class="breadcrumb-item active" aria-current="page" data-i18n="nav.about.volunteers">Volunteers</li>
       </ol>
     </nav>
   </section>
@@ -201,9 +217,9 @@
     <div class="container">
 
       <div class="section-title text-center mx-auto wow fadeInUp" data-wow-duration="0.7s">
-        <p class="subtitle">Our Temple Community</p>
-        <h4 class="title">Meet Our Temple Community</h4>
-        <p class="cvd-lead mx-auto">Meet the wonderful people who serve at Choto Vrindavan Dham. Each one brings their unique blessings, skills and devotion to our community.</p>
+        <p class="subtitle" data-i18n="volunteers.community.subtitle">Our Temple Community</p>
+        <h4 class="title" data-i18n="volunteers.community.title">Meet Our Temple Community</h4>
+        <p class="cvd-lead mx-auto" data-i18n="volunteers.community.desc">Meet the wonderful people who serve at Mero Choto Vrindavan Dham. Each one brings their unique blessings, skills and devotion to our community.</p>
       </div>
 
       <div class="row g-4">
@@ -220,9 +236,9 @@
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p>Pujari</p>
+                <p data-i18n="volunteers.role1">Pujari</p>
                 <h5>
-                  <a href="volunteer-detail.html">Member Name</a>
+                  <a href="volunteer-detail.html" data-i18n="volunteers.memberName">Member Name</a>
                 </h5>
               </div>
             </div>
@@ -241,9 +257,9 @@
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p>Pandit Ji</p>
+                <p data-i18n="volunteers.role2">Pandit Ji</p>
                 <h5>
-                  <a href="volunteer-detail.html">Member Name</a>
+                  <a href="volunteer-detail.html" data-i18n="volunteers.memberName">Member Name</a>
                 </h5>
               </div>
             </div>
@@ -262,9 +278,9 @@
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p>Temple Sevak</p>
+                <p data-i18n="volunteers.role3">Temple Sevak</p>
                 <h5>
-                  <a href="volunteer-detail.html">Member Name</a>
+                  <a href="volunteer-detail.html" data-i18n="volunteers.memberName">Member Name</a>
                 </h5>
               </div>
             </div>
@@ -283,9 +299,9 @@
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p>Acharya</p>
+                <p data-i18n="volunteers.role4">Acharya</p>
                 <h5>
-                  <a href="volunteer-detail.html">Member Name</a>
+                  <a href="volunteer-detail.html" data-i18n="volunteers.memberName">Member Name</a>
                 </h5>
               </div>
             </div>
@@ -304,9 +320,9 @@
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p>Purohit</p>
+                <p data-i18n="volunteers.role5">Purohit</p>
                 <h5>
-                  <a href="volunteer-detail.html">Member Name</a>
+                  <a href="volunteer-detail.html" data-i18n="volunteers.memberName">Member Name</a>
                 </h5>
               </div>
             </div>
@@ -325,9 +341,9 @@
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p>Satsang Sevak</p>
+                <p data-i18n="volunteers.role6">Satsang Sevak</p>
                 <h5>
-                  <a href="volunteer-detail.html">Member Name</a>
+                  <a href="volunteer-detail.html" data-i18n="volunteers.memberName">Member Name</a>
                 </h5>
               </div>
             </div>
@@ -346,9 +362,9 @@
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p>Seva Coordinator</p>
+                <p data-i18n="volunteers.role7">Seva Coordinator</p>
                 <h5>
-                  <a href="volunteer-detail.html">Member Name</a>
+                  <a href="volunteer-detail.html" data-i18n="volunteers.memberName">Member Name</a>
                 </h5>
               </div>
             </div>
@@ -367,9 +383,9 @@
             </div>
             <div class="sigma_volunteers-body">
               <div class="sigma_volunteers-info">
-                <p>Dharmic Guide</p>
+                <p data-i18n="volunteers.role8">Dharmic Guide</p>
                 <h5>
-                  <a href="volunteer-detail.html">Member Name</a>
+                  <a href="volunteer-detail.html" data-i18n="volunteers.memberName">Member Name</a>
                 </h5>
               </div>
             </div>
@@ -386,47 +402,47 @@
     <div class="container">
 
       <div class="section-title text-center mx-auto wow fadeInUp" data-wow-duration="0.7s">
-        <p class="subtitle">Ways to Serve</p>
-        <h4 class="title">Find Your Seva</h4>
-        <p class="cvd-lead mx-auto">Everyone has something meaningful to offer. Choose a way to serve that matches your time, skills and devotion.</p>
+        <p class="subtitle" data-i18n="volunteers.seva.subtitle">Ways to Serve</p>
+        <h4 class="title" data-i18n="volunteers.seva.title">Find Your Seva</h4>
+        <p class="cvd-lead mx-auto" data-i18n="volunteers.seva.desc">Everyone has something meaningful to offer. Choose a way to serve that matches your time, skills and devotion.</p>
       </div>
 
       <div class="cvd-seva-grid">
 
         <div class="cvd-seva-card wow fadeInUp" data-wow-duration="0.6s">
           <span class="cvd-seva-icon"><i class="fas fa-place-of-worship" aria-hidden="true"></i></span>
-          <h3>Temple Seva</h3>
-          <p>Support the daily needs and activities of the Dham.</p>
+          <h3 data-i18n="volunteers.sc1.title">Temple Seva</h3>
+          <p data-i18n="volunteers.sc1.desc">Support the daily needs and activities of the Dham.</p>
         </div>
 
         <div class="cvd-seva-card wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.05s">
           <span class="cvd-seva-icon"><i class="fas fa-fire-alt" aria-hidden="true"></i></span>
-          <h3>Puja &amp; Festivals</h3>
-          <p>Help during pujas, festivals and special spiritual events.</p>
+          <h3 data-i18n="volunteers.sc2.title">Puja &amp; Festivals</h3>
+          <p data-i18n="volunteers.sc2.desc">Help during pujas, festivals and special spiritual events.</p>
         </div>
 
         <div class="cvd-seva-card wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.1s">
           <span class="cvd-seva-icon"><i class="fas fa-utensils" aria-hidden="true"></i></span>
-          <h3>Annadanam</h3>
-          <p>Support food preparation, distribution and community service.</p>
+          <h3 data-i18n="volunteers.sc3.title">Annadanam</h3>
+          <p data-i18n="volunteers.sc3.desc">Support food preparation, distribution and community service.</p>
         </div>
 
         <div class="cvd-seva-card wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.15s">
           <span class="cvd-seva-icon"><i class="fas fa-book-open" aria-hidden="true"></i></span>
-          <h3>Education Support</h3>
-          <p>Help with educational initiatives and learning programs.</p>
+          <h3 data-i18n="volunteers.sc4.title">Education Support</h3>
+          <p data-i18n="volunteers.sc4.desc">Help with educational initiatives and learning programs.</p>
         </div>
 
         <div class="cvd-seva-card wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.2s">
           <span class="cvd-seva-icon"><i class="fas fa-users" aria-hidden="true"></i></span>
-          <h3>Community Outreach</h3>
-          <p>Support initiatives that serve and connect the wider community.</p>
+          <h3 data-i18n="volunteers.sc5.title">Community Outreach</h3>
+          <p data-i18n="volunteers.sc5.desc">Support initiatives that serve and connect the wider community.</p>
         </div>
 
         <div class="cvd-seva-card wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.25s">
           <span class="cvd-seva-icon"><i class="fas fa-laptop" aria-hidden="true"></i></span>
-          <h3>Digital &amp; Creative Seva</h3>
-          <p>Contribute design, technology, content, photography or digital skills.</p>
+          <h3 data-i18n="volunteers.sc6.title">Digital &amp; Creative Seva</h3>
+          <p data-i18n="volunteers.sc6.desc">Contribute design, technology, content, photography or digital skills.</p>
         </div>
 
       </div>
@@ -440,37 +456,37 @@
     <div class="container">
 
       <div class="section-title text-center mx-auto wow fadeInUp" data-wow-duration="0.7s">
-        <p class="subtitle">Our Impact</p>
-        <h4 class="title">Every Seva Makes a Difference</h4>
+        <p class="subtitle" data-i18n="volunteers.impact.subtitle">Our Impact</p>
+        <h4 class="title" data-i18n="volunteers.impact.title">Every Seva Makes a Difference</h4>
       </div>
 
       <div class="cvd-stats-row">
         <div class="cvd-stat cvd-stat-word">
           <i class="fas fa-hands-helping" aria-hidden="true"></i>
           <div>
-            <strong>Serve with Purpose</strong>
-            <span>Support temple sevas and daily needs.</span>
+            <strong data-i18n="volunteers.i1.title">Serve with Purpose</strong>
+            <span data-i18n="volunteers.i1.desc">Support temple sevas and daily needs.</span>
           </div>
         </div>
         <div class="cvd-stat cvd-stat-word">
           <i class="fas fa-users" aria-hidden="true"></i>
           <div>
-            <strong>Connect with Community</strong>
-            <span>Build lasting bonds of faith and fellowship.</span>
+            <strong data-i18n="volunteers.i2.title">Connect with Community</strong>
+            <span data-i18n="volunteers.i2.desc">Build lasting bonds of faith and fellowship.</span>
           </div>
         </div>
         <div class="cvd-stat cvd-stat-word">
           <i class="fas fa-om" aria-hidden="true"></i>
           <div>
-            <strong>Celebrate Together</strong>
-            <span>Share in pujas, festivals and utsavs.</span>
+            <strong data-i18n="volunteers.i3.title">Celebrate Together</strong>
+            <span data-i18n="volunteers.i3.desc">Share in pujas, festivals and utsavs.</span>
           </div>
         </div>
         <div class="cvd-stat cvd-stat-word">
           <i class="fas fa-seedling" aria-hidden="true"></i>
           <div>
-            <strong>Grow Through Seva</strong>
-            <span>Grow spiritually through selfless service.</span>
+            <strong data-i18n="volunteers.i4.title">Grow Through Seva</strong>
+            <span data-i18n="volunteers.i4.desc">Grow spiritually through selfless service.</span>
           </div>
         </div>
       </div>
@@ -485,59 +501,59 @@
       <div class="cvd-joinseva-card wow fadeInUp" data-wow-duration="0.7s">
 
         <div class="cvd-volform">
-            <p class="cvd-eyebrow"><i class="fas fa-om" aria-hidden="true"></i>Be a Part of Something Divine</p>
-            <h2>Join Us in Seva</h2>
-            <p class="cvd-volform-tagline">Your time can become someone's blessing.</p>
-            <p class="cvd-lead">Whether you can help with temple seva, festivals, community outreach, education or digital initiatives, there is a place for you at Choto Vrindavan Dham.</p>
+            <p class="cvd-eyebrow" data-i18n="volunteers.form.eyebrow"><i class="fas fa-om" aria-hidden="true"></i>Be a Part of Something Divine</p>
+            <h2 data-i18n="volunteers.form.title">Join Us in Seva</h2>
+            <p class="cvd-volform-tagline" data-i18n="volunteers.form.tagline">Your time can become someone's blessing.</p>
+            <p class="cvd-lead" data-i18n="volunteers.form.lead">Whether you can help with temple seva, festivals, community outreach, education or digital initiatives, there is a place for you at Mero Choto Vrindavan Dham.</p>
 
             <form method="post" class="cvd-volform-fields" novalidate>
               <div class="row g-3">
                 <div class="col-md-6">
-                  <label for="vol-name">Full Name *</label>
-                  <input type="text" id="vol-name" class="form-control" name="name" placeholder="Enter your full name" required>
+                  <label for="vol-name" data-i18n="volunteers.form.fullName">Full Name *</label>
+                  <input type="text" id="vol-name" class="form-control" name="name" placeholder="Enter your full name" required data-i18n-attr="placeholder:volunteers.form.fullNamePh">
                 </div>
                 <div class="col-md-6">
-                  <label for="vol-email">Email Address *</label>
+                  <label for="vol-email" data-i18n="volunteers.form.emailLabel">Email Address *</label>
                   <input type="email" id="vol-email" class="form-control" name="email" placeholder="you@example.com" required>
                 </div>
                 <div class="col-md-6">
-                  <label for="vol-phone">Phone Number *</label>
-                  <input type="tel" id="vol-phone" class="form-control" name="phone" placeholder="Enter your phone number" required>
+                  <label for="vol-phone" data-i18n="volunteers.form.phoneLabel">Phone Number *</label>
+                  <input type="tel" id="vol-phone" class="form-control" name="phone" placeholder="Enter your phone number" required data-i18n-attr="placeholder:volunteers.form.phonePh">
                 </div>
                 <div class="col-md-6">
-                  <label for="vol-city">City</label>
-                  <input type="text" id="vol-city" class="form-control" name="city" placeholder="Enter your city">
+                  <label for="vol-city" data-i18n="volunteers.form.cityLabel">City</label>
+                  <input type="text" id="vol-city" class="form-control" name="city" placeholder="Enter your city" data-i18n-attr="placeholder:volunteers.form.cityPh">
                 </div>
                 <div class="col-md-6">
-                  <label for="vol-area">Area of Seva *</label>
+                  <label for="vol-area" data-i18n="volunteers.form.areaLabel">Area of Seva *</label>
                   <select id="vol-area" class="form-control" name="area" required>
-                    <option value="" selected disabled>Select an area</option>
-                    <option value="Temple Seva">Temple Seva</option>
-                    <option value="Puja &amp; Festivals">Puja &amp; Festivals</option>
-                    <option value="Annadanam">Annadanam</option>
-                    <option value="Education Support">Education Support</option>
-                    <option value="Community Outreach">Community Outreach</option>
-                    <option value="Digital &amp; Creative Seva">Digital &amp; Creative Seva</option>
-                    <option value="Event Management">Event Management</option>
-                    <option value="Other">Other</option>
+                    <option value="" selected disabled data-i18n="volunteers.form.selectArea">Select an area</option>
+                    <option value="Temple Seva" data-i18n="volunteers.sc1.title">Temple Seva</option>
+                    <option value="Puja &amp; Festivals" data-i18n="volunteers.sc2.title">Puja &amp; Festivals</option>
+                    <option value="Annadanam" data-i18n="volunteers.sc3.title">Annadanam</option>
+                    <option value="Education Support" data-i18n="volunteers.sc4.title">Education Support</option>
+                    <option value="Community Outreach" data-i18n="volunteers.sc5.title">Community Outreach</option>
+                    <option value="Digital &amp; Creative Seva" data-i18n="volunteers.sc6.title">Digital &amp; Creative Seva</option>
+                    <option value="Event Management" data-i18n="volunteers.form.eventMgmt">Event Management</option>
+                    <option value="Other" data-i18n="volunteers.form.other">Other</option>
                   </select>
                 </div>
                 <div class="col-md-6">
-                  <label for="vol-availability">Availability *</label>
+                  <label for="vol-availability" data-i18n="volunteers.form.availabilityLabel">Availability *</label>
                   <select id="vol-availability" class="form-control" name="availability" required>
-                    <option value="" selected disabled>Select availability</option>
-                    <option value="Weekdays">Weekdays</option>
-                    <option value="Weekends">Weekends</option>
-                    <option value="Occasionally">Occasionally</option>
-                    <option value="Festivals / Special Events">Festivals / Special Events</option>
+                    <option value="" selected disabled data-i18n="volunteers.form.selectAvailability">Select availability</option>
+                    <option value="Weekdays" data-i18n="volunteers.form.weekdays">Weekdays</option>
+                    <option value="Weekends" data-i18n="volunteers.form.weekends">Weekends</option>
+                    <option value="Occasionally" data-i18n="volunteers.form.occasionally">Occasionally</option>
+                    <option value="Festivals / Special Events" data-i18n="volunteers.form.festivalsEvents">Festivals / Special Events</option>
                   </select>
                 </div>
                 <div class="col-12">
-                  <label for="vol-about">Tell us about yourself</label>
-                  <textarea id="vol-about" class="form-control" name="about" rows="4" placeholder="Share your background, interests or how you would like to contribute&hellip;"></textarea>
+                  <label for="vol-about" data-i18n="volunteers.form.aboutLabel">Tell us about yourself</label>
+                  <textarea id="vol-about" class="form-control" name="about" rows="4" placeholder="Share your background, interests or how you would like to contribute&hellip;" data-i18n-attr="placeholder:volunteers.form.aboutPh"></textarea>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="sigma_btn-custom d-block w-100" name="button">Join as a Volunteer <i class="fas fa-arrow-right"></i></button>
+                  <button type="submit" class="sigma_btn-custom d-block w-100" name="button" data-i18n="volunteers.form.submit">Join as a Volunteer <i class="fas fa-arrow-right"></i></button>
                 </div>
               </div>
             </form>
@@ -545,22 +561,22 @@
 
         <div class="cvd-krishna-panel" style="background-image: url(assets/img/joinus-krishna.jpg)">
           <div class="cvd-krishna-copy">
-            <p class="cvd-krishna-quote">Seva is not just<br>an offering.<br>It is a way of<br>connecting.</p>
+            <p class="cvd-krishna-quote" data-i18n="volunteers.krishna.quote">Seva is not just<br>an offering.<br>It is a way of<br>connecting.</p>
             <ul class="cvd-krishna-list">
               <li>
                 <span class="cvd-krishna-ico" aria-hidden="true"><i class="fas fa-hand-holding-heart"></i></span>
-                <div><strong>Serve</strong><span>Contribute to the temple and community.</span></div>
+                <div><strong data-i18n="volunteers.krishna.k1.title">Serve</strong><span data-i18n="volunteers.krishna.k1.desc">Contribute to the temple and community.</span></div>
               </li>
               <li>
                 <span class="cvd-krishna-ico" aria-hidden="true"><i class="fas fa-users"></i></span>
-                <div><strong>Connect</strong><span>Become part of a growing spiritual community.</span></div>
+                <div><strong data-i18n="volunteers.krishna.k2.title">Connect</strong><span data-i18n="volunteers.krishna.k2.desc">Become part of a growing spiritual community.</span></div>
               </li>
               <li>
                 <span class="cvd-krishna-ico" aria-hidden="true"><i class="fas fa-seedling"></i></span>
-                <div><strong>Grow</strong><span>Use your time and talents for meaningful seva.</span></div>
+                <div><strong data-i18n="volunteers.krishna.k3.title">Grow</strong><span data-i18n="volunteers.krishna.k3.desc">Use your time and talents for meaningful seva.</span></div>
               </li>
             </ul>
-            <p class="cvd-krishna-line">&ldquo;In serving others, we serve the Divine.&rdquo;</p>
+            <p class="cvd-krishna-line" data-i18n="home.testimonials.pullquote2">&ldquo;In serving others, we serve the Divine.&rdquo;</p>
           </div>
         </div>
 
@@ -574,8 +590,8 @@
     <div class="container">
 
       <div class="section-title text-center mx-auto wow fadeInUp" data-wow-duration="0.7s">
-        <p class="subtitle">Blog</p>
-        <h4 class="title">News Feed</h4>
+        <p class="subtitle" data-i18n="broadcast.blog.subtitle">Blog</p>
+        <h4 class="title" data-i18n="broadcast.blog.title">News Feed</h4>
       </div>
 
       <div class="row g-4">
@@ -586,9 +602,9 @@
               <img width="370" height="278" src="assets/img/blog/2.webp" alt="" loading="lazy">
             </a>
             <div class="cvd-card-body">
-              <p class="cvd-post-meta"><i class="fas fa-om" aria-hidden="true"></i> Temple, Love <span>&middot;</span> <time datetime="2026-05-20">May 20, 2026</time></p>
-              <h5><a href="blog-details.html">Education for all rural children are necessary.</a></h5>
-              <div class="cvd-card-foot"><a class="btn-link" href="blog-details.html">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+              <p class="cvd-post-meta"><i class="fas fa-om" aria-hidden="true"></i> <span data-i18n="volunteers.news.cat">Temple, Love</span> <span>&middot;</span> <time datetime="2026-05-20" data-i18n="events.sidebar.recentDate2">May 20, 2026</time></p>
+              <h5><a href="blog-details.html" data-i18n="broadcast.post.title">Education for all rural children are necessary.</a></h5>
+              <div class="cvd-card-foot"><a class="btn-link" href="blog-details.html" data-i18n="puja.readMore">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
           </article>
         </div>
@@ -599,9 +615,9 @@
               <img width="370" height="278" src="assets/img/blog/1.webp" alt="" loading="lazy">
             </a>
             <div class="cvd-card-body">
-              <p class="cvd-post-meta"><i class="fas fa-om" aria-hidden="true"></i> Temple, Love <span>&middot;</span> <time datetime="2026-05-20">May 20, 2026</time></p>
-              <h5><a href="blog-details.html">Education for all rural children are necessary.</a></h5>
-              <div class="cvd-card-foot"><a class="btn-link" href="blog-details.html">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+              <p class="cvd-post-meta"><i class="fas fa-om" aria-hidden="true"></i> <span data-i18n="volunteers.news.cat">Temple, Love</span> <span>&middot;</span> <time datetime="2026-05-20" data-i18n="events.sidebar.recentDate2">May 20, 2026</time></p>
+              <h5><a href="blog-details.html" data-i18n="broadcast.post.title">Education for all rural children are necessary.</a></h5>
+              <div class="cvd-card-foot"><a class="btn-link" href="blog-details.html" data-i18n="puja.readMore">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
           </article>
         </div>
@@ -612,9 +628,9 @@
               <img width="370" height="278" src="assets/img/blog/3.webp" alt="" loading="lazy">
             </a>
             <div class="cvd-card-body">
-              <p class="cvd-post-meta"><i class="fas fa-om" aria-hidden="true"></i> Temple, Love <span>&middot;</span> <time datetime="2026-05-20">May 20, 2026</time></p>
-              <h5><a href="blog-details.html">Education for all rural children are necessary.</a></h5>
-              <div class="cvd-card-foot"><a class="btn-link" href="blog-details.html">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+              <p class="cvd-post-meta"><i class="fas fa-om" aria-hidden="true"></i> <span data-i18n="volunteers.news.cat">Temple, Love</span> <span>&middot;</span> <time datetime="2026-05-20" data-i18n="events.sidebar.recentDate2">May 20, 2026</time></p>
+              <h5><a href="blog-details.html" data-i18n="broadcast.post.title">Education for all rural children are necessary.</a></h5>
+              <div class="cvd-card-foot"><a class="btn-link" href="blog-details.html" data-i18n="puja.readMore">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
           </article>
         </div>
@@ -635,8 +651,8 @@
         <div class="row">
 
           <div class="col-xl-4 col-lg-4 col-md-6 footer-widget cvd-footer-brand">
-            <img width="132" height="88" src="assets/img/logo.png" alt="Choto Vrindavan Dham" loading="lazy">
-            <p class="cvd-footer-tagline">Faith, Service, Community</p>
+            <img width="132" height="88" src="assets/img/logo.png" alt="Mero Choto Vrindavan Dham" loading="lazy" data-i18n-attr="alt:brand.name">
+            <p class="cvd-footer-tagline" data-i18n="footer.tagline">Faith, Service, Community</p>
             <ul class="sigma_sm">
               <li> <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
               <li> <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a> </li>
@@ -646,35 +662,35 @@
           </div>
 
           <div class="col-xl-2 col-lg-2 col-md-6 footer-widget">
-            <h5 class="widget-title">Quick Links</h5>
+            <h5 class="widget-title" data-i18n="footer.quicklinks">Quick Links</h5>
             <ul>
-              <li> <a href="index.html">Home</a> </li>
-              <li> <a href="about-us.html">About Us</a> </li>
-              <li> <a href="puja.html">Pujas &amp; Services</a> </li>
-              <li> <a href="events.html">Events</a> </li>
-              <li> <a href="gallery.html">Gallery</a> </li>
-              <li> <a href="blog-grid.html">Blog</a> </li>
+              <li> <a href="index.html" data-i18n="footer.home">Home</a> </li>
+              <li> <a href="about-us.html" data-i18n="footer.about">About Us</a> </li>
+              <li> <a href="puja.html" data-i18n="footer.pujas">Pujas &amp; Services</a> </li>
+              <li> <a href="events.html" data-i18n="footer.events">Events</a> </li>
+              <li> <a href="gallery.html" data-i18n="footer.gallery">Gallery</a> </li>
+              <li> <a href="blog-grid.html" data-i18n="footer.blog">Blog</a> </li>
             </ul>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget">
-            <h5 class="widget-title">Our Initiatives</h5>
+            <h5 class="widget-title" data-i18n="footer.initiatives">Our Initiatives</h5>
             <ul>
-              <li> <a href="donation.html">Annadanam</a> </li>
-              <li> <a href="donation.html">Education Support</a> </li>
-              <li> <a href="donation.html">Temple Restoration</a> </li>
-              <li> <a href="donation-archive.html">Community Outreach</a> </li>
-              <li> <a href="volunteers.html">Volunteer</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.annadanam">Annadanam</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.education">Education Support</a> </li>
+              <li> <a href="donation.html" data-i18n="footer.restoration">Temple Restoration</a> </li>
+              <li> <a href="donation-archive.html" data-i18n="footer.outreach">Community Outreach</a> </li>
+              <li> <a href="volunteers.html" data-i18n="footer.volunteer">Volunteer</a> </li>
             </ul>
           </div>
 
           <div class="col-xl-3 col-lg-3 col-md-6 footer-widget cvd-newsletter">
-            <h5 class="widget-title">Stay Connected</h5>
-            <p>Subscribe to our newsletter for updates and events.</p>
+            <h5 class="widget-title" data-i18n="footer.connected">Stay Connected</h5>
+            <p data-i18n="footer.newsletter.desc">Subscribe to our newsletter for updates and events.</p>
             <form method="post" aria-label="Newsletter signup">
-              <label class="visually-hidden" for="cvd-newsletter-email">Email address</label>
-              <input type="email" id="cvd-newsletter-email" name="email" placeholder="Your email address" required>
-              <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <label class="visually-hidden" for="cvd-newsletter-email" data-i18n="footer.newsletter.emailLabel">Email address</label>
+              <input type="email" id="cvd-newsletter-email" name="email" placeholder="Your email address" required data-i18n-attr="placeholder:footer.newsletter.emailPlaceholder">
+              <button type="submit" aria-label="Subscribe" data-i18n-attr="aria-label:footer.newsletter.subscribe"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
             </form>
           </div>
 
@@ -685,12 +701,12 @@
     <!-- Footer Bottom -->
     <div class="sigma_footer-bottom">
       <div class="container">
-        <p>&copy; 2026 Choto Vrindavan Dham. All rights reserved.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 Mero Choto Vrindavan Dham. All rights reserved.</p>
         <ul class="cvd-footer-legal">
-          <li><a href="about-us.html">Faith</a></li>
-          <li><a href="gallery.html">Culture</a></li>
-          <li><a href="services.html">Service</a></li>
-          <li><a href="donation.html">A Better Tomorrow</a></li>
+          <li><a href="about-us.html" data-i18n="footer.legal.faith">Faith</a></li>
+          <li><a href="gallery.html" data-i18n="footer.legal.culture">Culture</a></li>
+          <li><a href="services.html" data-i18n="footer.legal.service">Service</a></li>
+          <li><a href="donation.html" data-i18n="footer.legal.tomorrow">A Better Tomorrow</a></li>
         </ul>
       </div>
     </div>
@@ -699,7 +715,7 @@
   <!-- partial -->
 
   <!-- WhatsApp float button: set href="https://wa.me/<number>" and remove class mht-wa-disabled to enable -->
-  <a class="mht-whatsapp-btn mht-wa-disabled" href="#" title="WhatsApp — add your number to activate" aria-label="WhatsApp not yet configured">
+  <a class="mht-whatsapp-btn mht-wa-disabled" href="#" title="WhatsApp — add your number to activate" aria-label="WhatsApp not yet configured" data-i18n-attr="title:wa.title|aria-label:wa.aria">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
@@ -718,5 +734,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n-common.js"></script>
+  <script src="assets/js/i18n-pages/volunteers.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </body>
 </html>
